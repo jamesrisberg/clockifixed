@@ -141,8 +141,9 @@ export function registerTimeEntryTests(
         throw err;
       }
     });
-    // deleteAllForUser is intentionally not tested — it deletes ALL time entries
-    // for the user, which would destroy real workspace data. The endpoint exists
-    // and the wrapper is correct, but testing it would be destructive.
+    // deleteAllForUser is intentionally not tested:
+    // - It deletes ALL time entries for a user (no filter, no undo)
+    // - A dedicated test user would work, but the workspace plan limits to 1 user
+    // - The wrapper is a simple DELETE call — no logic to verify beyond the HTTP layer
   });
 }
