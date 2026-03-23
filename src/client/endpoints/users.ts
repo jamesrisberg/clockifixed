@@ -9,6 +9,7 @@ import type {
   MemberProfileFullRequest,
   RoleRequest,
   UpsertUserCustomFieldRequestV1,
+  User,
 } from "../../types/index.js";
 
 export interface GetAllUsersParams {
@@ -26,7 +27,7 @@ export class UserEndpoints {
   ) {}
 
   /** Get the currently authenticated user. */
-  async getLoggedUser(): Promise<UserDtoV1> {
+  async getLoggedUser(): Promise<User> {
     return this.http.get<UserDtoV1>("/user");
   }
 
@@ -36,7 +37,7 @@ export class UserEndpoints {
   }
 
   /** Get all users in the workspace. */
-  async getAll(params?: GetAllUsersParams): Promise<UserDtoV1[]> {
+  async getAll(params?: GetAllUsersParams): Promise<User[]> {
     return this.http.get<UserDtoV1[]>(
       `/workspaces/${this.workspaceId}/users`,
       {
@@ -54,7 +55,7 @@ export class UserEndpoints {
   }
 
   /** Filter users with advanced criteria. */
-  async filter(body: GetUsersRequest): Promise<UserDtoV1[]> {
+  async filter(body: GetUsersRequest): Promise<User[]> {
     return this.http.post<UserDtoV1[]>(
       `/workspaces/${this.workspaceId}/users/info`,
       { body }
@@ -92,7 +93,7 @@ export class UserEndpoints {
   }
 
   /** Get managers for a specific user. */
-  async getManagers(userId: string): Promise<UserDtoV1[]> {
+  async getManagers(userId: string): Promise<User[]> {
     return this.http.get<UserDtoV1[]>(
       `/workspaces/${this.workspaceId}/users/${userId}/managers`
     );

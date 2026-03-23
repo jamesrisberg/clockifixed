@@ -8,6 +8,7 @@ import type {
   UpdateExpenseV1Request,
   ExpenseCategoryV1Request,
   ExpenseCategoryArchiveV1Request,
+  ExpenseCategory,
 } from "../../types/index.js";
 
 export class ExpenseEndpoints {
@@ -69,7 +70,7 @@ export class ExpenseEndpoints {
   }
 
   /** Create an expense category. */
-  async createCategory(body: ExpenseCategoryV1Request): Promise<ExpenseCategoryDtoV1> {
+  async createCategory(body: ExpenseCategoryV1Request): Promise<ExpenseCategory> {
     return this.http.post<ExpenseCategoryDtoV1>(
       `/workspaces/${this.workspaceId}/expenses/categories`,
       { body }
@@ -80,7 +81,7 @@ export class ExpenseEndpoints {
   async updateCategory(
     categoryId: string,
     body: ExpenseCategoryV1Request
-  ): Promise<ExpenseCategoryDtoV1> {
+  ): Promise<ExpenseCategory> {
     return this.http.put<ExpenseCategoryDtoV1>(
       `/workspaces/${this.workspaceId}/expenses/categories/${categoryId}`,
       { body }
@@ -98,7 +99,7 @@ export class ExpenseEndpoints {
   async archiveCategory(
     categoryId: string,
     body: ExpenseCategoryArchiveV1Request
-  ): Promise<ExpenseCategoryDtoV1> {
+  ): Promise<ExpenseCategory> {
     return this.http.patch<ExpenseCategoryDtoV1>(
       `/workspaces/${this.workspaceId}/expenses/categories/${categoryId}/status`,
       { body }

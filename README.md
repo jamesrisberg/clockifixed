@@ -140,13 +140,13 @@ try {
 All request and response types are exported:
 
 ```typescript
-import type { ProjectDtoImplV1, CreateTimeEntryRequest } from "clockifixed";
+import type { Project, TimeEntry, ClockifyClient, Tag, User } from "clockifixed";
 ```
 
 Zod schemas are also available for custom validation:
 
 ```typescript
-import { projectDtoImplV1Schema } from "clockifixed";
+import { projectSchema, timeEntrySchema } from "clockifixed";
 ```
 
 ## API drift detection

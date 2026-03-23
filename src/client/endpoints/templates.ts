@@ -4,6 +4,7 @@ import type {
   TemplateDtoImpl,
   TemplateRequest,
   TemplatePatchRequest,
+  TemplateResult,
 } from "../../types/index.js";
 
 export class TemplateEndpoints {
@@ -20,7 +21,7 @@ export class TemplateEndpoints {
   }
 
   /** Create new templates. Accepts a single template or an array. */
-  async create(body: TemplateRequest | TemplateRequest[]): Promise<TemplateDtoImpl[]> {
+  async create(body: TemplateRequest | TemplateRequest[]): Promise<TemplateResult[]> {
     const payload = Array.isArray(body) ? body : [body];
     return this.http.post<TemplateDtoImpl[]>(
       `/workspaces/${this.workspaceId}/templates`,
@@ -36,7 +37,7 @@ export class TemplateEndpoints {
   }
 
   /** Update a template. */
-  async update(templateId: string, body: TemplatePatchRequest): Promise<TemplateDtoImpl> {
+  async update(templateId: string, body: TemplatePatchRequest): Promise<TemplateResult> {
     return this.http.patch<TemplateDtoImpl>(
       `/workspaces/${this.workspaceId}/templates/${templateId}`,
       { body }
@@ -44,7 +45,7 @@ export class TemplateEndpoints {
   }
 
   /** Delete a template. */
-  async delete(templateId: string): Promise<TemplateDtoImpl> {
+  async delete(templateId: string): Promise<TemplateResult> {
     return this.http.delete<TemplateDtoImpl>(
       `/workspaces/${this.workspaceId}/templates/${templateId}`
     );

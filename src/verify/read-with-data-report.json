@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-23T20:56:23.593Z",
+  "timestamp": "2026-03-23T23:51:22.136Z",
   "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
     "total": 45,
@@ -851,7 +851,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 170
+      "durationMs": 161
     },
     {
       "check": {
@@ -3341,7 +3341,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 135,
+      "durationMs": 140,
       "responseDataSample": [
         {
           "id": "63eab29ecf0b257026ab5625",
@@ -3413,78 +3413,78 @@
             "projectLabel": "project",
             "taskLabel": "task",
             "workingDays": [
-              "WEDNESDAY",
+              "TUESDAY",
               "THURSDAY",
-              "MONDAY",
               "FRIDAY",
-              "TUESDAY"
+              "MONDAY",
+              "WEDNESDAY"
             ],
             "isProjectPublicByDefault": true
           },
           "imageUrl": "",
           "featureSubscriptionType": "PRO_2021",
           "features": [
-            "DISABLE_MANUAL_MODE",
-            "INVOICE_EMAILS",
-            "TIMESHEET_IMPORT",
-            "MANAGER_ROLE",
-            "INVOICE_REMINDERS",
-            "ALERTS",
-            "CUSTOM_FIELDS",
-            "WHO_CAN_SEE_TEAMS_DASHBOARD",
-            "INVOICING",
-            "PROJECT_TEMPLATES",
-            "UNLIMITED_REPORTS",
-            "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
-            "ATTENDANCE_REPORT",
-            "ADD_TIME_FOR_OTHERS",
-            "FAVORITE_ENTRIES",
-            "AUTOMATIC_LOCK",
-            "TASK_RATES",
-            "TIME_OFF",
-            "REQUIRED_FIELDS",
-            "WORKSPACE_LOCK_TIMEENTRIES",
-            "RECURRING_INVOICES",
-            "FILE_IMPORT",
-            "SUMMARY_ESTIMATE",
-            "LOCATIONS",
-            "WORKSPACE_TRANSFER",
-            "BULK_EDIT",
-            "KIOSK_QR_CODE",
-            "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
-            "USER_IMPORT",
-            "MULTI_FACTOR_AUTHENTICATION",
-            "HISTORIC_RATES",
-            "LABOR_COST",
-            "WHO_CAN_SEE_ALL_TIME_ENTRIES",
-            "SCREENSHOTS",
-            "KIOSK",
-            "CLIENT_CURRENCY",
-            "EDIT_MEMBER_PROFILE",
-            "WORKSPACE_TIME_ROUNDING",
-            "TIME_TRACKING",
-            "APPROVAL",
-            "BRANDED_REPORTS",
-            "KIOSK_PIN_REQUIRED",
-            "SCHEDULING",
             "BREAKS",
-            "PROJECT_BUDGET",
-            "EXPENSES",
-            "USER_CUSTOM_FIELDS",
-            "WHO_CAN_SEE_PROJECT_STATUS",
-            "SCHEDULED_REPORTS",
-            "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
-            "KIOSK_SESSION_DURATION",
-            "KIOSK_SIX_DIGIT_PIN",
-            "RECURRING_ESTIMATES",
-            "SPLIT_TIME_ENTRY",
-            "FORECASTING",
-            "CUSTOM_REPORTING",
-            "TARGETS_AND_REMINDERS",
-            "QUICKBOOKS_INTEGRATION",
+            "LOCATIONS",
+            "TIME_TRACKING",
+            "CUSTOM_FIELDS",
+            "HIDE_PAGES",
+            "REQUIRED_FIELDS",
             "DECIMAL_FORMAT",
+            "PROJECT_BUDGET",
+            "KIOSK",
+            "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
+            "FAVORITE_ENTRIES",
+            "UNLIMITED_REPORTS",
+            "APPROVAL",
+            "MANAGER_ROLE",
+            "LABOR_COST",
+            "INVOICING",
+            "SCREENSHOTS",
+            "USER_CUSTOM_FIELDS",
+            "EDIT_MEMBER_PROFILE",
+            "AUTOMATIC_LOCK",
+            "WHO_CAN_SEE_ALL_TIME_ENTRIES",
+            "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
+            "RECURRING_ESTIMATES",
+            "ADD_TIME_FOR_OTHERS",
+            "CLIENT_CURRENCY",
+            "RECURRING_INVOICES",
+            "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
+            "KIOSK_SIX_DIGIT_PIN",
+            "INVOICE_EMAILS",
+            "SUMMARY_ESTIMATE",
+            "FILE_IMPORT",
+            "PROJECT_TEMPLATES",
+            "SPLIT_TIME_ENTRY",
+            "ATTENDANCE_REPORT",
+            "WHO_CAN_SEE_TEAMS_DASHBOARD",
+            "MULTI_FACTOR_AUTHENTICATION",
             "WORKSPACE_TIME_AUDIT",
-            "HIDE_PAGES"
+            "WORKSPACE_TIME_ROUNDING",
+            "ALERTS",
+            "USER_IMPORT",
+            "BRANDED_REPORTS",
+            "CUSTOM_REPORTING",
+            "FORECASTING",
+            "WHO_CAN_SEE_PROJECT_STATUS",
+            "KIOSK_SESSION_DURATION",
+            "WORKSPACE_TRANSFER",
+            "TIMESHEET_IMPORT",
+            "SCHEDULED_REPORTS",
+            "EXPENSES",
+            "SCHEDULING",
+            "WORKSPACE_LOCK_TIMEENTRIES",
+            "DISABLE_MANUAL_MODE",
+            "TARGETS_AND_REMINDERS",
+            "HISTORIC_RATES",
+            "KIOSK_QR_CODE",
+            "KIOSK_PIN_REQUIRED",
+            "TIME_OFF",
+            "TASK_RATES",
+            "BULK_EDIT",
+            "QUICKBOOKS_INTEGRATION",
+            "INVOICE_REMINDERS"
           ],
           "currencies": [
             {
@@ -5559,7 +5559,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 825,
+      "durationMs": 805,
       "responseDataSample": {
         "id": "63eab29ecf0b257026ab5625",
         "name": "James Risberg's workspace",
@@ -6557,7 +6557,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 408
+      "durationMs": 130
     },
     {
       "check": {
@@ -7052,7 +7052,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 136,
+      "durationMs": 135,
       "responseDataSample": {
         "name": "James Risberg",
         "email": "james.risberg@gmail.com",
@@ -7913,7 +7913,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 124
+      "durationMs": 312
     },
     {
       "check": {
@@ -8364,11 +8364,11 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 132,
+      "durationMs": 129,
       "responseDataSample": [
         {
-          "id": "69c1a8ced8bdf75f909490ec",
-          "name": "_cfix_test_Acme Corp mn3o0mh5",
+          "id": "69c1d1d15fdd9a5256ba69a6",
+          "name": "_cfix_test_Acme Corp mn3u9naw",
           "email": null,
           "ccEmails": null,
           "workspaceId": "63eab29ecf0b257026ab5625",
@@ -8826,10 +8826,10 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 130,
+      "durationMs": 132,
       "responseDataSample": {
-        "id": "69c1a8ced8bdf75f909490ec",
-        "name": "_cfix_test_Acme Corp mn3o0mh5",
+        "id": "69c1d1d15fdd9a5256ba69a6",
+        "name": "_cfix_test_Acme Corp mn3u9naw",
         "email": null,
         "ccEmails": null,
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -9831,12 +9831,12 @@
           {
             "path": "[0].clientId",
             "actualType": "string",
-            "sampleValue": "69c1a8ced8bdf75f909490ec"
+            "sampleValue": "69c1d1d15fdd9a5256ba69a6"
           },
           {
             "path": "[0].clientName",
             "actualType": "string",
-            "sampleValue": "_cfix_test_Acme Corp mn3o0mh5"
+            "sampleValue": "_cfix_test_Acme Corp mn3u9naw"
           },
           {
             "path": "[0].estimateReset",
@@ -10124,16 +10124,16 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 224,
+      "durationMs": 486,
       "responseDataSample": [
         {
-          "id": "69c1a8d257fa89e657ba5f7f",
-          "name": "_cfix_test_Web Redesign mn3o0pnz",
+          "id": "69c1d1d557fa89e657c1aaf2",
+          "name": "_cfix_test_Web Redesign mn3u9qfu",
           "hourlyRate": {
             "amount": 0,
             "currency": "USD"
           },
-          "clientId": "69c1a8ced8bdf75f909490ec",
+          "clientId": "69c1d1d15fdd9a5256ba69a6",
           "workspaceId": "63eab29ecf0b257026ab5625",
           "billable": true,
           "memberships": [
@@ -10141,7 +10141,7 @@
               "userId": "63eab29ecf0b257026ab5624",
               "hourlyRate": null,
               "costRate": null,
-              "targetId": "69c1a8d257fa89e657ba5f7f",
+              "targetId": "69c1d1d557fa89e657c1aaf2",
               "membershipType": "PROJECT",
               "membershipStatus": "ACTIVE"
             }
@@ -10153,7 +10153,7 @@
           },
           "archived": false,
           "duration": "PT0S",
-          "clientName": "_cfix_test_Acme Corp mn3o0mh5",
+          "clientName": "_cfix_test_Acme Corp mn3u9naw",
           "note": "",
           "costRate": null,
           "timeEstimate": {
@@ -11042,12 +11042,12 @@
           {
             "path": "clientId",
             "actualType": "string",
-            "sampleValue": "69c1a8ced8bdf75f909490ec"
+            "sampleValue": "69c1d1d15fdd9a5256ba69a6"
           },
           {
             "path": "clientName",
             "actualType": "string",
-            "sampleValue": "_cfix_test_Acme Corp mn3o0mh5"
+            "sampleValue": "_cfix_test_Acme Corp mn3u9naw"
           },
           {
             "path": "estimateReset",
@@ -11114,15 +11114,15 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 396,
+      "durationMs": 130,
       "responseDataSample": {
-        "id": "69c1a8d257fa89e657ba5f7f",
-        "name": "_cfix_test_Web Redesign mn3o0pnz",
+        "id": "69c1d1d557fa89e657c1aaf2",
+        "name": "_cfix_test_Web Redesign mn3u9qfu",
         "hourlyRate": {
           "amount": 0,
           "currency": "USD"
         },
-        "clientId": "69c1a8ced8bdf75f909490ec",
+        "clientId": "69c1d1d15fdd9a5256ba69a6",
         "workspaceId": "63eab29ecf0b257026ab5625",
         "billable": true,
         "memberships": [
@@ -11130,7 +11130,7 @@
             "userId": "63eab29ecf0b257026ab5624",
             "hourlyRate": null,
             "costRate": null,
-            "targetId": "69c1a8d257fa89e657ba5f7f",
+            "targetId": "69c1d1d557fa89e657c1aaf2",
             "membershipType": "PROJECT",
             "membershipStatus": "ACTIVE"
           }
@@ -11142,7 +11142,7 @@
         },
         "archived": false,
         "duration": "PT0S",
-        "clientName": "_cfix_test_Acme Corp mn3o0mh5",
+        "clientName": "_cfix_test_Acme Corp mn3u9naw",
         "note": "",
         "costRate": null,
         "timeEstimate": {
@@ -11239,7 +11239,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 128
+      "durationMs": 131
     },
     {
       "check": {
@@ -11323,7 +11323,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 362
+      "durationMs": 123
     },
     {
       "check": {
@@ -11925,12 +11925,12 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 131,
+      "durationMs": 161,
       "responseDataSample": [
         {
-          "id": "69c1a8d45fdd9a5256b80fa1",
-          "name": "_cfix_test_Design Updated mn3o0rr0",
-          "projectId": "69c1a8d257fa89e657ba5f7f",
+          "id": "69c1d1d7d8bdf75f9096e753",
+          "name": "_cfix_test_Design Updated mn3u9s76",
+          "projectId": "69c1d1d557fa89e657c1aaf2",
           "assigneeIds": [],
           "assigneeId": null,
           "userGroupIds": [],
@@ -12534,11 +12534,11 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 309,
+      "durationMs": 281,
       "responseDataSample": {
-        "id": "69c1a8d45fdd9a5256b80fa1",
-        "name": "_cfix_test_Design Updated mn3o0rr0",
-        "projectId": "69c1a8d257fa89e657ba5f7f",
+        "id": "69c1d1d7d8bdf75f9096e753",
+        "name": "_cfix_test_Design Updated mn3u9s76",
+        "projectId": "69c1d1d557fa89e657c1aaf2",
         "assigneeIds": [],
         "assigneeId": null,
         "userGroupIds": [],
@@ -12744,7 +12744,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 125
+      "durationMs": 314
     },
     {
       "check": {
@@ -13800,16 +13800,16 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 237,
+      "durationMs": 251,
       "responseDataSample": [
         {
-          "id": "69c1a8d657fa89e657ba5fc1",
+          "id": "69c1d1d8d8bdf75f9096e789",
           "description": "_cfix_test_Testing write ops",
           "tagIds": null,
           "userId": "63eab29ecf0b257026ab5624",
           "billable": true,
           "taskId": null,
-          "projectId": "69c1a8d257fa89e657ba5f7f",
+          "projectId": "69c1d1d557fa89e657c1aaf2",
           "workspaceId": "63eab29ecf0b257026ab5625",
           "timeInterval": {
             "start": "2027-01-16T09:00:00Z",
@@ -14687,15 +14687,15 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 325,
+      "durationMs": 347,
       "responseDataSample": {
-        "id": "69c1a8d657fa89e657ba5fc1",
+        "id": "69c1d1d8d8bdf75f9096e789",
         "description": "_cfix_test_Testing write ops",
         "tagIds": null,
         "userId": "63eab29ecf0b257026ab5624",
         "billable": true,
         "taskId": null,
-        "projectId": "69c1a8d257fa89e657ba5f7f",
+        "projectId": "69c1d1d557fa89e657c1aaf2",
         "workspaceId": "63eab29ecf0b257026ab5625",
         "timeInterval": {
           "start": "2027-01-16T09:00:00Z",
@@ -15467,7 +15467,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 393
+      "durationMs": 129
     },
     {
       "check": {
@@ -15682,7 +15682,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 125
+      "durationMs": 383
     },
     {
       "check": {
@@ -16786,7 +16786,7 @@
           }
         ]
       },
-      "durationMs": 410,
+      "durationMs": 162,
       "responseDataSample": {
         "expenses": {
           "expenses": [
@@ -17211,7 +17211,7 @@
           }
         ]
       },
-      "durationMs": 130,
+      "durationMs": 129,
       "responseDataSample": {
         "id": "68705846ea976557148f3162",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -17547,7 +17547,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 130
+      "durationMs": 129
     },
     {
       "check": {
@@ -18200,18 +18200,18 @@
           }
         ]
       },
-      "durationMs": 310,
+      "durationMs": 387,
       "responseDataSample": {
         "total": 1,
         "invoices": [
           {
-            "id": "69c1a8dc5fdd9a5256b8101f",
-            "number": "_cfix_test_persistmn3o0wye",
+            "id": "69c1d1dfd8bdf75f9096e84f",
+            "number": "_cfix_test_persistmn3u9y0h",
             "status": "UNSENT",
             "issuedDate": "2027-07-01T00:00:00Z",
             "dueDate": "2027-07-30T00:00:00Z",
-            "clientId": "69c1a8ced8bdf75f909490ec",
-            "clientName": "_cfix_test_Acme Corp mn3o0mh5",
+            "clientId": "69c1d1d15fdd9a5256ba69a6",
+            "clientName": "_cfix_test_Acme Corp mn3u9naw",
             "amount": 0,
             "paid": null,
             "balance": 0,
@@ -19455,8 +19455,8 @@
       },
       "durationMs": 135,
       "responseDataSample": {
-        "id": "69c1a8dc5fdd9a5256b8101f",
-        "number": "_cfix_test_persistmn3o0wye",
+        "id": "69c1d1dfd8bdf75f9096e84f",
+        "number": "_cfix_test_persistmn3u9y0h",
         "status": "UNSENT",
         "issuedDate": "2027-07-01T00:00:00Z",
         "dueDate": "2027-07-30T00:00:00Z",
@@ -19475,8 +19475,8 @@
         "currency": "USD",
         "subject": "",
         "note": "",
-        "clientId": "69c1a8ced8bdf75f909490ec",
-        "clientName": "_cfix_test_Acme Corp mn3o0mh5",
+        "clientId": "69c1d1d15fdd9a5256ba69a6",
+        "clientName": "_cfix_test_Acme Corp mn3u9naw",
         "clientAddress": null,
         "userId": "63eab29ecf0b257026ab5624",
         "items": [],
@@ -19622,7 +19622,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 125
+      "durationMs": 193
     },
     {
       "check": {
@@ -20039,7 +20039,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 306
+      "durationMs": 165
     },
     {
       "check": {
@@ -20828,7 +20828,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 307
+      "durationMs": 122
     },
     {
       "check": {
@@ -21206,7 +21206,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 126
+      "durationMs": 216
     },
     {
       "check": {
@@ -21415,7 +21415,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 135
+      "durationMs": 308
     },
     {
       "check": {
@@ -22422,7 +22422,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 140,
+      "durationMs": 383,
       "responseDataSample": [
         {
           "id": "682116a841fbb46a74c2cb06",
@@ -23419,7 +23419,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 605
+      "durationMs": 132
     },
     {
       "check": {
@@ -24302,7 +24302,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 719,
+      "durationMs": 613,
       "responseDataSample": [
         {
           "id": "69c1968e5fdd9a5256b6fdc4",
@@ -25086,7 +25086,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 122,
+      "durationMs": 129,
       "responseDataSample": {
         "id": "69c1968e5fdd9a5256b6fdc4",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -25369,7 +25369,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 120
+      "durationMs": 124
     },
     {
       "check": {
@@ -25559,7 +25559,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 130,
+      "durationMs": 321,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25741,7 +25741,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 135,
+      "durationMs": 346,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25760,7 +25760,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 128,
+      "durationMs": 307,
       "error": "Skipped — endpoint not available (Shared Reports)"
     },
     {
@@ -25867,7 +25867,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 504
+      "durationMs": 132
     },
     {
       "check": {
@@ -25978,7 +25978,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 496
+      "durationMs": 488
     },
     {
       "check": {
@@ -26007,7 +26007,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 127
+      "durationMs": 126
     },
     {
       "check": {
@@ -26036,7 +26036,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 137
+      "durationMs": 305
     },
     {
       "check": {
@@ -26061,7 +26061,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 336
+      "durationMs": 140
     },
     {
       "check": {
@@ -26086,7 +26086,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 323
+      "durationMs": 309
     }
   ],
   "divergencesByTag": {

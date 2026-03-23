@@ -3,6 +3,7 @@ import type {
   TagDtoV1,
   TagRequest,
   UpdateTagRequest,
+  Tag,
 } from "../../types/index.js";
 
 export interface GetAllTagsParams {
@@ -19,7 +20,7 @@ export class TagEndpoints {
   ) {}
 
   /** Get all tags in the workspace. */
-  async getAll(params?: GetAllTagsParams): Promise<TagDtoV1[]> {
+  async getAll(params?: GetAllTagsParams): Promise<Tag[]> {
     return this.http.get<TagDtoV1[]>(
       `/workspaces/${this.workspaceId}/tags`,
       {
@@ -36,7 +37,7 @@ export class TagEndpoints {
   }
 
   /** Create a new tag. */
-  async create(body: TagRequest): Promise<TagDtoV1> {
+  async create(body: TagRequest): Promise<Tag> {
     return this.http.post<TagDtoV1>(
       `/workspaces/${this.workspaceId}/tags`,
       { body }
@@ -44,14 +45,14 @@ export class TagEndpoints {
   }
 
   /** Get a tag by ID. */
-  async get(id: string): Promise<TagDtoV1> {
+  async get(id: string): Promise<Tag> {
     return this.http.get<TagDtoV1>(
       `/workspaces/${this.workspaceId}/tags/${id}`
     );
   }
 
   /** Update an existing tag. */
-  async update(id: string, body: UpdateTagRequest): Promise<TagDtoV1> {
+  async update(id: string, body: UpdateTagRequest): Promise<Tag> {
     return this.http.put<TagDtoV1>(
       `/workspaces/${this.workspaceId}/tags/${id}`,
       { body }
@@ -59,7 +60,7 @@ export class TagEndpoints {
   }
 
   /** Delete a tag. */
-  async delete(id: string): Promise<TagDtoV1> {
+  async delete(id: string): Promise<Tag> {
     return this.http.delete<TagDtoV1>(
       `/workspaces/${this.workspaceId}/tags/${id}`
     );
