@@ -185,6 +185,10 @@ import {
   timeEntryDtoImplV1Schema,
   timeEstimateSchema,
   memberProfileSchema,
+  clientWithCurrencySchema,
+  taskSchema,
+  customFieldSchema,
+  policySchema,
 } from "./index.js";
 
 /**
@@ -379,5 +383,64 @@ export const realMemberProfileSchema = (() => {
   return z.object({
     ...shape,
     workingDays: z.array(z.string()).optional(),
+  });
+})();
+
+/**
+ * Client with nullable ccEmails and email.
+ * Spec says required, API returns null when not set.
+ */
+export const realClientSchema = withNullable(clientWithCurrencySchema as any, [
+  "ccEmails",
+  "email",
+]);
+
+/**
+ * Task with nullable assigneeId, costRate, hourlyRate, duration.
+ * Spec says required, API returns null when not configured.
+ */
+export const realTaskSchema = withNullable(taskSchema as any, [
+  "assigneeId",
+  "costRate",
+  "hourlyRate",
+  "duration",
+]);
+
+/**
+ * Custom field with nullable description, workspaceDefaultValue,
+ * and projectDefaultValues[].value.
+ */
+export const realCustomFieldSchema = (() => {
+  const shape = (customFieldSchema as any)._zod?.def?.shape ?? (customFieldSchema as any).shape;
+  if (!shape) return customFieldSchema;
+  return z.object({
+    ...shape,
+    description: z.string().nullable().optional(),
+    workspaceDefaultValue: z.record(z.string(), z.unknown()).nullable().optional(),
+    projectDefaultValues: z.array(z.object({
+      projectId: z.string().optional(),
+      status: z.string().optional(),
+      value: z.union([z.record(z.string(), z.unknown()), z.string()]).nullable().optional(),
+    })).optional(),
+  });
+})();
+
+/**
+ * Time-off policy with nullable projectId, taskId, negativeBalance,
+ * and nested defaultEntities fields.
+ */
+export const realPolicySchema = (() => {
+  const shape = (policySchema as any)._zod?.def?.shape ?? (policySchema as any).shape;
+  if (!shape) return policySchema;
+  return z.object({
+    ...shape,
+    projectId: z.string().nullable().optional(),
+    negativeBalance: z.unknown().nullable().optional(),
+    automaticTimeEntryCreation: z.object({
+      defaultEntities: z.object({
+        projectId: z.string().nullable().optional(),
+        taskId: z.string().nullable().optional(),
+      }).passthrough().optional(),
+    }).passthrough().nullable().optional(),
   });
 })();
