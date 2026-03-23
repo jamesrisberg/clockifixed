@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-23T19:13:04.244Z",
+  "timestamp": "2026-03-23T19:22:12.110Z",
   "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
-    "total": 39,
-    "passed": 12,
-    "failed": 27,
+    "total": 47,
+    "passed": 18,
+    "failed": 29,
     "skipped": 0,
     "errors": 0,
-    "totalDivergences": 108,
+    "totalDivergences": 118,
     "totalUndocumentedFields": 3
   },
   "checks": [
@@ -269,7 +269,7 @@
         "name": "Get client (after create)",
         "tag": "Client",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c190b05fdd9a5256b41f4f",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c192d3e182f76fc719cae2",
         "schema": {
           "def": {
             "type": "object",
@@ -522,7 +522,7 @@
         "name": "Update client",
         "tag": "Client",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c190b05fdd9a5256b41f4f",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c192d3e182f76fc719cae2",
         "schema": {
           "def": {
             "type": "object",
@@ -753,7 +753,7 @@
         "name": "Delete client",
         "tag": "Client",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c190b05fdd9a5256b41f4f",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c192d3e182f76fc719cae2",
         "schema": {
           "def": {
             "type": "object",
@@ -1067,7 +1067,7 @@
         "name": "Update tag",
         "tag": "Tag",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c190b257fa89e657b66f1a",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c192d4d8bdf75f90933edd",
         "schema": {
           "def": {
             "type": "object",
@@ -1150,7 +1150,7 @@
         "name": "Delete tag",
         "tag": "Tag",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c190b257fa89e657b66f1a",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c192d4d8bdf75f90933edd",
         "schema": {
           "def": {
             "type": "object",
@@ -1422,7 +1422,7 @@
         "name": "Update group",
         "tag": "Group",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c190b25fdd9a5256b41f74",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c192d557fa89e657b69867",
         "schema": {
           "def": {
             "type": "object",
@@ -1611,7 +1611,7 @@
         "name": "Add user to group",
         "tag": "Group",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c190b25fdd9a5256b41f74/users",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c192d557fa89e657b69867/users",
         "schema": {
           "def": {
             "type": "object",
@@ -1800,7 +1800,7 @@
         "name": "Remove user from group",
         "tag": "Group",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c190b25fdd9a5256b41f74/users/63eab29ecf0b257026ab5624",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c192d557fa89e657b69867/users/63eab29ecf0b257026ab5624",
         "schema": {
           "def": {
             "type": "object",
@@ -2487,7 +2487,7 @@
         "name": "Update custom field",
         "tag": "Custom Fields",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/custom-fields/69c190b45fdd9a5256b41f8c",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/custom-fields/69c192d6d8bdf75f90933f0d",
         "schema": {
           "def": {
             "type": "object",
@@ -3361,7 +3361,7 @@
         "name": "Get project (after create)",
         "tag": "Project",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c190b5e182f76fc719a11e",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c192d75fdd9a5256b6befc",
         "schema": {
           "def": {
             "type": "object",
@@ -3634,12 +3634,12 @@
           {
             "path": "clientId",
             "actualType": "string",
-            "sampleValue": "69c190b1d8bdf75f909316cb"
+            "sampleValue": "69c192d35fdd9a5256b6be9d"
           },
           {
             "path": "clientName",
             "actualType": "string",
-            "sampleValue": "_cfix_test_Acme Corp mn3kcb15"
+            "sampleValue": "_cfix_test_Acme Corp mn3ko0xn"
           },
           {
             "path": "estimateReset",
@@ -3713,7 +3713,7 @@
         "name": "Update project",
         "tag": "Project",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c190b5e182f76fc719a11e",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c192d75fdd9a5256b6befc",
         "schema": {
           "def": {
             "type": "object",
@@ -4122,7 +4122,7 @@
         "name": "Update project estimate",
         "tag": "Project",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c190b5e182f76fc719a11e/estimate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c192d75fdd9a5256b6befc/estimate",
         "schema": {
           "def": {
             "type": "object",
@@ -4531,7 +4531,7 @@
         "name": "Delete project",
         "tag": "Project",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c190b5e182f76fc719a11e",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c192d75fdd9a5256b6befc",
         "schema": {
           "def": {
             "type": "object",
@@ -4940,7 +4940,7 @@
         "name": "Create task",
         "tag": "Task",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c190b55fdd9a5256b41f9e/tasks",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c192d7e182f76fc719cb1a/tasks",
         "schema": {
           "def": {
             "type": "object",
@@ -5263,7 +5263,7 @@
         "name": "Get task (after create)",
         "tag": "Task",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c190b55fdd9a5256b41f9e/tasks/69c190b6d8bdf75f9093173f",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c192d7e182f76fc719cb1a/tasks/69c192d85fdd9a5256b6bf10",
         "schema": {
           "def": {
             "type": "object",
@@ -5586,7 +5586,7 @@
         "name": "Update task",
         "tag": "Task",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c190b55fdd9a5256b41f9e/tasks/69c190b6d8bdf75f9093173f",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c192d7e182f76fc719cb1a/tasks/69c192d85fdd9a5256b6bf10",
         "schema": {
           "def": {
             "type": "object",
@@ -5909,7 +5909,7 @@
         "name": "Set task cost rate",
         "tag": "Task",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c190b55fdd9a5256b41f9e/tasks/69c190b6d8bdf75f9093173f/cost-rate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c192d7e182f76fc719cb1a/tasks/69c192d85fdd9a5256b6bf10/cost-rate",
         "schema": {
           "def": {
             "type": "object",
@@ -6218,7 +6218,7 @@
         "name": "Set task hourly rate",
         "tag": "Task",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c190b55fdd9a5256b41f9e/tasks/69c190b6d8bdf75f9093173f/hourly-rate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c192d7e182f76fc719cb1a/tasks/69c192d85fdd9a5256b6bf10/hourly-rate",
         "schema": {
           "def": {
             "type": "object",
@@ -6801,7 +6801,7 @@
         "name": "Get time entry (after create)",
         "tag": "Time Entry",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c190b7d8bdf75f90931752",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c192d957fa89e657b698ce",
         "schema": {
           "def": {
             "type": "object",
@@ -7113,7 +7113,7 @@
         "name": "Update time entry",
         "tag": "Time Entry",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c190b7d8bdf75f90931752",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c192d957fa89e657b698ce",
         "schema": {
           "def": {
             "type": "object",
@@ -7731,7 +7731,7 @@
         "name": "Duplicate time entry",
         "tag": "Time Entry",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user/63eab29ecf0b257026ab5624/time-entries/69c190b7d8bdf75f90931752/duplicate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user/63eab29ecf0b257026ab5624/time-entries/69c192d957fa89e657b698ce/duplicate",
         "schema": {
           "def": {
             "type": "object",
@@ -8346,6 +8346,435 @@
     },
     {
       "check": {
+        "name": "Create expense category",
+        "tag": "Expense",
+        "method": "POST",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "hasUnitPrice": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "priceInCents": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "unit": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Update expense category",
+        "tag": "Expense",
+        "method": "PUT",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c192dbe182f76fc719cb7b",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "hasUnitPrice": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "priceInCents": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "unit": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Archive expense category",
+        "tag": "Expense",
+        "method": "PATCH",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c192dbe182f76fc719cb7b/status",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "hasUnitPrice": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "priceInCents": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "unit": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
         "name": "Create webhook",
         "tag": "Webhook",
         "method": "POST",
@@ -8726,7 +9155,7 @@
         "name": "Get webhook (after create)",
         "tag": "Webhook",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c190bad8bdf75f9093177f",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c192dce182f76fc719cb8e",
         "schema": {
           "def": {
             "type": "object",
@@ -9103,7 +9532,7 @@
         "name": "Update webhook",
         "tag": "Webhook",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c190bad8bdf75f9093177f",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c192dce182f76fc719cb8e",
         "schema": {
           "def": {
             "type": "object",
@@ -9480,7 +9909,7 @@
         "name": "Regenerate webhook token",
         "tag": "Webhook",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c190bad8bdf75f9093177f/token",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c192dce182f76fc719cb8e/token",
         "schema": {
           "def": {
             "type": "object",
@@ -9841,6 +10270,3320 @@
           "type": "object"
         },
         "array": false,
+        "readonly": false
+      },
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Get invoice (after create)",
+        "tag": "Invoice",
+        "method": "GET",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c192dd5fdd9a5256b6bfaa",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "amount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "balance": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "billFrom": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "calculationType": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "clientAddress": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "companyId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "containsImportedExpenses": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "containsImportedTimes": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "currency": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "discount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "discountAmount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "dueDate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "string",
+                            "format": "datetime",
+                            "check": "string_format",
+                            "offset": true,
+                            "local": false,
+                            "precision": null,
+                            "pattern": {}
+                          },
+                          "type": "string",
+                          "format": "datetime",
+                          "minLength": null,
+                          "maxLength": null
+                        }
+                      ]
+                    },
+                    "type": "string",
+                    "format": "datetime",
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "issuedDate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "string",
+                            "format": "datetime",
+                            "check": "string_format",
+                            "offset": true,
+                            "local": false,
+                            "precision": null,
+                            "pattern": {}
+                          },
+                          "type": "string",
+                          "format": "datetime",
+                          "minLength": null,
+                          "maxLength": null
+                        }
+                      ]
+                    },
+                    "type": "string",
+                    "format": "datetime",
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "items": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "object",
+                          "shape": {
+                            "amount": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "applyTaxes": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "lazy"
+                                  },
+                                  "type": "lazy"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "description": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "expenseIds": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "array",
+                                    "element": {
+                                      "def": {
+                                        "type": "string"
+                                      },
+                                      "type": "string",
+                                      "format": null,
+                                      "minLength": null,
+                                      "maxLength": null
+                                    }
+                                  },
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "importType": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "enum",
+                                    "entries": {
+                                      "NOT_IMPORTED": "NOT_IMPORTED",
+                                      "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                      "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                    }
+                                  },
+                                  "type": "enum",
+                                  "enum": {
+                                    "NOT_IMPORTED": "NOT_IMPORTED",
+                                    "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                    "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                  },
+                                  "options": [
+                                    "NOT_IMPORTED",
+                                    "TIME_ENTRY_IMPORT",
+                                    "EXPENSE_IMPORT"
+                                  ]
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "itemType": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "order": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "quantity": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "timeEntryIds": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "array",
+                                    "element": {
+                                      "def": {
+                                        "type": "string"
+                                      },
+                                      "type": "string",
+                                      "format": null,
+                                      "minLength": null,
+                                      "maxLength": null
+                                    }
+                                  },
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "unitPrice": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            }
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "object",
+                        "shape": {
+                          "amount": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "applyTaxes": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "lazy"
+                                },
+                                "type": "lazy"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "description": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "expenseIds": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                },
+                                "type": "array",
+                                "element": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "importType": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "enum",
+                                  "entries": {
+                                    "NOT_IMPORTED": "NOT_IMPORTED",
+                                    "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                    "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                  }
+                                },
+                                "type": "enum",
+                                "enum": {
+                                  "NOT_IMPORTED": "NOT_IMPORTED",
+                                  "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                  "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                },
+                                "options": [
+                                  "NOT_IMPORTED",
+                                  "TIME_ENTRY_IMPORT",
+                                  "EXPENSE_IMPORT"
+                                ]
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "itemType": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "order": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "quantity": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "timeEntryIds": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                },
+                                "type": "array",
+                                "element": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "unitPrice": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          }
+                        }
+                      },
+                      "type": "object"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "note": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "number": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "paid": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "status": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "enum",
+                      "entries": {
+                        "UNSENT": "UNSENT",
+                        "SENT": "SENT",
+                        "PAID": "PAID",
+                        "PARTIALLY_PAID": "PARTIALLY_PAID",
+                        "VOID": "VOID",
+                        "OVERDUE": "OVERDUE"
+                      }
+                    },
+                    "type": "enum",
+                    "enum": {
+                      "UNSENT": "UNSENT",
+                      "SENT": "SENT",
+                      "PAID": "PAID",
+                      "PARTIALLY_PAID": "PARTIALLY_PAID",
+                      "VOID": "VOID",
+                      "OVERDUE": "OVERDUE"
+                    },
+                    "options": [
+                      "UNSENT",
+                      "SENT",
+                      "PAID",
+                      "PARTIALLY_PAID",
+                      "VOID",
+                      "OVERDUE"
+                    ]
+                  }
+                },
+                "type": "optional"
+              },
+              "subject": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "subtotal": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "tax": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "tax2": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "tax2Amount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "taxAmount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "taxType": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "userId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "visibleZeroFields": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "clientAddress",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "paid",
+            "issue": "wrong_type",
+            "expected": "number",
+            "actual": "Invalid input: expected number, received null"
+          },
+          {
+            "path": "visibleZeroFields",
+            "issue": "invalid_enum",
+            "expected": "TAX | TAX_2 | DISCOUNT",
+            "actual": "Invalid option: expected one of \"TAX\"|\"TAX_2\"|\"DISCOUNT\""
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "clientAddress"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "number",
+            "code": "invalid_type",
+            "path": [
+              "paid"
+            ],
+            "message": "Invalid input: expected number, received null"
+          },
+          {
+            "code": "invalid_value",
+            "values": [
+              "TAX",
+              "TAX_2",
+              "DISCOUNT"
+            ],
+            "path": [
+              "visibleZeroFields"
+            ],
+            "message": "Invalid option: expected one of \"TAX\"|\"TAX_2\"|\"DISCOUNT\""
+          }
+        ]
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Update invoice",
+        "tag": "Invoice",
+        "method": "PUT",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c192dd5fdd9a5256b6bfaa",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "amount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "balance": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "billFrom": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "calculationType": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "clientAddress": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "companyId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "containsImportedExpenses": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "containsImportedTimes": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "currency": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "discount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "discountAmount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "dueDate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "string",
+                            "format": "datetime",
+                            "check": "string_format",
+                            "offset": true,
+                            "local": false,
+                            "precision": null,
+                            "pattern": {}
+                          },
+                          "type": "string",
+                          "format": "datetime",
+                          "minLength": null,
+                          "maxLength": null
+                        }
+                      ]
+                    },
+                    "type": "string",
+                    "format": "datetime",
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "issuedDate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "string",
+                            "format": "datetime",
+                            "check": "string_format",
+                            "offset": true,
+                            "local": false,
+                            "precision": null,
+                            "pattern": {}
+                          },
+                          "type": "string",
+                          "format": "datetime",
+                          "minLength": null,
+                          "maxLength": null
+                        }
+                      ]
+                    },
+                    "type": "string",
+                    "format": "datetime",
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "items": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "object",
+                          "shape": {
+                            "amount": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "applyTaxes": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "lazy"
+                                  },
+                                  "type": "lazy"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "description": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "expenseIds": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "array",
+                                    "element": {
+                                      "def": {
+                                        "type": "string"
+                                      },
+                                      "type": "string",
+                                      "format": null,
+                                      "minLength": null,
+                                      "maxLength": null
+                                    }
+                                  },
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "importType": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "enum",
+                                    "entries": {
+                                      "NOT_IMPORTED": "NOT_IMPORTED",
+                                      "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                      "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                    }
+                                  },
+                                  "type": "enum",
+                                  "enum": {
+                                    "NOT_IMPORTED": "NOT_IMPORTED",
+                                    "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                    "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                  },
+                                  "options": [
+                                    "NOT_IMPORTED",
+                                    "TIME_ENTRY_IMPORT",
+                                    "EXPENSE_IMPORT"
+                                  ]
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "itemType": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "order": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "quantity": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "timeEntryIds": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "array",
+                                    "element": {
+                                      "def": {
+                                        "type": "string"
+                                      },
+                                      "type": "string",
+                                      "format": null,
+                                      "minLength": null,
+                                      "maxLength": null
+                                    }
+                                  },
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "unitPrice": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            }
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "object",
+                        "shape": {
+                          "amount": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "applyTaxes": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "lazy"
+                                },
+                                "type": "lazy"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "description": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "expenseIds": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                },
+                                "type": "array",
+                                "element": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "importType": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "enum",
+                                  "entries": {
+                                    "NOT_IMPORTED": "NOT_IMPORTED",
+                                    "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                    "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                  }
+                                },
+                                "type": "enum",
+                                "enum": {
+                                  "NOT_IMPORTED": "NOT_IMPORTED",
+                                  "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                  "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                },
+                                "options": [
+                                  "NOT_IMPORTED",
+                                  "TIME_ENTRY_IMPORT",
+                                  "EXPENSE_IMPORT"
+                                ]
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "itemType": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "order": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "quantity": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "timeEntryIds": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                },
+                                "type": "array",
+                                "element": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "unitPrice": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          }
+                        }
+                      },
+                      "type": "object"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "note": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "number": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "paid": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "status": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "enum",
+                      "entries": {
+                        "UNSENT": "UNSENT",
+                        "SENT": "SENT",
+                        "PAID": "PAID",
+                        "PARTIALLY_PAID": "PARTIALLY_PAID",
+                        "VOID": "VOID",
+                        "OVERDUE": "OVERDUE"
+                      }
+                    },
+                    "type": "enum",
+                    "enum": {
+                      "UNSENT": "UNSENT",
+                      "SENT": "SENT",
+                      "PAID": "PAID",
+                      "PARTIALLY_PAID": "PARTIALLY_PAID",
+                      "VOID": "VOID",
+                      "OVERDUE": "OVERDUE"
+                    },
+                    "options": [
+                      "UNSENT",
+                      "SENT",
+                      "PAID",
+                      "PARTIALLY_PAID",
+                      "VOID",
+                      "OVERDUE"
+                    ]
+                  }
+                },
+                "type": "optional"
+              },
+              "subject": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "subtotal": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "tax": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "tax2": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "tax2Amount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "taxAmount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "taxType": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "userId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "visibleZeroFields": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "billFrom",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "clientAddress",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "companyId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "note",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "paid",
+            "issue": "wrong_type",
+            "expected": "number",
+            "actual": "Invalid input: expected number, received null"
+          },
+          {
+            "path": "subject",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "visibleZeroFields",
+            "issue": "invalid_enum",
+            "expected": "TAX | TAX_2 | DISCOUNT",
+            "actual": "Invalid option: expected one of \"TAX\"|\"TAX_2\"|\"DISCOUNT\""
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "billFrom"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "clientAddress"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "companyId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "note"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "number",
+            "code": "invalid_type",
+            "path": [
+              "paid"
+            ],
+            "message": "Invalid input: expected number, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "subject"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "code": "invalid_value",
+            "values": [
+              "TAX",
+              "TAX_2",
+              "DISCOUNT"
+            ],
+            "path": [
+              "visibleZeroFields"
+            ],
+            "message": "Invalid option: expected one of \"TAX\"|\"TAX_2\"|\"DISCOUNT\""
+          }
+        ]
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Get invoice settings",
+        "tag": "Invoice",
+        "method": "GET",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/settings",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "defaults": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "object",
+                      "shape": {
+                        "companyId": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "string"
+                              },
+                              "type": "string",
+                              "format": null,
+                              "minLength": null,
+                              "maxLength": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "defaultImportExpenseItemTypeId": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "string"
+                              },
+                              "type": "string",
+                              "format": null,
+                              "minLength": null,
+                              "maxLength": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "defaultImportTimeItemTypeId": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "string"
+                              },
+                              "type": "string",
+                              "format": null,
+                              "minLength": null,
+                              "maxLength": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "dueDays": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "number",
+                                "checks": [
+                                  {
+                                    "def": {
+                                      "type": "number",
+                                      "check": "number_format",
+                                      "abort": false,
+                                      "format": "safeint"
+                                    },
+                                    "type": "number",
+                                    "minValue": -9007199254740991,
+                                    "maxValue": 9007199254740991,
+                                    "isInt": true,
+                                    "isFinite": true,
+                                    "format": "safeint"
+                                  }
+                                ]
+                              },
+                              "type": "number",
+                              "minValue": -9007199254740991,
+                              "maxValue": 9007199254740991,
+                              "isInt": true,
+                              "isFinite": true,
+                              "format": "safeint"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "itemType": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "string"
+                              },
+                              "type": "string",
+                              "format": null,
+                              "minLength": null,
+                              "maxLength": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "itemTypeId": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "string"
+                              },
+                              "type": "string",
+                              "format": null,
+                              "minLength": null,
+                              "maxLength": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "notes": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "string"
+                              },
+                              "type": "string",
+                              "format": null,
+                              "minLength": null,
+                              "maxLength": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "subject": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "string"
+                              },
+                              "type": "string",
+                              "format": null,
+                              "minLength": null,
+                              "maxLength": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "tax": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "number",
+                                "checks": [
+                                  {
+                                    "def": {
+                                      "type": "number",
+                                      "check": "number_format",
+                                      "abort": false,
+                                      "format": "safeint"
+                                    },
+                                    "type": "number",
+                                    "minValue": -9007199254740991,
+                                    "maxValue": 9007199254740991,
+                                    "isInt": true,
+                                    "isFinite": true,
+                                    "format": "safeint"
+                                  }
+                                ]
+                              },
+                              "type": "number",
+                              "minValue": -9007199254740991,
+                              "maxValue": 9007199254740991,
+                              "isInt": true,
+                              "isFinite": true,
+                              "format": "safeint"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "tax2": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "number",
+                                "checks": [
+                                  {
+                                    "def": {
+                                      "type": "number",
+                                      "check": "number_format",
+                                      "abort": false,
+                                      "format": "safeint"
+                                    },
+                                    "type": "number",
+                                    "minValue": -9007199254740991,
+                                    "maxValue": 9007199254740991,
+                                    "isInt": true,
+                                    "isFinite": true,
+                                    "format": "safeint"
+                                  }
+                                ]
+                              },
+                              "type": "number",
+                              "minValue": -9007199254740991,
+                              "maxValue": 9007199254740991,
+                              "isInt": true,
+                              "isFinite": true,
+                              "format": "safeint"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "tax2Percent": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "number",
+                                "checks": []
+                              },
+                              "type": "number",
+                              "minValue": null,
+                              "maxValue": null,
+                              "isInt": false,
+                              "isFinite": true,
+                              "format": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "taxPercent": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "number",
+                                "checks": []
+                              },
+                              "type": "number",
+                              "minValue": null,
+                              "maxValue": null,
+                              "isInt": false,
+                              "isFinite": true,
+                              "format": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "taxType": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "enum",
+                                "entries": {
+                                  "COMPOUND": "COMPOUND",
+                                  "SIMPLE": "SIMPLE",
+                                  "NONE": "NONE"
+                                }
+                              },
+                              "type": "enum",
+                              "enum": {
+                                "COMPOUND": "COMPOUND",
+                                "SIMPLE": "SIMPLE",
+                                "NONE": "NONE"
+                              },
+                              "options": [
+                                "COMPOUND",
+                                "SIMPLE",
+                                "NONE"
+                              ]
+                            }
+                          },
+                          "type": "optional"
+                        }
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "optional"
+              },
+              "exportFields": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "object",
+                      "shape": {
+                        "RTL": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "itemType": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "quantity": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "rtl": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "tax": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "tax2": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "unitPrice": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        }
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "optional"
+              },
+              "labels": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Get scheduling project totals (POST)",
+        "tag": "Scheduling",
+        "method": "POST",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/scheduling/assignments/projects/totals",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "assignments": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "clientName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "milestones": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "projectArchived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "projectBillable": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "projectColor": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "projectId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "projectName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "totalHours": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": true,
+        "readonly": false
+      },
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Get scheduling user totals (POST)",
+        "tag": "Scheduling",
+        "method": "POST",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/scheduling/assignments/user-filter/totals",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "capacityPerDay": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "totalHoursPerDay": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "userId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "userImage": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "userName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "userStatus": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "workingDays": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "enum",
+                      "entries": {
+                        "MONDAY": "MONDAY",
+                        "TUESDAY": "TUESDAY",
+                        "WEDNESDAY": "WEDNESDAY",
+                        "THURSDAY": "THURSDAY",
+                        "FRIDAY": "FRIDAY",
+                        "SATURDAY": "SATURDAY",
+                        "SUNDAY": "SUNDAY"
+                      }
+                    },
+                    "type": "enum",
+                    "enum": {
+                      "MONDAY": "MONDAY",
+                      "TUESDAY": "TUESDAY",
+                      "WEDNESDAY": "WEDNESDAY",
+                      "THURSDAY": "THURSDAY",
+                      "FRIDAY": "FRIDAY",
+                      "SATURDAY": "SATURDAY",
+                      "SUNDAY": "SUNDAY"
+                    },
+                    "options": [
+                      "MONDAY",
+                      "TUESDAY",
+                      "WEDNESDAY",
+                      "THURSDAY",
+                      "FRIDAY",
+                      "SATURDAY",
+                      "SUNDAY"
+                    ]
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": true,
         "readonly": false
       },
       "status": "pass",
@@ -15002,8 +18745,26 @@
       "divergences": 18,
       "undocumentedFields": 0
     },
+    "Expense": {
+      "passed": 3,
+      "failed": 0,
+      "divergences": 0,
+      "undocumentedFields": 0
+    },
     "Webhook": {
       "passed": 4,
+      "failed": 0,
+      "divergences": 0,
+      "undocumentedFields": 0
+    },
+    "Invoice": {
+      "passed": 1,
+      "failed": 2,
+      "divergences": 10,
+      "undocumentedFields": 0
+    },
+    "Scheduling": {
+      "passed": 2,
       "failed": 0,
       "divergences": 0,
       "undocumentedFields": 0

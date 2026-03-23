@@ -22,6 +22,12 @@ import { registerProjectTests } from "./write/domains/projects.js";
 import { registerTaskTests } from "./write/domains/tasks.js";
 import { registerTimeEntryTests } from "./write/domains/time-entries.js";
 import { registerWebhookTests } from "./write/domains/webhooks.js";
+import { registerExpenseCategoryTests } from "./write/domains/expense-categories.js";
+import { registerInvoiceTests } from "./write/domains/invoices.js";
+import { registerTemplateTests } from "./write/domains/templates.js";
+import { registerPolicyTests } from "./write/domains/policies.js";
+import { registerSchedulingTests } from "./write/domains/scheduling.js";
+import { registerApprovalTests } from "./write/domains/approvals.js";
 import { registerWorkspaceTests } from "./write/domains/workspace.js";
 import { registerUserTests } from "./write/domains/users.js";
 
@@ -48,11 +54,6 @@ let WORKSPACE_ID = process.env.CLOCKIFY_WORKSPACE_ID;
 
 const canRun = !!API_KEY;
 
-/**
- * Container that gets populated by beforeAll and accessed by test bodies.
- * This works because describe/it register synchronously but it() callbacks
- * execute after beforeAll completes.
- */
 const $ = {} as { runner: WriteTestRunner };
 
 describe.skipIf(!canRun)("Clockify Write API Verification", { timeout: 300_000 }, () => {
@@ -74,7 +75,6 @@ describe.skipIf(!canRun)("Clockify Write API Verification", { timeout: 300_000 }
     if ($.runner) await $.runner.teardown();
   }, 120_000);
 
-  // Accessors for domain modules — safe to dereference inside it() bodies
   const api = () => $.runner.api;
   const ctx = () => $.runner.ctx;
   const cleanup = () => $.runner.cleanup;
@@ -93,9 +93,23 @@ describe.skipIf(!canRun)("Clockify Write API Verification", { timeout: 300_000 }
   // ── Phase 3: Depends on project ─────────────────────────────────
   registerTaskTests(api, ctx, cleanup, reporter);
   registerTimeEntryTests(api, ctx, cleanup, reporter);
+  registerTemplateTests(api, ctx, cleanup, reporter);
+
+  // ── Phase 4: Expense categories ─────────────────────────────────
+  registerExpenseCategoryTests(api, ctx, cleanup, reporter);
 
   // ── Phase 5: Webhooks ───────────────────────────────────────────
   registerWebhookTests(api, ctx, cleanup, reporter);
+
+  // ── Phase 6: Invoices (needs persistent client) ─────────────────
+  registerInvoiceTests(api, ctx, cleanup, reporter);
+
+  // ── Phase 7: Policies ───────────────────────────────────────────
+  registerPolicyTests(api, ctx, cleanup, reporter);
+
+  // ── Phase 9: Scheduling, Approvals ──────────────────────────────
+  registerSchedulingTests(api, ctx, reporter);
+  registerApprovalTests(api, ctx, reporter);
 
   // ── Phase 10: Non-destructive ───────────────────────────────────
   registerWorkspaceTests(api, ctx, reporter);

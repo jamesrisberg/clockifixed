@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-23T19:11:48.919Z",
+  "timestamp": "2026-03-23T19:22:02.070Z",
   "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
     "total": 45,
@@ -7,7 +7,7 @@
     "failed": 12,
     "skipped": 14,
     "errors": 0,
-    "totalDivergences": 92,
+    "totalDivergences": 96,
     "totalUndocumentedFields": 6
   },
   "checks": [
@@ -851,7 +851,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 130
+      "durationMs": 303
     },
     {
       "check": {
@@ -3341,7 +3341,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 329,
+      "durationMs": 316,
       "responseDataSample": [
         {
           "id": "63eab29ecf0b257026ab5625",
@@ -3413,78 +3413,78 @@
             "projectLabel": "project",
             "taskLabel": "task",
             "workingDays": [
-              "TUESDAY",
+              "MONDAY",
               "THURSDAY",
               "FRIDAY",
-              "MONDAY",
-              "WEDNESDAY"
+              "WEDNESDAY",
+              "TUESDAY"
             ],
             "isProjectPublicByDefault": true
           },
           "imageUrl": "",
           "featureSubscriptionType": "PRO_2021",
           "features": [
-            "BREAKS",
-            "LOCATIONS",
-            "TIME_TRACKING",
-            "CUSTOM_FIELDS",
-            "HIDE_PAGES",
-            "REQUIRED_FIELDS",
-            "DECIMAL_FORMAT",
-            "PROJECT_BUDGET",
-            "KIOSK",
-            "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
-            "FAVORITE_ENTRIES",
-            "UNLIMITED_REPORTS",
-            "APPROVAL",
-            "MANAGER_ROLE",
-            "LABOR_COST",
-            "INVOICING",
-            "SCREENSHOTS",
-            "USER_CUSTOM_FIELDS",
-            "EDIT_MEMBER_PROFILE",
-            "AUTOMATIC_LOCK",
-            "WHO_CAN_SEE_ALL_TIME_ENTRIES",
-            "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
-            "RECURRING_ESTIMATES",
-            "ADD_TIME_FOR_OTHERS",
-            "CLIENT_CURRENCY",
-            "RECURRING_INVOICES",
-            "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
-            "KIOSK_SIX_DIGIT_PIN",
-            "INVOICE_EMAILS",
-            "SUMMARY_ESTIMATE",
-            "FILE_IMPORT",
             "PROJECT_TEMPLATES",
-            "SPLIT_TIME_ENTRY",
-            "ATTENDANCE_REPORT",
-            "WHO_CAN_SEE_TEAMS_DASHBOARD",
-            "MULTI_FACTOR_AUTHENTICATION",
-            "WORKSPACE_TIME_AUDIT",
-            "WORKSPACE_TIME_ROUNDING",
-            "ALERTS",
-            "USER_IMPORT",
-            "BRANDED_REPORTS",
-            "CUSTOM_REPORTING",
             "FORECASTING",
-            "WHO_CAN_SEE_PROJECT_STATUS",
-            "KIOSK_SESSION_DURATION",
-            "WORKSPACE_TRANSFER",
-            "TIMESHEET_IMPORT",
-            "SCHEDULED_REPORTS",
-            "EXPENSES",
-            "SCHEDULING",
-            "WORKSPACE_LOCK_TIMEENTRIES",
-            "DISABLE_MANUAL_MODE",
-            "TARGETS_AND_REMINDERS",
-            "HISTORIC_RATES",
-            "KIOSK_QR_CODE",
-            "KIOSK_PIN_REQUIRED",
-            "TIME_OFF",
+            "PROJECT_BUDGET",
+            "MANAGER_ROLE",
+            "AUTOMATIC_LOCK",
             "TASK_RATES",
-            "BULK_EDIT",
+            "REQUIRED_FIELDS",
+            "INVOICE_EMAILS",
+            "WORKSPACE_TRANSFER",
+            "WORKSPACE_TIME_ROUNDING",
+            "INVOICING",
+            "USER_CUSTOM_FIELDS",
+            "TIME_OFF",
+            "KIOSK_SIX_DIGIT_PIN",
+            "WHO_CAN_SEE_TEAMS_DASHBOARD",
+            "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
+            "SCHEDULED_REPORTS",
+            "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
+            "FILE_IMPORT",
+            "WHO_CAN_SEE_PROJECT_STATUS",
+            "HIDE_PAGES",
+            "UNLIMITED_REPORTS",
+            "ALERTS",
             "QUICKBOOKS_INTEGRATION",
-            "INVOICE_REMINDERS"
+            "HISTORIC_RATES",
+            "SUMMARY_ESTIMATE",
+            "LABOR_COST",
+            "LOCATIONS",
+            "KIOSK_PIN_REQUIRED",
+            "WORKSPACE_TIME_AUDIT",
+            "CUSTOM_FIELDS",
+            "APPROVAL",
+            "WORKSPACE_LOCK_TIMEENTRIES",
+            "SCHEDULING",
+            "KIOSK_QR_CODE",
+            "CUSTOM_REPORTING",
+            "BREAKS",
+            "TARGETS_AND_REMINDERS",
+            "TIMESHEET_IMPORT",
+            "MULTI_FACTOR_AUTHENTICATION",
+            "DISABLE_MANUAL_MODE",
+            "CLIENT_CURRENCY",
+            "USER_IMPORT",
+            "KIOSK",
+            "KIOSK_SESSION_DURATION",
+            "SCREENSHOTS",
+            "RECURRING_ESTIMATES",
+            "TIME_TRACKING",
+            "EXPENSES",
+            "RECURRING_INVOICES",
+            "DECIMAL_FORMAT",
+            "ADD_TIME_FOR_OTHERS",
+            "BULK_EDIT",
+            "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
+            "INVOICE_REMINDERS",
+            "EDIT_MEMBER_PROFILE",
+            "ATTENDANCE_REPORT",
+            "FAVORITE_ENTRIES",
+            "SPLIT_TIME_ENTRY",
+            "BRANDED_REPORTS",
+            "WHO_CAN_SEE_ALL_TIME_ENTRIES"
           ],
           "currencies": [
             {
@@ -5559,7 +5559,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 773,
+      "durationMs": 997,
       "responseDataSample": {
         "id": "63eab29ecf0b257026ab5625",
         "name": "James Risberg's workspace",
@@ -5630,78 +5630,78 @@
           "projectLabel": "project",
           "taskLabel": "task",
           "workingDays": [
-            "MONDAY",
-            "THURSDAY",
-            "FRIDAY",
             "WEDNESDAY",
-            "TUESDAY"
+            "THURSDAY",
+            "MONDAY",
+            "TUESDAY",
+            "FRIDAY"
           ],
           "isProjectPublicByDefault": true
         },
         "imageUrl": "",
         "featureSubscriptionType": "PRO_2021",
         "features": [
-          "PROJECT_TEMPLATES",
-          "FORECASTING",
-          "PROJECT_BUDGET",
+          "DISABLE_MANUAL_MODE",
+          "INVOICE_EMAILS",
+          "TIMESHEET_IMPORT",
           "MANAGER_ROLE",
+          "INVOICE_REMINDERS",
+          "ALERTS",
+          "CUSTOM_FIELDS",
+          "WHO_CAN_SEE_TEAMS_DASHBOARD",
+          "INVOICING",
+          "PROJECT_TEMPLATES",
+          "UNLIMITED_REPORTS",
+          "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
+          "ATTENDANCE_REPORT",
+          "ADD_TIME_FOR_OTHERS",
+          "FAVORITE_ENTRIES",
           "AUTOMATIC_LOCK",
           "TASK_RATES",
-          "REQUIRED_FIELDS",
-          "INVOICE_EMAILS",
-          "WORKSPACE_TRANSFER",
-          "WORKSPACE_TIME_ROUNDING",
-          "INVOICING",
-          "USER_CUSTOM_FIELDS",
           "TIME_OFF",
-          "KIOSK_SIX_DIGIT_PIN",
-          "WHO_CAN_SEE_TEAMS_DASHBOARD",
-          "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
-          "SCHEDULED_REPORTS",
-          "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
-          "FILE_IMPORT",
-          "WHO_CAN_SEE_PROJECT_STATUS",
-          "HIDE_PAGES",
-          "UNLIMITED_REPORTS",
-          "ALERTS",
-          "QUICKBOOKS_INTEGRATION",
-          "HISTORIC_RATES",
-          "SUMMARY_ESTIMATE",
-          "LABOR_COST",
-          "LOCATIONS",
-          "KIOSK_PIN_REQUIRED",
-          "WORKSPACE_TIME_AUDIT",
-          "CUSTOM_FIELDS",
-          "APPROVAL",
+          "REQUIRED_FIELDS",
           "WORKSPACE_LOCK_TIMEENTRIES",
-          "SCHEDULING",
-          "KIOSK_QR_CODE",
-          "CUSTOM_REPORTING",
-          "BREAKS",
-          "TARGETS_AND_REMINDERS",
-          "TIMESHEET_IMPORT",
-          "MULTI_FACTOR_AUTHENTICATION",
-          "DISABLE_MANUAL_MODE",
-          "CLIENT_CURRENCY",
-          "USER_IMPORT",
-          "KIOSK",
-          "KIOSK_SESSION_DURATION",
-          "SCREENSHOTS",
-          "RECURRING_ESTIMATES",
-          "TIME_TRACKING",
-          "EXPENSES",
           "RECURRING_INVOICES",
-          "DECIMAL_FORMAT",
-          "ADD_TIME_FOR_OTHERS",
+          "FILE_IMPORT",
+          "SUMMARY_ESTIMATE",
+          "LOCATIONS",
+          "WORKSPACE_TRANSFER",
           "BULK_EDIT",
-          "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
-          "INVOICE_REMINDERS",
+          "KIOSK_QR_CODE",
+          "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
+          "USER_IMPORT",
+          "MULTI_FACTOR_AUTHENTICATION",
+          "HISTORIC_RATES",
+          "LABOR_COST",
+          "WHO_CAN_SEE_ALL_TIME_ENTRIES",
+          "SCREENSHOTS",
+          "KIOSK",
+          "CLIENT_CURRENCY",
           "EDIT_MEMBER_PROFILE",
-          "ATTENDANCE_REPORT",
-          "FAVORITE_ENTRIES",
-          "SPLIT_TIME_ENTRY",
+          "WORKSPACE_TIME_ROUNDING",
+          "TIME_TRACKING",
+          "APPROVAL",
           "BRANDED_REPORTS",
-          "WHO_CAN_SEE_ALL_TIME_ENTRIES"
+          "KIOSK_PIN_REQUIRED",
+          "SCHEDULING",
+          "BREAKS",
+          "PROJECT_BUDGET",
+          "EXPENSES",
+          "USER_CUSTOM_FIELDS",
+          "WHO_CAN_SEE_PROJECT_STATUS",
+          "SCHEDULED_REPORTS",
+          "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
+          "KIOSK_SESSION_DURATION",
+          "KIOSK_SIX_DIGIT_PIN",
+          "RECURRING_ESTIMATES",
+          "SPLIT_TIME_ENTRY",
+          "FORECASTING",
+          "CUSTOM_REPORTING",
+          "TARGETS_AND_REMINDERS",
+          "QUICKBOOKS_INTEGRATION",
+          "DECIMAL_FORMAT",
+          "WORKSPACE_TIME_AUDIT",
+          "HIDE_PAGES"
         ],
         "currencies": [
           {
@@ -6557,7 +6557,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 308
+      "durationMs": 129
     },
     {
       "check": {
@@ -7052,7 +7052,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 309,
+      "durationMs": 311,
       "responseDataSample": {
         "name": "James Risberg",
         "email": "james.risberg@gmail.com",
@@ -7913,7 +7913,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 165
+      "durationMs": 157
     },
     {
       "check": {
@@ -8097,18 +8097,24 @@
             "shape": {
               "address": {
                 "def": {
-                  "type": "optional",
+                  "type": "nullable",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "optional",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "optional"
                   }
                 },
-                "type": "optional"
+                "type": "nullable"
               },
               "archived": {
                 "def": {
@@ -8241,18 +8247,24 @@
               },
               "note": {
                 "def": {
-                  "type": "optional",
+                  "type": "nullable",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "optional",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "optional"
                   }
                 },
-                "type": "optional"
+                "type": "nullable"
               },
               "workspaceId": {
                 "def": {
@@ -8303,6 +8315,30 @@
             "issue": "wrong_type",
             "expected": "string",
             "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "[1].address",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "[1].ccEmails",
+            "issue": "wrong_type",
+            "expected": "array",
+            "actual": "Invalid input: expected array, received null"
+          },
+          {
+            "path": "[1].email",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "[1].note",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
           }
         ],
         "undocumentedFields": [],
@@ -8342,33 +8378,31 @@
               "note"
             ],
             "message": "Invalid input: expected string, received null"
-          }
-        ]
-      },
-      "realityResult": {
-        "valid": false,
-        "divergences": [
-          {
-            "path": "[0].address",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
           },
-          {
-            "path": "[0].note",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          }
-        ],
-        "undocumentedFields": [],
-        "zodErrors": [
           {
             "expected": "string",
             "code": "invalid_type",
             "path": [
-              0,
+              1,
               "address"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "array",
+            "code": "invalid_type",
+            "path": [
+              1,
+              "ccEmails"
+            ],
+            "message": "Invalid input: expected array, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              1,
+              "email"
             ],
             "message": "Invalid input: expected string, received null"
           },
@@ -8376,19 +8410,25 @@
             "expected": "string",
             "code": "invalid_type",
             "path": [
-              0,
+              1,
               "note"
             ],
             "message": "Invalid input: expected string, received null"
           }
         ]
       },
-      "realityStatus": "fail",
-      "durationMs": 319,
+      "realityResult": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "realityStatus": "pass",
+      "durationMs": 312,
       "responseDataSample": [
         {
-          "id": "69c1906e57fa89e657b66b82",
-          "name": "_cfix_test_Acme Corp mn3kavpv",
+          "id": "69c192d3e182f76fc719cae2",
+          "name": "_cfix_test_Acme Corp mn3ko0ty",
           "email": null,
           "ccEmails": null,
           "workspaceId": "63eab29ecf0b257026ab5625",
@@ -8582,18 +8622,24 @@
             "shape": {
               "address": {
                 "def": {
-                  "type": "optional",
+                  "type": "nullable",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "optional",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "optional"
                   }
                 },
-                "type": "optional"
+                "type": "nullable"
               },
               "archived": {
                 "def": {
@@ -8726,18 +8772,24 @@
               },
               "note": {
                 "def": {
-                  "type": "optional",
+                  "type": "nullable",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "optional",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "optional"
                   }
                 },
-                "type": "optional"
+                "type": "nullable"
               },
               "workspaceId": {
                 "def": {
@@ -8828,46 +8880,16 @@
         ]
       },
       "realityResult": {
-        "valid": false,
-        "divergences": [
-          {
-            "path": "address",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "note",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          }
-        ],
+        "valid": true,
+        "divergences": [],
         "undocumentedFields": [],
-        "zodErrors": [
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "address"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "note"
-            ],
-            "message": "Invalid input: expected string, received null"
-          }
-        ]
+        "zodErrors": []
       },
-      "realityStatus": "fail",
-      "durationMs": 128,
+      "realityStatus": "pass",
+      "durationMs": 131,
       "responseDataSample": {
-        "id": "69c1906e57fa89e657b66b82",
-        "name": "_cfix_test_Acme Corp mn3kavpv",
+        "id": "69c192d3e182f76fc719cae2",
+        "name": "_cfix_test_Acme Corp mn3ko0ty",
         "email": null,
         "ccEmails": null,
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -10144,7 +10166,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 313,
+      "durationMs": 134,
       "responseDataSample": [
         {
           "id": "63f447a9513b6c41904e81c0",
@@ -11116,7 +11138,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 318,
+      "durationMs": 134,
       "responseDataSample": {
         "id": "63f447a9513b6c41904e81c0",
         "name": "Better Stove",
@@ -11241,7 +11263,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 125
+      "durationMs": 268
     },
     {
       "check": {
@@ -11325,7 +11347,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 314
+      "durationMs": 157
     },
     {
       "check": {
@@ -11883,7 +11905,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 128
+      "durationMs": 319
     },
     {
       "check": {
@@ -12618,7 +12640,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 122
+      "durationMs": 127
     },
     {
       "check": {
@@ -13253,12 +13275,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -13304,12 +13332,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -13560,7 +13594,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 243,
+      "durationMs": 440,
       "responseDataSample": [
         {
           "id": "6877609b3bae1e57f72e0200",
@@ -14224,12 +14258,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -14275,12 +14315,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -14409,7 +14455,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 215,
+      "durationMs": 133,
       "responseDataSample": {
         "id": "6877609b3bae1e57f72e0200",
         "description": "Aaa",
@@ -15023,12 +15069,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -15074,12 +15126,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -15177,7 +15235,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 121
+      "durationMs": 125
     },
     {
       "check": {
@@ -15386,7 +15444,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 309,
+      "durationMs": 175,
       "error": "Skipped — requires elevated permissions (Approval)"
     },
     {
@@ -16491,7 +16549,7 @@
           }
         ]
       },
-      "durationMs": 166,
+      "durationMs": 159,
       "responseDataSample": {
         "expenses": {
           "expenses": [
@@ -16916,7 +16974,7 @@
           }
         ]
       },
-      "durationMs": 306,
+      "durationMs": 309,
       "responseDataSample": {
         "id": "68705846ea976557148f3162",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -17252,7 +17310,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 313
+      "durationMs": 420
     },
     {
       "check": {
@@ -17887,7 +17945,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 310
+      "durationMs": 130
     },
     {
       "check": {
@@ -19068,7 +19126,7 @@
         "requiresIdFrom": "List invoices"
       },
       "status": "skip",
-      "durationMs": 0,
+      "durationMs": 1,
       "error": "Could not resolve path — missing ID from \"List invoices\""
     },
     {
@@ -19618,7 +19676,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 147
+      "durationMs": 128
     },
     {
       "check": {
@@ -20407,7 +20465,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 124
+      "durationMs": 123
     },
     {
       "check": {
@@ -20989,7 +21047,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 123
+      "durationMs": 122
     },
     {
       "check": {
@@ -21510,12 +21568,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -21990,7 +22054,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 131,
+      "durationMs": 327,
       "responseDataSample": [
         {
           "id": "682116a841fbb46a74c2cb06",
@@ -22532,12 +22596,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -23713,7 +23783,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 303,
+      "durationMs": 125,
       "error": "Skipped — requires elevated permissions (Policy)"
     },
     {
@@ -24709,7 +24779,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 382
+      "durationMs": 119
     },
     {
       "check": {
@@ -24899,7 +24969,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 131,
+      "durationMs": 129,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25081,7 +25151,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 133,
+      "durationMs": 514,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25100,7 +25170,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 133,
+      "durationMs": 124,
       "error": "Skipped — endpoint not available (Shared Reports)"
     },
     {
@@ -25207,7 +25277,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 234
+      "durationMs": 118
     },
     {
       "check": {
@@ -25318,7 +25388,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 321
+      "durationMs": 313
     },
     {
       "check": {
@@ -25347,7 +25417,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 185
+      "durationMs": 123
     },
     {
       "check": {
@@ -25376,7 +25446,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 126
+      "durationMs": 142
     },
     {
       "check": {
@@ -25395,7 +25465,7 @@
         "requiresIdFrom": "Get logged user"
       },
       "status": "skip",
-      "durationMs": 139,
+      "durationMs": 318,
       "error": "Skipped — requires elevated permissions (Balance)"
     },
     {
@@ -25435,7 +25505,7 @@
     "Client": {
       "passed": 0,
       "failed": 2,
-      "divergences": 8,
+      "divergences": 12,
       "undocumentedFields": 0
     },
     "Project": {
