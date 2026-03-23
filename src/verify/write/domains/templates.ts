@@ -49,6 +49,21 @@ export function registerTemplateTests(
       }
     });
 
+    it("creates a persistent template for read verifier", async () => {
+      if (skipped) return;
+      try {
+        const result = await withRetry(() =>
+          api().templates.create({ name: `${PREFIX_PATTERN}PersistTmpl`, projectsAndTasks: [] })
+        );
+        const created = Array.isArray(result) ? result[0] : result;
+        const id = (created as any)?.id;
+        if (id) {
+          cleanup().register(`persist-template:${id}`, () => api().templates.delete(id));
+          ctx().persistTemplateId = id;
+        }
+      } catch {}
+    });
+
     it("reads back created template", async () => {
       if (skipped || !ctx().templateId) return;
       const result = await withRetry(() => api().templates.get(ctx().templateId!));

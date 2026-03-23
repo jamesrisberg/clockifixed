@@ -34,6 +34,25 @@ export function registerInvoiceTests(
       expect(id).toBeDefined();
     });
 
+    it("creates a persistent invoice for read verifier", async () => {
+      try {
+        const result = await withRetry(() =>
+          api().invoices.create({
+            clientId: ctx().persistClientId!,
+            currency: "USD",
+            dueDate: "2027-07-30T00:00:00Z",
+            issuedDate: "2027-07-01T00:00:00Z",
+            number: `${PREFIX_PATTERN}persist${ts()}`,
+          })
+        );
+        const id = (result as any).id;
+        if (id) {
+          cleanup().register(`persist-invoice:${id}`, () => api().invoices.delete(id));
+          ctx().persistInvoiceId = id;
+        }
+      } catch {}
+    });
+
     it("reads back created invoice", async () => {
       if (!ctx().invoiceId) return;
       const result = await withRetry(() => api().invoices.get(ctx().invoiceId!));

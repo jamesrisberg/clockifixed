@@ -5,6 +5,8 @@
 import { Clockify } from "../../client/clockify.js";
 import { HttpClient } from "../../client/http.js";
 import { Reporter } from "../reporter.js";
+import { VerificationRunner } from "../runner.js";
+import { readOnlyChecks } from "../checks.js";
 import { TestContext, CleanupRegistry } from "./context.js";
 import { PREFIX_PATTERN } from "./fixtures.js";
 import { withRetry } from "./helpers.js";
@@ -14,9 +16,11 @@ export class WriteTestRunner {
   readonly ctx: TestContext;
   readonly cleanup: CleanupRegistry;
   readonly reporter: Reporter;
+  readonly apiKey: string;
   private http: HttpClient;
 
   constructor(config: { apiKey: string; workspaceId: string }) {
+    this.apiKey = config.apiKey;
     this.api = new Clockify({
       apiKey: config.apiKey,
       workspaceId: config.workspaceId,
@@ -43,6 +47,50 @@ export class WriteTestRunner {
     if (swept > 0) {
       console.log(`  Swept ${swept} orphan entities from prior runs`);
     }
+  }
+
+  /**
+   * Run the read verifier while write harness data still exists.
+   * This ensures every GET endpoint has real data to validate against.
+   */
+  async runReadVerifier(): Promise<Reporter> {
+    console.log("\n  Running read verifier with populated workspace...");
+    const readRunner = new VerificationRunner({
+      apiKey: this.apiKey,
+      workspaceId: this.ctx.workspaceId,
+    });
+    const readReporter = await readRunner.runAll(readOnlyChecks);
+
+    const { writeFileSync } = await import("fs");
+    const { join } = await import("path");
+    const reportPath = join(import.meta.dirname, "..", "read-with-data-report.json");
+    const report = readReporter.buildReport(this.ctx.workspaceId);
+    writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    console.log(`  Read verifier: ${report.summary.passed} passed, ${report.summary.failed} failed, ${report.summary.skipped} skipped, ${report.summary.errors} errors`);
+    const rc = report.checks.filter((c: any) => c.realityStatus);
+    const rf = rc.filter((c: any) => c.realityStatus === "fail");
+    console.log(`  Reality schemas: ${rc.length - rf.length}/${rc.length} passing`);
+
+    if (rf.length > 0) {
+      console.log("  Reality failures:");
+      for (const c of rf) {
+        console.log(`    ${c.check.name}:`);
+        for (const d of (c as any).realityResult?.divergences ?? []) {
+          console.log(`      ${d.path}: ${d.issue}`);
+        }
+      }
+    }
+
+    const skipped = report.checks.filter((c: any) => c.status === "skip");
+    if (skipped.length > 0) {
+      console.log(`  Skipped (${skipped.length}):`);
+      for (const c of skipped) {
+        console.log(`    ${c.check.name}: ${c.error}`);
+      }
+    }
+
+    return readReporter;
   }
 
   /** Run cleanup registry and write report */

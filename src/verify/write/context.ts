@@ -6,13 +6,16 @@ export interface TestContext {
   workspaceId: string;
   userId: string;
 
-  // Persistent entities (survive full suite for dependent phases)
+  // Persistent entities (survive full suite for dependent phases + read verifier)
   persistClientId?: string;
   persistProjectId?: string;
   persistTaskId?: string;
   persistTimeEntryId?: string;
   persistCategoryId?: string;
   persistPolicyId?: string;
+  persistInvoiceId?: string;
+  persistWebhookId?: string;
+  persistTemplateId?: string;
 
   // Lifecycle entities (created and deleted within domain tests)
   clientId?: string;

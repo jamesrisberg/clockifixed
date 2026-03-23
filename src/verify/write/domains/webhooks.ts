@@ -27,6 +27,17 @@ export function registerWebhookTests(
       expect(result.id).toBeDefined();
     });
 
+    it("creates a persistent webhook for read verifier", async () => {
+      try {
+        const body = fixtures.webhook(ctx().workspaceId);
+        const result = await withRetry(() => api().webhooks.create(body));
+        cleanup().register(`persist-webhook:${result.id}`, async () => {
+          try { await api().webhooks.delete(result.id!); } catch {}
+        });
+        ctx().persistWebhookId = result.id!;
+      } catch {}
+    });
+
     it("reads back created webhook", async () => {
       const result = await withRetry(() => api().webhooks.get(ctx().webhookId!));
       reporter().addResult(validateResponse(result, {

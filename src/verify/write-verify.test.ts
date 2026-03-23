@@ -125,4 +125,19 @@ describe.skipIf(!canRun)("Clockify Write API Verification", { timeout: 300_000 }
   registerWorkspaceTests(api, ctx, reporter);
   registerUserTests(api, ctx, reporter);
 
+  // ── Phase 11: Read verifier with populated data ────────────────
+  // Runs all 45 GET endpoint checks while write harness data exists
+  describe("Read verifier (with populated workspace)", () => {
+    it("runs all GET checks against populated data", async () => {
+      const readReporter = await $.runner.runReadVerifier();
+      const report = readReporter.buildReport($.runner.ctx.workspaceId);
+      expect(report.summary.errors).toBe(0);
+
+      // Reality schemas should all pass
+      const rc = report.checks.filter((c: any) => c.realityStatus);
+      const rf = rc.filter((c: any) => c.realityStatus === "fail");
+      expect(rf.length).toBe(0);
+    }, 120_000);
+  });
+
 });
