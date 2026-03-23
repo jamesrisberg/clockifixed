@@ -24,9 +24,13 @@ export function registerPolicyTests(
             name: `${PREFIX_PATTERN}PTO ${ts()}`,
             timeUnit: "DAYS",
             approve: {},
+            everyoneIncludingNew: true,
           })
         );
-        cleanup().register(`policy:${result.id}`, () => api().policies.delete(result.id!));
+        cleanup().register(`policy:${result.id}`, async () => {
+          await api().policies.updateStatus(result.id!, { status: "ARCHIVED" });
+          await api().policies.delete(result.id!);
+        });
         ctx().policyId = result.id!;
         ctx().persistPolicyId = result.id!;
 
@@ -65,10 +69,10 @@ export function registerPolicyTests(
           allowNegativeBalance: false,
           approve: {},
           archived: false,
-          everyoneIncludingNew: false,
+          everyoneIncludingNew: true,
           hasExpiration: false,
           userGroups: { ids: [] },
-          users: { ids: [] },
+          users: { ids: [], contains: "CONTAINS" },
         })
       );
       reporter().addResult(validateResponse(result, {
@@ -78,9 +82,20 @@ export function registerPolicyTests(
       }));
     });
 
-    it("deletes the policy", async () => {
+    it("deletes the policy (archive first)", async () => {
       if (skipped || !ctx().policyId) return;
-      await withRetry(() => api().policies.delete(ctx().policyId!));
+      try {
+        await withRetry(() =>
+          api().policies.updateStatus(ctx().policyId!, { status: "ARCHIVED" })
+        );
+      } catch (err: any) {
+        if (!err.message?.includes("Unexpected end")) throw err;
+      }
+      try {
+        await withRetry(() => api().policies.delete(ctx().policyId!));
+      } catch (err: any) {
+        if (!err.message?.includes("Unexpected end")) throw err;
+      }
       cleanup().remove(`policy:${ctx().policyId}`);
     });
   });

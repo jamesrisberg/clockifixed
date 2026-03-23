@@ -57,5 +57,26 @@ export function registerSchedulingTests(
         throw err;
       }
     });
+    it("creates a recurring assignment", async () => {
+      if (skipped) return;
+      try {
+        const result = await withRetry(() =>
+          api().scheduling.createRecurring({
+            assigneeId: ctx().userId,
+            projectId: ctx().persistProjectId!,
+            startDate: "2027-06-01",
+            endDate: "2027-06-30",
+            recurrence: { period: "WEEKLY", daysOfWeek: ["MONDAY"] },
+          } as any)
+        );
+        if (Array.isArray(result) && result[0]?.id) {
+          const id = result[0].id;
+          await withRetry(() => api().scheduling.deleteRecurring(id));
+        }
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
   });
 }

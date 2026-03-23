@@ -58,6 +58,12 @@ export function registerExpenseCategoryTests(
       }));
     });
 
+    // Expense create/update/delete require multipart/form-data (file upload)
+    // which our JSON-only HttpClient doesn't support. Skipped.
+    it("skips expense CRUD (requires multipart upload)", () => {
+      // Documented gap: expenses.create/update/delete need multipart form data
+    });
+
     it("unarchives the expense category", async () => {
       // Restore it so dependent tests can use it
       await withRetry(() =>

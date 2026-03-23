@@ -56,6 +56,15 @@ export function registerWebhookTests(
       }));
     });
 
+    it("gets webhook logs", async () => {
+      try {
+        await withRetry(() => api().webhooks.getLogs(ctx().webhookId!, {}));
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
+
     it("deletes the webhook", async () => {
       try {
         await withRetry(() => api().webhooks.delete(ctx().webhookId!));

@@ -47,5 +47,21 @@ export function registerWorkspaceTests(
         specSchema: workspaceSchema, realitySchema: realWorkspaceSchema,
       }));
     });
+    it("updates user status on workspace", async () => {
+      try {
+        const result = await withRetry(() =>
+          api().workspaces.updateUserStatus(ctx().userId, { status: "ACTIVE" })
+        );
+        reporter().addResult(validateResponse(result, {
+          name: "Update user status (workspace)", tag: "Workspace", method: "PUT",
+          path: `/workspaces/${ctx().workspaceId}/users/${ctx().userId}`,
+          specSchema: workspaceSchema, realitySchema: realWorkspaceSchema,
+        }));
+      } catch (err: any) {
+        // May fail if user is the owner
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
   });
 }

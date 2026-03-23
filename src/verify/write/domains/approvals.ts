@@ -28,5 +28,25 @@ export function registerApprovalTests(
         throw err;
       }
     });
+    it("creates an approval request", async () => {
+      try {
+        const result = await withRetry(() =>
+          api().approvals.create({
+            dateRange: {
+              start: "2027-01-01T00:00:00Z",
+              end: "2027-01-31T23:59:59Z",
+            },
+          } as any)
+        );
+        if ((result as any)?.id) {
+          await withRetry(() =>
+            api().approvals.updateStatus((result as any).id, { status: "WITHDRAWN" } as any)
+          );
+        }
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
   });
 }

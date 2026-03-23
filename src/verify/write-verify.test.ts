@@ -28,6 +28,8 @@ import { registerTemplateTests } from "./write/domains/templates.js";
 import { registerPolicyTests } from "./write/domains/policies.js";
 import { registerSchedulingTests } from "./write/domains/scheduling.js";
 import { registerApprovalTests } from "./write/domains/approvals.js";
+import { registerReportTests } from "./write/domains/reports.js";
+import { registerTimeOffTests } from "./write/domains/time-off.js";
 import { registerWorkspaceTests } from "./write/domains/workspace.js";
 import { registerUserTests } from "./write/domains/users.js";
 
@@ -107,9 +109,13 @@ describe.skipIf(!canRun)("Clockify Write API Verification", { timeout: 300_000 }
   // ── Phase 7: Policies ───────────────────────────────────────────
   registerPolicyTests(api, ctx, cleanup, reporter);
 
-  // ── Phase 9: Scheduling, Approvals ──────────────────────────────
+  // ── Phase 8: Time-off requests (needs policy) ──────────────────
+  registerTimeOffTests(api, ctx, cleanup, reporter);
+
+  // ── Phase 9: Scheduling, Approvals, Reports ────────────────────
   registerSchedulingTests(api, ctx, reporter);
   registerApprovalTests(api, ctx, reporter);
+  registerReportTests(api, ctx, reporter);
 
   // ── Phase 10: Non-destructive ───────────────────────────────────
   registerWorkspaceTests(api, ctx, reporter);

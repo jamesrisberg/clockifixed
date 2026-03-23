@@ -81,6 +81,65 @@ export function registerProjectTests(
       }));
     });
 
+    it("updates project memberships", async () => {
+      const result = await withRetry(() =>
+        api().projects.updateMemberships(ctx().projectId!, {
+          memberships: [{ userId: ctx().userId }],
+        })
+      );
+      reporter().addResult(validateResponse(result, {
+        name: "Update project memberships", tag: "Project", method: "PATCH",
+        path: `/workspaces/${ctx().workspaceId}/projects/${ctx().projectId}/memberships`,
+        specSchema: projectDtoImplV1Schema,
+      }));
+    });
+
+    it("adds users to project", async () => {
+      try {
+        await withRetry(() =>
+          api().projects.addUsers(ctx().projectId!, {
+            userIds: [ctx().userId],
+          })
+        );
+      } catch (err: any) {
+        // May fail if user already a member
+        if (!err.message?.includes("already")) throw err;
+      }
+    });
+
+    it("updates project template flag", async () => {
+      const result = await withRetry(() =>
+        api().projects.updateTemplate(ctx().projectId!, { isTemplate: false })
+      );
+      reporter().addResult(validateResponse(result, {
+        name: "Update project template flag", tag: "Project", method: "PATCH",
+        path: `/workspaces/${ctx().workspaceId}/projects/${ctx().projectId}/template`,
+        specSchema: projectDtoImplV1Schema,
+      }));
+    });
+
+    it("sets project user cost rate", async () => {
+      const result = await withRetry(() =>
+        api().projects.setUserCostRate(ctx().projectId!, ctx().userId, { amount: 3000 })
+      );
+      reporter().addResult(validateResponse(result, {
+        name: "Set project user cost rate", tag: "Project", method: "PUT",
+        path: `/workspaces/${ctx().workspaceId}/projects/${ctx().projectId}/users/${ctx().userId}/cost-rate`,
+        specSchema: projectDtoImplV1Schema,
+      }));
+    });
+
+    it("sets project user hourly rate", async () => {
+      const result = await withRetry(() =>
+        api().projects.setUserHourlyRate(ctx().projectId!, ctx().userId, { amount: 6000 })
+      );
+      reporter().addResult(validateResponse(result, {
+        name: "Set project user hourly rate", tag: "Project", method: "PUT",
+        path: `/workspaces/${ctx().workspaceId}/projects/${ctx().projectId}/users/${ctx().userId}/hourly-rate`,
+        specSchema: projectDtoImplV1Schema,
+      }));
+    });
+
     it("deletes the project (archive first)", async () => {
       await withRetry(() => api().projects.update(ctx().projectId!, { name: "archived", archived: true }));
       const result = await withRetry(() => api().projects.delete(ctx().projectId!));

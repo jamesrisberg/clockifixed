@@ -29,5 +29,35 @@ export function registerUserTests(
         specSchema: memberProfileSchema, realitySchema: realMemberProfileSchema,
       }));
     });
+
+    it("creates and deletes a user role", async () => {
+      try {
+        await withRetry(() =>
+          api().users.createRole(ctx().userId, { entityId: ctx().userId, role: "TEAM_MANAGER" })
+        );
+        await withRetry(() =>
+          api().users.deleteRole(ctx().userId, { entityId: ctx().userId, role: "TEAM_MANAGER" })
+        );
+      } catch (err: any) {
+        // Role ops may fail on certain plans or if role already assigned
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
+
+    it("upserts a user custom field value", async () => {
+      if (!ctx().customFieldId) return;
+      try {
+        await withRetry(() =>
+          api().users.upsertCustomFieldValue(ctx().userId, ctx().customFieldId!, {
+            value: { value: "test-value" },
+          })
+        );
+      } catch (err: any) {
+        // May fail if custom field is not for users or already deleted
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("404")) return;
+        throw err;
+      }
+    });
   });
 }

@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-03-23T19:26:06.332Z",
+  "timestamp": "2026-03-23T19:47:40.724Z",
   "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
-    "total": 47,
-    "passed": 18,
-    "failed": 29,
+    "total": 59,
+    "passed": 19,
+    "failed": 40,
     "skipped": 0,
     "errors": 0,
-    "totalDivergences": 118,
-    "totalUndocumentedFields": 3
+    "totalDivergences": 160,
+    "totalUndocumentedFields": 4
   },
   "checks": [
     {
@@ -269,7 +269,7 @@
         "name": "Get client (after create)",
         "tag": "Client",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c193bce182f76fc719da11",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c198c4e182f76fc71a2f39",
         "schema": {
           "def": {
             "type": "object",
@@ -522,7 +522,7 @@
         "name": "Update client",
         "tag": "Client",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c193bce182f76fc719da11",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c198c4e182f76fc71a2f39",
         "schema": {
           "def": {
             "type": "object",
@@ -753,7 +753,7 @@
         "name": "Delete client",
         "tag": "Client",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c193bce182f76fc719da11",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c198c4e182f76fc71a2f39",
         "schema": {
           "def": {
             "type": "object",
@@ -1067,7 +1067,7 @@
         "name": "Update tag",
         "tag": "Tag",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c193bdd8bdf75f90934e0b",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c198c5e182f76fc71a2f4d",
         "schema": {
           "def": {
             "type": "object",
@@ -1150,7 +1150,7 @@
         "name": "Delete tag",
         "tag": "Tag",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c193bdd8bdf75f90934e0b",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c198c5e182f76fc71a2f4d",
         "schema": {
           "def": {
             "type": "object",
@@ -1422,7 +1422,7 @@
         "name": "Update group",
         "tag": "Group",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c193bee182f76fc719da59",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c198c6d8bdf75f9093a015",
         "schema": {
           "def": {
             "type": "object",
@@ -1611,7 +1611,7 @@
         "name": "Add user to group",
         "tag": "Group",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c193bee182f76fc719da59/users",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c198c6d8bdf75f9093a015/users",
         "schema": {
           "def": {
             "type": "object",
@@ -1800,7 +1800,7 @@
         "name": "Remove user from group",
         "tag": "Group",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c193bee182f76fc719da59/users/63eab29ecf0b257026ab5624",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c198c6d8bdf75f9093a015/users/63eab29ecf0b257026ab5624",
         "schema": {
           "def": {
             "type": "object",
@@ -1981,6 +1981,715 @@
         "divergences": [],
         "undocumentedFields": [],
         "zodErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Create holiday",
+        "tag": "Holiday",
+        "method": "POST",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/holidays",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "automaticTimeEntryCreation": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "datePeriod": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "everyoneIncludingNew": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "occursAnnually": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "projectId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "taskId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "userGroupIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "userIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "projectId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "taskId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "projectId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "taskId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          }
+        ]
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Update holiday",
+        "tag": "Holiday",
+        "method": "PUT",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/holidays/69c198c757fa89e657b6f8da",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "automaticTimeEntryCreation": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "datePeriod": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "everyoneIncludingNew": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "occursAnnually": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "projectId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "taskId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "userGroupIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "userIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "projectId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "taskId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "projectId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "taskId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          }
+        ]
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Delete holiday",
+        "tag": "Holiday",
+        "method": "DELETE",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/holidays/69c198c757fa89e657b6f8da",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "automaticTimeEntryCreation": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "datePeriod": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "everyoneIncludingNew": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "occursAnnually": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "projectId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "taskId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "userGroupIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "userIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "automaticTimeEntryCreation",
+            "issue": "wrong_type",
+            "expected": "boolean",
+            "actual": "Invalid input: expected boolean, received object"
+          }
+        ],
+        "undocumentedFields": [
+          {
+            "path": "color",
+            "actualType": "null",
+            "sampleValue": null
+          }
+        ],
+        "zodErrors": [
+          {
+            "expected": "boolean",
+            "code": "invalid_type",
+            "path": [
+              "automaticTimeEntryCreation"
+            ],
+            "message": "Invalid input: expected boolean, received object"
+          }
+        ]
       },
       "durationMs": 0
     },
@@ -2487,7 +3196,7 @@
         "name": "Update custom field",
         "tag": "Custom Fields",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/custom-fields/69c193bfe182f76fc719da80",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/custom-fields/69c198c75fdd9a5256b72054",
         "schema": {
           "def": {
             "type": "object",
@@ -3361,7 +4070,7 @@
         "name": "Get project (after create)",
         "tag": "Project",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c193c0e182f76fc719da8c",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c857fa89e657b6f8ec",
         "schema": {
           "def": {
             "type": "object",
@@ -3634,12 +4343,12 @@
           {
             "path": "clientId",
             "actualType": "string",
-            "sampleValue": "69c193bc5fdd9a5256b6cdc8"
+            "sampleValue": "69c198c4d8bdf75f90939fef"
           },
           {
             "path": "clientName",
             "actualType": "string",
-            "sampleValue": "_cfix_test_Acme Corp mn3kt0ht"
+            "sampleValue": "_cfix_test_Acme Corp mn3lkmlh"
           },
           {
             "path": "estimateReset",
@@ -3713,7 +4422,7 @@
         "name": "Update project",
         "tag": "Project",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c193c0e182f76fc719da8c",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c857fa89e657b6f8ec",
         "schema": {
           "def": {
             "type": "object",
@@ -4122,7 +4831,7 @@
         "name": "Update project estimate",
         "tag": "Project",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c193c0e182f76fc719da8c/estimate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c857fa89e657b6f8ec/estimate",
         "schema": {
           "def": {
             "type": "object",
@@ -4506,6 +5215,1594 @@
               "memberships",
               0,
               "hourlyRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "code": "invalid_value",
+            "values": [
+              "WEEKLY",
+              "MONTHLY",
+              "YEARLY"
+            ],
+            "path": [
+              "timeEstimate",
+              "resetOption"
+            ],
+            "message": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
+          }
+        ]
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Update project memberships",
+        "tag": "Project",
+        "method": "PATCH",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c857fa89e657b6f8ec/memberships",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "billable": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "budgetEstimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "clientId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "color": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "costRate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "duration": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "estimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "estimateReset": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "hourlyRate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "isPublic": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "isTemplate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "memberships": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "note": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "public": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "template": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "timeEstimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "budgetEstimate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "costRate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "estimateReset",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "memberships.0.costRate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "memberships.0.hourlyRate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "timeEstimate.resetOption",
+            "issue": "invalid_enum",
+            "expected": "WEEKLY | MONTHLY | YEARLY",
+            "actual": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "budgetEstimate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "costRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "estimateReset"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "memberships",
+              0,
+              "costRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "memberships",
+              0,
+              "hourlyRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "code": "invalid_value",
+            "values": [
+              "WEEKLY",
+              "MONTHLY",
+              "YEARLY"
+            ],
+            "path": [
+              "timeEstimate",
+              "resetOption"
+            ],
+            "message": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
+          }
+        ]
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Update project template flag",
+        "tag": "Project",
+        "method": "PATCH",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c857fa89e657b6f8ec/template",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "billable": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "budgetEstimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "clientId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "color": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "costRate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "duration": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "estimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "estimateReset": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "hourlyRate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "isPublic": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "isTemplate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "memberships": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "note": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "public": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "template": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "timeEstimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "budgetEstimate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "costRate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "estimateReset",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "memberships.0.costRate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "memberships.0.hourlyRate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "timeEstimate.resetOption",
+            "issue": "invalid_enum",
+            "expected": "WEEKLY | MONTHLY | YEARLY",
+            "actual": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "budgetEstimate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "costRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "estimateReset"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "memberships",
+              0,
+              "costRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "memberships",
+              0,
+              "hourlyRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "code": "invalid_value",
+            "values": [
+              "WEEKLY",
+              "MONTHLY",
+              "YEARLY"
+            ],
+            "path": [
+              "timeEstimate",
+              "resetOption"
+            ],
+            "message": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
+          }
+        ]
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Set project user cost rate",
+        "tag": "Project",
+        "method": "PUT",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c857fa89e657b6f8ec/users/63eab29ecf0b257026ab5624/cost-rate",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "billable": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "budgetEstimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "clientId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "color": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "costRate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "duration": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "estimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "estimateReset": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "hourlyRate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "isPublic": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "isTemplate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "memberships": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "note": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "public": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "template": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "timeEstimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "budgetEstimate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "costRate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "estimateReset",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "memberships.0.hourlyRate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "timeEstimate.resetOption",
+            "issue": "invalid_enum",
+            "expected": "WEEKLY | MONTHLY | YEARLY",
+            "actual": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "budgetEstimate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "costRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "estimateReset"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "memberships",
+              0,
+              "hourlyRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "code": "invalid_value",
+            "values": [
+              "WEEKLY",
+              "MONTHLY",
+              "YEARLY"
+            ],
+            "path": [
+              "timeEstimate",
+              "resetOption"
+            ],
+            "message": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
+          }
+        ]
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Set project user hourly rate",
+        "tag": "Project",
+        "method": "PUT",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c857fa89e657b6f8ec/users/63eab29ecf0b257026ab5624/hourly-rate",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "billable": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "budgetEstimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "clientId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "color": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "costRate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "duration": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "estimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "estimateReset": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "hourlyRate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "isPublic": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "isTemplate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "memberships": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "note": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "public": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "template": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "timeEstimate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "budgetEstimate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "costRate",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "estimateReset",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "timeEstimate.resetOption",
+            "issue": "invalid_enum",
+            "expected": "WEEKLY | MONTHLY | YEARLY",
+            "actual": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "budgetEstimate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "costRate"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "estimateReset"
             ],
             "message": "Invalid input: expected object, received null"
           },
@@ -4531,7 +6828,7 @@
         "name": "Delete project",
         "tag": "Project",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c193c0e182f76fc719da8c",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c857fa89e657b6f8ec",
         "schema": {
           "def": {
             "type": "object",
@@ -4854,18 +7151,6 @@
             "actual": "Invalid input: expected object, received null"
           },
           {
-            "path": "memberships.0.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.0.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
             "path": "timeEstimate.resetOption",
             "issue": "invalid_enum",
             "expected": "WEEKLY | MONTHLY | YEARLY",
@@ -4899,26 +7184,6 @@
             "message": "Invalid input: expected object, received null"
           },
           {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              0,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              0,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
             "code": "invalid_value",
             "values": [
               "WEEKLY",
@@ -4940,7 +7205,7 @@
         "name": "Create task",
         "tag": "Task",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c193c0e182f76fc719da96/tasks",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c8e182f76fc71a2f83/tasks",
         "schema": {
           "def": {
             "type": "object",
@@ -5263,7 +7528,7 @@
         "name": "Get task (after create)",
         "tag": "Task",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c193c0e182f76fc719da96/tasks/69c193c1e182f76fc719dabb",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c8e182f76fc71a2f83/tasks/69c198cae182f76fc71a2fa8",
         "schema": {
           "def": {
             "type": "object",
@@ -5586,7 +7851,7 @@
         "name": "Update task",
         "tag": "Task",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c193c0e182f76fc719da96/tasks/69c193c1e182f76fc719dabb",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c8e182f76fc71a2f83/tasks/69c198cae182f76fc71a2fa8",
         "schema": {
           "def": {
             "type": "object",
@@ -5909,7 +8174,7 @@
         "name": "Set task cost rate",
         "tag": "Task",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c193c0e182f76fc719da96/tasks/69c193c1e182f76fc719dabb/cost-rate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c8e182f76fc71a2f83/tasks/69c198cae182f76fc71a2fa8/cost-rate",
         "schema": {
           "def": {
             "type": "object",
@@ -6218,7 +8483,7 @@
         "name": "Set task hourly rate",
         "tag": "Task",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c193c0e182f76fc719da96/tasks/69c193c1e182f76fc719dabb/hourly-rate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c198c8e182f76fc71a2f83/tasks/69c198cae182f76fc71a2fa8/hourly-rate",
         "schema": {
           "def": {
             "type": "object",
@@ -6801,7 +9066,7 @@
         "name": "Get time entry (after create)",
         "tag": "Time Entry",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c193c257fa89e657b6a879",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c198cb57fa89e657b6f937",
         "schema": {
           "def": {
             "type": "object",
@@ -7113,7 +9378,7 @@
         "name": "Update time entry",
         "tag": "Time Entry",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c193c257fa89e657b6a879",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c198cb57fa89e657b6f937",
         "schema": {
           "def": {
             "type": "object",
@@ -7731,7 +9996,7 @@
         "name": "Duplicate time entry",
         "tag": "Time Entry",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user/63eab29ecf0b257026ab5624/time-entries/69c193c257fa89e657b6a879/duplicate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user/63eab29ecf0b257026ab5624/time-entries/69c198cb57fa89e657b6f937/duplicate",
         "schema": {
           "def": {
             "type": "object",
@@ -8492,7 +10757,7 @@
         "name": "Update expense category",
         "tag": "Expense",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c193c4e182f76fc719db16",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c198ce57fa89e657b6f99e",
         "schema": {
           "def": {
             "type": "object",
@@ -8635,7 +10900,7 @@
         "name": "Archive expense category",
         "tag": "Expense",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c193c4e182f76fc719db16/status",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c198ce57fa89e657b6f99e/status",
         "schema": {
           "def": {
             "type": "object",
@@ -9155,7 +11420,7 @@
         "name": "Get webhook (after create)",
         "tag": "Webhook",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c193c55fdd9a5256b6ceb6",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c198cf5fdd9a5256b720e1",
         "schema": {
           "def": {
             "type": "object",
@@ -9532,7 +11797,7 @@
         "name": "Update webhook",
         "tag": "Webhook",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c193c55fdd9a5256b6ceb6",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c198cf5fdd9a5256b720e1",
         "schema": {
           "def": {
             "type": "object",
@@ -9909,7 +12174,7 @@
         "name": "Regenerate webhook token",
         "tag": "Webhook",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c193c55fdd9a5256b6ceb6/token",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c198cf5fdd9a5256b720e1/token",
         "schema": {
           "def": {
             "type": "object",
@@ -10286,7 +12551,7 @@
         "name": "Get invoice (after create)",
         "tag": "Invoice",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c193c6e182f76fc719db4b",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c198d0e182f76fc71a303e",
         "schema": {
           "def": {
             "type": "object",
@@ -11520,7 +13785,7 @@
         "name": "Update invoice",
         "tag": "Invoice",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c193c6e182f76fc719db4b",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c198d0e182f76fc71a303e",
         "schema": {
           "def": {
             "type": "object",
@@ -12807,6 +15072,1282 @@
     },
     {
       "check": {
+        "name": "Create invoice payment",
+        "tag": "Invoice",
+        "method": "POST",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c198d0e182f76fc71a303e/payments",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "amount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "balance": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "billFrom": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "calculationType": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "clientAddress": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "clientName": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "companyId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "containsImportedExpenses": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "containsImportedTimes": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "currency": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "discount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "discountAmount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "dueDate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "string",
+                            "format": "datetime",
+                            "check": "string_format",
+                            "offset": true,
+                            "local": false,
+                            "precision": null,
+                            "pattern": {}
+                          },
+                          "type": "string",
+                          "format": "datetime",
+                          "minLength": null,
+                          "maxLength": null
+                        }
+                      ]
+                    },
+                    "type": "string",
+                    "format": "datetime",
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "issuedDate": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "string",
+                            "format": "datetime",
+                            "check": "string_format",
+                            "offset": true,
+                            "local": false,
+                            "precision": null,
+                            "pattern": {}
+                          },
+                          "type": "string",
+                          "format": "datetime",
+                          "minLength": null,
+                          "maxLength": null
+                        }
+                      ]
+                    },
+                    "type": "string",
+                    "format": "datetime",
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "items": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "object",
+                          "shape": {
+                            "amount": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "applyTaxes": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "lazy"
+                                  },
+                                  "type": "lazy"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "description": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "expenseIds": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "array",
+                                    "element": {
+                                      "def": {
+                                        "type": "string"
+                                      },
+                                      "type": "string",
+                                      "format": null,
+                                      "minLength": null,
+                                      "maxLength": null
+                                    }
+                                  },
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "importType": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "enum",
+                                    "entries": {
+                                      "NOT_IMPORTED": "NOT_IMPORTED",
+                                      "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                      "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                    }
+                                  },
+                                  "type": "enum",
+                                  "enum": {
+                                    "NOT_IMPORTED": "NOT_IMPORTED",
+                                    "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                    "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                  },
+                                  "options": [
+                                    "NOT_IMPORTED",
+                                    "TIME_ENTRY_IMPORT",
+                                    "EXPENSE_IMPORT"
+                                  ]
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "itemType": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "order": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "quantity": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "timeEntryIds": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "array",
+                                    "element": {
+                                      "def": {
+                                        "type": "string"
+                                      },
+                                      "type": "string",
+                                      "format": null,
+                                      "minLength": null,
+                                      "maxLength": null
+                                    }
+                                  },
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "unitPrice": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "number",
+                                    "checks": [
+                                      {
+                                        "def": {
+                                          "type": "number",
+                                          "check": "number_format",
+                                          "abort": false,
+                                          "format": "safeint"
+                                        },
+                                        "type": "number",
+                                        "minValue": -9007199254740991,
+                                        "maxValue": 9007199254740991,
+                                        "isInt": true,
+                                        "isFinite": true,
+                                        "format": "safeint"
+                                      }
+                                    ]
+                                  },
+                                  "type": "number",
+                                  "minValue": -9007199254740991,
+                                  "maxValue": 9007199254740991,
+                                  "isInt": true,
+                                  "isFinite": true,
+                                  "format": "safeint"
+                                }
+                              },
+                              "type": "optional"
+                            }
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "object",
+                        "shape": {
+                          "amount": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "applyTaxes": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "lazy"
+                                },
+                                "type": "lazy"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "description": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "expenseIds": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                },
+                                "type": "array",
+                                "element": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "importType": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "enum",
+                                  "entries": {
+                                    "NOT_IMPORTED": "NOT_IMPORTED",
+                                    "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                    "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                  }
+                                },
+                                "type": "enum",
+                                "enum": {
+                                  "NOT_IMPORTED": "NOT_IMPORTED",
+                                  "TIME_ENTRY_IMPORT": "TIME_ENTRY_IMPORT",
+                                  "EXPENSE_IMPORT": "EXPENSE_IMPORT"
+                                },
+                                "options": [
+                                  "NOT_IMPORTED",
+                                  "TIME_ENTRY_IMPORT",
+                                  "EXPENSE_IMPORT"
+                                ]
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "itemType": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "order": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "quantity": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "timeEntryIds": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "array",
+                                  "element": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  }
+                                },
+                                "type": "array",
+                                "element": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "unitPrice": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "number",
+                                  "checks": [
+                                    {
+                                      "def": {
+                                        "type": "number",
+                                        "check": "number_format",
+                                        "abort": false,
+                                        "format": "safeint"
+                                      },
+                                      "type": "number",
+                                      "minValue": -9007199254740991,
+                                      "maxValue": 9007199254740991,
+                                      "isInt": true,
+                                      "isFinite": true,
+                                      "format": "safeint"
+                                    }
+                                  ]
+                                },
+                                "type": "number",
+                                "minValue": -9007199254740991,
+                                "maxValue": 9007199254740991,
+                                "isInt": true,
+                                "isFinite": true,
+                                "format": "safeint"
+                              }
+                            },
+                            "type": "optional"
+                          }
+                        }
+                      },
+                      "type": "object"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "note": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "number": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "paid": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "status": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "enum",
+                      "entries": {
+                        "UNSENT": "UNSENT",
+                        "SENT": "SENT",
+                        "PAID": "PAID",
+                        "PARTIALLY_PAID": "PARTIALLY_PAID",
+                        "VOID": "VOID",
+                        "OVERDUE": "OVERDUE"
+                      }
+                    },
+                    "type": "enum",
+                    "enum": {
+                      "UNSENT": "UNSENT",
+                      "SENT": "SENT",
+                      "PAID": "PAID",
+                      "PARTIALLY_PAID": "PARTIALLY_PAID",
+                      "VOID": "VOID",
+                      "OVERDUE": "OVERDUE"
+                    },
+                    "options": [
+                      "UNSENT",
+                      "SENT",
+                      "PAID",
+                      "PARTIALLY_PAID",
+                      "VOID",
+                      "OVERDUE"
+                    ]
+                  }
+                },
+                "type": "optional"
+              },
+              "subject": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "subtotal": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "tax": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "tax2": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "tax2Amount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "taxAmount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": [
+                        {
+                          "def": {
+                            "type": "number",
+                            "check": "number_format",
+                            "abort": false,
+                            "format": "safeint"
+                          },
+                          "type": "number",
+                          "minValue": -9007199254740991,
+                          "maxValue": 9007199254740991,
+                          "isInt": true,
+                          "isFinite": true,
+                          "format": "safeint"
+                        }
+                      ]
+                    },
+                    "type": "number",
+                    "minValue": -9007199254740991,
+                    "maxValue": 9007199254740991,
+                    "isInt": true,
+                    "isFinite": true,
+                    "format": "safeint"
+                  }
+                },
+                "type": "optional"
+              },
+              "taxType": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "userId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "visibleZeroFields": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "billFrom",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "clientAddress",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "companyId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "note",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "subject",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "visibleZeroFields",
+            "issue": "invalid_enum",
+            "expected": "TAX | TAX_2 | DISCOUNT",
+            "actual": "Invalid option: expected one of \"TAX\"|\"TAX_2\"|\"DISCOUNT\""
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "billFrom"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "clientAddress"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "companyId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "note"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "subject"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "code": "invalid_value",
+            "values": [
+              "TAX",
+              "TAX_2",
+              "DISCOUNT"
+            ],
+            "path": [
+              "visibleZeroFields"
+            ],
+            "message": "Invalid option: expected one of \"TAX\"|\"TAX_2\"|\"DISCOUNT\""
+          }
+        ]
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
         "name": "Get invoice settings",
         "tag": "Invoice",
         "method": "GET",
@@ -13224,6 +16765,1251 @@
     },
     {
       "check": {
+        "name": "Create policy",
+        "tag": "Policy",
+        "method": "POST",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-off/policies",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "allowHalfDay": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "allowNegativeBalance": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "approve": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "object",
+                      "shape": {
+                        "requiresApproval": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "specificMembers": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "teamManagers": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "userIds": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "array",
+                                "element": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "array",
+                              "element": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            }
+                          },
+                          "type": "optional"
+                        }
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "optional"
+              },
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "automaticAccrual": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "automaticTimeEntryCreation": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "everyoneIncludingNew": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "negativeBalance": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "projectId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "timeUnit": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "enum",
+                      "entries": {
+                        "DAYS": "DAYS",
+                        "HOURS": "HOURS"
+                      }
+                    },
+                    "type": "enum",
+                    "enum": {
+                      "DAYS": "DAYS",
+                      "HOURS": "HOURS"
+                    },
+                    "options": [
+                      "DAYS",
+                      "HOURS"
+                    ]
+                  }
+                },
+                "type": "optional"
+              },
+              "userGroupIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "userIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "automaticAccrual",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "automaticTimeEntryCreation",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "negativeBalance",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "projectId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticAccrual"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticTimeEntryCreation"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "negativeBalance"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "projectId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          }
+        ]
+      },
+      "realityResult": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "automaticAccrual",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticAccrual"
+            ],
+            "message": "Invalid input: expected object, received null"
+          }
+        ]
+      },
+      "realityStatus": "fail",
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Get policy (after create)",
+        "tag": "Policy",
+        "method": "GET",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-off/policies/69c198d25fdd9a5256b72121",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "allowHalfDay": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "allowNegativeBalance": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "approve": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "object",
+                      "shape": {
+                        "requiresApproval": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "specificMembers": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "teamManagers": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "userIds": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "array",
+                                "element": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "array",
+                              "element": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            }
+                          },
+                          "type": "optional"
+                        }
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "optional"
+              },
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "automaticAccrual": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "automaticTimeEntryCreation": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "everyoneIncludingNew": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "negativeBalance": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "projectId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "timeUnit": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "enum",
+                      "entries": {
+                        "DAYS": "DAYS",
+                        "HOURS": "HOURS"
+                      }
+                    },
+                    "type": "enum",
+                    "enum": {
+                      "DAYS": "DAYS",
+                      "HOURS": "HOURS"
+                    },
+                    "options": [
+                      "DAYS",
+                      "HOURS"
+                    ]
+                  }
+                },
+                "type": "optional"
+              },
+              "userGroupIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "userIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "automaticAccrual",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "automaticTimeEntryCreation",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "negativeBalance",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "projectId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticAccrual"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticTimeEntryCreation"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "negativeBalance"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "projectId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          }
+        ]
+      },
+      "realityResult": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "automaticAccrual",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticAccrual"
+            ],
+            "message": "Invalid input: expected object, received null"
+          }
+        ]
+      },
+      "realityStatus": "fail",
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Update policy",
+        "tag": "Policy",
+        "method": "PUT",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-off/policies/69c198d25fdd9a5256b72121",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "allowHalfDay": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "allowNegativeBalance": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "approve": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "object",
+                      "shape": {
+                        "requiresApproval": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "specificMembers": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "teamManagers": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "userIds": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "array",
+                                "element": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "array",
+                              "element": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            }
+                          },
+                          "type": "optional"
+                        }
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "optional"
+              },
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "automaticAccrual": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "automaticTimeEntryCreation": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "everyoneIncludingNew": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "negativeBalance": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "projectId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "timeUnit": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "enum",
+                      "entries": {
+                        "DAYS": "DAYS",
+                        "HOURS": "HOURS"
+                      }
+                    },
+                    "type": "enum",
+                    "enum": {
+                      "DAYS": "DAYS",
+                      "HOURS": "HOURS"
+                    },
+                    "options": [
+                      "DAYS",
+                      "HOURS"
+                    ]
+                  }
+                },
+                "type": "optional"
+              },
+              "userGroupIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "userIds": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "string"
+                      },
+                      "type": "string",
+                      "format": null,
+                      "minLength": null,
+                      "maxLength": null
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "automaticAccrual",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "automaticTimeEntryCreation",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "negativeBalance",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "projectId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticAccrual"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticTimeEntryCreation"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "negativeBalance"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "projectId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          }
+        ]
+      },
+      "realityResult": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "automaticAccrual",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticAccrual"
+            ],
+            "message": "Invalid input: expected object, received null"
+          }
+        ]
+      },
+      "realityStatus": "fail",
+      "durationMs": 0
+    },
+    {
+      "check": {
         "name": "Get scheduling project totals (POST)",
         "tag": "Scheduling",
         "method": "POST",
@@ -13565,6 +18351,221 @@
                 "type": "optional"
               },
               "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": true,
+        "readonly": false
+      },
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "List approval requests",
+        "tag": "Approval",
+        "method": "GET",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/approval-requests",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "approvalRequest": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              },
+              "approvedTime": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "billableAmount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "billableTime": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "breakTime": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "costAmount": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "entries": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "expenseTotal": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "number",
+                      "checks": []
+                    },
+                    "type": "number",
+                    "minValue": null,
+                    "maxValue": null,
+                    "isInt": false,
+                    "isFinite": true,
+                    "format": null
+                  }
+                },
+                "type": "optional"
+              },
+              "expenses": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "pendingTime": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "trackedTime": {
                 "def": {
                   "type": "optional",
                   "innerType": {
@@ -18721,6 +23722,12 @@
       "divergences": 0,
       "undocumentedFields": 0
     },
+    "Holiday": {
+      "passed": 0,
+      "failed": 3,
+      "divergences": 5,
+      "undocumentedFields": 1
+    },
     "Custom Fields": {
       "passed": 0,
       "failed": 2,
@@ -18729,8 +23736,8 @@
     },
     "Project": {
       "passed": 0,
-      "failed": 5,
-      "divergences": 29,
+      "failed": 9,
+      "divergences": 48,
       "undocumentedFields": 3
     },
     "Task": {
@@ -18759,12 +23766,24 @@
     },
     "Invoice": {
       "passed": 1,
-      "failed": 2,
-      "divergences": 10,
+      "failed": 3,
+      "divergences": 16,
+      "undocumentedFields": 0
+    },
+    "Policy": {
+      "passed": 0,
+      "failed": 3,
+      "divergences": 12,
       "undocumentedFields": 0
     },
     "Scheduling": {
       "passed": 2,
+      "failed": 0,
+      "divergences": 0,
+      "undocumentedFields": 0
+    },
+    "Approval": {
+      "passed": 1,
       "failed": 0,
       "divergences": 0,
       "undocumentedFields": 0

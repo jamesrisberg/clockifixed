@@ -37,6 +37,7 @@ export const fixtures = {
       startDate: "2027-12-25",
       endDate: "2027-12-25",
     },
+    everyoneIncludingNew: true,
   }),
 
   customField: () => ({
@@ -126,6 +127,7 @@ export const updates = {
       endDate: "2027-12-26",
     },
     occursAnnually: false,
+    everyoneIncludingNew: true,
   }),
 };
 

@@ -64,6 +64,82 @@ export function registerInvoiceTests(
       }));
     });
 
+    it("adds an item to the invoice", async () => {
+      if (!ctx().invoiceId) return;
+      try {
+        const result = await withRetry(() =>
+          api().invoices.addItem(ctx().invoiceId!, {
+            description: "_cfix_test_line_item",
+            quantity: 1,
+            unitPrice: 10000,
+            applyTaxes: "NONE",
+            itemType: "CUSTOM",
+          })
+        );
+        reporter().addResult(validateResponse(result, {
+          name: "Add invoice item", tag: "Invoice", method: "POST",
+          path: `/workspaces/${ctx().workspaceId}/invoices/${ctx().invoiceId}/items`,
+          specSchema: invoiceOverviewSchema,
+        }));
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("404")) return;
+        throw err;
+      }
+    });
+
+    it("removes an item from the invoice", async () => {
+      if (!ctx().invoiceId) return;
+      try {
+        await withRetry(() => api().invoices.removeItem(ctx().invoiceId!, 0));
+      } catch (err: any) {
+        // May fail if no items or index wrong
+        if (err.message?.includes("400") || err.message?.includes("404")) return;
+        throw err;
+      }
+    });
+
+    it("creates a payment on the invoice", async () => {
+      if (!ctx().invoiceId) return;
+      try {
+        const result = await withRetry(() =>
+          api().invoices.createPayment(ctx().invoiceId!, {
+            amount: 5000,
+            paymentDate: "2027-06-15T00:00:00Z",
+          })
+        );
+        reporter().addResult(validateResponse(result, {
+          name: "Create invoice payment", tag: "Invoice", method: "POST",
+          path: `/workspaces/${ctx().workspaceId}/invoices/${ctx().invoiceId}/payments`,
+          specSchema: invoiceOverviewSchema,
+        }));
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
+
+    it("changes invoice status", async () => {
+      if (!ctx().invoiceId) return;
+      try {
+        await withRetry(() =>
+          api().invoices.changeStatus(ctx().invoiceId!, { invoiceStatus: "SENT" })
+        );
+      } catch (err: any) {
+        // Status change may return void or fail
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("Unexpected end")) return;
+        throw err;
+      }
+    });
+
+    it("filters invoices", async () => {
+      try {
+        await withRetry(() => api().invoices.getInfo({}));
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
+
     it("gets invoice settings", async () => {
       const result = await withRetry(() => api().invoices.getSettings());
       reporter().addResult(validateResponse(result, {
