@@ -7,6 +7,12 @@ import type { Reporter } from "../../reporter.js";
 import { fixtures, updates } from "../fixtures.js";
 import { withRetry, validateResponse } from "../helpers.js";
 
+/** Archive then delete a project (Clockify requires archive first) */
+async function archiveAndDeleteProject(api: Clockify, projectId: string) {
+  await api.projects.update(projectId, { name: "archived", archived: true });
+  await api.projects.delete(projectId);
+}
+
 export function registerProjectTests(
   api: () => Clockify,
   ctx: () => TestContext,
@@ -17,7 +23,7 @@ export function registerProjectTests(
     it("creates a project", async () => {
       const body = fixtures.project(ctx().persistClientId);
       const result = await withRetry(() => api().projects.create(body));
-      cleanup().register(`project:${result.id}`, () => api().projects.delete(result.id!));
+      cleanup().register(`project:${result.id}`, () => archiveAndDeleteProject(api(), result.id!));
       ctx().projectId = result.id!;
 
       reporter().addResult(validateResponse(result, {
@@ -32,7 +38,7 @@ export function registerProjectTests(
     it("creates a persistent project for later phases", async () => {
       const body = fixtures.project(ctx().persistClientId);
       const result = await withRetry(() => api().projects.create(body));
-      cleanup().register(`persist-project:${result.id}`, () => api().projects.delete(result.id!));
+      cleanup().register(`persist-project:${result.id}`, () => archiveAndDeleteProject(api(), result.id!));
       ctx().persistProjectId = result.id!;
       expect(result.id).toBeDefined();
     });
@@ -75,7 +81,8 @@ export function registerProjectTests(
       }));
     });
 
-    it("deletes the project", async () => {
+    it("deletes the project (archive first)", async () => {
+      await withRetry(() => api().projects.update(ctx().projectId!, { name: "archived", archived: true }));
       const result = await withRetry(() => api().projects.delete(ctx().projectId!));
       cleanup().remove(`project:${ctx().projectId}`);
       reporter().addResult(validateResponse(result, {

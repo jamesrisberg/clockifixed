@@ -55,7 +55,7 @@ export const fixtures = {
   }),
 
   webhook: (workspaceId: string) => ({
-    name: `${PREFIX}Test Hook ${ts()}`,
+    name: `${PREFIX}Hook${ts()}`.slice(0, 30),
     url: "https://httpbin.org/post",
     triggerSource: [workspaceId],
     triggerSourceType: "WORKSPACE_ID" as const,
@@ -112,7 +112,7 @@ export const updates = {
   }),
 
   webhook: (workspaceId: string) => ({
-    name: `${PREFIX}Hook Updated ${ts()}`,
+    name: `${PREFIX}Upd${ts()}`.slice(0, 30),
     url: "https://httpbin.org/post",
     triggerSource: [workspaceId],
     triggerSourceType: "WORKSPACE_ID" as const,

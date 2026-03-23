@@ -284,6 +284,8 @@ export const realTimeEntryWithRatesSchema = (() => {
   return z.object({
     ...shape,
     customFieldValues: z.array(realCustomFieldValueItemSchema).nullable().optional(),
+    projectId: z.string().nullable().optional(),
+    taskId: z.string().nullable().optional(),
   });
 })();
 
@@ -294,6 +296,8 @@ export const realTimeEntrySchema = (() => {
   return z.object({
     ...shape,
     customFieldValues: z.array(realCustomFieldValueItemSchema).nullable().optional(),
+    projectId: z.string().nullable().optional(),
+    taskId: z.string().nullable().optional(),
   });
 })();
 
@@ -391,8 +395,10 @@ export const realMemberProfileSchema = (() => {
  * Spec says required, API returns null when not set.
  */
 export const realClientSchema = withNullable(clientWithCurrencySchema as any, [
+  "address",
   "ccEmails",
   "email",
+  "note",
 ]);
 
 /**
@@ -416,6 +422,7 @@ export const realCustomFieldSchema = (() => {
   return z.object({
     ...shape,
     description: z.string().nullable().optional(),
+    placeholder: z.string().nullable().optional(),
     workspaceDefaultValue: z.record(z.string(), z.unknown()).nullable().optional(),
     projectDefaultValues: z.array(z.object({
       projectId: z.string().optional(),

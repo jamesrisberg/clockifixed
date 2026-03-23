@@ -17,7 +17,10 @@ export function registerClientTests(
     it("creates a client", async () => {
       const body = fixtures.client();
       const result = await withRetry(() => api().clients.create(body));
-      cleanup().register(`client:${result.id}`, async () => { await api().clients.delete(result.id!); });
+      cleanup().register(`client:${result.id}`, async () => {
+        await api().clients.update(result.id!, { name: result.name!, archived: true });
+        await api().clients.delete(result.id!);
+      });
       ctx().clientId = result.id!;
 
       reporter().addResult(validateResponse(result, {
@@ -32,7 +35,10 @@ export function registerClientTests(
     it("creates a persistent client for later phases", async () => {
       const body = fixtures.client();
       const result = await withRetry(() => api().clients.create(body));
-      cleanup().register(`persist-client:${result.id}`, async () => { await api().clients.delete(result.id!); });
+      cleanup().register(`persist-client:${result.id}`, async () => {
+        await api().clients.update(result.id!, { name: result.name!, archived: true });
+        await api().clients.delete(result.id!);
+      });
       ctx().persistClientId = result.id!;
       expect(result.id).toBeDefined();
     });
@@ -58,7 +64,8 @@ export function registerClientTests(
       expect(result.name).toBe(body.name);
     });
 
-    it("deletes the client", async () => {
+    it("deletes the client (archive first)", async () => {
+      await withRetry(() => api().clients.update(ctx().clientId!, { name: "archived", archived: true }));
       const result = await withRetry(() => api().clients.delete(ctx().clientId!));
       cleanup().remove(`client:${ctx().clientId}`);
       reporter().addResult(validateResponse(result, {

@@ -97,14 +97,22 @@ export class WriteTestRunner {
             }
           }
         } catch {}
-        try { await this.api.projects.delete(p.id!); count++; } catch {}
+        try {
+          await this.api.projects.update(p.id!, { name: p.name!, archived: true });
+          await this.api.projects.delete(p.id!);
+          count++;
+        } catch {}
       }
 
-      // Clients
+      // Clients (must archive before delete)
       const clients = await withRetry(() => this.api.clients.getAll());
       for (const c of clients) {
         if (c.name?.includes(PREFIX_PATTERN)) {
-          try { await this.api.clients.delete(c.id!); count++; } catch {}
+          try {
+            await this.api.clients.update(c.id!, { name: c.name!, archived: true });
+            await this.api.clients.delete(c.id!);
+            count++;
+          } catch {}
         }
       }
 

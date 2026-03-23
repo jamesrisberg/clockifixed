@@ -17,7 +17,10 @@ export function registerTaskTests(
     it("creates a task", async () => {
       const body = fixtures.task();
       const result = await withRetry(() => api().tasks.create(ctx().persistProjectId!, body));
-      cleanup().register(`task:${result.id}`, () => api().tasks.delete(ctx().persistProjectId!, result.id!));
+      cleanup().register(`task:${result.id}`, async () => {
+        await api().tasks.update(ctx().persistProjectId!, result.id!, { name: result.name!, status: "DONE" });
+        await api().tasks.delete(ctx().persistProjectId!, result.id!);
+      });
       ctx().taskId = result.id!;
       ctx().persistTaskId = result.id!;
 
