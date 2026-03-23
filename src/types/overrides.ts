@@ -146,6 +146,27 @@ export const overrideRegistry: OverrideEntry[] = [
     actualBehavior: "Return null when auto time entry creation is not configured",
     discoveredAt: "2026-03-23",
   },
+  {
+    schemaName: "ClientWithCurrencyDtoV1 / ClientDtoV1",
+    divergence: "address and note can be null",
+    specBehavior: "address: string, note: string",
+    actualBehavior: "Both return null when not set on the client",
+    discoveredAt: "2026-03-23",
+  },
+  {
+    schemaName: "CustomFieldProjectDtoV1",
+    divergence: "placeholder can be null",
+    specBehavior: "placeholder: string",
+    actualBehavior: "Returns null when not set",
+    discoveredAt: "2026-03-23",
+  },
+  {
+    schemaName: "TimeEntryDtoImplV1",
+    divergence: "projectId and taskId can be null on write responses",
+    specBehavior: "projectId: string (optional), taskId: string (optional)",
+    actualBehavior: "Returns null instead of being absent on create/update/duplicate/stop responses",
+    discoveredAt: "2026-03-23",
+  },
   // ── Enum values not in spec ────────────────────────────────────────
   {
     schemaName: "Feature",

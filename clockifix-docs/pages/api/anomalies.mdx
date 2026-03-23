@@ -19,7 +19,7 @@ This is a living document of every inconsistency, naming collision, and spec div
 | Schema name collisions | 17 | Medium — forces consumers to disambiguate |
 | Inconsistent naming conventions | 6 patterns | Low — cosmetic but confusing |
 | Return type mismatches | 4 entities | High — different types for create vs. read |
-| Nullable fields declared as required | 27 unique fields | High — causes runtime validation failures |
+| Nullable fields declared as required | 32 unique fields | High — causes runtime validation failures |
 | Undeclared enum values | 4 fields | Medium — responses contain values not in the spec |
 | Nullable arrays | 1 field | Medium — returns null instead of empty array |
 | Undocumented response fields | 3 fields | Medium — spec is incomplete |
@@ -111,13 +111,12 @@ This forces API consumers to maintain **two type definitions per entity** and ha
 
 The [runtime verifier](/sdk/verification) checks live API responses against the OpenAPI spec schemas. Tested against both free and paid Clockify workspaces (March 2026):
 
-| Metric | Count |
-|---|---|
-| Endpoints checked | 18 |
-| Spec divergences (unique fields) | 27 |
-| Spec divergences (total across all array items) | 150 |
-| Undocumented response fields | 3 |
-| Reality schema checks | 6/6 passing |
+| Metric | Read (GET) | Write (POST/PUT/PATCH/DELETE) |
+|---|---|---|
+| Endpoints checked | 45 | 47 |
+| Spec divergences (unique fields) | 27 | 29 |
+| Undocumented response fields | 3 | 3 |
+| Reality schema checks | 16/16 passing | 21/21 passing |
 
 ### Nullable Fields Declared as Required Objects
 
@@ -149,6 +148,8 @@ The most common divergence. The spec declares these as required non-null objects
 |---|---|---|
 | `ccEmails` | `string[]` (required) | `null` |
 | `email` | `string` (required) | `null` |
+| `address` | `string` (required) | `null` |
+| `note` | `string` (required) | `null` |
 
 **Task endpoints** (`GET /workspaces/.../projects/{id}/tasks`):
 
@@ -165,13 +166,16 @@ The most common divergence. The spec declares these as required non-null objects
 |---|---|---|
 | `kioskId` | `string` (required) | `null` |
 | `customFieldValues[].value` | `Record<string, unknown>` | `null` |
+| `projectId` | `string` (optional) | `null` on write responses (create/update/duplicate/stop) |
+| `taskId` | `string` (optional) | `null` on write responses |
 
 **Custom field endpoints** (`GET /workspaces/.../custom-fields`):
 
 | Field | Spec says | Actually returns |
 |---|---|---|
 | `description` | `string` (required) | `null` |
-| `projectDefaultValues[].value` | `Record<string, unknown>` | `null` |
+| `placeholder` | `string` (required) | `null` |
+| `projectDefaultValues[].value` | `Record<string, unknown>` | `null` or `string` |
 | `workspaceDefaultValue` | `Record<string, unknown>` | `null` |
 
 **Time-off policy endpoints** (`GET /workspaces/.../time-off/policies`):

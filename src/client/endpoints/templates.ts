@@ -19,11 +19,12 @@ export class TemplateEndpoints {
     );
   }
 
-  /** Create a new template. */
-  async create(body: TemplateRequest): Promise<TemplateDtoImpl[]> {
+  /** Create new templates. Accepts a single template or an array. */
+  async create(body: TemplateRequest | TemplateRequest[]): Promise<TemplateDtoImpl[]> {
+    const payload = Array.isArray(body) ? body : [body];
     return this.http.post<TemplateDtoImpl[]>(
       `/workspaces/${this.workspaceId}/templates`,
-      { body }
+      { body: payload }
     );
   }
 

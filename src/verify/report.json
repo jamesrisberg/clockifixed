@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-23T19:22:02.070Z",
+  "timestamp": "2026-03-23T19:25:54.888Z",
   "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
     "total": 45,
@@ -851,7 +851,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 303
+      "durationMs": 132
     },
     {
       "check": {
@@ -3341,7 +3341,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 316,
+      "durationMs": 329,
       "responseDataSample": [
         {
           "id": "63eab29ecf0b257026ab5625",
@@ -5559,7 +5559,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 997,
+      "durationMs": 822,
       "responseDataSample": {
         "id": "63eab29ecf0b257026ab5625",
         "name": "James Risberg's workspace",
@@ -6557,7 +6557,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 129
+      "durationMs": 345
     },
     {
       "check": {
@@ -7052,7 +7052,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 311,
+      "durationMs": 308,
       "responseDataSample": {
         "name": "James Risberg",
         "email": "james.risberg@gmail.com",
@@ -7913,7 +7913,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 157
+      "durationMs": 160
     },
     {
       "check": {
@@ -8424,11 +8424,11 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 312,
+      "durationMs": 316,
       "responseDataSample": [
         {
-          "id": "69c192d3e182f76fc719cae2",
-          "name": "_cfix_test_Acme Corp mn3ko0ty",
+          "id": "69c193bce182f76fc719da11",
+          "name": "_cfix_test_Acme Corp mn3kt0e0",
           "email": null,
           "ccEmails": null,
           "workspaceId": "63eab29ecf0b257026ab5625",
@@ -8888,8 +8888,8 @@
       "realityStatus": "pass",
       "durationMs": 131,
       "responseDataSample": {
-        "id": "69c192d3e182f76fc719cae2",
-        "name": "_cfix_test_Acme Corp mn3ko0ty",
+        "id": "69c193bce182f76fc719da11",
+        "name": "_cfix_test_Acme Corp mn3kt0e0",
         "email": null,
         "ccEmails": null,
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -10166,7 +10166,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 134,
+      "durationMs": 139,
       "responseDataSample": [
         {
           "id": "63f447a9513b6c41904e81c0",
@@ -11138,7 +11138,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 134,
+      "durationMs": 140,
       "responseDataSample": {
         "id": "63f447a9513b6c41904e81c0",
         "name": "Better Stove",
@@ -11263,7 +11263,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 268
+      "durationMs": 254
     },
     {
       "check": {
@@ -11347,7 +11347,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 157
+      "durationMs": 158
     },
     {
       "check": {
@@ -11905,7 +11905,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 319
+      "durationMs": 317
     },
     {
       "check": {
@@ -12640,7 +12640,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 127
+      "durationMs": 131
     },
     {
       "check": {
@@ -13594,7 +13594,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 440,
+      "durationMs": 420,
       "responseDataSample": [
         {
           "id": "6877609b3bae1e57f72e0200",
@@ -14455,7 +14455,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 133,
+      "durationMs": 137,
       "responseDataSample": {
         "id": "6877609b3bae1e57f72e0200",
         "description": "Aaa",
@@ -15235,7 +15235,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 125
+      "durationMs": 129
     },
     {
       "check": {
@@ -15444,7 +15444,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 175,
+      "durationMs": 189,
       "error": "Skipped — requires elevated permissions (Approval)"
     },
     {
@@ -16549,7 +16549,7 @@
           }
         ]
       },
-      "durationMs": 159,
+      "durationMs": 168,
       "responseDataSample": {
         "expenses": {
           "expenses": [
@@ -16974,7 +16974,7 @@
           }
         ]
       },
-      "durationMs": 309,
+      "durationMs": 314,
       "responseDataSample": {
         "id": "68705846ea976557148f3162",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -17310,7 +17310,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 420
+      "durationMs": 206
     },
     {
       "check": {
@@ -17945,7 +17945,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 130
+      "durationMs": 310
     },
     {
       "check": {
@@ -19676,7 +19676,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 128
+      "durationMs": 136
     },
     {
       "check": {
@@ -20465,7 +20465,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 123
+      "durationMs": 132
     },
     {
       "check": {
@@ -21047,7 +21047,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 122
+      "durationMs": 130
     },
     {
       "check": {
@@ -22054,7 +22054,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 327,
+      "durationMs": 490,
       "responseDataSample": [
         {
           "id": "682116a841fbb46a74c2cb06",
@@ -23051,7 +23051,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 310
+      "durationMs": 131
     },
     {
       "check": {
@@ -23783,7 +23783,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 125,
+      "durationMs": 128,
       "error": "Skipped — requires elevated permissions (Policy)"
     },
     {
@@ -24779,7 +24779,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 119
+      "durationMs": 306
     },
     {
       "check": {
@@ -24969,7 +24969,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 129,
+      "durationMs": 126,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25151,7 +25151,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 514,
+      "durationMs": 141,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25170,7 +25170,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 124,
+      "durationMs": 312,
       "error": "Skipped — endpoint not available (Shared Reports)"
     },
     {
@@ -25277,7 +25277,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 118
+      "durationMs": 126
     },
     {
       "check": {
@@ -25388,7 +25388,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 313
+      "durationMs": 322
     },
     {
       "check": {
@@ -25417,7 +25417,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 123
+      "durationMs": 126
     },
     {
       "check": {
@@ -25446,7 +25446,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 142
+      "durationMs": 127
     },
     {
       "check": {
@@ -25465,7 +25465,7 @@
         "requiresIdFrom": "Get logged user"
       },
       "status": "skip",
-      "durationMs": 318,
+      "durationMs": 301,
       "error": "Skipped — requires elevated permissions (Balance)"
     },
     {
