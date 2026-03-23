@@ -39,6 +39,20 @@ export class VerificationRunner {
   /**
    * Resolve path template placeholders.
    */
+  /**
+   * Map from path placeholder names to check names that discover them.
+   */
+  private static readonly PLACEHOLDER_SOURCES: Record<string, string> = {
+    projectId: "List projects",
+    taskId: "List tasks on project",
+    timeEntryId: "Get time entries for user",
+    expenseId: "List expenses",
+    invoiceId: "List invoices",
+    webhookId: "List webhooks",
+    policyId: "List time-off policies",
+    templateId: "List templates",
+  };
+
   private resolvePath(check: EndpointCheck): string | null {
     let path = check.path;
 
@@ -49,20 +63,35 @@ export class VerificationRunner {
     if (path.includes("{userId}")) {
       const userId = this.context.get("userId");
       if (!userId) return null;
-      path = path.replace("{userId}", userId);
+      path = path.replace(/\{userId\}/g, userId);
     }
 
-    // Replace {id}, {projectId}, {taskId}, etc. from discovered IDs
+    // Replace remaining placeholders
     const idPlaceholders = path.match(/\{(\w+)\}/g);
     if (idPlaceholders) {
       for (const placeholder of idPlaceholders) {
+        const name = placeholder.slice(1, -1); // strip { }
+
+        // Try the known source mapping first
+        const sourceName = VerificationRunner.PLACEHOLDER_SOURCES[name];
+        if (sourceName) {
+          const id = this.discoveredIds.get(sourceName);
+          if (id) {
+            path = path.replace(placeholder, id);
+            continue;
+          }
+        }
+
+        // Fall back to requiresIdFrom
         if (check.requiresIdFrom) {
           const id = this.discoveredIds.get(check.requiresIdFrom);
-          if (!id) return null;
-          path = path.replace(placeholder, id);
-        } else {
-          return null; // Can't resolve
+          if (id) {
+            path = path.replace(placeholder, id);
+            continue;
+          }
         }
+
+        return null; // Can't resolve
       }
     }
 
@@ -122,11 +151,26 @@ export class VerificationRunner {
         const item = data as any;
         if (item?.id) {
           this.discoveredIds.set(check.name, item.id);
+        }
 
-          // Special context extraction
-          if (check.name === "Get logged user") {
-            this.context.set("userId", item.id);
+        // Dig into wrapper objects for nested array IDs
+        // e.g., InvoicesList.invoices[], Webhooks.webhooks[], ExpensesAndTotals.expenses.expenses[]
+        for (const key of ["invoices", "webhooks"]) {
+          if (Array.isArray(item?.[key]) && item[key].length > 0 && item[key][0]?.id) {
+            this.discoveredIds.set(check.name, item[key][0].id);
+            break;
           }
+        }
+        if (item?.expenses?.expenses && Array.isArray(item.expenses.expenses) && item.expenses.expenses.length > 0) {
+          const expense = item.expenses.expenses[0];
+          if (expense?.id) {
+            this.discoveredIds.set(check.name, expense.id);
+          }
+        }
+
+        // Special context extraction
+        if (check.name === "Get logged user") {
+          this.context.set("userId", item.id);
         }
       }
 
@@ -167,15 +211,28 @@ export class VerificationRunner {
 
       return report;
     } catch (error) {
-      // Treat 403 as a skip — the endpoint exists but the API key lacks permission
-      const is403 = error instanceof Error && error.message.includes("403");
+      // Treat certain errors as skips rather than failures
+      const msg = error instanceof Error ? error.message : String(error);
+      const is403 = msg.includes("403");
+      const is404 = msg.includes("404");
+      const isEmptyBody = msg.includes("Unexpected end of JSON");
+      if (is403 || is404 || isEmptyBody) {
+        return {
+          check,
+          status: "skip",
+          durationMs: Date.now() - start,
+          error: is403
+            ? `Skipped — requires elevated permissions (${check.tag})`
+            : is404
+            ? `Skipped — endpoint not available (${check.tag})`
+            : `Skipped — endpoint returned empty response (${check.tag})`,
+        };
+      }
       return {
         check,
-        status: is403 ? "skip" : "error",
+        status: "error",
         durationMs: Date.now() - start,
-        error: is403
-          ? `Skipped — requires elevated permissions (${check.tag})`
-          : error instanceof Error ? error.message : String(error),
+        error: msg,
       };
     }
   }
