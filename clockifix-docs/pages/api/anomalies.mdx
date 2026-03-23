@@ -19,8 +19,9 @@ This is a living document of every inconsistency, naming collision, and spec div
 | Schema name collisions | 17 | Medium — forces consumers to disambiguate |
 | Inconsistent naming conventions | 6 patterns | Low — cosmetic but confusing |
 | Return type mismatches | 4 entities | High — different types for create vs. read |
-| Nullable fields declared as required objects | 9 fields | High — causes runtime validation failures |
-| Undeclared enum values | 3 fields | Medium — responses contain values not in the spec |
+| Nullable fields declared as required | 27 unique fields | High — causes runtime validation failures |
+| Undeclared enum values | 4 fields | Medium — responses contain values not in the spec |
+| Nullable arrays | 1 field | Medium — returns null instead of empty array |
 | Undocumented response fields | 3 fields | Medium — spec is incomplete |
 
 ---
@@ -108,34 +109,79 @@ This forces API consumers to maintain **two type definitions per entity** and ha
 
 ## Runtime Divergences
 
-The [runtime verifier](/sdk/verification) checks live API responses against the OpenAPI spec schemas. As of the latest run (March 2026):
+The [runtime verifier](/sdk/verification) checks live API responses against the OpenAPI spec schemas. Tested against both free and paid Clockify workspaces (March 2026):
 
 | Metric | Count |
 |---|---|
 | Endpoints checked | 18 |
-| Spec divergences (unique fields) | 16 |
-| Spec divergences (total across all array items) | 78 |
+| Spec divergences (unique fields) | 27 |
+| Spec divergences (total across all array items) | 150 |
 | Undocumented response fields | 3 |
-| Permission-gated endpoints (skipped) | 2 |
 | Reality schema checks | 6/6 passing |
 
 ### Nullable Fields Declared as Required Objects
 
 The most common divergence. The spec declares these as required non-null objects, but the API returns `null` when they haven't been set:
 
-| Endpoint | Field | Spec says | Actually returns |
-|---|---|---|---|
-| `GET /workspaces` | `memberships[].costRate` | `object` (required) | `null` |
-| `GET /workspaces` | `memberships[].hourlyRate` | `object` (required) | `null` |
-| `GET /workspaces` | `subdomain.name` | `string` (required) | `null` |
-| `GET /workspaces` | `workspaceSettings.automaticLock` | `object` (required) | `null` |
-| `GET /workspaces` | `workspaceSettings.lockTimeEntries` | `string` (required) | `null` |
-| `GET /workspaces` | `workspaceSettings.lockTimeZone` | `string` (required) | `null` |
-| `GET /workspaces/.../projects` | `budgetEstimate` | `object` (required) | `null` |
-| `GET /workspaces/.../projects` | `costRate` | `object` (required) | `null` |
-| `GET /workspaces/.../time-entries` | `kioskId` | `string` (required) | `null` |
+**Workspace endpoints** (`GET /workspaces`, `GET /workspaces/{id}`):
 
-These affect **every item in every array response** — a single `null` costRate field on workspace memberships produces divergences across every membership in every workspace.
+| Field | Spec says | Actually returns |
+|---|---|---|
+| `memberships[].costRate` | `object` (required) | `null` |
+| `memberships[].hourlyRate` | `object` (required) | `null` |
+| `subdomain.name` | `string` (required) | `null` |
+| `workspaceSettings.automaticLock` | `object` (required) | `null` |
+| `workspaceSettings.lockTimeEntries` | `string` (required) | `null` |
+| `workspaceSettings.lockTimeZone` | `string` (required) | `null` |
+
+**Project endpoints** (`GET /workspaces/.../projects`, `GET /workspaces/.../projects/{id}`):
+
+| Field | Spec says | Actually returns |
+|---|---|---|
+| `budgetEstimate` | `object` (required) | `null` |
+| `costRate` | `object` (required) | `null` |
+| `memberships[].costRate` | `object` (required) | `null` |
+| `memberships[].hourlyRate` | `object` (required) | `null` |
+
+**Client endpoints** (`GET /workspaces/.../clients`, `GET /workspaces/.../clients/{id}`):
+
+| Field | Spec says | Actually returns |
+|---|---|---|
+| `ccEmails` | `string[]` (required) | `null` |
+| `email` | `string` (required) | `null` |
+
+**Task endpoints** (`GET /workspaces/.../projects/{id}/tasks`):
+
+| Field | Spec says | Actually returns |
+|---|---|---|
+| `assigneeId` | `string` (required) | `null` |
+| `costRate` | `object` (required) | `null` |
+| `hourlyRate` | `object` (required) | `null` |
+| `duration` | `string` (required) | `null` |
+
+**Time entry endpoints** (`GET /workspaces/.../user/{id}/time-entries`):
+
+| Field | Spec says | Actually returns |
+|---|---|---|
+| `kioskId` | `string` (required) | `null` |
+| `customFieldValues[].value` | `Record<string, unknown>` | `null` |
+
+**Custom field endpoints** (`GET /workspaces/.../custom-fields`):
+
+| Field | Spec says | Actually returns |
+|---|---|---|
+| `description` | `string` (required) | `null` |
+| `projectDefaultValues[].value` | `Record<string, unknown>` | `null` |
+| `workspaceDefaultValue` | `Record<string, unknown>` | `null` |
+
+**Time-off policy endpoints** (`GET /workspaces/.../time-off/policies`):
+
+| Field | Spec says | Actually returns |
+|---|---|---|
+| `automaticTimeEntryCreation.defaultEntities.projectId` | `string` (required) | `null` |
+| `automaticTimeEntryCreation.defaultEntities.taskId` | `string` (required) | `null` |
+| `negativeBalance` | `object` (required) | `null` |
+| `projectId` | `string` (required) | `null` |
 
 <Callout type="tip" title="Suggested Fix">
   Mark these fields as nullable in the OpenAPI spec (`nullable: true` or use `oneOf` with null). The data model clearly treats them as optional.
@@ -147,7 +193,7 @@ The API returns enum values that aren't listed in the spec:
 
 | Endpoint | Field | Spec declares | API also returns |
 |---|---|---|---|
-| `GET /workspaces` | `features[]` | 64 values (see below) | Additional undeclared feature flags |
+| `GET /workspaces` | `features[]` | 64 values | Additional undeclared feature flags |
 | `GET /workspaces` | `workspaceSettings.adminOnlyPages[]` | `PROJECT`, `TEAM`, `REPORTS` | Additional undeclared page values |
 | `GET /workspaces/.../projects` | `timeEstimate.resetOption` | `WEEKLY`, `MONTHLY`, `YEARLY` | Empty/null value not in enum |
 | `GET /workspaces/.../member-profile` | `workingDays[]` | `MONDAY` through `SUNDAY` | Additional undeclared values |
@@ -162,7 +208,7 @@ The `features` enum is the most volatile — Clockify adds new feature flags wit
 
 | Endpoint | Field | Spec says | Actually returns |
 |---|---|---|---|
-| `GET /workspaces/.../time-entries` | `tagIds` | `array` (required) | `null` when no tags |
+| `GET /workspaces/.../time-entries` | `tagIds` | `string[]` (required) | `null` when no tags |
 
 <Callout type="tip" title="Suggested Fix">
   Return an empty array `[]` instead of `null`, or mark the field as nullable.
@@ -174,8 +220,8 @@ These fields appear in API responses but are not declared in the OpenAPI spec:
 
 | Endpoint | Field | Type | Sample value | Notes |
 |---|---|---|---|---|
-| `GET /workspaces/.../projects` | `clientId` | `string` | `""` | Client association — useful but missing from spec |
-| `GET /workspaces/.../projects` | `clientName` | `string` | `""` | Denormalized client name |
+| `GET /workspaces/.../projects` | `clientId` | `string` | `"648cc487..."` | Client association — useful but missing from spec |
+| `GET /workspaces/.../projects` | `clientName` | `string` | `"Max Baender, GA"` | Denormalized client name |
 | `GET /workspaces/.../projects` | `estimateReset` | `null` | `null` | Likely related to `timeEstimate.resetOption` |
 
 All three fields appear on both the list endpoint and the single-project endpoint.
@@ -188,23 +234,13 @@ These endpoints return responses that exactly match the OpenAPI spec — no dive
 
 | Endpoint | Domain |
 |---|---|
-| `GET /workspaces/.../clients` | Client |
 | `GET /workspaces/.../groups` | Group |
 | `GET /workspaces/.../holidays` | Holiday |
 | `GET /workspaces/.../tags` | Tag |
-| `GET /workspaces/.../projects/.../tasks` | Task |
+| `GET /workspaces/.../tags/{id}` | Tag |
 | `GET /workspaces/.../webhooks` | Webhook |
 | `GET /user` | User |
 | `GET /workspaces/.../users` | User |
-
-### Permission-Gated Endpoints
-
-These endpoints returned `403 Forbidden` and could not be verified. They require a paid Clockify plan or admin permissions:
-
-| Endpoint | Domain |
-|---|---|
-| `GET /workspaces/.../custom-fields` | Custom Fields |
-| `GET /workspaces/.../time-off/policies` | Time-Off Policies |
 
 ---
 

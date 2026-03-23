@@ -111,6 +111,41 @@ export const overrideRegistry: OverrideEntry[] = [
     actualBehavior: "Returns empty string when no reset is configured",
     discoveredAt: "2026-03-18",
   },
+  {
+    schemaName: "CustomFieldValueDtoV1",
+    divergence: "value can be null",
+    specBehavior: "value: Record<string, unknown> (optional but non-null)",
+    actualBehavior: "Returns null when custom field has no value set",
+    discoveredAt: "2026-03-23",
+  },
+  {
+    schemaName: "ClientDtoV1",
+    divergence: "ccEmails and email can be null",
+    specBehavior: "ccEmails: string[], email: string",
+    actualBehavior: "Both return null when not set on the client",
+    discoveredAt: "2026-03-23",
+  },
+  {
+    schemaName: "TaskDtoV1",
+    divergence: "assigneeId, costRate, hourlyRate, duration can be null",
+    specBehavior: "All typed as required non-nullable",
+    actualBehavior: "Return null when not configured on the task",
+    discoveredAt: "2026-03-23",
+  },
+  {
+    schemaName: "CustomFieldProjectDtoV1",
+    divergence: "description, projectDefaultValues[].value, workspaceDefaultValue can be null",
+    specBehavior: "All typed as required non-nullable",
+    actualBehavior: "Return null when not configured",
+    discoveredAt: "2026-03-23",
+  },
+  {
+    schemaName: "TimeOffPolicyDtoV1",
+    divergence: "projectId, taskId, negativeBalance can be null",
+    specBehavior: "All typed as required non-nullable",
+    actualBehavior: "Return null when auto time entry creation is not configured",
+    discoveredAt: "2026-03-23",
+  },
   // ── Enum values not in spec ────────────────────────────────────────
   {
     schemaName: "Feature",
@@ -224,17 +259,39 @@ export const realProjectSchema = (() => {
 })();
 
 /**
- * Time entry with nullable kioskId and tagIds.
+ * Custom field value with nullable value field.
+ * Spec says value: Record<string, unknown>, API returns null when unset.
  */
-export const realTimeEntryWithRatesSchema = withNullable(
-  timeEntryWithRatesSchema as any,
-  ["kioskId", "tagIds"]
-);
+const realCustomFieldValueItemSchema = z.object({
+  customFieldId: z.string().optional(),
+  name: z.string().optional(),
+  timeEntryId: z.string().optional(),
+  type: z.string().optional(),
+  value: z.record(z.string(), z.unknown()).nullable().optional(),
+}).passthrough();
 
-export const realTimeEntrySchema = withNullable(
-  timeEntryDtoImplV1Schema as any,
-  ["kioskId", "tagIds"]
-);
+/**
+ * Time entry with nullable kioskId, tagIds, and customFieldValues[].value.
+ */
+export const realTimeEntryWithRatesSchema = (() => {
+  const base = withNullable(timeEntryWithRatesSchema as any, ["kioskId", "tagIds"]);
+  const shape = (base as any)._zod?.def?.shape ?? (base as any).shape;
+  if (!shape) return base;
+  return z.object({
+    ...shape,
+    customFieldValues: z.array(realCustomFieldValueItemSchema).nullable().optional(),
+  });
+})();
+
+export const realTimeEntrySchema = (() => {
+  const base = withNullable(timeEntryDtoImplV1Schema as any, ["kioskId", "tagIds"]);
+  const shape = (base as any)._zod?.def?.shape ?? (base as any).shape;
+  if (!shape) return base;
+  return z.object({
+    ...shape,
+    customFieldValues: z.array(realCustomFieldValueItemSchema).nullable().optional(),
+  });
+})();
 
 /**
  * Time estimate with resetOption allowing empty string.
