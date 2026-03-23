@@ -464,6 +464,7 @@ export const realPolicySchema = (() => {
     ...shape,
     projectId: z.string().nullable().optional(),
     negativeBalance: z.unknown().nullable().optional(),
+    automaticAccrual: z.unknown().nullable().optional(),
     automaticTimeEntryCreation: z.object({
       defaultEntities: z.object({
         projectId: z.string().nullable().optional(),
