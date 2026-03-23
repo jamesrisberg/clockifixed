@@ -141,9 +141,26 @@ export function registerTimeEntryTests(
         throw err;
       }
     });
-    // deleteAllForUser is intentionally not tested:
-    // - It deletes ALL time entries for a user (no filter, no undo)
-    // - A dedicated test user would work, but the workspace plan limits to 1 user
-    // - The wrapper is a simple DELETE call — no logic to verify beyond the HTTP layer
+    it("deletes specific time entries for user", async () => {
+      // Create a dedicated entry to confirm deletion works
+      const te = await withRetry(() =>
+        api().timeEntries.createForUser(ctx().userId, {
+          start: "2027-02-01T09:00:00Z",
+          end: "2027-02-01T10:00:00Z",
+          description: "_cfix_test_deleteForUser_target",
+        })
+      );
+      expect(te.id).toBeDefined();
+
+      const result = await withRetry(() =>
+        api().timeEntries.deleteForUser(ctx().userId, [te.id!])
+      );
+      reporter().addResult(validateResponse(result, {
+        name: "Delete time entries for user", tag: "Time Entry", method: "DELETE",
+        path: `/workspaces/${ctx().workspaceId}/user/${ctx().userId}/time-entries`,
+        specSchema: timeEntryDtoImplV1Schema, realitySchema: realTimeEntrySchema,
+        array: true,
+      }));
+    });
   });
 }

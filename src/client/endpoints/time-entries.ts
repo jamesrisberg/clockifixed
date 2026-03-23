@@ -129,12 +129,14 @@ export class TimeEntryEndpoints {
     );
   }
 
-  /** Delete all time entries for a user. */
-  async deleteAllForUser(userId: string): Promise<TimeEntryDtoImplV1[]> {
+  /** Delete specific time entries for a user by ID. */
+  async deleteForUser(userId: string, timeEntryIds: string[]): Promise<TimeEntryDtoImplV1[]> {
     return this.http.delete<TimeEntryDtoImplV1[]>(
-      `/workspaces/${this.workspaceId}/user/${userId}/time-entries`
+      `/workspaces/${this.workspaceId}/user/${userId}/time-entries`,
+      { params: { "time-entry-ids": timeEntryIds.join(",") } }
     );
   }
+
 
   /** Bulk edit time entries for a user. Accepts a single entry or an array. */
   async bulkEdit(
