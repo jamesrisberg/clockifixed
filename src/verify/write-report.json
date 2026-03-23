@@ -1,0 +1,954 @@
+{
+  "timestamp": "2026-03-23T18:58:53.418Z",
+  "workspaceId": "648b69e660cb70155e48de8c",
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "totalDivergences": 0,
+    "totalUndocumentedFields": 0
+  },
+  "checks": [
+    {
+      "check": {
+        "name": "Create tag",
+        "tag": "Tag",
+        "method": "POST",
+        "path": "/workspaces/648b69e660cb70155e48de8c/tags",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "archived": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "boolean"
+                    },
+                    "type": "boolean"
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "workspaceId": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": false,
+        "readonly": false
+      },
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "check": {
+        "name": "Filter users",
+        "tag": "User",
+        "method": "POST",
+        "path": "/workspaces/648b69e660cb70155e48de8c/users/info",
+        "schema": {
+          "def": {
+            "type": "object",
+            "shape": {
+              "activeWorkspace": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "customFields": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "object",
+                          "shape": {
+                            "customFieldId": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "customFieldName": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "customFieldType": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "lazy"
+                                  },
+                                  "type": "lazy"
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "userId": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                }
+                              },
+                              "type": "optional"
+                            },
+                            "value": {
+                              "def": {
+                                "type": "optional",
+                                "innerType": {
+                                  "def": {
+                                    "type": "record",
+                                    "keyType": {
+                                      "def": {
+                                        "type": "string"
+                                      },
+                                      "type": "string",
+                                      "format": null,
+                                      "minLength": null,
+                                      "maxLength": null
+                                    },
+                                    "valueType": {
+                                      "def": {
+                                        "type": "unknown"
+                                      },
+                                      "type": "unknown"
+                                    }
+                                  },
+                                  "type": "record",
+                                  "keyType": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  },
+                                  "valueType": {
+                                    "def": {
+                                      "type": "unknown"
+                                    },
+                                    "type": "unknown"
+                                  }
+                                }
+                              },
+                              "type": "optional"
+                            }
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "object",
+                        "shape": {
+                          "customFieldId": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "customFieldName": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "customFieldType": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "lazy"
+                                },
+                                "type": "lazy"
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "userId": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "string"
+                                },
+                                "type": "string",
+                                "format": null,
+                                "minLength": null,
+                                "maxLength": null
+                              }
+                            },
+                            "type": "optional"
+                          },
+                          "value": {
+                            "def": {
+                              "type": "optional",
+                              "innerType": {
+                                "def": {
+                                  "type": "record",
+                                  "keyType": {
+                                    "def": {
+                                      "type": "string"
+                                    },
+                                    "type": "string",
+                                    "format": null,
+                                    "minLength": null,
+                                    "maxLength": null
+                                  },
+                                  "valueType": {
+                                    "def": {
+                                      "type": "unknown"
+                                    },
+                                    "type": "unknown"
+                                  }
+                                },
+                                "type": "record",
+                                "keyType": {
+                                  "def": {
+                                    "type": "string"
+                                  },
+                                  "type": "string",
+                                  "format": null,
+                                  "minLength": null,
+                                  "maxLength": null
+                                },
+                                "valueType": {
+                                  "def": {
+                                    "type": "unknown"
+                                  },
+                                  "type": "unknown"
+                                }
+                              }
+                            },
+                            "type": "optional"
+                          }
+                        }
+                      },
+                      "type": "object"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "defaultWorkspace": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "email": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "id": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "memberships": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "array",
+                      "element": {
+                        "def": {
+                          "type": "lazy"
+                        },
+                        "type": "lazy"
+                      }
+                    },
+                    "type": "array",
+                    "element": {
+                      "def": {
+                        "type": "lazy"
+                      },
+                      "type": "lazy"
+                    }
+                  }
+                },
+                "type": "optional"
+              },
+              "name": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "profilePicture": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "string"
+                    },
+                    "type": "string",
+                    "format": null,
+                    "minLength": null,
+                    "maxLength": null
+                  }
+                },
+                "type": "optional"
+              },
+              "settings": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "object",
+                      "shape": {
+                        "alerts": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "approval": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "collapseAllProjectLists": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "dashboardPinToTop": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "dashboardSelection": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "enum",
+                                "entries": {
+                                  "ME": "ME",
+                                  "TEAM": "TEAM"
+                                }
+                              },
+                              "type": "enum",
+                              "enum": {
+                                "ME": "ME",
+                                "TEAM": "TEAM"
+                              },
+                              "options": [
+                                "ME",
+                                "TEAM"
+                              ]
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "dashboardViewType": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "enum",
+                                "entries": {
+                                  "PROJECT": "PROJECT",
+                                  "BILLABILITY": "BILLABILITY"
+                                }
+                              },
+                              "type": "enum",
+                              "enum": {
+                                "PROJECT": "PROJECT",
+                                "BILLABILITY": "BILLABILITY"
+                              },
+                              "options": [
+                                "PROJECT",
+                                "BILLABILITY"
+                              ]
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "dateFormat": {
+                          "def": {
+                            "type": "string"
+                          },
+                          "type": "string",
+                          "format": null,
+                          "minLength": null,
+                          "maxLength": null
+                        },
+                        "groupSimilarEntriesDisabled": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "invoiceReminders": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "isCompactViewOn": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "lang": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "string"
+                              },
+                              "type": "string",
+                              "format": null,
+                              "minLength": null,
+                              "maxLength": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "longRunning": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "multiFactorEnabled": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "myStartOfDay": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "string"
+                              },
+                              "type": "string",
+                              "format": null,
+                              "minLength": null,
+                              "maxLength": null
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "onboarding": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "projectListCollapse": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "number",
+                                "checks": [
+                                  {
+                                    "def": {
+                                      "type": "number",
+                                      "check": "number_format",
+                                      "abort": false,
+                                      "format": "safeint"
+                                    },
+                                    "type": "number",
+                                    "minValue": -9007199254740991,
+                                    "maxValue": 9007199254740991,
+                                    "isInt": true,
+                                    "isFinite": true,
+                                    "format": "safeint"
+                                  }
+                                ]
+                              },
+                              "type": "number",
+                              "minValue": -9007199254740991,
+                              "maxValue": 9007199254740991,
+                              "isInt": true,
+                              "isFinite": true,
+                              "format": "safeint"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "projectPickerTaskFilter": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "pto": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "reminders": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "scheduledReports": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "scheduling": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "sendNewsletter": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "showOnlyWorkingDays": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "summaryReportSettings": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "lazy"
+                              },
+                              "type": "lazy"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "theme": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "enum",
+                                "entries": {
+                                  "DARK": "DARK",
+                                  "DEFAULT": "DEFAULT"
+                                }
+                              },
+                              "type": "enum",
+                              "enum": {
+                                "DARK": "DARK",
+                                "DEFAULT": "DEFAULT"
+                              },
+                              "options": [
+                                "DARK",
+                                "DEFAULT"
+                              ]
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "timeFormat": {
+                          "def": {
+                            "type": "enum",
+                            "entries": {
+                              "HOUR12": "HOUR12",
+                              "HOUR24": "HOUR24"
+                            }
+                          },
+                          "type": "enum",
+                          "enum": {
+                            "HOUR12": "HOUR12",
+                            "HOUR24": "HOUR24"
+                          },
+                          "options": [
+                            "HOUR12",
+                            "HOUR24"
+                          ]
+                        },
+                        "timeTrackingManual": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "timeZone": {
+                          "def": {
+                            "type": "string"
+                          },
+                          "type": "string",
+                          "format": null,
+                          "minLength": null,
+                          "maxLength": null
+                        },
+                        "weekStart": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "enum",
+                                "entries": {
+                                  "MONDAY": "MONDAY",
+                                  "TUESDAY": "TUESDAY",
+                                  "WEDNESDAY": "WEDNESDAY",
+                                  "THURSDAY": "THURSDAY",
+                                  "FRIDAY": "FRIDAY",
+                                  "SATURDAY": "SATURDAY",
+                                  "SUNDAY": "SUNDAY"
+                                }
+                              },
+                              "type": "enum",
+                              "enum": {
+                                "MONDAY": "MONDAY",
+                                "TUESDAY": "TUESDAY",
+                                "WEDNESDAY": "WEDNESDAY",
+                                "THURSDAY": "THURSDAY",
+                                "FRIDAY": "FRIDAY",
+                                "SATURDAY": "SATURDAY",
+                                "SUNDAY": "SUNDAY"
+                              },
+                              "options": [
+                                "MONDAY",
+                                "TUESDAY",
+                                "WEDNESDAY",
+                                "THURSDAY",
+                                "FRIDAY",
+                                "SATURDAY",
+                                "SUNDAY"
+                              ]
+                            }
+                          },
+                          "type": "optional"
+                        },
+                        "weeklyUpdates": {
+                          "def": {
+                            "type": "optional",
+                            "innerType": {
+                              "def": {
+                                "type": "boolean"
+                              },
+                              "type": "boolean"
+                            }
+                          },
+                          "type": "optional"
+                        }
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "optional"
+              },
+              "status": {
+                "def": {
+                  "type": "optional",
+                  "innerType": {
+                    "def": {
+                      "type": "lazy"
+                    },
+                    "type": "lazy"
+                  }
+                },
+                "type": "optional"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "array": true,
+        "readonly": false
+      },
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 0
+    }
+  ],
+  "divergencesByTag": {
+    "Tag": {
+      "passed": 1,
+      "failed": 0,
+      "divergences": 0,
+      "undocumentedFields": 0
+    },
+    "User": {
+      "passed": 1,
+      "failed": 0,
+      "divergences": 0,
+      "undocumentedFields": 0
+    }
+  }
+}

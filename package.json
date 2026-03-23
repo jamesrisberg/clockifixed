@@ -40,6 +40,7 @@
     "generate": "tsx scripts/generate-types.ts",
     "verify": "vitest run src/verify/verify.test.ts",
     "verify:cli": "tsx scripts/verify.ts",
+    "verify:write": "vitest run src/verify/write-verify.test.ts",
     "lint": "tsc --noEmit"
   },
   "keywords": [
