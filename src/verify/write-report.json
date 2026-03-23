@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-23T23:51:25.586Z",
+  "timestamp": "2026-03-23T23:57:58.311Z",
   "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
     "total": 60,
@@ -269,7 +269,7 @@
         "name": "Get client (after create)",
         "tag": "Client",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c1d1d15fdd9a5256ba6993",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c1d35a57fa89e657c1c603",
         "schema": {
           "def": {
             "type": "object",
@@ -522,7 +522,7 @@
         "name": "Update client",
         "tag": "Client",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c1d1d15fdd9a5256ba6993",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c1d35a57fa89e657c1c603",
         "schema": {
           "def": {
             "type": "object",
@@ -753,7 +753,7 @@
         "name": "Delete client",
         "tag": "Client",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c1d1d15fdd9a5256ba6993",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/clients/69c1d35a57fa89e657c1c603",
         "schema": {
           "def": {
             "type": "object",
@@ -1067,7 +1067,7 @@
         "name": "Update tag",
         "tag": "Tag",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c1d1d2d8bdf75f9096e6dd",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c1d35bd8bdf75f909701f2",
         "schema": {
           "def": {
             "type": "object",
@@ -1150,7 +1150,7 @@
         "name": "Delete tag",
         "tag": "Tag",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c1d1d2d8bdf75f9096e6dd",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/tags/69c1d35bd8bdf75f909701f2",
         "schema": {
           "def": {
             "type": "object",
@@ -1422,7 +1422,7 @@
         "name": "Update group",
         "tag": "Group",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c1d1d3e182f76fc71fedf1",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c1d35c57fa89e657c1c646",
         "schema": {
           "def": {
             "type": "object",
@@ -1611,7 +1611,7 @@
         "name": "Add user to group",
         "tag": "Group",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c1d1d3e182f76fc71fedf1/users",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c1d35c57fa89e657c1c646/users",
         "schema": {
           "def": {
             "type": "object",
@@ -1800,7 +1800,7 @@
         "name": "Remove user from group",
         "tag": "Group",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c1d1d3e182f76fc71fedf1/users/63eab29ecf0b257026ab5624",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user-groups/69c1d35c57fa89e657c1c646/users/63eab29ecf0b257026ab5624",
         "schema": {
           "def": {
             "type": "object",
@@ -2228,7 +2228,7 @@
         "name": "Update holiday",
         "tag": "Holiday",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/holidays/69c1d1d357fa89e657c1aad4",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/holidays/69c1d35de182f76fc7200905",
         "schema": {
           "def": {
             "type": "object",
@@ -2467,7 +2467,7 @@
         "name": "Delete holiday",
         "tag": "Holiday",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/holidays/69c1d1d357fa89e657c1aad4",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/holidays/69c1d35de182f76fc7200905",
         "schema": {
           "def": {
             "type": "object",
@@ -3196,7 +3196,7 @@
         "name": "Update custom field",
         "tag": "Custom Fields",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/custom-fields/69c1d1d4e182f76fc71fee17",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/custom-fields/69c1d35dd8bdf75f90970222",
         "schema": {
           "def": {
             "type": "object",
@@ -4070,7 +4070,7 @@
         "name": "Get project (after create)",
         "tag": "Project",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d5e182f76fc71fee27",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c666",
         "schema": {
           "def": {
             "type": "object",
@@ -4343,12 +4343,12 @@
           {
             "path": "clientId",
             "actualType": "string",
-            "sampleValue": "69c1d1d15fdd9a5256ba69a6"
+            "sampleValue": "69c1d35a5fdd9a5256ba84df"
           },
           {
             "path": "clientName",
             "actualType": "string",
-            "sampleValue": "_cfix_test_Acme Corp mn3u9naw"
+            "sampleValue": "_cfix_test_Acme Corp mn3ui2u6"
           },
           {
             "path": "estimateReset",
@@ -4422,7 +4422,7 @@
         "name": "Update project",
         "tag": "Project",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d5e182f76fc71fee27",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c666",
         "schema": {
           "def": {
             "type": "object",
@@ -4831,7 +4831,7 @@
         "name": "Update project estimate",
         "tag": "Project",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d5e182f76fc71fee27/estimate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c666/estimate",
         "schema": {
           "def": {
             "type": "object",
@@ -5240,7 +5240,7 @@
         "name": "Update project memberships",
         "tag": "Project",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d5e182f76fc71fee27/memberships",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c666/memberships",
         "schema": {
           "def": {
             "type": "object",
@@ -5649,7 +5649,7 @@
         "name": "Update project template flag",
         "tag": "Project",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d5e182f76fc71fee27/template",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c666/template",
         "schema": {
           "def": {
             "type": "object",
@@ -6058,7 +6058,7 @@
         "name": "Set project user cost rate",
         "tag": "Project",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d5e182f76fc71fee27/users/63eab29ecf0b257026ab5624/cost-rate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c666/users/63eab29ecf0b257026ab5624/cost-rate",
         "schema": {
           "def": {
             "type": "object",
@@ -6451,7 +6451,7 @@
         "name": "Set project user hourly rate",
         "tag": "Project",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d5e182f76fc71fee27/users/63eab29ecf0b257026ab5624/hourly-rate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c666/users/63eab29ecf0b257026ab5624/hourly-rate",
         "schema": {
           "def": {
             "type": "object",
@@ -6828,7 +6828,7 @@
         "name": "Delete project",
         "tag": "Project",
         "method": "DELETE",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d5e182f76fc71fee27",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c666",
         "schema": {
           "def": {
             "type": "object",
@@ -7205,7 +7205,7 @@
         "name": "Create task",
         "tag": "Task",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d557fa89e657c1aaf2/tasks",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c66d/tasks",
         "schema": {
           "def": {
             "type": "object",
@@ -7528,7 +7528,7 @@
         "name": "Get task (after create)",
         "tag": "Task",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d557fa89e657c1aaf2/tasks/69c1d1d7d8bdf75f9096e753",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c66d/tasks/69c1d3615fdd9a5256ba8544",
         "schema": {
           "def": {
             "type": "object",
@@ -7851,7 +7851,7 @@
         "name": "Update task",
         "tag": "Task",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d557fa89e657c1aaf2/tasks/69c1d1d7d8bdf75f9096e753",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c66d/tasks/69c1d3615fdd9a5256ba8544",
         "schema": {
           "def": {
             "type": "object",
@@ -8174,7 +8174,7 @@
         "name": "Set task cost rate",
         "tag": "Task",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d557fa89e657c1aaf2/tasks/69c1d1d7d8bdf75f9096e753/cost-rate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c66d/tasks/69c1d3615fdd9a5256ba8544/cost-rate",
         "schema": {
           "def": {
             "type": "object",
@@ -8483,7 +8483,7 @@
         "name": "Set task hourly rate",
         "tag": "Task",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d1d557fa89e657c1aaf2/tasks/69c1d1d7d8bdf75f9096e753/hourly-rate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/projects/69c1d35e57fa89e657c1c66d/tasks/69c1d3615fdd9a5256ba8544/hourly-rate",
         "schema": {
           "def": {
             "type": "object",
@@ -9066,7 +9066,7 @@
         "name": "Get time entry (after create)",
         "tag": "Time Entry",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c1d1d85fdd9a5256ba6a70",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c1d362d8bdf75f9097028c",
         "schema": {
           "def": {
             "type": "object",
@@ -9378,7 +9378,7 @@
         "name": "Update time entry",
         "tag": "Time Entry",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c1d1d85fdd9a5256ba6a70",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-entries/69c1d362d8bdf75f9097028c",
         "schema": {
           "def": {
             "type": "object",
@@ -9996,7 +9996,7 @@
         "name": "Duplicate time entry",
         "tag": "Time Entry",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/user/63eab29ecf0b257026ab5624/time-entries/69c1d1d85fdd9a5256ba6a70/duplicate",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/user/63eab29ecf0b257026ab5624/time-entries/69c1d362d8bdf75f9097028c/duplicate",
         "schema": {
           "def": {
             "type": "object",
@@ -11077,7 +11077,7 @@
         "name": "Update expense category",
         "tag": "Expense",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c1d1db57fa89e657c1abb2",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c1d365d8bdf75f909702c9",
         "schema": {
           "def": {
             "type": "object",
@@ -11220,7 +11220,7 @@
         "name": "Archive expense category",
         "tag": "Expense",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c1d1db57fa89e657c1abb2/status",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/expenses/categories/69c1d365d8bdf75f909702c9/status",
         "schema": {
           "def": {
             "type": "object",
@@ -11740,7 +11740,7 @@
         "name": "Get webhook (after create)",
         "tag": "Webhook",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c1d1dcd8bdf75f9096e81c",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c1d36657fa89e657c1c6fa",
         "schema": {
           "def": {
             "type": "object",
@@ -12117,7 +12117,7 @@
         "name": "Update webhook",
         "tag": "Webhook",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c1d1dcd8bdf75f9096e81c",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c1d36657fa89e657c1c6fa",
         "schema": {
           "def": {
             "type": "object",
@@ -12494,7 +12494,7 @@
         "name": "Regenerate webhook token",
         "tag": "Webhook",
         "method": "PATCH",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c1d1dcd8bdf75f9096e81c/token",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/webhooks/69c1d36657fa89e657c1c6fa/token",
         "schema": {
           "def": {
             "type": "object",
@@ -12871,7 +12871,7 @@
         "name": "Get invoice (after create)",
         "tag": "Invoice",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c1d1de5fdd9a5256ba6b2f",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c1d3685fdd9a5256ba85ca",
         "schema": {
           "def": {
             "type": "object",
@@ -14105,7 +14105,7 @@
         "name": "Update invoice",
         "tag": "Invoice",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c1d1de5fdd9a5256ba6b2f",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c1d3685fdd9a5256ba85ca",
         "schema": {
           "def": {
             "type": "object",
@@ -15395,7 +15395,7 @@
         "name": "Create invoice payment",
         "tag": "Invoice",
         "method": "POST",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c1d1de5fdd9a5256ba6b2f/payments",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/invoices/69c1d3685fdd9a5256ba85ca/payments",
         "schema": {
           "def": {
             "type": "object",
@@ -17487,7 +17487,7 @@
         "name": "Get policy (after create)",
         "tag": "Policy",
         "method": "GET",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/time-off/policies/69c1d1e15fdd9a5256ba6b75",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-off/policies/69c1d36bd8bdf75f9097032d",
         "schema": {
           "def": {
             "type": "object",
@@ -17886,7 +17886,7 @@
         "name": "Update policy",
         "tag": "Policy",
         "method": "PUT",
-        "path": "/workspaces/63eab29ecf0b257026ab5625/time-off/policies/69c1d1e15fdd9a5256ba6b75",
+        "path": "/workspaces/63eab29ecf0b257026ab5625/time-off/policies/69c1d36bd8bdf75f9097032d",
         "schema": {
           "def": {
             "type": "object",
