@@ -140,6 +140,27 @@ export function registerProjectTests(
       }));
     });
 
+    it("creates a project from template", async () => {
+      if (!ctx().templateId) return;
+      try {
+        const result = await withRetry(() =>
+          api().projects.createFromTemplate({
+            name: "_cfix_test_FromTemplate",
+            templateProjectId: ctx().templateId!,
+          })
+        );
+        if (result?.id) {
+          cleanup().register(`project-tmpl:${result.id}`, async () => {
+            await api().projects.update(result.id!, { name: "archived", archived: true });
+            await api().projects.delete(result.id!);
+          });
+        }
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
+
     it("deletes the project (archive first)", async () => {
       await withRetry(() => api().projects.update(ctx().projectId!, { name: "archived", archived: true }));
       const result = await withRetry(() => api().projects.delete(ctx().projectId!));

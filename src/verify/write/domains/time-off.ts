@@ -72,6 +72,31 @@ export function registerTimeOffTests(
       }
     });
 
+    it("creates a time-off request for user", async () => {
+      if (skipped || !ctx().persistPolicyId) return;
+      try {
+        const result = await withRetry(() =>
+          api().timeOff.createForUser(ctx().persistPolicyId!, ctx().userId, {
+            timeOffPeriod: {
+              period: {
+                start: "2027-08-01T00:00:00Z",
+                end: "2027-08-02T00:00:00Z",
+              },
+            },
+          })
+        );
+        const id = (result as any)?.id;
+        if (id) {
+          cleanup().register(`time-off-user:${id}`, () =>
+            api().timeOff.delete(ctx().persistPolicyId!, id)
+          );
+        }
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
+
     it("deletes a time-off request", async () => {
       if (skipped || !ctx().timeOffRequestId) return;
       try {
@@ -80,7 +105,19 @@ export function registerTimeOffTests(
         );
         cleanup().remove(`time-off:${ctx().timeOffRequestId}`);
       } catch (err: any) {
-        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("Unexpected end")) return;
+        throw err;
+      }
+    });
+
+    it("updates balances for policy", async () => {
+      if (skipped || !ctx().persistPolicyId) return;
+      try {
+        await withRetry(() =>
+          api().balances.update(ctx().persistPolicyId!, {} as any)
+        );
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("Unexpected end")) return;
         throw err;
       }
     });

@@ -47,6 +47,23 @@ export function registerWorkspaceTests(
         specSchema: workspaceSchema, realitySchema: realWorkspaceSchema,
       }));
     });
+    it("adds a user to workspace", async () => {
+      try {
+        const result = await withRetry(() =>
+          api().workspaces.addUsers({ email: "james.risberg+testclockify@gmail.com" })
+        );
+        reporter().addResult(validateResponse(result, {
+          name: "Add user to workspace", tag: "Workspace", method: "POST",
+          path: `/workspaces/${ctx().workspaceId}/users`,
+          specSchema: workspaceSchema, realitySchema: realWorkspaceSchema,
+        }));
+      } catch (err: any) {
+        // May fail if user already added or email invalid
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("409")) return;
+        throw err;
+      }
+    });
+
     it("updates user status on workspace", async () => {
       try {
         const result = await withRetry(() =>

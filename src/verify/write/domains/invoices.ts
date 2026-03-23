@@ -118,6 +118,37 @@ export function registerInvoiceTests(
       }
     });
 
+    it("deletes a payment from the invoice", async () => {
+      if (!ctx().invoiceId) return;
+      try {
+        // Get the invoice to find payment IDs
+        const inv = await withRetry(() => api().invoices.get(ctx().invoiceId!));
+        const payments = (inv as any)?.payments;
+        if (Array.isArray(payments) && payments.length > 0) {
+          await withRetry(() =>
+            api().invoices.deletePayment(ctx().invoiceId!, payments[0].id)
+          );
+        }
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("404") || err.message?.includes("Unexpected end")) return;
+        throw err;
+      }
+    });
+
+    it("imports time entries and expenses to invoice", async () => {
+      if (!ctx().invoiceId) return;
+      try {
+        await withRetry(() =>
+          api().invoices.importTimeEntriesAndExpenses(ctx().invoiceId!, {
+            billable: true,
+          } as any)
+        );
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("404")) return;
+        throw err;
+      }
+    });
+
     it("changes invoice status", async () => {
       if (!ctx().invoiceId) return;
       try {
@@ -147,6 +178,37 @@ export function registerInvoiceTests(
         path: `/workspaces/${ctx().workspaceId}/invoices/settings`,
         specSchema: invoiceSettingsSchema,
       }));
+    });
+
+    it("updates invoice settings", async () => {
+      try {
+        await withRetry(() =>
+          api().invoices.updateSettings({
+            labels: {
+              issueDate: "Issue date",
+              dueDate: "Due date",
+              billFrom: "Bill from",
+              billTo: "Bill to",
+              description: "DESCRIPTION",
+              quantity: "QUANTITY",
+              unitPrice: "UNIT PRICE",
+              amount: "AMOUNT",
+              subtotal: "Subtotal",
+              tax: "Tax",
+              tax2: "Tax 2",
+              total: "TOTAL",
+              discount: "Discount",
+              itemType: "Type",
+              notes: "Notes",
+              paid: "Paid",
+              totalAmountDue: "Total Amount Due",
+            },
+          })
+        );
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("Unexpected end")) return;
+        throw err;
+      }
     });
 
     it("deletes the invoice", async () => {

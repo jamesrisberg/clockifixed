@@ -59,6 +59,18 @@ export function registerTemplateTests(
       }));
     });
 
+    it("updates the template", async () => {
+      if (skipped || !ctx().templateId) return;
+      try {
+        await withRetry(() =>
+          api().templates.update(ctx().templateId!, { name: "_cfix_test_Tmpl Updated" })
+        );
+      } catch (err: any) {
+        if (err.message?.includes("403") || err.message?.includes("400")) return;
+        throw err;
+      }
+    });
+
     it("deletes the template", async () => {
       if (skipped || !ctx().templateId) return;
       await withRetry(() => api().templates.delete(ctx().templateId!));
