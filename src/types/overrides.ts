@@ -274,6 +274,9 @@ export const realProjectSchema = (() => {
     ...shape,
     budgetEstimate: z.unknown().nullable().optional(),
     costRate: z.unknown().nullable().optional(),
+    duration: z.string().nullable().optional(),
+    estimate: z.unknown().nullable().optional(),
+    hourlyRate: z.unknown().nullable().optional(),
     memberships: z.array(realMembershipItemSchema).optional(),
     timeEstimate: realTimeEstimateInlineSchema,
     // Undocumented fields
@@ -304,7 +307,9 @@ export const realTimeEntryWithRatesSchema = (() => {
   if (!shape) return base;
   return z.object({
     ...shape,
+    costRate: z.unknown().nullable().optional(),
     customFieldValues: z.array(realCustomFieldValueItemSchema).nullable().optional(),
+    hourlyRate: z.unknown().nullable().optional(),
     projectId: z.string().nullable().optional(),
     taskId: z.string().nullable().optional(),
   });
@@ -428,9 +433,11 @@ export const realClientSchema = withNullable(clientWithCurrencySchema as any, [
  */
 export const realTaskSchema = withNullable(taskSchema as any, [
   "assigneeId",
+  "budgetEstimate",
   "costRate",
-  "hourlyRate",
   "duration",
+  "estimate",
+  "hourlyRate",
 ]);
 
 /**
@@ -462,9 +469,12 @@ export const realPolicySchema = (() => {
   if (!shape) return policySchema;
   return z.object({
     ...shape,
+    approve: z.unknown().nullable().optional(),
     projectId: z.string().nullable().optional(),
     negativeBalance: z.unknown().nullable().optional(),
     automaticAccrual: z.unknown().nullable().optional(),
+    userGroupIds: z.array(z.string()).nullable().optional(),
+    userIds: z.array(z.string()).nullable().optional(),
     automaticTimeEntryCreation: z.object({
       defaultEntities: z.object({
         projectId: z.string().nullable().optional(),

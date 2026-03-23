@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-23T20:27:22.803Z",
+  "timestamp": "2026-03-23T20:34:15.784Z",
   "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
     "total": 45,
@@ -851,7 +851,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 236
+      "durationMs": 217
     },
     {
       "check": {
@@ -3341,7 +3341,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 138,
+      "durationMs": 146,
       "responseDataSample": [
         {
           "id": "63eab29ecf0b257026ab5625",
@@ -5559,7 +5559,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 548,
+      "durationMs": 811,
       "responseDataSample": {
         "id": "63eab29ecf0b257026ab5625",
         "name": "James Risberg's workspace",
@@ -5630,78 +5630,78 @@
           "projectLabel": "project",
           "taskLabel": "task",
           "workingDays": [
-            "TUESDAY",
+            "WEDNESDAY",
             "THURSDAY",
-            "FRIDAY",
             "MONDAY",
-            "WEDNESDAY"
+            "FRIDAY",
+            "TUESDAY"
           ],
           "isProjectPublicByDefault": true
         },
         "imageUrl": "",
         "featureSubscriptionType": "PRO_2021",
         "features": [
-          "BREAKS",
-          "LOCATIONS",
-          "TIME_TRACKING",
-          "CUSTOM_FIELDS",
-          "HIDE_PAGES",
-          "REQUIRED_FIELDS",
-          "DECIMAL_FORMAT",
-          "PROJECT_BUDGET",
-          "KIOSK",
-          "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
-          "FAVORITE_ENTRIES",
-          "UNLIMITED_REPORTS",
-          "APPROVAL",
-          "MANAGER_ROLE",
-          "LABOR_COST",
-          "INVOICING",
-          "SCREENSHOTS",
-          "USER_CUSTOM_FIELDS",
-          "EDIT_MEMBER_PROFILE",
-          "AUTOMATIC_LOCK",
-          "WHO_CAN_SEE_ALL_TIME_ENTRIES",
-          "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
-          "RECURRING_ESTIMATES",
-          "ADD_TIME_FOR_OTHERS",
-          "CLIENT_CURRENCY",
-          "RECURRING_INVOICES",
-          "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
-          "KIOSK_SIX_DIGIT_PIN",
-          "INVOICE_EMAILS",
-          "SUMMARY_ESTIMATE",
-          "FILE_IMPORT",
-          "PROJECT_TEMPLATES",
-          "SPLIT_TIME_ENTRY",
-          "ATTENDANCE_REPORT",
-          "WHO_CAN_SEE_TEAMS_DASHBOARD",
-          "MULTI_FACTOR_AUTHENTICATION",
-          "WORKSPACE_TIME_AUDIT",
-          "WORKSPACE_TIME_ROUNDING",
-          "ALERTS",
-          "USER_IMPORT",
-          "BRANDED_REPORTS",
-          "CUSTOM_REPORTING",
-          "FORECASTING",
-          "WHO_CAN_SEE_PROJECT_STATUS",
-          "KIOSK_SESSION_DURATION",
-          "WORKSPACE_TRANSFER",
-          "TIMESHEET_IMPORT",
-          "SCHEDULED_REPORTS",
-          "EXPENSES",
-          "SCHEDULING",
-          "WORKSPACE_LOCK_TIMEENTRIES",
           "DISABLE_MANUAL_MODE",
-          "TARGETS_AND_REMINDERS",
-          "HISTORIC_RATES",
-          "KIOSK_QR_CODE",
-          "KIOSK_PIN_REQUIRED",
-          "TIME_OFF",
+          "INVOICE_EMAILS",
+          "TIMESHEET_IMPORT",
+          "MANAGER_ROLE",
+          "INVOICE_REMINDERS",
+          "ALERTS",
+          "CUSTOM_FIELDS",
+          "WHO_CAN_SEE_TEAMS_DASHBOARD",
+          "INVOICING",
+          "PROJECT_TEMPLATES",
+          "UNLIMITED_REPORTS",
+          "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
+          "ATTENDANCE_REPORT",
+          "ADD_TIME_FOR_OTHERS",
+          "FAVORITE_ENTRIES",
+          "AUTOMATIC_LOCK",
           "TASK_RATES",
+          "TIME_OFF",
+          "REQUIRED_FIELDS",
+          "WORKSPACE_LOCK_TIMEENTRIES",
+          "RECURRING_INVOICES",
+          "FILE_IMPORT",
+          "SUMMARY_ESTIMATE",
+          "LOCATIONS",
+          "WORKSPACE_TRANSFER",
           "BULK_EDIT",
+          "KIOSK_QR_CODE",
+          "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
+          "USER_IMPORT",
+          "MULTI_FACTOR_AUTHENTICATION",
+          "HISTORIC_RATES",
+          "LABOR_COST",
+          "WHO_CAN_SEE_ALL_TIME_ENTRIES",
+          "SCREENSHOTS",
+          "KIOSK",
+          "CLIENT_CURRENCY",
+          "EDIT_MEMBER_PROFILE",
+          "WORKSPACE_TIME_ROUNDING",
+          "TIME_TRACKING",
+          "APPROVAL",
+          "BRANDED_REPORTS",
+          "KIOSK_PIN_REQUIRED",
+          "SCHEDULING",
+          "BREAKS",
+          "PROJECT_BUDGET",
+          "EXPENSES",
+          "USER_CUSTOM_FIELDS",
+          "WHO_CAN_SEE_PROJECT_STATUS",
+          "SCHEDULED_REPORTS",
+          "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
+          "KIOSK_SESSION_DURATION",
+          "KIOSK_SIX_DIGIT_PIN",
+          "RECURRING_ESTIMATES",
+          "SPLIT_TIME_ENTRY",
+          "FORECASTING",
+          "CUSTOM_REPORTING",
+          "TARGETS_AND_REMINDERS",
           "QUICKBOOKS_INTEGRATION",
-          "INVOICE_REMINDERS"
+          "DECIMAL_FORMAT",
+          "WORKSPACE_TIME_AUDIT",
+          "HIDE_PAGES"
         ],
         "currencies": [
           {
@@ -6557,7 +6557,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 131
+      "durationMs": 330
     },
     {
       "check": {
@@ -7052,7 +7052,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 314,
+      "durationMs": 411,
       "responseDataSample": {
         "name": "James Risberg",
         "email": "james.risberg@gmail.com",
@@ -7913,7 +7913,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 158
+      "durationMs": 159
     },
     {
       "check": {
@@ -8302,7 +8302,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 125
+      "durationMs": 128
     },
     {
       "check": {
@@ -8679,7 +8679,7 @@
         "requiresIdFrom": "List clients"
       },
       "status": "skip",
-      "durationMs": 0,
+      "durationMs": 1,
       "error": "Could not resolve path — missing ID from \"List clients\""
     },
     {
@@ -9002,12 +9002,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -9017,9 +9023,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "lazy"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
+                        },
+                        "type": "unknown"
+                      }
                     },
-                    "type": "lazy"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -9029,9 +9041,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "lazy"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
+                        },
+                        "type": "unknown"
+                      }
                     },
-                    "type": "lazy"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -10314,12 +10332,18 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -10329,9 +10353,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "lazy"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
+                        },
+                        "type": "unknown"
+                      }
                     },
-                    "type": "lazy"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -10341,9 +10371,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "lazy"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
+                        },
+                        "type": "unknown"
+                      }
                     },
-                    "type": "lazy"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -10920,7 +10956,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 467,
+      "durationMs": 141,
       "responseDataSample": {
         "id": "63f447a9513b6c41904e81c0",
         "name": "Better Stove",
@@ -11045,7 +11081,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 127
+      "durationMs": 359
     },
     {
       "check": {
@@ -11129,7 +11165,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 129
+      "durationMs": 396
     },
     {
       "check": {
@@ -11460,36 +11496,42 @@
               },
               "budgetEstimate": {
                 "def": {
-                  "type": "optional",
+                  "type": "nullable",
                   "innerType": {
                     "def": {
-                      "type": "number",
-                      "checks": [
-                        {
-                          "def": {
-                            "type": "number",
-                            "check": "number_format",
-                            "abort": false,
-                            "format": "safeint"
-                          },
+                      "type": "optional",
+                      "innerType": {
+                        "def": {
                           "type": "number",
-                          "minValue": -9007199254740991,
-                          "maxValue": 9007199254740991,
-                          "isInt": true,
-                          "isFinite": true,
-                          "format": "safeint"
-                        }
-                      ]
+                          "checks": [
+                            {
+                              "def": {
+                                "type": "number",
+                                "check": "number_format",
+                                "abort": false,
+                                "format": "safeint"
+                              },
+                              "type": "number",
+                              "minValue": -9007199254740991,
+                              "maxValue": 9007199254740991,
+                              "isInt": true,
+                              "isFinite": true,
+                              "format": "safeint"
+                            }
+                          ]
+                        },
+                        "type": "number",
+                        "minValue": -9007199254740991,
+                        "maxValue": 9007199254740991,
+                        "isInt": true,
+                        "isFinite": true,
+                        "format": "safeint"
+                      }
                     },
-                    "type": "number",
-                    "minValue": -9007199254740991,
-                    "maxValue": 9007199254740991,
-                    "isInt": true,
-                    "isFinite": true,
-                    "format": "safeint"
+                    "type": "optional"
                   }
                 },
-                "type": "optional"
+                "type": "nullable"
               },
               "costRate": {
                 "def": {
@@ -11532,18 +11574,24 @@
               },
               "estimate": {
                 "def": {
-                  "type": "optional",
+                  "type": "nullable",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "optional",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "optional"
                   }
                 },
-                "type": "optional"
+                "type": "nullable"
               },
               "hourlyRate": {
                 "def": {
@@ -11687,7 +11735,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 338
+      "durationMs": 143
     },
     {
       "check": {
@@ -12018,36 +12066,42 @@
               },
               "budgetEstimate": {
                 "def": {
-                  "type": "optional",
+                  "type": "nullable",
                   "innerType": {
                     "def": {
-                      "type": "number",
-                      "checks": [
-                        {
-                          "def": {
-                            "type": "number",
-                            "check": "number_format",
-                            "abort": false,
-                            "format": "safeint"
-                          },
+                      "type": "optional",
+                      "innerType": {
+                        "def": {
                           "type": "number",
-                          "minValue": -9007199254740991,
-                          "maxValue": 9007199254740991,
-                          "isInt": true,
-                          "isFinite": true,
-                          "format": "safeint"
-                        }
-                      ]
+                          "checks": [
+                            {
+                              "def": {
+                                "type": "number",
+                                "check": "number_format",
+                                "abort": false,
+                                "format": "safeint"
+                              },
+                              "type": "number",
+                              "minValue": -9007199254740991,
+                              "maxValue": 9007199254740991,
+                              "isInt": true,
+                              "isFinite": true,
+                              "format": "safeint"
+                            }
+                          ]
+                        },
+                        "type": "number",
+                        "minValue": -9007199254740991,
+                        "maxValue": 9007199254740991,
+                        "isInt": true,
+                        "isFinite": true,
+                        "format": "safeint"
+                      }
                     },
-                    "type": "number",
-                    "minValue": -9007199254740991,
-                    "maxValue": 9007199254740991,
-                    "isInt": true,
-                    "isFinite": true,
-                    "format": "safeint"
+                    "type": "optional"
                   }
                 },
-                "type": "optional"
+                "type": "nullable"
               },
               "costRate": {
                 "def": {
@@ -12090,18 +12144,24 @@
               },
               "estimate": {
                 "def": {
-                  "type": "optional",
+                  "type": "nullable",
                   "innerType": {
                     "def": {
-                      "type": "string"
+                      "type": "optional",
+                      "innerType": {
+                        "def": {
+                          "type": "string"
+                        },
+                        "type": "string",
+                        "format": null,
+                        "minLength": null,
+                        "maxLength": null
+                      }
                     },
-                    "type": "string",
-                    "format": null,
-                    "minLength": null,
-                    "maxLength": null
+                    "type": "optional"
                   }
                 },
-                "type": "optional"
+                "type": "nullable"
               },
               "hourlyRate": {
                 "def": {
@@ -12422,7 +12482,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 346
+      "durationMs": 128
     },
     {
       "check": {
@@ -12708,9 +12768,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "lazy"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
+                        },
+                        "type": "unknown"
+                      }
                     },
-                    "type": "lazy"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -12997,9 +13063,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "lazy"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
+                        },
+                        "type": "unknown"
+                      }
                     },
-                    "type": "lazy"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -13376,7 +13448,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 234,
+      "durationMs": 245,
       "responseDataSample": [
         {
           "id": "6877609b3bae1e57f72e0200",
@@ -13691,9 +13763,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "lazy"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
+                        },
+                        "type": "unknown"
+                      }
                     },
-                    "type": "lazy"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -13980,9 +14058,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "lazy"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
+                        },
+                        "type": "unknown"
+                      }
                     },
-                    "type": "lazy"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -14237,7 +14321,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 127,
+      "durationMs": 130,
       "responseDataSample": {
         "id": "6877609b3bae1e57f72e0200",
         "description": "Aaa",
@@ -15017,7 +15101,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 127
+      "durationMs": 185
     },
     {
       "check": {
@@ -15232,7 +15316,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 125
+      "durationMs": 305
     },
     {
       "check": {
@@ -16336,7 +16420,7 @@
           }
         ]
       },
-      "durationMs": 515,
+      "durationMs": 189,
       "responseDataSample": {
         "expenses": {
           "expenses": [
@@ -16761,7 +16845,7 @@
           }
         ]
       },
-      "durationMs": 123,
+      "durationMs": 131,
       "responseDataSample": {
         "id": "68705846ea976557148f3162",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -17097,7 +17181,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 131
+      "durationMs": 370
     },
     {
       "check": {
@@ -17732,7 +17816,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 313
+      "durationMs": 334
     },
     {
       "check": {
@@ -19463,7 +19547,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 129
+      "durationMs": 133
     },
     {
       "check": {
@@ -20252,7 +20336,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 301
+      "durationMs": 121
     },
     {
       "check": {
@@ -20834,7 +20918,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 138
+      "durationMs": 128
     },
     {
       "check": {
@@ -21841,7 +21925,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 125,
+      "durationMs": 337,
       "responseDataSample": [
         {
           "id": "682116a841fbb46a74c2cb06",
@@ -22838,7 +22922,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 150
+      "durationMs": 137
     },
     {
       "check": {
@@ -23195,77 +23279,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "object",
-                      "shape": {
-                        "requiresApproval": {
-                          "def": {
-                            "type": "optional",
-                            "innerType": {
-                              "def": {
-                                "type": "boolean"
-                              },
-                              "type": "boolean"
-                            }
-                          },
-                          "type": "optional"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
                         },
-                        "specificMembers": {
-                          "def": {
-                            "type": "optional",
-                            "innerType": {
-                              "def": {
-                                "type": "boolean"
-                              },
-                              "type": "boolean"
-                            }
-                          },
-                          "type": "optional"
-                        },
-                        "teamManagers": {
-                          "def": {
-                            "type": "optional",
-                            "innerType": {
-                              "def": {
-                                "type": "boolean"
-                              },
-                              "type": "boolean"
-                            }
-                          },
-                          "type": "optional"
-                        },
-                        "userIds": {
-                          "def": {
-                            "type": "optional",
-                            "innerType": {
-                              "def": {
-                                "type": "array",
-                                "element": {
-                                  "def": {
-                                    "type": "string"
-                                  },
-                                  "type": "string",
-                                  "format": null,
-                                  "minLength": null,
-                                  "maxLength": null
-                                }
-                              },
-                              "type": "array",
-                              "element": {
-                                "def": {
-                                  "type": "string"
-                                },
-                                "type": "string",
-                                "format": null,
-                                "minLength": null,
-                                "maxLength": null
-                              }
-                            }
-                          },
-                          "type": "optional"
-                        }
+                        "type": "unknown"
                       }
                     },
-                    "type": "object"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -23498,27 +23520,33 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "array",
-                      "element": {
+                      "type": "nullable",
+                      "innerType": {
                         "def": {
-                          "type": "string"
+                          "type": "array",
+                          "element": {
+                            "def": {
+                              "type": "string"
+                            },
+                            "type": "string",
+                            "format": null,
+                            "minLength": null,
+                            "maxLength": null
+                          }
                         },
-                        "type": "string",
-                        "format": null,
-                        "minLength": null,
-                        "maxLength": null
+                        "type": "array",
+                        "element": {
+                          "def": {
+                            "type": "string"
+                          },
+                          "type": "string",
+                          "format": null,
+                          "minLength": null,
+                          "maxLength": null
+                        }
                       }
                     },
-                    "type": "array",
-                    "element": {
-                      "def": {
-                        "type": "string"
-                      },
-                      "type": "string",
-                      "format": null,
-                      "minLength": null,
-                      "maxLength": null
-                    }
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -23528,27 +23556,33 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "array",
-                      "element": {
+                      "type": "nullable",
+                      "innerType": {
                         "def": {
-                          "type": "string"
+                          "type": "array",
+                          "element": {
+                            "def": {
+                              "type": "string"
+                            },
+                            "type": "string",
+                            "format": null,
+                            "minLength": null,
+                            "maxLength": null
+                          }
                         },
-                        "type": "string",
-                        "format": null,
-                        "minLength": null,
-                        "maxLength": null
+                        "type": "array",
+                        "element": {
+                          "def": {
+                            "type": "string"
+                          },
+                          "type": "string",
+                          "format": null,
+                          "minLength": null,
+                          "maxLength": null
+                        }
                       }
                     },
-                    "type": "array",
-                    "element": {
-                      "def": {
-                        "type": "string"
-                      },
-                      "type": "string",
-                      "format": null,
-                      "minLength": null,
-                      "maxLength": null
-                    }
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -23771,7 +23805,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 697,
+      "durationMs": 888,
       "responseDataSample": [
         {
           "id": "69c1968e5fdd9a5256b6fdc4",
@@ -24152,77 +24186,15 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "object",
-                      "shape": {
-                        "requiresApproval": {
-                          "def": {
-                            "type": "optional",
-                            "innerType": {
-                              "def": {
-                                "type": "boolean"
-                              },
-                              "type": "boolean"
-                            }
-                          },
-                          "type": "optional"
+                      "type": "nullable",
+                      "innerType": {
+                        "def": {
+                          "type": "unknown"
                         },
-                        "specificMembers": {
-                          "def": {
-                            "type": "optional",
-                            "innerType": {
-                              "def": {
-                                "type": "boolean"
-                              },
-                              "type": "boolean"
-                            }
-                          },
-                          "type": "optional"
-                        },
-                        "teamManagers": {
-                          "def": {
-                            "type": "optional",
-                            "innerType": {
-                              "def": {
-                                "type": "boolean"
-                              },
-                              "type": "boolean"
-                            }
-                          },
-                          "type": "optional"
-                        },
-                        "userIds": {
-                          "def": {
-                            "type": "optional",
-                            "innerType": {
-                              "def": {
-                                "type": "array",
-                                "element": {
-                                  "def": {
-                                    "type": "string"
-                                  },
-                                  "type": "string",
-                                  "format": null,
-                                  "minLength": null,
-                                  "maxLength": null
-                                }
-                              },
-                              "type": "array",
-                              "element": {
-                                "def": {
-                                  "type": "string"
-                                },
-                                "type": "string",
-                                "format": null,
-                                "minLength": null,
-                                "maxLength": null
-                              }
-                            }
-                          },
-                          "type": "optional"
-                        }
+                        "type": "unknown"
                       }
                     },
-                    "type": "object"
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -24455,27 +24427,33 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "array",
-                      "element": {
+                      "type": "nullable",
+                      "innerType": {
                         "def": {
-                          "type": "string"
+                          "type": "array",
+                          "element": {
+                            "def": {
+                              "type": "string"
+                            },
+                            "type": "string",
+                            "format": null,
+                            "minLength": null,
+                            "maxLength": null
+                          }
                         },
-                        "type": "string",
-                        "format": null,
-                        "minLength": null,
-                        "maxLength": null
+                        "type": "array",
+                        "element": {
+                          "def": {
+                            "type": "string"
+                          },
+                          "type": "string",
+                          "format": null,
+                          "minLength": null,
+                          "maxLength": null
+                        }
                       }
                     },
-                    "type": "array",
-                    "element": {
-                      "def": {
-                        "type": "string"
-                      },
-                      "type": "string",
-                      "format": null,
-                      "minLength": null,
-                      "maxLength": null
-                    }
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -24485,27 +24463,33 @@
                   "type": "optional",
                   "innerType": {
                     "def": {
-                      "type": "array",
-                      "element": {
+                      "type": "nullable",
+                      "innerType": {
                         "def": {
-                          "type": "string"
+                          "type": "array",
+                          "element": {
+                            "def": {
+                              "type": "string"
+                            },
+                            "type": "string",
+                            "format": null,
+                            "minLength": null,
+                            "maxLength": null
+                          }
                         },
-                        "type": "string",
-                        "format": null,
-                        "minLength": null,
-                        "maxLength": null
+                        "type": "array",
+                        "element": {
+                          "def": {
+                            "type": "string"
+                          },
+                          "type": "string",
+                          "format": null,
+                          "minLength": null,
+                          "maxLength": null
+                        }
                       }
                     },
-                    "type": "array",
-                    "element": {
-                      "def": {
-                        "type": "string"
-                      },
-                      "type": "string",
-                      "format": null,
-                      "minLength": null,
-                      "maxLength": null
-                    }
+                    "type": "nullable"
                   }
                 },
                 "type": "optional"
@@ -24605,7 +24589,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 351,
+      "durationMs": 305,
       "responseDataSample": {
         "id": "69c1968e5fdd9a5256b6fdc4",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -24888,7 +24872,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 128
+      "durationMs": 127
     },
     {
       "check": {
@@ -25078,7 +25062,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 127,
+      "durationMs": 309,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25260,7 +25244,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 136,
+      "durationMs": 133,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25279,7 +25263,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 130,
+      "durationMs": 455,
       "error": "Skipped — endpoint not available (Shared Reports)"
     },
     {
@@ -25386,7 +25370,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 262
+      "durationMs": 126
     },
     {
       "check": {
@@ -25497,7 +25481,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 697
+      "durationMs": 482
     },
     {
       "check": {
@@ -25526,7 +25510,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 130
+      "durationMs": 125
     },
     {
       "check": {
@@ -25555,7 +25539,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 313
+      "durationMs": 129
     },
     {
       "check": {
@@ -25580,7 +25564,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 131
+      "durationMs": 138
     },
     {
       "check": {
