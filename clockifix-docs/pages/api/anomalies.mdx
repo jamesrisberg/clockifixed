@@ -17,10 +17,13 @@ This is a living document of every inconsistency, naming collision, and spec div
 | Category | Count | Severity |
 |---|---|---|
 | Schema name collisions | 17 | Medium — forces consumers to disambiguate |
-| Inconsistent naming conventions | Multiple | Low — cosmetic but confusing |
-| Return type mismatches | TBD | High — different types for create vs. read |
-| Undocumented response fields | TBD | Medium — spec is incomplete |
-| Deprecated but undocumented | TBD | Low — unclear migration path |
+| Inconsistent naming conventions | 6 patterns | Low — cosmetic but confusing |
+| Return type mismatches | 4 entities | High — different types for create vs. read |
+| Nullable fields declared as required objects | 9 fields | High — causes runtime validation failures |
+| Undeclared enum values | 3 fields | Medium — responses contain values not in the spec |
+| Undocumented response fields | 3 fields | Medium — spec is incomplete |
+
+---
 
 ## Schema Name Collisions
 
@@ -67,6 +70,8 @@ graph LR
   Use descriptive suffixes that communicate purpose: `TimeEntryFull`, `TimeEntryCompact`, `TimeEntryReportView`. Or better, use a single `TimeEntry` type with optional fields and document which endpoints populate which fields.
 </Callout>
 
+---
+
 ## Inconsistent Naming Patterns
 
 The spec mixes several naming conventions:
@@ -84,6 +89,8 @@ The spec mixes several naming conventions:
   The `DtoImplV1` suffix leaks Java implementation details (DTO = Data Transfer Object, Impl = Implementation). API consumers shouldn't need to know about internal class hierarchies.
 </Callout>
 
+---
+
 ## Return Type Mismatches
 
 Several endpoints return a **different type** for mutation operations (create/update/delete) than for read operations (get/list):
@@ -97,34 +104,121 @@ Several endpoints return a **different type** for mutation operations (create/up
 
 This forces API consumers to maintain **two type definitions per entity** and handle the impedance mismatch between reading and writing.
 
+---
+
 ## Runtime Divergences
 
-The [runtime verifier](/sdk/verification) checks live API responses against the OpenAPI spec schemas. As of the latest run against the Clockify API:
+The [runtime verifier](/sdk/verification) checks live API responses against the OpenAPI spec schemas. As of the latest run (March 2026):
 
 | Metric | Count |
 |---|---|
 | Endpoints checked | 18 |
-| Spec divergences found | 78 |
-| Undocumented response fields | 6 |
+| Spec divergences (unique fields) | 16 |
+| Spec divergences (total across all array items) | 78 |
+| Undocumented response fields | 3 |
 | Permission-gated endpoints (skipped) | 2 |
+| Reality schema checks | 6/6 passing |
 
-### Common divergence patterns
+### Nullable Fields Declared as Required Objects
 
-- **Wrong types** — fields declared as objects in the spec are actually `null` in responses (e.g., `costRate`, `hourlyRate`, `budgetEstimate`)
-- **Invalid enum values** — actual API responses include enum values not declared in the spec (e.g., `features`, `adminOnlyPages`, `resetOption`)
-- **Undocumented fields** — responses include fields not in the spec at all (e.g., `clientId`, `clientName`, `estimateReset` on projects)
+The most common divergence. The spec declares these as required non-null objects, but the API returns `null` when they haven't been set:
 
-### Reality schemas
+| Endpoint | Field | Spec says | Actually returns |
+|---|---|---|---|
+| `GET /workspaces` | `memberships[].costRate` | `object` (required) | `null` |
+| `GET /workspaces` | `memberships[].hourlyRate` | `object` (required) | `null` |
+| `GET /workspaces` | `subdomain.name` | `string` (required) | `null` |
+| `GET /workspaces` | `workspaceSettings.automaticLock` | `object` (required) | `null` |
+| `GET /workspaces` | `workspaceSettings.lockTimeEntries` | `string` (required) | `null` |
+| `GET /workspaces` | `workspaceSettings.lockTimeZone` | `string` (required) | `null` |
+| `GET /workspaces/.../projects` | `budgetEstimate` | `object` (required) | `null` |
+| `GET /workspaces/.../projects` | `costRate` | `object` (required) | `null` |
+| `GET /workspaces/.../time-entries` | `kioskId` | `string` (required) | `null` |
 
-For endpoints with known divergences, Clockifixed maintains "reality" override schemas that match what the API actually returns. The verifier checks both:
+These affect **every item in every array response** — a single `null` costRate field on workspace memberships produces divergences across every membership in every workspace.
+
+<Callout type="tip" title="Suggested Fix">
+  Mark these fields as nullable in the OpenAPI spec (`nullable: true` or use `oneOf` with null). The data model clearly treats them as optional.
+</Callout>
+
+### Undeclared Enum Values
+
+The API returns enum values that aren't listed in the spec:
+
+| Endpoint | Field | Spec declares | API also returns |
+|---|---|---|---|
+| `GET /workspaces` | `features[]` | 64 values (see below) | Additional undeclared feature flags |
+| `GET /workspaces` | `workspaceSettings.adminOnlyPages[]` | `PROJECT`, `TEAM`, `REPORTS` | Additional undeclared page values |
+| `GET /workspaces/.../projects` | `timeEstimate.resetOption` | `WEEKLY`, `MONTHLY`, `YEARLY` | Empty/null value not in enum |
+| `GET /workspaces/.../member-profile` | `workingDays[]` | `MONDAY` through `SUNDAY` | Additional undeclared values |
+
+The `features` enum is the most volatile — Clockify adds new feature flags without updating the spec. The spec lists 64 values, but live responses include additional flags.
+
+<Callout type="tip" title="Suggested Fix">
+  Either keep the enum exhaustive and update it with each release, or switch to a `string` type with documented known values. The latter is more forward-compatible.
+</Callout>
+
+### Nullable Arrays
+
+| Endpoint | Field | Spec says | Actually returns |
+|---|---|---|---|
+| `GET /workspaces/.../time-entries` | `tagIds` | `array` (required) | `null` when no tags |
+
+<Callout type="tip" title="Suggested Fix">
+  Return an empty array `[]` instead of `null`, or mark the field as nullable.
+</Callout>
+
+### Undocumented Response Fields
+
+These fields appear in API responses but are not declared in the OpenAPI spec:
+
+| Endpoint | Field | Type | Sample value | Notes |
+|---|---|---|---|---|
+| `GET /workspaces/.../projects` | `clientId` | `string` | `""` | Client association — useful but missing from spec |
+| `GET /workspaces/.../projects` | `clientName` | `string` | `""` | Denormalized client name |
+| `GET /workspaces/.../projects` | `estimateReset` | `null` | `null` | Likely related to `timeEstimate.resetOption` |
+
+All three fields appear on both the list endpoint and the single-project endpoint.
+
+---
+
+### Endpoints Passing Spec Validation
+
+These endpoints return responses that exactly match the OpenAPI spec — no divergences:
+
+| Endpoint | Domain |
+|---|---|
+| `GET /workspaces/.../clients` | Client |
+| `GET /workspaces/.../groups` | Group |
+| `GET /workspaces/.../holidays` | Holiday |
+| `GET /workspaces/.../tags` | Tag |
+| `GET /workspaces/.../projects/.../tasks` | Task |
+| `GET /workspaces/.../webhooks` | Webhook |
+| `GET /user` | User |
+| `GET /workspaces/.../users` | User |
+
+### Permission-Gated Endpoints
+
+These endpoints returned `403 Forbidden` and could not be verified. They require a paid Clockify plan or admin permissions:
+
+| Endpoint | Domain |
+|---|---|
+| `GET /workspaces/.../custom-fields` | Custom Fields |
+| `GET /workspaces/.../time-off/policies` | Time-Off Policies |
+
+---
+
+### Reality Schemas
+
+For every endpoint with known divergences, Clockifixed maintains "reality" override schemas that match what the API **actually** returns. The verifier checks both:
 
 - **Spec schema** — does the response match the OpenAPI spec? (often no)
 - **Reality schema** — does the response match our patched schema? (should always pass)
 
-Run `npm run verify:cli` to see the full divergence report for your workspace.
+All 6 reality schema checks pass, meaning Clockifixed's override types accurately model the real API behavior even where the spec is wrong.
 
 ---
 
 <Callout type="info" title="Contributing">
-  Found an anomaly we missed? The verifier catches these automatically, but manual reports are welcome too. Document the endpoint, expected behavior, and actual behavior.
+  Found an anomaly we missed? Run `npm run verify:cli` against your own workspace — different plan tiers and data may surface additional divergences. Document the endpoint, expected behavior, and actual behavior.
 </Callout>
