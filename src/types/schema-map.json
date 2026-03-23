@@ -1,0 +1,1941 @@
+[
+  {
+    "openApiName": "AccountStatus",
+    "typeName": "AccountStatus",
+    "zodSchemaName": "accountStatusSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "AddUserToWorkspaceRequest",
+    "typeName": "AddUserToWorkspaceRequest",
+    "zodSchemaName": "addUserToWorkspaceRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "AddUsersToProjectRequestV1",
+    "typeName": "AddUsersToProjectRequest",
+    "zodSchemaName": "addUsersToProjectRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ApplyTaxes",
+    "typeName": "ApplyTaxes",
+    "zodSchemaName": "applyTaxesSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ApprovalDetailsDtoV1",
+    "typeName": "ApprovalDetails",
+    "zodSchemaName": "approvalDetailsSchema",
+    "category": "models",
+    "domain": "approval"
+  },
+  {
+    "openApiName": "ApprovalRequestCreatorDtoV1",
+    "typeName": "ApprovalRequestCreator",
+    "zodSchemaName": "approvalRequestCreatorSchema",
+    "category": "requests",
+    "domain": "approval"
+  },
+  {
+    "openApiName": "ApprovalRequestDtoV1",
+    "typeName": "ApprovalRequest",
+    "zodSchemaName": "approvalRequestSchema",
+    "category": "requests",
+    "domain": "approval"
+  },
+  {
+    "openApiName": "ApprovalRequestOwnerDtoV1",
+    "typeName": "ApprovalRequestOwner",
+    "zodSchemaName": "approvalRequestOwnerSchema",
+    "category": "requests",
+    "domain": "approval"
+  },
+  {
+    "openApiName": "ApprovalRequestStatusDtoV1",
+    "typeName": "ApprovalRequestStatus",
+    "zodSchemaName": "approvalRequestStatusSchema",
+    "category": "requests",
+    "domain": "approval"
+  },
+  {
+    "openApiName": "AssignmentCreateRequestV1",
+    "typeName": "AssignmentCreateRequest",
+    "zodSchemaName": "assignmentCreateRequestSchema",
+    "category": "requests",
+    "domain": "assignment"
+  },
+  {
+    "openApiName": "AssignmentDtoV1",
+    "typeName": "Assignment",
+    "zodSchemaName": "assignmentSchema",
+    "category": "models",
+    "domain": "assignment"
+  },
+  {
+    "openApiName": "AssignmentHydratedDtoV1",
+    "typeName": "AssignmentHydrated",
+    "zodSchemaName": "assignmentHydratedSchema",
+    "category": "models",
+    "domain": "assignment"
+  },
+  {
+    "openApiName": "AssignmentPerDayDto",
+    "typeName": "AssignmentPerDay",
+    "zodSchemaName": "assignmentPerDaySchema",
+    "category": "models",
+    "domain": "assignment"
+  },
+  {
+    "openApiName": "AssignmentUpdateRequestV1",
+    "typeName": "AssignmentUpdateRequest",
+    "zodSchemaName": "assignmentUpdateRequestSchema",
+    "category": "requests",
+    "domain": "assignment"
+  },
+  {
+    "openApiName": "AuditMetadataDto",
+    "typeName": "AuditMetadata",
+    "zodSchemaName": "auditMetadataSchema",
+    "category": "models",
+    "domain": "audit"
+  },
+  {
+    "openApiName": "AuthorizationSourceDtoV1",
+    "typeName": "AuthorizationSource",
+    "zodSchemaName": "authorizationSourceSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "AutomaticAccrualDto",
+    "typeName": "AutomaticAccrual",
+    "zodSchemaName": "automaticAccrualSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "AutomaticAccrualRequest",
+    "typeName": "AutomaticAccrualRequest",
+    "zodSchemaName": "automaticAccrualRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "AutomaticLockDtoV1",
+    "typeName": "AutomaticLock",
+    "zodSchemaName": "automaticLockSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "AutomaticTimeEntryCreationDto",
+    "typeName": "AutomaticTimeEntryCreation",
+    "zodSchemaName": "automaticTimeEntryCreationSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "AutomaticTimeEntryCreationRequest",
+    "typeName": "AutomaticTimeEntryCreationRequest",
+    "zodSchemaName": "automaticTimeEntryCreationRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "BalanceDtoV1",
+    "typeName": "Balance",
+    "zodSchemaName": "balanceSchema",
+    "category": "models",
+    "domain": "balance"
+  },
+  {
+    "openApiName": "BalancesWithCountDtoV1",
+    "typeName": "BalancesWithCount",
+    "zodSchemaName": "balancesWithCountSchema",
+    "category": "models",
+    "domain": "balance"
+  },
+  {
+    "openApiName": "BaseFilterRequest",
+    "typeName": "BaseFilterRequest",
+    "zodSchemaName": "baseFilterRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CalculationType",
+    "typeName": "CalculationType",
+    "zodSchemaName": "calculationTypeSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ChangeInvoiceStatusRequestV1",
+    "typeName": "ChangeInvoiceStatusRequest",
+    "zodSchemaName": "changeInvoiceStatusRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ChangePolicyStatusRequestV1",
+    "typeName": "ChangePolicyStatusRequest",
+    "zodSchemaName": "changePolicyStatusRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ClientDtoV1",
+    "typeName": "Client",
+    "zodSchemaName": "clientSchema",
+    "category": "models",
+    "domain": "client"
+  },
+  {
+    "openApiName": "ClientWithCurrencyDtoV1",
+    "typeName": "ClientWithCurrency",
+    "zodSchemaName": "clientWithCurrencySchema",
+    "category": "models",
+    "domain": "client"
+  },
+  {
+    "openApiName": "ContainsArchivedFilterRequest",
+    "typeName": "ContainsArchivedFilterRequest",
+    "zodSchemaName": "containsArchivedFilterRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ContainsUserGroupFilterRequest",
+    "typeName": "ContainsUserGroupFilterRequest",
+    "zodSchemaName": "containsUserGroupFilterRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ContainsUserGroupFilterRequestV1",
+    "typeName": "ContainsUserGroupFilterRequestV1",
+    "zodSchemaName": "containsUserGroupFilterRequestV1Schema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ContainsUsersFilterRequestForHoliday",
+    "typeName": "ContainsUsersFilterRequestForHoliday",
+    "zodSchemaName": "containsUsersFilterRequestForHolidaySchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ContainsUsersFilterRequestV1",
+    "typeName": "ContainsUsersFilterRequest",
+    "zodSchemaName": "containsUsersFilterRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CopyAssignmentRequestV1",
+    "typeName": "CopyAssignmentRequest",
+    "zodSchemaName": "copyAssignmentRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CostRateRequest",
+    "typeName": "CostRateRequest",
+    "zodSchemaName": "costRateRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CostRateRequestV1",
+    "typeName": "CostRateRequestV1",
+    "zodSchemaName": "costRateRequestV1Schema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateApprovalRequest",
+    "typeName": "CreateApprovalRequest",
+    "zodSchemaName": "createApprovalRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateClientRequestV1",
+    "typeName": "CreateClientRequest",
+    "zodSchemaName": "createClientRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateCustomAttributeRequest",
+    "typeName": "CreateCustomAttributeRequest",
+    "zodSchemaName": "createCustomAttributeRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateExpenseV1Request",
+    "typeName": "CreateExpenseV1Request",
+    "zodSchemaName": "createExpenseV1RequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateHolidayRequestV1",
+    "typeName": "CreateHolidayRequest",
+    "zodSchemaName": "createHolidayRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateInvoiceDtoV1",
+    "typeName": "CreateInvoice",
+    "zodSchemaName": "createInvoiceSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateInvoiceItemRequestV1",
+    "typeName": "CreateInvoiceItemRequest",
+    "zodSchemaName": "createInvoiceItemRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateInvoicePaymentRequest",
+    "typeName": "CreateInvoicePaymentRequest",
+    "zodSchemaName": "createInvoicePaymentRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateInvoiceRequest",
+    "typeName": "CreateInvoiceRequest",
+    "zodSchemaName": "createInvoiceRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreatePolicyRequestV1",
+    "typeName": "CreatePolicyRequest",
+    "zodSchemaName": "createPolicyRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateProjectFromTemplateV1",
+    "typeName": "CreateProjectFromTemplate",
+    "zodSchemaName": "createProjectFromTemplateSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateTimeEntryRequest",
+    "typeName": "CreateTimeEntryRequest",
+    "zodSchemaName": "createTimeEntryRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateTimeOffRequestV1Request",
+    "typeName": "CreateTimeOffRequestV1Request",
+    "zodSchemaName": "createTimeOffRequestV1RequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateWebhookRequestV1",
+    "typeName": "CreateWebhookRequest",
+    "zodSchemaName": "createWebhookRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CreateWorkspaceRequestV1",
+    "typeName": "CreateWorkspaceRequest",
+    "zodSchemaName": "createWorkspaceRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CurrencyWithDefaultInfoDtoV1",
+    "typeName": "CurrencyWithDefaultInfo",
+    "zodSchemaName": "currencyWithDefaultInfoSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CustomFieldDefaultValuesDtoV1",
+    "typeName": "CustomFieldDefaultValues",
+    "zodSchemaName": "customFieldDefaultValuesSchema",
+    "category": "models",
+    "domain": "custom-field"
+  },
+  {
+    "openApiName": "CustomFieldDtoV1",
+    "typeName": "CustomField",
+    "zodSchemaName": "customFieldSchema",
+    "category": "models",
+    "domain": "custom-field"
+  },
+  {
+    "openApiName": "CustomFieldProjectDefaultValuesRequest",
+    "typeName": "CustomFieldProjectDefaultValuesRequest",
+    "zodSchemaName": "customFieldProjectDefaultValuesRequestSchema",
+    "category": "requests",
+    "domain": "custom-field"
+  },
+  {
+    "openApiName": "CustomFieldRequestV1",
+    "typeName": "CustomFieldRequest",
+    "zodSchemaName": "customFieldRequestSchema",
+    "category": "requests",
+    "domain": "custom-field"
+  },
+  {
+    "openApiName": "CustomFieldType",
+    "typeName": "CustomFieldType",
+    "zodSchemaName": "customFieldTypeSchema",
+    "category": "models",
+    "domain": "custom-field"
+  },
+  {
+    "openApiName": "CustomFieldValueDto",
+    "typeName": "CustomFieldValueDto",
+    "zodSchemaName": "customFieldValueDtoSchema",
+    "category": "models",
+    "domain": "custom-field"
+  },
+  {
+    "openApiName": "CustomFieldValueDtoV1",
+    "typeName": "CustomFieldValueDtoV1",
+    "zodSchemaName": "customFieldValueDtoV1Schema",
+    "category": "models",
+    "domain": "custom-field"
+  },
+  {
+    "openApiName": "CustomFieldValueUpdatedInfoDto",
+    "typeName": "CustomFieldValueUpdatedInfo",
+    "zodSchemaName": "customFieldValueUpdatedInfoSchema",
+    "category": "models",
+    "domain": "custom-field"
+  },
+  {
+    "openApiName": "DatePeriod",
+    "typeName": "DatePeriod",
+    "zodSchemaName": "datePeriodSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "DatePeriodRequest",
+    "typeName": "DatePeriodRequest",
+    "zodSchemaName": "datePeriodRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "DateRangeDto",
+    "typeName": "DateRange",
+    "zodSchemaName": "dateRangeSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "DefaultEntitiesDto",
+    "typeName": "DefaultEntities",
+    "zodSchemaName": "defaultEntitiesSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "DefaultEntitiesRequest",
+    "typeName": "DefaultEntitiesRequest",
+    "zodSchemaName": "defaultEntitiesRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "EntityCreationPermission",
+    "typeName": "EntityCreationPermission",
+    "zodSchemaName": "entityCreationPermissionSchema",
+    "category": "models",
+    "domain": "entity"
+  },
+  {
+    "openApiName": "EntityCreationPermissionsDtoV1",
+    "typeName": "EntityCreationPermissions",
+    "zodSchemaName": "entityCreationPermissionsSchema",
+    "category": "models",
+    "domain": "entity"
+  },
+  {
+    "openApiName": "EstimateDtoV1",
+    "typeName": "Estimate",
+    "zodSchemaName": "estimateSchema",
+    "category": "models",
+    "domain": "estimate"
+  },
+  {
+    "openApiName": "EstimateRequest",
+    "typeName": "EstimateRequest",
+    "zodSchemaName": "estimateRequestSchema",
+    "category": "requests",
+    "domain": "estimate"
+  },
+  {
+    "openApiName": "EstimateResetDto",
+    "typeName": "EstimateReset",
+    "zodSchemaName": "estimateResetSchema",
+    "category": "models",
+    "domain": "estimate"
+  },
+  {
+    "openApiName": "EstimateResetRequest",
+    "typeName": "EstimateResetRequest",
+    "zodSchemaName": "estimateResetRequestSchema",
+    "category": "requests",
+    "domain": "estimate"
+  },
+  {
+    "openApiName": "EstimateWithOptionsDto",
+    "typeName": "EstimateWithOptions",
+    "zodSchemaName": "estimateWithOptionsSchema",
+    "category": "models",
+    "domain": "estimate"
+  },
+  {
+    "openApiName": "EstimateWithOptionsRequest",
+    "typeName": "EstimateWithOptionsRequest",
+    "zodSchemaName": "estimateWithOptionsRequestSchema",
+    "category": "requests",
+    "domain": "estimate"
+  },
+  {
+    "openApiName": "ExpenseCategoriesWithCountDtoV1",
+    "typeName": "ExpenseCategoriesWithCount",
+    "zodSchemaName": "expenseCategoriesWithCountSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseCategoryArchiveV1Request",
+    "typeName": "ExpenseCategoryArchiveV1Request",
+    "zodSchemaName": "expenseCategoryArchiveV1RequestSchema",
+    "category": "requests",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseCategoryDto",
+    "typeName": "ExpenseCategoryDto",
+    "zodSchemaName": "expenseCategoryDtoSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseCategoryDtoV1",
+    "typeName": "ExpenseCategoryDtoV1",
+    "zodSchemaName": "expenseCategoryDtoV1Schema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseCategoryV1Request",
+    "typeName": "ExpenseCategoryV1Request",
+    "zodSchemaName": "expenseCategoryV1RequestSchema",
+    "category": "requests",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseDailyTotalsDtoV1",
+    "typeName": "ExpenseDailyTotals",
+    "zodSchemaName": "expenseDailyTotalsSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseDtoV1",
+    "typeName": "Expense",
+    "zodSchemaName": "expenseSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseHydratedDto",
+    "typeName": "ExpenseHydratedDto",
+    "zodSchemaName": "expenseHydratedDtoSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseHydratedDtoV1",
+    "typeName": "ExpenseHydratedDtoV1",
+    "zodSchemaName": "expenseHydratedDtoV1Schema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseWeeklyTotalsDtoV1",
+    "typeName": "ExpenseWeeklyTotals",
+    "zodSchemaName": "expenseWeeklyTotalsSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpensesAndTotalsDtoV1",
+    "typeName": "ExpensesAndTotals",
+    "zodSchemaName": "expensesAndTotalsSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpensesWithCountDtoV1",
+    "typeName": "ExpensesWithCount",
+    "zodSchemaName": "expensesWithCountSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "Feature",
+    "typeName": "Feature",
+    "zodSchemaName": "featureSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "FeatureSubscriptionType",
+    "typeName": "FeatureSubscriptionType",
+    "zodSchemaName": "featureSubscriptionTypeSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "GetTimeOffRequestsV1Request",
+    "typeName": "GetTimeOffRequestsV1Request",
+    "zodSchemaName": "getTimeOffRequestsV1RequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "GetUserTotalsRequestV1",
+    "typeName": "GetUserTotalsRequest",
+    "zodSchemaName": "getUserTotalsRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "GetUsersRequestV1",
+    "typeName": "GetUsersRequest",
+    "zodSchemaName": "getUsersRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "HolidayDto",
+    "typeName": "HolidayDto",
+    "zodSchemaName": "holidayDtoSchema",
+    "category": "models",
+    "domain": "holiday"
+  },
+  {
+    "openApiName": "HolidayDtoV1",
+    "typeName": "HolidayDtoV1",
+    "zodSchemaName": "holidayDtoV1Schema",
+    "category": "models",
+    "domain": "holiday"
+  },
+  {
+    "openApiName": "HourlyRateDtoV1",
+    "typeName": "HourlyRate",
+    "zodSchemaName": "hourlyRateSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "HourlyRateRequest",
+    "typeName": "HourlyRateRequest",
+    "zodSchemaName": "hourlyRateRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "HourlyRateRequestV1",
+    "typeName": "HourlyRateRequestV1",
+    "zodSchemaName": "hourlyRateRequestV1Schema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ImportTimeEntriesAndExpensesRequestV1",
+    "typeName": "ImportTimeEntriesAndExpensesRequest",
+    "zodSchemaName": "importTimeEntriesAndExpensesRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "InvoiceDefaultSettingsDto",
+    "typeName": "InvoiceDefaultSettings",
+    "zodSchemaName": "invoiceDefaultSettingsSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceDefaultSettingsRequestV1",
+    "typeName": "InvoiceDefaultSettingsRequest",
+    "zodSchemaName": "invoiceDefaultSettingsRequestSchema",
+    "category": "requests",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceDtoV1",
+    "typeName": "Invoice",
+    "zodSchemaName": "invoiceSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceExportFields",
+    "typeName": "InvoiceExportFields",
+    "zodSchemaName": "invoiceExportFieldsSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceExportFieldsRequest",
+    "typeName": "InvoiceExportFieldsRequest",
+    "zodSchemaName": "invoiceExportFieldsRequestSchema",
+    "category": "requests",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceFilterRequestV1",
+    "typeName": "InvoiceFilterRequest",
+    "zodSchemaName": "invoiceFilterRequestSchema",
+    "category": "requests",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceInfoResponseDtoV1",
+    "typeName": "InvoiceInfoResponse",
+    "zodSchemaName": "invoiceInfoResponseSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceInfoV1",
+    "typeName": "InvoiceInfo",
+    "zodSchemaName": "invoiceInfoSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceItemDto",
+    "typeName": "InvoiceItem",
+    "zodSchemaName": "invoiceItemSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceOverviewDtoV1",
+    "typeName": "InvoiceOverview",
+    "zodSchemaName": "invoiceOverviewSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoicePaymentDtoV1",
+    "typeName": "InvoicePayment",
+    "zodSchemaName": "invoicePaymentSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoiceSettingsDtoV1",
+    "typeName": "InvoiceSettings",
+    "zodSchemaName": "invoiceSettingsSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "InvoicesListDtoV1",
+    "typeName": "InvoicesList",
+    "zodSchemaName": "invoicesListSchema",
+    "category": "models",
+    "domain": "invoice"
+  },
+  {
+    "openApiName": "LabelsCustomization",
+    "typeName": "LabelsCustomization",
+    "zodSchemaName": "labelsCustomizationSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "LabelsCustomizationRequest",
+    "typeName": "LabelsCustomizationRequest",
+    "zodSchemaName": "labelsCustomizationRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "LogBinDocumentDto",
+    "typeName": "LogBinDocument",
+    "zodSchemaName": "logBinDocumentSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "MemberProfileDtoV1",
+    "typeName": "MemberProfile",
+    "zodSchemaName": "memberProfileSchema",
+    "category": "models",
+    "domain": "member"
+  },
+  {
+    "openApiName": "MemberProfileFullRequestV1",
+    "typeName": "MemberProfileFullRequest",
+    "zodSchemaName": "memberProfileFullRequestSchema",
+    "category": "requests",
+    "domain": "member"
+  },
+  {
+    "openApiName": "MembershipDtoV1",
+    "typeName": "Membership",
+    "zodSchemaName": "membershipSchema",
+    "category": "models",
+    "domain": "member"
+  },
+  {
+    "openApiName": "MembershipRequest",
+    "typeName": "MembershipRequest",
+    "zodSchemaName": "membershipRequestSchema",
+    "category": "requests",
+    "domain": "member"
+  },
+  {
+    "openApiName": "MilestoneDto",
+    "typeName": "Milestone",
+    "zodSchemaName": "milestoneSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "NegativeBalanceDto",
+    "typeName": "NegativeBalance",
+    "zodSchemaName": "negativeBalanceSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "NegativeBalanceRequest",
+    "typeName": "NegativeBalanceRequest",
+    "zodSchemaName": "negativeBalanceRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "PageableCollectionLogBinDocumentDto",
+    "typeName": "PageableCollectionLogBinDocument",
+    "zodSchemaName": "pageableCollectionLogBinDocumentSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "PatchProjectTemplateRequest",
+    "typeName": "PatchProjectTemplateRequest",
+    "zodSchemaName": "patchProjectTemplateRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "Period",
+    "typeName": "Period",
+    "zodSchemaName": "periodSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "PeriodV1Request",
+    "typeName": "PeriodV1Request",
+    "zodSchemaName": "periodV1RequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "PolicyApprovalDto",
+    "typeName": "PolicyApproval",
+    "zodSchemaName": "policyApprovalSchema",
+    "category": "models",
+    "domain": "policy"
+  },
+  {
+    "openApiName": "PolicyDtoV1",
+    "typeName": "Policy",
+    "zodSchemaName": "policySchema",
+    "category": "models",
+    "domain": "policy"
+  },
+  {
+    "openApiName": "ProjectDtoImplV1",
+    "typeName": "ProjectDtoImplV1",
+    "zodSchemaName": "projectDtoImplV1Schema",
+    "category": "models",
+    "domain": "project"
+  },
+  {
+    "openApiName": "ProjectDtoV1",
+    "typeName": "ProjectDtoV1",
+    "zodSchemaName": "projectDtoV1Schema",
+    "category": "models",
+    "domain": "project"
+  },
+  {
+    "openApiName": "ProjectEstimateRequest",
+    "typeName": "ProjectEstimateRequest",
+    "zodSchemaName": "projectEstimateRequestSchema",
+    "category": "requests",
+    "domain": "project"
+  },
+  {
+    "openApiName": "ProjectInfoDto",
+    "typeName": "ProjectInfo",
+    "zodSchemaName": "projectInfoSchema",
+    "category": "models",
+    "domain": "project"
+  },
+  {
+    "openApiName": "ProjectRequest",
+    "typeName": "ProjectRequest",
+    "zodSchemaName": "projectRequestSchema",
+    "category": "requests",
+    "domain": "project"
+  },
+  {
+    "openApiName": "ProjectTaskTupleDto",
+    "typeName": "ProjectTaskTuple",
+    "zodSchemaName": "projectTaskTupleSchema",
+    "category": "models",
+    "domain": "project"
+  },
+  {
+    "openApiName": "ProjectTaskTupleRequest",
+    "typeName": "ProjectTaskTupleRequest",
+    "zodSchemaName": "projectTaskTupleRequestSchema",
+    "category": "requests",
+    "domain": "project"
+  },
+  {
+    "openApiName": "ProjectTotalsRequestV1",
+    "typeName": "ProjectTotalsRequest",
+    "zodSchemaName": "projectTotalsRequestSchema",
+    "category": "requests",
+    "domain": "project"
+  },
+  {
+    "openApiName": "PublishAssignmentsRequestV1",
+    "typeName": "PublishAssignmentsRequest",
+    "zodSchemaName": "publishAssignmentsRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "RateDto",
+    "typeName": "RateDto",
+    "zodSchemaName": "rateDtoSchema",
+    "category": "models",
+    "domain": "rate"
+  },
+  {
+    "openApiName": "RateDtoV1",
+    "typeName": "RateDtoV1",
+    "zodSchemaName": "rateDtoV1Schema",
+    "category": "models",
+    "domain": "rate"
+  },
+  {
+    "openApiName": "RateWithCurrencyRequestV1",
+    "typeName": "RateWithCurrencyRequest",
+    "zodSchemaName": "rateWithCurrencyRequestSchema",
+    "category": "requests",
+    "domain": "rate"
+  },
+  {
+    "openApiName": "RecurringAssignmentDto",
+    "typeName": "RecurringAssignment",
+    "zodSchemaName": "recurringAssignmentSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "RecurringAssignmentRequestV1",
+    "typeName": "RecurringAssignmentRequest",
+    "zodSchemaName": "recurringAssignmentRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "RoleDetailsDtoV1",
+    "typeName": "RoleDetails",
+    "zodSchemaName": "roleDetailsSchema",
+    "category": "models",
+    "domain": "role"
+  },
+  {
+    "openApiName": "RoleDtoV1",
+    "typeName": "Role",
+    "zodSchemaName": "roleSchema",
+    "category": "models",
+    "domain": "role"
+  },
+  {
+    "openApiName": "RoleRequestV1",
+    "typeName": "RoleRequest",
+    "zodSchemaName": "roleRequestSchema",
+    "category": "requests",
+    "domain": "role"
+  },
+  {
+    "openApiName": "RoundDto",
+    "typeName": "Round",
+    "zodSchemaName": "roundSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "SchedulingExcludeDay",
+    "typeName": "SchedulingExcludeDay",
+    "zodSchemaName": "schedulingExcludeDaySchema",
+    "category": "models",
+    "domain": "scheduling"
+  },
+  {
+    "openApiName": "SchedulingProjectsTotalsDtoV1",
+    "typeName": "SchedulingProjectsTotals",
+    "zodSchemaName": "schedulingProjectsTotalsSchema",
+    "category": "models",
+    "domain": "scheduling"
+  },
+  {
+    "openApiName": "SchedulingUsersTotalsDtoV1",
+    "typeName": "SchedulingUsersTotals",
+    "zodSchemaName": "schedulingUsersTotalsSchema",
+    "category": "models",
+    "domain": "scheduling"
+  },
+  {
+    "openApiName": "StatusTimeOffRequestV1Request",
+    "typeName": "StatusTimeOffRequestV1Request",
+    "zodSchemaName": "statusTimeOffRequestV1RequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "StopTimeEntryRequest",
+    "typeName": "StopTimeEntryRequest",
+    "zodSchemaName": "stopTimeEntryRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "SummaryReportSettingsDtoV1",
+    "typeName": "SummaryReportSettings",
+    "zodSchemaName": "summaryReportSettingsSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "TagDto",
+    "typeName": "TagDto",
+    "zodSchemaName": "tagDtoSchema",
+    "category": "models",
+    "domain": "tag"
+  },
+  {
+    "openApiName": "TagDtoV1",
+    "typeName": "TagDtoV1",
+    "zodSchemaName": "tagDtoV1Schema",
+    "category": "models",
+    "domain": "tag"
+  },
+  {
+    "openApiName": "TagRequest",
+    "typeName": "TagRequest",
+    "zodSchemaName": "tagRequestSchema",
+    "category": "requests",
+    "domain": "tag"
+  },
+  {
+    "openApiName": "TaskDtoV1",
+    "typeName": "Task",
+    "zodSchemaName": "taskSchema",
+    "category": "models",
+    "domain": "task"
+  },
+  {
+    "openApiName": "TaskInfoDto",
+    "typeName": "TaskInfo",
+    "zodSchemaName": "taskInfoSchema",
+    "category": "models",
+    "domain": "task"
+  },
+  {
+    "openApiName": "TaskRequest",
+    "typeName": "TaskRequest",
+    "zodSchemaName": "taskRequestSchema",
+    "category": "requests",
+    "domain": "task"
+  },
+  {
+    "openApiName": "TaskRequestV1",
+    "typeName": "TaskRequestV1",
+    "zodSchemaName": "taskRequestV1Schema",
+    "category": "requests",
+    "domain": "task"
+  },
+  {
+    "openApiName": "TaskStatus",
+    "typeName": "TaskStatus",
+    "zodSchemaName": "taskStatusSchema",
+    "category": "models",
+    "domain": "task"
+  },
+  {
+    "openApiName": "TaxType",
+    "typeName": "TaxType",
+    "zodSchemaName": "taxTypeSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "TemplateDto",
+    "typeName": "Template",
+    "zodSchemaName": "templateSchema",
+    "category": "models",
+    "domain": "template"
+  },
+  {
+    "openApiName": "TemplateDtoImpl",
+    "typeName": "TemplateDtoImpl",
+    "zodSchemaName": "templateDtoImplSchema",
+    "category": "models",
+    "domain": "template"
+  },
+  {
+    "openApiName": "TemplatePatchRequest",
+    "typeName": "TemplatePatchRequest",
+    "zodSchemaName": "templatePatchRequestSchema",
+    "category": "requests",
+    "domain": "template"
+  },
+  {
+    "openApiName": "TemplateRequest",
+    "typeName": "TemplateRequest",
+    "zodSchemaName": "templateRequestSchema",
+    "category": "requests",
+    "domain": "template"
+  },
+  {
+    "openApiName": "TimeEntryDtoImplV1",
+    "typeName": "TimeEntryDtoImplV1",
+    "zodSchemaName": "timeEntryDtoImplV1Schema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntryDtoV1",
+    "typeName": "TimeEntryDtoV1",
+    "zodSchemaName": "timeEntryDtoV1Schema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntryId",
+    "typeName": "TimeEntryId",
+    "zodSchemaName": "timeEntryIdSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntryInfoDto",
+    "typeName": "TimeEntryInfo",
+    "zodSchemaName": "timeEntryInfoSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntryUpdatedInfoDto",
+    "typeName": "TimeEntryUpdatedInfo",
+    "zodSchemaName": "timeEntryUpdatedInfoSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntryWithCustomFieldsDto",
+    "typeName": "TimeEntryWithCustomFields",
+    "zodSchemaName": "timeEntryWithCustomFieldsSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntryWithRatesDtoV1",
+    "typeName": "TimeEntryWithRates",
+    "zodSchemaName": "timeEntryWithRatesSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEstimateDto",
+    "typeName": "TimeEstimate",
+    "zodSchemaName": "timeEstimateSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "TimeEstimateRequest",
+    "typeName": "TimeEstimateRequest",
+    "zodSchemaName": "timeEstimateRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "TimeIntervalDto",
+    "typeName": "TimeIntervalDto",
+    "zodSchemaName": "timeIntervalDtoSchema",
+    "category": "models",
+    "domain": "time-interval"
+  },
+  {
+    "openApiName": "TimeIntervalDtoV1",
+    "typeName": "TimeIntervalDtoV1",
+    "zodSchemaName": "timeIntervalDtoV1Schema",
+    "category": "models",
+    "domain": "time-interval"
+  },
+  {
+    "openApiName": "TimeOffRequestFullV1Dto",
+    "typeName": "TimeOffRequestFull",
+    "zodSchemaName": "timeOffRequestFullSchema",
+    "category": "requests",
+    "domain": "time-off"
+  },
+  {
+    "openApiName": "TimeOffRequestPeriodDto",
+    "typeName": "TimeOffRequestPeriod",
+    "zodSchemaName": "timeOffRequestPeriodSchema",
+    "category": "requests",
+    "domain": "time-off"
+  },
+  {
+    "openApiName": "TimeOffRequestPeriodV1Request",
+    "typeName": "TimeOffRequestPeriodV1Request",
+    "zodSchemaName": "timeOffRequestPeriodV1RequestSchema",
+    "category": "requests",
+    "domain": "time-off"
+  },
+  {
+    "openApiName": "TimeOffRequestStatus",
+    "typeName": "TimeOffRequestStatus",
+    "zodSchemaName": "timeOffRequestStatusSchema",
+    "category": "requests",
+    "domain": "time-off"
+  },
+  {
+    "openApiName": "TimeOffRequestV1Dto",
+    "typeName": "TimeOffRequest",
+    "zodSchemaName": "timeOffRequestSchema",
+    "category": "requests",
+    "domain": "time-off"
+  },
+  {
+    "openApiName": "TimeOffRequestsWithCountV1Dto",
+    "typeName": "TimeOffRequestsWithCount",
+    "zodSchemaName": "timeOffRequestsWithCountSchema",
+    "category": "requests",
+    "domain": "time-off"
+  },
+  {
+    "openApiName": "TimeRangeRequestDtoV1",
+    "typeName": "TimeRangeRequest",
+    "zodSchemaName": "timeRangeRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "TotalsPerDayDto",
+    "typeName": "TotalsPerDay",
+    "zodSchemaName": "totalsPerDaySchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateApprovalRequest",
+    "typeName": "UpdateApprovalRequest",
+    "zodSchemaName": "updateApprovalRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateBalanceRequestV1",
+    "typeName": "UpdateBalanceRequest",
+    "zodSchemaName": "updateBalanceRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateClientRequestV1",
+    "typeName": "UpdateClientRequest",
+    "zodSchemaName": "updateClientRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateCustomFieldRequest",
+    "typeName": "UpdateCustomFieldRequest",
+    "zodSchemaName": "updateCustomFieldRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateCustomFieldRequestV1",
+    "typeName": "UpdateCustomFieldRequestV1",
+    "zodSchemaName": "updateCustomFieldRequestV1Schema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateExpenseV1Request",
+    "typeName": "UpdateExpenseV1Request",
+    "zodSchemaName": "updateExpenseV1RequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateHolidayRequestV1",
+    "typeName": "UpdateHolidayRequest",
+    "zodSchemaName": "updateHolidayRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateInvoiceRequestV1",
+    "typeName": "UpdateInvoiceRequest",
+    "zodSchemaName": "updateInvoiceRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateInvoiceSettingsRequestV1",
+    "typeName": "UpdateInvoiceSettingsRequest",
+    "zodSchemaName": "updateInvoiceSettingsRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateInvoicedStatusRequest",
+    "typeName": "UpdateInvoicedStatusRequest",
+    "zodSchemaName": "updateInvoicedStatusRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdatePolicyRequestV1",
+    "typeName": "UpdatePolicyRequest",
+    "zodSchemaName": "updatePolicyRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateProjectMembershipsRequest",
+    "typeName": "UpdateProjectMembershipsRequest",
+    "zodSchemaName": "updateProjectMembershipsRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateProjectRequest",
+    "typeName": "UpdateProjectRequest",
+    "zodSchemaName": "updateProjectRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateTagRequest",
+    "typeName": "UpdateTagRequest",
+    "zodSchemaName": "updateTagRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateTaskRequest",
+    "typeName": "UpdateTaskRequest",
+    "zodSchemaName": "updateTaskRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateTimeEntryBulkRequest",
+    "typeName": "UpdateTimeEntryBulkRequest",
+    "zodSchemaName": "updateTimeEntryBulkRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateTimeEntryRequest",
+    "typeName": "UpdateTimeEntryRequest",
+    "zodSchemaName": "updateTimeEntryRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateUserGroupRequest",
+    "typeName": "UpdateUserGroupRequest",
+    "zodSchemaName": "updateUserGroupRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateUserStatusRequest",
+    "typeName": "UpdateUserStatusRequest",
+    "zodSchemaName": "updateUserStatusRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpdateWebhookRequestV1",
+    "typeName": "UpdateWebhookRequest",
+    "zodSchemaName": "updateWebhookRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UploadFileResponseV1",
+    "typeName": "UploadFileResponse",
+    "zodSchemaName": "uploadFileResponseSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpsertUserCustomFieldRequest",
+    "typeName": "UpsertUserCustomFieldRequest",
+    "zodSchemaName": "upsertUserCustomFieldRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UpsertUserCustomFieldRequestV1",
+    "typeName": "UpsertUserCustomFieldRequestV1",
+    "zodSchemaName": "upsertUserCustomFieldRequestV1Schema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UserCustomFieldValueDtoV1",
+    "typeName": "UserCustomFieldValue",
+    "zodSchemaName": "userCustomFieldValueSchema",
+    "category": "models",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserCustomFieldValueFullDtoV1",
+    "typeName": "UserCustomFieldValueFull",
+    "zodSchemaName": "userCustomFieldValueFullSchema",
+    "category": "models",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserDtoV1",
+    "typeName": "UserDtoV1",
+    "zodSchemaName": "userDtoV1Schema",
+    "category": "models",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserGroupDtoV1",
+    "typeName": "UserGroup",
+    "zodSchemaName": "userGroupSchema",
+    "category": "models",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserGroupIdsSchema",
+    "typeName": "UserGroupIdsSchema",
+    "zodSchemaName": "userGroupIdsSchemaSchema",
+    "category": "models",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserGroupRequest",
+    "typeName": "UserGroupRequest",
+    "zodSchemaName": "userGroupRequestSchema",
+    "category": "requests",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserGroupUserRequest",
+    "typeName": "UserGroupUserRequest",
+    "zodSchemaName": "userGroupUserRequestSchema",
+    "category": "requests",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserIdWithRatesRequest",
+    "typeName": "UserIdWithRatesRequest",
+    "zodSchemaName": "userIdWithRatesRequestSchema",
+    "category": "requests",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserIdsSchema",
+    "typeName": "UserIdsSchema",
+    "zodSchemaName": "userIdsSchemaSchema",
+    "category": "models",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserRedactedDtoV1",
+    "typeName": "UserRedacted",
+    "zodSchemaName": "userRedactedSchema",
+    "category": "models",
+    "domain": "user"
+  },
+  {
+    "openApiName": "UserSettingsDtoV1",
+    "typeName": "UserSettings",
+    "zodSchemaName": "userSettingsSchema",
+    "category": "models",
+    "domain": "user"
+  },
+  {
+    "openApiName": "VisibleZeroFieldsInvoice",
+    "typeName": "VisibleZeroFieldsInvoice",
+    "zodSchemaName": "visibleZeroFieldsInvoiceSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "WebhookDtoV1",
+    "typeName": "Webhook",
+    "zodSchemaName": "webhookSchema",
+    "category": "models",
+    "domain": "webhook"
+  },
+  {
+    "openApiName": "WebhookEventTriggerSourceType",
+    "typeName": "WebhookEventTriggerSourceType",
+    "zodSchemaName": "webhookEventTriggerSourceTypeSchema",
+    "category": "models",
+    "domain": "webhook"
+  },
+  {
+    "openApiName": "WebhookEventType",
+    "typeName": "WebhookEventType",
+    "zodSchemaName": "webhookEventTypeSchema",
+    "category": "models",
+    "domain": "webhook"
+  },
+  {
+    "openApiName": "WebhookLogDtoV1",
+    "typeName": "WebhookLog",
+    "zodSchemaName": "webhookLogSchema",
+    "category": "models",
+    "domain": "webhook"
+  },
+  {
+    "openApiName": "WebhookLogSearchRequestV1",
+    "typeName": "WebhookLogSearchRequest",
+    "zodSchemaName": "webhookLogSearchRequestSchema",
+    "category": "requests",
+    "domain": "webhook"
+  },
+  {
+    "openApiName": "WebhooksDtoV1",
+    "typeName": "Webhooks",
+    "zodSchemaName": "webhooksSchema",
+    "category": "models",
+    "domain": "webhook"
+  },
+  {
+    "openApiName": "WorkspaceDtoV1",
+    "typeName": "Workspace",
+    "zodSchemaName": "workspaceSchema",
+    "category": "models",
+    "domain": "workspace"
+  },
+  {
+    "openApiName": "WorkspaceSettingsDtoV1",
+    "typeName": "WorkspaceSettings",
+    "zodSchemaName": "workspaceSettingsSchema",
+    "category": "models",
+    "domain": "workspace"
+  },
+  {
+    "openApiName": "WorkspaceSubdomainDtoV1",
+    "typeName": "WorkspaceSubdomain",
+    "zodSchemaName": "workspaceSubdomainSchema",
+    "category": "models",
+    "domain": "workspace"
+  },
+  {
+    "openApiName": "AmountDto",
+    "typeName": "Amount",
+    "zodSchemaName": "amountSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "AttendanceDto",
+    "typeName": "Attendance",
+    "zodSchemaName": "attendanceSchema",
+    "category": "models",
+    "domain": "attendance"
+  },
+  {
+    "openApiName": "AttendanceFilterV1",
+    "typeName": "AttendanceFilter",
+    "zodSchemaName": "attendanceFilterSchema",
+    "category": "filters",
+    "domain": "attendance"
+  },
+  {
+    "openApiName": "AttendanceReportDtoV1",
+    "typeName": "AttendanceReport",
+    "zodSchemaName": "attendanceReportSchema",
+    "category": "models",
+    "domain": "attendance"
+  },
+  {
+    "openApiName": "AttendanceReportFilterV1",
+    "typeName": "AttendanceReportFilter",
+    "zodSchemaName": "attendanceReportFilterSchema",
+    "category": "filters",
+    "domain": "attendance"
+  },
+  {
+    "openApiName": "AuditFilterV1",
+    "typeName": "AuditFilter",
+    "zodSchemaName": "auditFilterSchema",
+    "category": "filters",
+    "domain": "audit"
+  },
+  {
+    "openApiName": "CompareBreakFilter",
+    "typeName": "CompareBreakFilter",
+    "zodSchemaName": "compareBreakFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CompareCapacityFilter",
+    "typeName": "CompareCapacityFilter",
+    "zodSchemaName": "compareCapacityFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CompareEndFilter",
+    "typeName": "CompareEndFilter",
+    "zodSchemaName": "compareEndFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CompareOvertimeFilter",
+    "typeName": "CompareOvertimeFilter",
+    "zodSchemaName": "compareOvertimeFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CompareStartFilter",
+    "typeName": "CompareStartFilter",
+    "zodSchemaName": "compareStartFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CompareWorkFilter",
+    "typeName": "CompareWorkFilter",
+    "zodSchemaName": "compareWorkFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ContainsArchivedFilterV1",
+    "typeName": "ContainsArchivedFilter",
+    "zodSchemaName": "containsArchivedFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ContainsTagFilterV1",
+    "typeName": "ContainsTagFilter",
+    "zodSchemaName": "containsTagFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ContainsTaskFilterV1",
+    "typeName": "ContainsTaskFilter",
+    "zodSchemaName": "containsTaskFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "ContainsUsersFilterV1",
+    "typeName": "ContainsUsersFilter",
+    "zodSchemaName": "containsUsersFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "CustomFieldFilterV1",
+    "typeName": "CustomFieldFilter",
+    "zodSchemaName": "customFieldFilterSchema",
+    "category": "filters",
+    "domain": "custom-field"
+  },
+  {
+    "openApiName": "DailyTotalDto",
+    "typeName": "DailyTotal",
+    "zodSchemaName": "dailyTotalSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "DetailedFilterV1",
+    "typeName": "DetailedFilter",
+    "zodSchemaName": "detailedFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "DetailedOptionsV1",
+    "typeName": "DetailedOptions",
+    "zodSchemaName": "detailedOptionsSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "DetailedReportFilterV1",
+    "typeName": "DetailedReportFilter",
+    "zodSchemaName": "detailedReportFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "EntityName",
+    "typeName": "EntityName",
+    "zodSchemaName": "entityNameSchema",
+    "category": "models",
+    "domain": "entity"
+  },
+  {
+    "openApiName": "ExpenseDetailedReportDtoV1",
+    "typeName": "ExpenseDetailedReport",
+    "zodSchemaName": "expenseDetailedReportSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseReportDtoV1",
+    "typeName": "ExpenseReport",
+    "zodSchemaName": "expenseReportSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseReportFilterV1",
+    "typeName": "ExpenseReportFilter",
+    "zodSchemaName": "expenseReportFilterSchema",
+    "category": "filters",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "ExpenseTotalsDtoV1",
+    "typeName": "ExpenseTotals",
+    "zodSchemaName": "expenseTotalsSchema",
+    "category": "models",
+    "domain": "expense"
+  },
+  {
+    "openApiName": "GroupOneDto",
+    "typeName": "GroupOne",
+    "zodSchemaName": "groupOneSchema",
+    "category": "models",
+    "domain": "group"
+  },
+  {
+    "openApiName": "ReportFilterV1",
+    "typeName": "ReportFilter",
+    "zodSchemaName": "reportFilterSchema",
+    "category": "filters",
+    "domain": "report"
+  },
+  {
+    "openApiName": "ReportTagDto",
+    "typeName": "ReportTag",
+    "zodSchemaName": "reportTagSchema",
+    "category": "models",
+    "domain": "report"
+  },
+  {
+    "openApiName": "ReportTimeIntervalDto",
+    "typeName": "ReportTimeInterval",
+    "zodSchemaName": "reportTimeIntervalSchema",
+    "category": "models",
+    "domain": "report"
+  },
+  {
+    "openApiName": "SharedReportDtoV1",
+    "typeName": "SharedReportDtoV1",
+    "zodSchemaName": "sharedReportDtoV1Schema",
+    "category": "models",
+    "domain": "shared-report"
+  },
+  {
+    "openApiName": "SharedReportRequestV1",
+    "typeName": "SharedReportRequest",
+    "zodSchemaName": "sharedReportRequestSchema",
+    "category": "requests",
+    "domain": "shared-report"
+  },
+  {
+    "openApiName": "SharedReportV1",
+    "typeName": "SharedReportV1",
+    "zodSchemaName": "sharedReportV1Schema",
+    "category": "models",
+    "domain": "shared-report"
+  },
+  {
+    "openApiName": "SharedReportsAndCountDtoV1",
+    "typeName": "SharedReportsAndCount",
+    "zodSchemaName": "sharedReportsAndCountSchema",
+    "category": "models",
+    "domain": "shared-report"
+  },
+  {
+    "openApiName": "SummaryFilterV1",
+    "typeName": "SummaryFilter",
+    "zodSchemaName": "summaryFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "SummaryReportChartDto",
+    "typeName": "SummaryReportChart",
+    "zodSchemaName": "summaryReportChartSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "SummaryReportFilterV1",
+    "typeName": "SummaryReportFilter",
+    "zodSchemaName": "summaryReportFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "TimeEntryDetailedReportDto",
+    "typeName": "TimeEntryDetailedReport",
+    "zodSchemaName": "timeEntryDetailedReportSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntryDto",
+    "typeName": "TimeEntryDto",
+    "zodSchemaName": "timeEntryDtoSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntryReportTotals",
+    "typeName": "TimeEntryReportTotals",
+    "zodSchemaName": "timeEntryReportTotalsSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntrySummaryReportDto",
+    "typeName": "TimeEntrySummaryReport",
+    "zodSchemaName": "timeEntrySummaryReportSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "TimeEntryWeeklyReportDto",
+    "typeName": "TimeEntryWeeklyReport",
+    "zodSchemaName": "timeEntryWeeklyReportSchema",
+    "category": "models",
+    "domain": "time-entry"
+  },
+  {
+    "openApiName": "UpdateSharedReportRequestV1",
+    "typeName": "UpdateSharedReportRequest",
+    "zodSchemaName": "updateSharedReportRequestSchema",
+    "category": "requests",
+    "domain": "common"
+  },
+  {
+    "openApiName": "UserDto",
+    "typeName": "UserDto",
+    "zodSchemaName": "userDtoSchema",
+    "category": "models",
+    "domain": "user"
+  },
+  {
+    "openApiName": "WeeklyFilterV1",
+    "typeName": "WeeklyFilter",
+    "zodSchemaName": "weeklyFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "WeeklyReportFilterV1",
+    "typeName": "WeeklyReportFilter",
+    "zodSchemaName": "weeklyReportFilterSchema",
+    "category": "filters",
+    "domain": "common"
+  },
+  {
+    "openApiName": "invoicingInfo",
+    "typeName": "InvoicingInfo",
+    "zodSchemaName": "invoicingInfoSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "AuditLogDtoV1",
+    "typeName": "AuditLog",
+    "zodSchemaName": "auditLogSchema",
+    "category": "models",
+    "domain": "audit"
+  },
+  {
+    "openApiName": "AuditLogGetRequestV1",
+    "typeName": "AuditLogGetRequest",
+    "zodSchemaName": "auditLogGetRequestSchema",
+    "category": "requests",
+    "domain": "audit"
+  },
+  {
+    "openApiName": "PageableV1ListAuditLogDtoV1",
+    "typeName": "PageableV1ListAuditLog",
+    "zodSchemaName": "pageableV1ListAuditLogSchema",
+    "category": "models",
+    "domain": "common"
+  },
+  {
+    "openApiName": "authors",
+    "typeName": "Authors",
+    "zodSchemaName": "authorsSchema",
+    "category": "models",
+    "domain": "common"
+  }
+]

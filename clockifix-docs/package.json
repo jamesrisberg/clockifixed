@@ -1,0 +1,17 @@
+{
+  "name": "clockifix",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync-spec": "[ -f ../openapi.json ] && cp ../openapi.json ./openapi.json || true",
+    "dev": "npm run sync-spec && tome dev",
+    "build": "npm run sync-spec && tome build",
+    "deploy": "tome deploy"
+  },
+  "devDependencies": {
+    "@tomehq/cli": "^0.5.0",
+    "@tomehq/theme": "^0.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

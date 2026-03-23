@@ -1,0 +1,130 @@
+---
+title: Type System
+description: How Clockifixed generates and organizes 277 TypeScript types with runtime Zod validation.
+icon: shield
+---
+
+# Type System
+
+Clockifixed has a two-layer type system: **TypeScript interfaces** for compile-time safety and **Zod schemas** for runtime validation. Both are auto-generated from Clockify's OpenAPI spec.
+
+## Generation Pipeline
+
+```mermaid
+flowchart LR
+    SPEC["openapi.json<br/><i>Clockify's spec</i>"]
+    GEN["generate-types.ts<br/><i>Parser + generator</i>"]
+    TYPES["277 TS Interfaces"]
+    ZOD["277 Zod Schemas"]
+    ANOM["Anomaly Report<br/><i>17 issues found</i>"]
+
+    SPEC --> GEN
+    GEN --> TYPES & ZOD & ANOM
+
+    style SPEC fill:#6366f1,stroke:#4f46e5,color:#fff
+    style GEN fill:#f59e0b,stroke:#d97706,color:#000
+    style TYPES fill:#3b82f6,stroke:#2563eb,color:#fff
+    style ZOD fill:#10b981,stroke:#059669,color:#fff
+    style ANOM fill:#ef4444,stroke:#dc2626,color:#fff
+```
+
+## File Organization
+
+Types are organized by **category** and **domain**:
+
+```text
+src/types/
+├── models/           # Entity types (what the API returns)
+│   ├── time-entry.ts    # TimeEntryDtoImplV1, TimeEntryDtoV1, ...
+│   ├── project.ts       # ProjectDtoImplV1, ProjectDtoV1
+│   ├── user.ts          # UserDtoV1, UserDto, UserRedacted, ...
+│   ├── client.ts        # Client, ClientWithCurrency
+│   ├── invoice.ts       # InvoiceOverview, InvoicesList, ...
+│   ├── expense.ts       # Expense, ExpensesAndTotals, ...
+│   └── ... (30 files)
+├── requests/         # Request body types (what you send)
+│   ├── common.ts        # CreateTimeEntryRequest, UpdateProjectRequest, ...
+│   ├── invoice.ts       # CreateInvoiceRequest, InvoiceFilterRequest, ...
+│   └── ... (19 files)
+├── filters/          # Report and query filter types
+│   ├── common.ts        # DetailedReportFilter, SummaryReportFilter, ...
+│   ├── report.ts        # ReportFilter, WeeklyReportFilter, ...
+│   └── ... (6 files)
+└── index.ts          # Barrel export — import everything from here
+```
+
+## Name Collision Handling
+
+Clockify defines multiple schemas that reduce to the same name after suffix stripping. The generator detects and resolves these:
+
+| Collision Group | Raw OpenAPI Names | Our Type Names |
+|---|---|---|
+| TimeEntry | `TimeEntryDtoImplV1`, `TimeEntryDtoV1`, `TimeEntryDto` | `TimeEntryDtoImplV1`, `TimeEntryDtoV1`, `TimeEntryDto` |
+| Rate | `RateDto`, `RateDtoV1` | `RateDto`, `RateDtoV1` |
+| Tag | `TagDto`, `TagDtoV1` | `TagDto`, `TagDtoV1` |
+| User | `UserDtoV1`, `UserDto` | `UserDtoV1`, `UserDto` |
+| Holiday | `HolidayDto`, `HolidayDtoV1` | `HolidayDto`, `HolidayDtoV1` |
+| CustomFieldValue | `CustomFieldValueDto`, `CustomFieldValueDtoV1` | `CustomFieldValueDto`, `CustomFieldValueDtoV1` |
+
+<Callout type="info" title="Naming Rule">
+  When a schema name is **unique** after stripping `Dto`, `DtoV1`, `DtoImplV1`, `V1` suffixes, we use the clean name (e.g., `WorkspaceDtoV1` becomes `Workspace`). When there's a **collision**, we preserve the raw OpenAPI name to avoid ambiguity.
+</Callout>
+
+## Using Types
+
+Every type is exported from `clockifixed`:
+
+```typescript
+import type {
+  Workspace,
+  ProjectDtoV1,
+  TimeEntryDtoImplV1,
+  CreateTimeEntryRequest,
+} from "clockifixed";
+```
+
+## Using Zod Schemas
+
+Every type has a matching Zod schema for runtime validation:
+
+```typescript
+import {
+  workspaceSchema,
+  projectDtoV1Schema,
+  timeEntryDtoImplV1Schema,
+} from "clockifixed";
+
+// Validate unknown data
+const result = workspaceSchema.safeParse(apiResponse);
+if (result.success) {
+  const workspace = result.data; // typed as Workspace
+} else {
+  console.error(result.error.issues);
+}
+```
+
+## Circular Reference Handling
+
+Some Clockify schemas are self-referencing (e.g., `GroupOne.children` is `GroupOne[]`). The generator handles these with `z.lazy()`:
+
+```typescript
+// Generated automatically
+export const groupOneSchema: z.ZodType<GroupOne> = z.lazy(() =>
+  z.object({
+    children: z.array(groupOneSchema).optional(),
+    // ...
+  })
+);
+```
+
+Cross-file references also use `z.lazy()` to prevent circular import deadlocks at runtime.
+
+## Regenerating Types
+
+If the OpenAPI spec is updated:
+
+```bash
+npm run generate
+```
+
+This cleans previous output (preserving test files), regenerates all types and schemas, and reports any new anomalies.

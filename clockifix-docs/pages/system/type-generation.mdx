@@ -1,0 +1,139 @@
+---
+title: Type Generation
+description: Deep dive into how the generator transforms 277 OpenAPI schemas into TypeScript + Zod.
+icon: cpu
+---
+
+# Type Generation
+
+The generator (`scripts/generate-types.ts`) is the heart of Clockifixed's type system. It reads Clockify's OpenAPI spec and produces a complete, well-organized set of TypeScript interfaces and Zod schemas.
+
+## Pipeline Stages
+
+```mermaid
+stateDiagram-v2
+    [*] --> Clean: rm previous output
+    Clean --> Parse: read openapi.json
+    Parse --> Resolve: build name resolution map
+    Resolve --> Detect: find name collisions
+    Detect --> Categorize: models / requests / filters
+    Categorize --> Domain: group by domain prefix
+    Domain --> FileMap: assign to output files
+    FileMap --> TopoSort: order within each file
+    TopoSort --> Generate: emit TS + Zod
+    Generate --> LazyWrap: z.lazy() for cross-file refs
+    LazyWrap --> Write: write files + barrel indexes
+    Write --> Report: anomalies + schema map
+    Report --> [*]
+```
+
+## Name Resolution
+
+The biggest challenge is Clockify's inconsistent naming. The spec has:
+
+- `TimeEntryDtoImplV1` — an implementation detail DTO
+- `TimeEntryDtoV1` — a V1-versioned DTO
+- `TimeEntryDto` — a plain DTO
+
+All three represent "time entry" shapes with different fields. The generator:
+
+1. Strips suffixes (`DtoImplV1`, `DtoV1`, `Dto`, `V1`) to get an ideal name
+2. Detects when multiple schemas map to the same ideal name
+3. Falls back to preserving the raw OpenAPI name for colliding schemas
+4. Uses the clean name when there's no collision
+
+```mermaid
+flowchart TD
+    RAW["TimeEntryDtoImplV1"]
+    STRIP["Strip: DtoImplV1"]
+    IDEAL["TimeEntry"]
+    CHECK{"Others map<br/>to 'TimeEntry'?"}
+
+    RAW --> STRIP --> IDEAL --> CHECK
+
+    CHECK -->|"Yes: collision"| KEEP["Keep raw:<br/>TimeEntryDtoImplV1"]
+    CHECK -->|"No: unique"| CLEAN["Use clean:<br/>TimeEntry"]
+
+    style KEEP fill:#ef4444,stroke:#dc2626,color:#fff
+    style CLEAN fill:#10b981,stroke:#059669,color:#fff
+```
+
+## Domain Grouping
+
+Types are grouped into files by domain prefix:
+
+```mermaid
+flowchart LR
+    subgraph "Type Name"
+        T1["ProjectDtoV1"]
+        T2["ProjectDtoImplV1"]
+        T3["ProjectRequest"]
+        T4["ProjectEstimateRequest"]
+        T5["TimeEntryDtoV1"]
+        T6["CreateTimeEntryRequest"]
+    end
+
+    subgraph "Domain"
+        P["project"]
+        TE["time-entry"]
+    end
+
+    subgraph "Category"
+        M["models/"]
+        R["requests/"]
+    end
+
+    subgraph "Output File"
+        F1["models/project.ts"]
+        F2["requests/project.ts"]
+        F3["models/time-entry.ts"]
+        F4["requests/common.ts"]
+    end
+
+    T1 & T2 --> P --> M --> F1
+    T3 & T4 --> P --> R --> F2
+    T5 --> TE --> M --> F3
+    T6 -.->|"no domain prefix"| F4
+
+    style F1 fill:#3b82f6,stroke:#2563eb,color:#fff
+    style F2 fill:#3b82f6,stroke:#2563eb,color:#fff
+    style F3 fill:#3b82f6,stroke:#2563eb,color:#fff
+    style F4 fill:#6b7280,stroke:#4b5563,color:#fff
+```
+
+## Topological Sort
+
+Within each output file, schemas are sorted so that dependencies come before dependents:
+
+```mermaid
+graph TD
+    A["TimeIntervalDtoV1<br/><i>(no deps)</i>"]
+    B["CustomFieldValueDtoV1<br/><i>(no deps)</i>"]
+    C["TimeEntryDtoV1<br/><i>depends on A, B</i>"]
+    D["TimeEntryWithRates<br/><i>depends on A, B, C</i>"]
+
+    A --> C
+    B --> C
+    C --> D
+
+    style A fill:#10b981,stroke:#059669,color:#fff
+    style B fill:#10b981,stroke:#059669,color:#fff
+    style C fill:#3b82f6,stroke:#2563eb,color:#fff
+    style D fill:#6366f1,stroke:#4f46e5,color:#fff
+```
+
+For self-referencing schemas (like `GroupOne.children: GroupOne[]`), the generator wraps the Zod schema in `z.lazy()`.
+
+## Output Statistics
+
+| Metric | Count |
+|---|---|
+| Total schemas processed | 277 |
+| TypeScript interfaces generated | 277 |
+| Zod schemas generated | 277 |
+| Model files | 27 |
+| Request files | 16 |
+| Filter files | 7 |
+| Name collisions detected | 17 |
+| Self-referencing schemas | 1 |
+| Cross-file `z.lazy()` wraps | ~50+ |

@@ -1,0 +1,78 @@
+{
+  "name": "clockifixed",
+  "version": "0.1.0",
+  "description": "Normalized Clockify API wrapper with complete TypeScript types, Zod runtime validation, and API drift detection",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js",
+      "default": "./dist/types/index.js"
+    },
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "import": "./dist/client/index.js",
+      "default": "./dist/client/index.js"
+    }
+  },
+  "files": [
+    "dist/client",
+    "dist/types",
+    "dist/index.*",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:all": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build && npm run test",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "generate": "tsx scripts/generate-types.ts",
+    "verify": "vitest run src/verify/verify.test.ts",
+    "verify:cli": "tsx scripts/verify.ts",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "clockify",
+    "clockify-api",
+    "time-tracking",
+    "api-client",
+    "typescript",
+    "zod",
+    "runtime-validation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesrisberg/clockifixed.git"
+  },
+  "homepage": "https://clockifixed.com",
+  "bugs": {
+    "url": "https://github.com/jamesrisberg/clockifixed/issues"
+  },
+  "author": "jamesrisberg",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@vitest/coverage-v8": "^4.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  },
+  "sideEffects": false
+}

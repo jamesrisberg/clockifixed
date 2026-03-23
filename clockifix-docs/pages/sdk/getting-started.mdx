@@ -1,0 +1,163 @@
+---
+title: Getting Started
+description: Install Clockifixed and make your first API call.
+icon: rocket
+---
+
+# Getting Started
+
+## Installation
+
+```bash
+npm install clockifixed
+```
+
+Requires Node.js 20+.
+
+## Configuration
+
+You need an **API Key** from your [Clockify Profile Settings](https://app.clockify.me/user/settings).
+
+The **Workspace ID** is optional at construction time — you can discover workspaces via the API first.
+
+### With a known workspace
+
+If you already know your workspace ID:
+
+```typescript
+import { Clockify } from "clockifixed";
+
+const clockify = new Clockify({
+  apiKey: process.env.CLOCKIFY_API_KEY!,
+  workspaceId: process.env.CLOCKIFY_WORKSPACE_ID!,
+});
+```
+
+### Discovering workspaces
+
+If you don't have a workspace ID, connect with just your API key and discover it:
+
+```typescript
+import { Clockify } from "clockifixed";
+
+const api = new Clockify({ apiKey: process.env.CLOCKIFY_API_KEY! });
+
+// These work without a workspaceId
+const me = await api.users.getLoggedUser();
+const workspaces = await api.workspaces.getAll();
+
+// Pick a workspace, then get full access
+const clockify = api.forWorkspace(workspaces[0].id);
+const projects = await clockify.projects.getAll();
+```
+
+### Configuration Options
+
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `apiKey` | `string` | *required* | Your Clockify API key |
+| `workspaceId` | `string` | *optional* | Target workspace ID — required for most endpoints |
+| `baseUrl` | `string` | `https://api.clockify.me/api/v1` | API base URL |
+| `reportsBaseUrl` | `string` | `https://reports.api.clockify.me/v1` | Reports API base URL |
+| `maxRequestsPerSecond` | `number` | `10` | Rate limit (Clockify allows 50 for addon tokens) |
+| `defaultPageSize` | `number` | `50` | Default page size for paginated requests |
+
+<Callout type="tip" title="Regional Endpoints">
+  If your workspace is in a specific region, set the `baseUrl` accordingly:
+  - **EU (Germany)**: `https://euc1.clockify.me/api/v1`
+  - **USA**: `https://use2.clockify.me/api/v1`
+  - **UK**: `https://euw2.clockify.me/api/v1`
+  - **AU**: `https://apse2.clockify.me/api/v1`
+</Callout>
+
+## Basic Usage
+
+### Get current user
+
+```typescript
+const me = await clockify.users.getLoggedUser();
+console.log(`Logged in as ${me.name} (${me.email})`);
+```
+
+### List projects
+
+```typescript
+const projects = await clockify.projects.getAll();
+for (const project of projects) {
+  console.log(`${project.name} — ${project.id}`);
+}
+```
+
+### Create a time entry
+
+```typescript
+const entry = await clockify.timeEntries.create({
+  start: "2026-03-17T09:00:00Z",
+  end: "2026-03-17T12:30:00Z",
+  projectId: "your-project-id",
+  description: "Morning standup and feature work",
+  billable: true,
+});
+```
+
+### Get time entries for a user
+
+```typescript
+const entries = await clockify.timeEntries.getForUser(me.id, {
+  start: "2026-03-01T00:00:00Z",
+  end: "2026-03-31T23:59:59Z",
+});
+```
+
+### Pagination
+
+List endpoints accept `page` and `pageSize` parameters:
+
+```typescript
+const page1 = await clockify.projects.getAll({ page: 1, pageSize: 25 });
+```
+
+For auto-pagination across all pages, use the lower-level HTTP client:
+
+```typescript
+import { HttpClient } from "clockifixed/client";
+
+const http = new HttpClient({ apiKey: "your-key" });
+
+// Async generator — yields one page at a time
+for await (const page of http.getAllPages("/workspaces/ws-id/projects")) {
+  console.log(page);
+}
+
+// Or collect everything into a single array
+const all = await http.collectAllPages("/workspaces/ws-id/projects");
+```
+
+## Error Handling
+
+Clockifixed throws typed errors you can catch specifically:
+
+```typescript
+import { ClockifyApiError, ClockifyValidationError, ClockifyRateLimitError } from "clockifixed";
+
+try {
+  await clockify.projects.get("nonexistent-id");
+} catch (error) {
+  if (error instanceof ClockifyRateLimitError) {
+    console.log(`Rate limited — retry after ${error.retryAfterMs}ms`);
+  } else if (error instanceof ClockifyApiError) {
+    console.log(`API error: ${error.status} ${error.message}`);
+  } else if (error instanceof ClockifyValidationError) {
+    console.log(`Response didn't match expected schema:`, error.zodError.issues);
+  }
+}
+```
+
+## Switching Workspaces
+
+`forWorkspace()` returns a new client instance scoped to a different workspace:
+
+```typescript
+const otherWorkspace = clockify.forWorkspace("other-workspace-id");
+const projects = await otherWorkspace.projects.getAll();
+```

@@ -1,0 +1,162 @@
+---
+title: Data Flow
+description: How requests and responses flow through Clockifixed, from your code to the Clockify API and back.
+icon: arrow-right-left
+---
+
+# Data Flow
+
+## Request Lifecycle
+
+Every API call flows through the same pipeline:
+
+```mermaid
+sequenceDiagram
+    participant App as Your Code
+    participant EP as Endpoint Module
+    participant HTTP as HttpClient
+    participant RL as Rate Limiter
+    participant API as Clockify API
+    participant ZOD as Zod Schema
+
+    App->>EP: clockify.projects.create(body)
+    EP->>EP: Build path: /v1/workspaces/{id}/projects
+    EP->>EP: Type-check request body
+    EP->>HTTP: post(path, { body })
+
+    HTTP->>RL: acquire()
+    RL-->>HTTP: OK (or wait)
+
+    HTTP->>API: POST /v1/workspaces/.../projects
+    Note over HTTP,API: Headers: X-Api-Key, Content-Type
+
+    alt 200 OK
+        API-->>HTTP: JSON response
+        HTTP->>ZOD: schema.safeParse(data)
+        ZOD-->>HTTP: Validated & typed data
+        HTTP-->>EP: ProjectDtoImplV1
+        EP-->>App: ProjectDtoImplV1
+    else 429 Too Many Requests
+        API-->>HTTP: Rate limit error
+        HTTP-->>App: ClockifyRateLimitError
+    else 4xx/5xx
+        API-->>HTTP: Error response
+        HTTP-->>App: ClockifyApiError
+    end
+```
+
+## Pagination Flow
+
+For paginated endpoints, the auto-paginator handles multi-page collection:
+
+```mermaid
+sequenceDiagram
+    participant App as Your Code
+    participant HTTP as HttpClient
+    participant API as Clockify API
+
+    App->>HTTP: collectAllPages(path)
+
+    loop Until Last-Page: true
+        HTTP->>API: GET path?page=N&page-size=50
+        API-->>HTTP: JSON[] + Last-Page header
+        HTTP->>HTTP: Accumulate results
+    end
+
+    HTTP-->>App: All items as single array
+```
+
+## Type Generation Flow
+
+Types are generated from the OpenAPI spec, not hand-written:
+
+```mermaid
+flowchart TD
+    SPEC[("openapi.json<br/>1 MB, 277 schemas")]
+
+    subgraph "Generator Pipeline"
+        PARSE["Parse JSON"]
+        CATEGORIZE["Categorize schemas<br/>models / requests / filters"]
+        COLLISIONS["Detect name collisions<br/>17 found"]
+        TOPO["Topological sort<br/>per file"]
+        GEN_TS["Generate TS interfaces"]
+        GEN_ZOD["Generate Zod schemas"]
+        LAZY["Wrap cross-file refs<br/>in z.lazy()"]
+        SELF_REF["Wrap self-refs<br/>in z.lazy()"]
+    end
+
+    subgraph "Output"
+        MODELS["models/<br/>27 files, 143 types"]
+        REQUESTS["requests/<br/>16 files, 110 types"]
+        FILTERS["filters/<br/>7 files, 22 types"]
+        MAP["schema-map.json"]
+        ANOMALIES["spec-anomalies.json"]
+    end
+
+    SPEC --> PARSE --> CATEGORIZE --> COLLISIONS
+    COLLISIONS --> TOPO --> GEN_TS & GEN_ZOD
+    GEN_ZOD --> LAZY & SELF_REF
+    GEN_TS --> MODELS & REQUESTS & FILTERS
+    GEN_ZOD --> MODELS & REQUESTS & FILTERS
+    COLLISIONS --> ANOMALIES
+    CATEGORIZE --> MAP
+
+    style SPEC fill:#6366f1,stroke:#4f46e5,color:#fff
+    style ANOMALIES fill:#ef4444,stroke:#dc2626,color:#fff
+```
+
+## Error Handling Flow
+
+```mermaid
+flowchart TD
+    REQ["API Request"]
+    RES{"Response Status"}
+
+    REQ --> RES
+
+    RES -->|"200/201"| PARSE["Parse JSON"]
+    RES -->|"204"| VOID["Return undefined"]
+    RES -->|"429"| RATE["ClockifyRateLimitError<br/><i>includes retryAfterMs</i>"]
+    RES -->|"4xx/5xx"| ERR["ClockifyApiError<br/><i>status, body, url, method</i>"]
+
+    PARSE --> VALIDATE{"Zod Schema<br/>Provided?"}
+    VALIDATE -->|"Yes"| SAFE["safeParse()"]
+    VALIDATE -->|"No"| RAW["Return raw data"]
+
+    SAFE -->|"Valid"| TYPED["Return typed data"]
+    SAFE -->|"Invalid"| VAL_ERR["ClockifyValidationError<br/><i>zodError, rawData</i>"]
+
+    style RATE fill:#f59e0b,stroke:#d97706,color:#000
+    style ERR fill:#ef4444,stroke:#dc2626,color:#fff
+    style VAL_ERR fill:#ef4444,stroke:#dc2626,color:#fff
+    style TYPED fill:#10b981,stroke:#059669,color:#fff
+```
+
+## Planned: Composite Operations
+
+Future composite operations will layer on top of the raw endpoints:
+
+```mermaid
+flowchart LR
+    subgraph "Composite Layer (planned)"
+        BATCH["batchSubmitDay()<br/><i>Time entries across<br/>multiple projects</i>"]
+        FETCH["fetchDateRange()<br/><i>Enriched data for<br/>visualization</i>"]
+        ORG["orgConfig()<br/><i>Member settings<br/>management</i>"]
+    end
+
+    subgraph "Endpoint Layer"
+        TE["timeEntries"]
+        PR["projects"]
+        US["users"]
+        WS["workspaces"]
+        TG["tags"]
+    end
+
+    BATCH --> TE & PR
+    FETCH --> TE & PR & US & TG
+    ORG --> US & WS
+
+    style BATCH fill:#f59e0b,stroke:#d97706,color:#000
+    style FETCH fill:#f59e0b,stroke:#d97706,color:#000
+    style ORG fill:#f59e0b,stroke:#d97706,color:#000
+```

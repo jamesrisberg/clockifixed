@@ -1,0 +1,87 @@
+[
+  {
+    "schema": "ContainsUserGroupFilterRequest, ContainsUserGroupFilterRequestV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"ContainsUserGroupFilterRequest\": ContainsUserGroupFilterRequest, ContainsUserGroupFilterRequestV1. Using raw names."
+  },
+  {
+    "schema": "CostRateRequest, CostRateRequestV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"CostRateRequest\": CostRateRequest, CostRateRequestV1. Using raw names."
+  },
+  {
+    "schema": "CustomFieldValueDto, CustomFieldValueDtoV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"CustomFieldValue\": CustomFieldValueDto, CustomFieldValueDtoV1. Using raw names."
+  },
+  {
+    "schema": "ExpenseCategoryDto, ExpenseCategoryDtoV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"ExpenseCategory\": ExpenseCategoryDto, ExpenseCategoryDtoV1. Using raw names."
+  },
+  {
+    "schema": "ExpenseHydratedDto, ExpenseHydratedDtoV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"ExpenseHydrated\": ExpenseHydratedDto, ExpenseHydratedDtoV1. Using raw names."
+  },
+  {
+    "schema": "HolidayDto, HolidayDtoV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"Holiday\": HolidayDto, HolidayDtoV1. Using raw names."
+  },
+  {
+    "schema": "HourlyRateRequest, HourlyRateRequestV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"HourlyRateRequest\": HourlyRateRequest, HourlyRateRequestV1. Using raw names."
+  },
+  {
+    "schema": "ProjectDtoImplV1, ProjectDtoV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"Project\": ProjectDtoImplV1, ProjectDtoV1. Using raw names."
+  },
+  {
+    "schema": "RateDto, RateDtoV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"Rate\": RateDto, RateDtoV1. Using raw names."
+  },
+  {
+    "schema": "TagDto, TagDtoV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"Tag\": TagDto, TagDtoV1. Using raw names."
+  },
+  {
+    "schema": "TaskRequest, TaskRequestV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"TaskRequest\": TaskRequest, TaskRequestV1. Using raw names."
+  },
+  {
+    "schema": "TimeEntryDtoImplV1, TimeEntryDtoV1, TimeEntryDto",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"TimeEntry\": TimeEntryDtoImplV1, TimeEntryDtoV1, TimeEntryDto. Using raw names."
+  },
+  {
+    "schema": "TimeIntervalDto, TimeIntervalDtoV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"TimeInterval\": TimeIntervalDto, TimeIntervalDtoV1. Using raw names."
+  },
+  {
+    "schema": "UpdateCustomFieldRequest, UpdateCustomFieldRequestV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"UpdateCustomFieldRequest\": UpdateCustomFieldRequest, UpdateCustomFieldRequestV1. Using raw names."
+  },
+  {
+    "schema": "UpsertUserCustomFieldRequest, UpsertUserCustomFieldRequestV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"UpsertUserCustomFieldRequest\": UpsertUserCustomFieldRequest, UpsertUserCustomFieldRequestV1. Using raw names."
+  },
+  {
+    "schema": "UserDtoV1, UserDto",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"User\": UserDtoV1, UserDto. Using raw names."
+  },
+  {
+    "schema": "SharedReportDtoV1, SharedReportV1",
+    "issue": "name-collision",
+    "detail": "Multiple schemas map to \"SharedReport\": SharedReportDtoV1, SharedReportV1. Using raw names."
+  }
+]

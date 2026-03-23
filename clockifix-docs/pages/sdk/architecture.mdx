@@ -1,0 +1,117 @@
+---
+title: Architecture
+description: How Clockifixed is structured — from OpenAPI spec to typed endpoint calls.
+icon: layers
+---
+
+# Architecture
+
+Clockifixed is built in layers, each solving a specific problem in the Clockify API integration story.
+
+## Layer Diagram
+
+```mermaid
+graph TB
+    subgraph "Your Application"
+        APP[Application Code]
+    end
+
+    subgraph "Clockifixed SDK"
+        FACADE["Clockify Facade<br/><i>Single entry point</i>"]
+
+        subgraph "Endpoint Modules"
+            EP_TE[Time Entries]
+            EP_PR[Projects]
+            EP_US[Users]
+            EP_CL[Clients]
+            EP_TG[Tags]
+            EP_TK[Tasks]
+            EP_GR[Groups]
+            EP_IN[Invoices]
+            EP_EX[Expenses]
+            EP_WH[Webhooks]
+            EP_SC[Scheduling]
+            EP_RP[Reports]
+            EP_MORE["+10 more"]
+        end
+
+        HTTP["HTTP Client<br/><i>Auth, rate limiting, pagination</i>"]
+
+        subgraph "Type System"
+            TS_TYPES["TypeScript Interfaces<br/><i>277 types</i>"]
+            ZOD["Zod Schemas<br/><i>277 runtime validators</i>"]
+        end
+    end
+
+    subgraph "Clockify"
+        API["Clockify REST API<br/><i>api.clockify.me</i>"]
+        REPORTS["Reports API<br/><i>reports.api.clockify.me</i>"]
+    end
+
+    APP --> FACADE
+    FACADE --> EP_TE & EP_PR & EP_US & EP_CL & EP_TG & EP_TK & EP_GR & EP_IN & EP_EX & EP_WH & EP_SC & EP_RP & EP_MORE
+    EP_TE & EP_PR & EP_US & EP_CL & EP_TG & EP_TK & EP_GR & EP_IN & EP_EX & EP_WH & EP_SC & EP_RP & EP_MORE --> HTTP
+    HTTP --> API & REPORTS
+    EP_TE & EP_PR & EP_US -.->|"validates with"| ZOD
+    ZOD -.->|"implements"| TS_TYPES
+
+    style FACADE fill:#f59e0b,stroke:#d97706,color:#000
+    style HTTP fill:#3b82f6,stroke:#2563eb,color:#fff
+    style ZOD fill:#10b981,stroke:#059669,color:#fff
+```
+
+## Design Principles
+
+<CardGroup cols={2}>
+  <Card title="Spec-Driven" icon="📋">
+    Types and schemas are generated from the official OpenAPI spec. The generator handles Clockify's naming inconsistencies automatically.
+  </Card>
+  <Card title="Runtime-Safe" icon="🛡️">
+    Every type has a matching Zod schema. Validate at the boundary, trust internally.
+  </Card>
+  <Card title="Full Coverage" icon="📡">
+    164 methods across 22 endpoint modules. Every documented Clockify operation is wrapped.
+  </Card>
+  <Card title="Anomaly-Aware" icon="🔍">
+    Inconsistencies between spec and reality are tracked, documented, and reported.
+  </Card>
+</CardGroup>
+
+## Key Components
+
+### Clockify Facade
+
+The main entry point. Can be created with just an API key for discovery, or with a workspace ID for full access:
+
+```typescript
+// Discovery mode — workspaces and user info only
+const api = new Clockify({ apiKey: "your-key" });
+const workspaces = await api.workspaces.getAll();
+const me = await api.users.getLoggedUser();
+
+// Full mode — all 22 endpoint modules available
+const clockify = api.forWorkspace(workspaces[0].id);
+clockify.timeEntries.create({ ... });
+clockify.projects.getAll();
+```
+
+### HTTP Client
+
+Handles the cross-cutting concerns:
+
+- **Authentication** via `X-Api-Key` header
+- **Rate limiting** — configurable requests/second with token bucket
+- **Pagination** — `getPaginated()` for single pages, `collectAllPages()` for everything
+- **Error handling** — typed errors (`ClockifyApiError`, `ClockifyValidationError`, `ClockifyRateLimitError`)
+- **Base URL switching** between main API and Reports API
+
+### Type System
+
+Two layers working together:
+
+| Layer | Purpose | When it runs |
+|---|---|---|
+| **TypeScript interfaces** | Catch type errors during development | Compile time |
+| **Zod schemas** | Validate actual API responses match expected shapes | Runtime |
+
+The Zod schemas are the foundation of the verifier — they let us prove whether Clockify is actually sending what the spec claims.
