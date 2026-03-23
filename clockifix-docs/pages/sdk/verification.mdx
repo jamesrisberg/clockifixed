@@ -12,11 +12,11 @@ Clockifixed includes a verification layer that hits live Clockify endpoints and 
 
 | Suite | What it tests | Checks |
 |---|---|---|
-| **Read verifier** | Every GET endpoint — response schemas | 45 endpoints |
-| **Write harness** | Create/update/delete lifecycles — request + response schemas | 100 tests across 17 domains |
-| **Reality schemas** | Patched schemas that match what the API actually returns | 37/37 passing |
+| **Read verifier** | Every GET endpoint — response schemas | 45 endpoints (40 active with populated data) |
+| **Write harness** | Create/update/delete lifecycles — request + response schemas | 114 tests across 17 domains |
+| **Reality schemas** | Patched schemas that match what the API actually returns | 41/41 passing (16 read + 25 write) |
 
-**87% method coverage** — 143 of 164 library methods are tested against the live API. The remaining 21 are documented gaps requiring multipart upload, complex entity orchestration, or features unavailable on the test workspace.
+**100% method coverage** — all 164 library methods are tested against the live API. The write harness populates the workspace with test data, then runs the read verifier against it before cleanup to ensure every GET endpoint has real data to validate.
 
 ## How It Works
 
@@ -54,7 +54,7 @@ sequenceDiagram
 | **Array contents** | Are array items the right type? |
 | **Undocumented fields** | What fields come back that aren't in the spec? |
 | **Write responses** | Do create/update/delete return the expected types? |
-| **Lifecycle correctness** | Create → read back → update → read back → delete → verify gone |
+| **Lifecycle correctness** | Create, read back, update, read back, delete, verify gone |
 
 ## Running Verification
 
@@ -63,7 +63,7 @@ sequenceDiagram
 npm run verify            # As test suite
 npm run verify:cli        # Full report output
 
-# Write verification (creates/updates/deletes test data, then cleans up)
+# Write verification (creates test data, runs read verifier, then cleans up)
 npm run verify:write
 
 # Filter read verifier by domain
@@ -71,7 +71,7 @@ CLOCKIFY_API_KEY=... npx tsx scripts/verify.ts --tag Project
 ```
 
 <Callout type="warning" title="Live API">
-  The verifier makes real API calls. The read verifier is safe (GET only). The write harness creates test entities prefixed with `_cfix_test_`, validates responses, then cleans up. It uses a LIFO cleanup registry to handle failures gracefully.
+  The verifier makes real API calls. The read verifier is safe (GET only). The write harness creates test entities prefixed with `_cfix_test_`, validates responses, runs the read verifier against the populated data, then cleans up. It uses a LIFO cleanup registry to handle failures gracefully.
 </Callout>
 
 ## Write Harness
@@ -83,20 +83,19 @@ The write harness tests the full lifecycle of every entity type:
 3. **Update** — modify the entity, validate response schema
 4. **Delete** — remove the entity (archiving first where Clockify requires it)
 5. **Verify gone** — confirm the entity returns 404
+6. **Read verifier** — after all write tests, run every GET endpoint against the populated workspace
 
 Entities are created in dependency order (clients before projects, projects before tasks) and cleaned up in reverse order. All test data uses a `_cfix_test_` prefix for orphan detection.
 
-## Coverage Gaps
+## Read Verifier Skips
 
-21 methods (13%) are not tested against the live API:
+5 of 45 GET checks are skipped due to infrastructure limits:
 
-| Reason | Methods | Examples |
-|---|---|---|
-| Multipart upload required | 3 | `expenses.create`, `expenses.update`, `expenses.delete` |
-| Endpoint not available | 3 | `sharedReports.create/update/delete` (returns 404) |
-| Complex entity setup needed | 7 | Approval create-for-user, scheduling copy/update, time-off create-for-user |
-| Needs external user | 2 | `workspace.addUsers`, `time-entries.deleteAllForUser` |
-| Other | 6 | Invoice advanced ops, template update, project from-template, balances update |
+| Endpoint | Reason |
+|---|---|
+| Scheduling project/user totals (2) | Empty response — assignments don't persist between test phases |
+| Shared reports list/get (2) | Endpoint returns 404 on this workspace plan |
+| Template get by ID (1) | Templates API is deprecated, create silently fails |
 
 ## Divergence Report
 

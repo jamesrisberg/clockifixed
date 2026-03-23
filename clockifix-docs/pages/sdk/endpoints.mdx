@@ -62,8 +62,8 @@ graph LR
 | `getForUser(userId, params?)` | GET | Get time entries for a user |
 | `createForUser(userId, body)` | POST | Add a time entry for another user |
 | `stopTimer(userId, body)` | PATCH | Stop a running timer |
-| `deleteAllForUser(userId)` | DELETE | Delete all time entries for a user |
-| `bulkEdit(userId, body)` | PUT | Bulk edit time entries |
+| `deleteForUser(userId, timeEntryIds)` | DELETE | Delete specific time entries for a user |
+| `bulkEdit(userId, body)` | PUT | Bulk edit time entries (accepts single or array) |
 | `duplicate(userId, id)` | POST | Duplicate a time entry |
 | `updateInvoicedStatus(body)` | PATCH | Mark entries as invoiced |
 | `getInProgress()` | GET | Get all running timers |

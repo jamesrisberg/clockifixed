@@ -19,7 +19,7 @@ This is a living document of every inconsistency, naming collision, and spec div
 | Schema name collisions | 17 | Medium — forces consumers to disambiguate |
 | Inconsistent naming conventions | 6 patterns | Low — cosmetic but confusing |
 | Return type mismatches | 4 entities | High — different types for create vs. read |
-| Nullable fields declared as required | 32 unique fields | High — causes runtime validation failures |
+| Nullable fields declared as required | 38+ unique fields | High — causes runtime validation failures |
 | Undeclared enum values | 4 fields | Medium — responses contain values not in the spec |
 | Nullable arrays | 1 field | Medium — returns null instead of empty array |
 | Undocumented response fields | 3 fields | Medium — spec is incomplete |
@@ -117,10 +117,10 @@ The [runtime verifier](/sdk/verification) checks live API responses against the 
 
 | Metric | Read (GET) | Write (POST/PUT/PATCH/DELETE) |
 |---|---|---|
-| Endpoints checked | 45 | 47 |
-| Spec divergences (unique fields) | 27 | 29 |
+| Endpoints checked | 45 (40 active) | 114 tests |
+| Spec divergences (unique fields) | 30+ | 30+ |
 | Undocumented response fields | 3 | 3 |
-| Reality schema checks | 16/16 passing | 21/21 passing |
+| Reality schema checks | 16/16 passing | 25/25 passing |
 
 ### Nullable Fields Declared as Required Objects
 
@@ -143,6 +143,9 @@ The most common divergence. The spec declares these as required non-null objects
 |---|---|---|
 | `budgetEstimate` | `object` (required) | `null` |
 | `costRate` | `object` (required) | `null` |
+| `duration` | `string` (required) | `null` |
+| `estimate` | `object` (required) | `null` |
+| `hourlyRate` | `object` (required) | `null` |
 | `memberships[].costRate` | `object` (required) | `null` |
 | `memberships[].hourlyRate` | `object` (required) | `null` |
 
@@ -160,15 +163,19 @@ The most common divergence. The spec declares these as required non-null objects
 | Field | Spec says | Actually returns |
 |---|---|---|
 | `assigneeId` | `string` (required) | `null` |
+| `budgetEstimate` | `number` (required) | `null` |
 | `costRate` | `object` (required) | `null` |
-| `hourlyRate` | `object` (required) | `null` |
 | `duration` | `string` (required) | `null` |
+| `estimate` | `string` (required) | `null` |
+| `hourlyRate` | `object` (required) | `null` |
 
 **Time entry endpoints** (`GET /workspaces/.../user/{id}/time-entries`):
 
 | Field | Spec says | Actually returns |
 |---|---|---|
 | `kioskId` | `string` (required) | `null` |
+| `costRate` | `object` (required) | `null` on read responses (WithRates) |
+| `hourlyRate` | `object` (required) | `null` on read responses (WithRates) |
 | `customFieldValues[].value` | `Record<string, unknown>` | `null` |
 | `projectId` | `string` (optional) | `null` on write responses (create/update/duplicate/stop) |
 | `taskId` | `string` (optional) | `null` on write responses |
@@ -186,10 +193,14 @@ The most common divergence. The spec declares these as required non-null objects
 
 | Field | Spec says | Actually returns |
 |---|---|---|
+| `approve` | `object` (required) | `null` |
+| `automaticAccrual` | `object` (required) | `null` |
 | `automaticTimeEntryCreation.defaultEntities.projectId` | `string` (required) | `null` |
 | `automaticTimeEntryCreation.defaultEntities.taskId` | `string` (required) | `null` |
 | `negativeBalance` | `object` (required) | `null` |
 | `projectId` | `string` (required) | `null` |
+| `userGroupIds` | `string[]` (required) | `null` |
+| `userIds` | `string[]` (required) | `null` |
 
 <Callout type="tip" title="Suggested Fix">
   Mark these fields as nullable in the OpenAPI spec (`nullable: true` or use `oneOf` with null). The data model clearly treats them as optional.
@@ -259,7 +270,7 @@ For every endpoint with known divergences, Clockifixed maintains "reality" overr
 - **Spec schema** — does the response match the OpenAPI spec? (often no)
 - **Reality schema** — does the response match our patched schema? (should always pass)
 
-All 37 reality schema checks pass (16 read + 21 write), meaning Clockifixed's override types accurately model the real API behavior even where the spec is wrong.
+All 41 reality schema checks pass (16 read + 25 write), meaning Clockifixed's override types accurately model the real API behavior even where the spec is wrong.
 
 ---
 

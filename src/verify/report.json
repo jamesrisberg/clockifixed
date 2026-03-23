@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-23T20:44:32.226Z",
+  "timestamp": "2026-03-23T20:55:48.441Z",
   "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
     "total": 45,
@@ -851,7 +851,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 128
+      "durationMs": 132
     },
     {
       "check": {
@@ -3341,7 +3341,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 326,
+      "durationMs": 317,
       "responseDataSample": [
         {
           "id": "63eab29ecf0b257026ab5625",
@@ -3413,78 +3413,78 @@
             "projectLabel": "project",
             "taskLabel": "task",
             "workingDays": [
+              "MONDAY",
               "THURSDAY",
               "FRIDAY",
-              "TUESDAY",
-              "MONDAY",
-              "WEDNESDAY"
+              "WEDNESDAY",
+              "TUESDAY"
             ],
             "isProjectPublicByDefault": true
           },
           "imageUrl": "",
           "featureSubscriptionType": "PRO_2021",
           "features": [
-            "AUTOMATIC_LOCK",
-            "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
-            "WHO_CAN_SEE_PROJECT_STATUS",
-            "EXPENSES",
-            "DECIMAL_FORMAT",
-            "ADD_TIME_FOR_OTHERS",
-            "ALERTS",
-            "USER_CUSTOM_FIELDS",
-            "KIOSK_PIN_REQUIRED",
             "PROJECT_TEMPLATES",
-            "BULK_EDIT",
-            "WHO_CAN_SEE_TEAMS_DASHBOARD",
-            "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
-            "WORKSPACE_LOCK_TIMEENTRIES",
-            "HISTORIC_RATES",
-            "APPROVAL",
-            "INVOICE_EMAILS",
-            "TIME_OFF",
-            "FAVORITE_ENTRIES",
-            "HIDE_PAGES",
-            "MULTI_FACTOR_AUTHENTICATION",
-            "WORKSPACE_TIME_ROUNDING",
-            "EDIT_MEMBER_PROFILE",
-            "KIOSK_QR_CODE",
-            "PROJECT_BUDGET",
-            "USER_IMPORT",
-            "SUMMARY_ESTIMATE",
-            "DISABLE_MANUAL_MODE",
-            "FILE_IMPORT",
-            "WHO_CAN_SEE_ALL_TIME_ENTRIES",
-            "LOCATIONS",
-            "SPLIT_TIME_ENTRY",
-            "UNLIMITED_REPORTS",
-            "INVOICE_REMINDERS",
-            "LABOR_COST",
             "FORECASTING",
-            "REQUIRED_FIELDS",
-            "RECURRING_ESTIMATES",
-            "KIOSK",
-            "WORKSPACE_TIME_AUDIT",
-            "KIOSK_SIX_DIGIT_PIN",
-            "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
-            "QUICKBOOKS_INTEGRATION",
-            "CLIENT_CURRENCY",
-            "SCREENSHOTS",
-            "RECURRING_INVOICES",
-            "SCHEDULING",
+            "PROJECT_BUDGET",
             "MANAGER_ROLE",
+            "AUTOMATIC_LOCK",
+            "TASK_RATES",
+            "REQUIRED_FIELDS",
+            "INVOICE_EMAILS",
+            "WORKSPACE_TRANSFER",
+            "WORKSPACE_TIME_ROUNDING",
             "INVOICING",
+            "USER_CUSTOM_FIELDS",
+            "TIME_OFF",
+            "KIOSK_SIX_DIGIT_PIN",
+            "WHO_CAN_SEE_TEAMS_DASHBOARD",
+            "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
+            "SCHEDULED_REPORTS",
+            "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
+            "FILE_IMPORT",
+            "WHO_CAN_SEE_PROJECT_STATUS",
+            "HIDE_PAGES",
+            "UNLIMITED_REPORTS",
+            "ALERTS",
+            "QUICKBOOKS_INTEGRATION",
+            "HISTORIC_RATES",
+            "SUMMARY_ESTIMATE",
+            "LABOR_COST",
+            "LOCATIONS",
+            "KIOSK_PIN_REQUIRED",
+            "WORKSPACE_TIME_AUDIT",
+            "CUSTOM_FIELDS",
+            "APPROVAL",
+            "WORKSPACE_LOCK_TIMEENTRIES",
+            "SCHEDULING",
+            "KIOSK_QR_CODE",
             "CUSTOM_REPORTING",
             "BREAKS",
-            "CUSTOM_FIELDS",
-            "ATTENDANCE_REPORT",
-            "WORKSPACE_TRANSFER",
-            "SCHEDULED_REPORTS",
-            "BRANDED_REPORTS",
-            "TIME_TRACKING",
-            "TIMESHEET_IMPORT",
             "TARGETS_AND_REMINDERS",
-            "TASK_RATES",
-            "KIOSK_SESSION_DURATION"
+            "TIMESHEET_IMPORT",
+            "MULTI_FACTOR_AUTHENTICATION",
+            "DISABLE_MANUAL_MODE",
+            "CLIENT_CURRENCY",
+            "USER_IMPORT",
+            "KIOSK",
+            "KIOSK_SESSION_DURATION",
+            "SCREENSHOTS",
+            "RECURRING_ESTIMATES",
+            "TIME_TRACKING",
+            "EXPENSES",
+            "RECURRING_INVOICES",
+            "DECIMAL_FORMAT",
+            "ADD_TIME_FOR_OTHERS",
+            "BULK_EDIT",
+            "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
+            "INVOICE_REMINDERS",
+            "EDIT_MEMBER_PROFILE",
+            "ATTENDANCE_REPORT",
+            "FAVORITE_ENTRIES",
+            "SPLIT_TIME_ENTRY",
+            "BRANDED_REPORTS",
+            "WHO_CAN_SEE_ALL_TIME_ENTRIES"
           ],
           "currencies": [
             {
@@ -5559,7 +5559,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 1001,
+      "durationMs": 810,
       "responseDataSample": {
         "id": "63eab29ecf0b257026ab5625",
         "name": "James Risberg's workspace",
@@ -5630,78 +5630,78 @@
           "projectLabel": "project",
           "taskLabel": "task",
           "workingDays": [
-            "WEDNESDAY",
+            "TUESDAY",
             "THURSDAY",
-            "MONDAY",
             "FRIDAY",
-            "TUESDAY"
+            "MONDAY",
+            "WEDNESDAY"
           ],
           "isProjectPublicByDefault": true
         },
         "imageUrl": "",
         "featureSubscriptionType": "PRO_2021",
         "features": [
-          "DISABLE_MANUAL_MODE",
-          "INVOICE_EMAILS",
-          "TIMESHEET_IMPORT",
-          "MANAGER_ROLE",
-          "INVOICE_REMINDERS",
-          "ALERTS",
-          "CUSTOM_FIELDS",
-          "WHO_CAN_SEE_TEAMS_DASHBOARD",
-          "INVOICING",
-          "PROJECT_TEMPLATES",
-          "UNLIMITED_REPORTS",
-          "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
-          "ATTENDANCE_REPORT",
-          "ADD_TIME_FOR_OTHERS",
-          "FAVORITE_ENTRIES",
-          "AUTOMATIC_LOCK",
-          "TASK_RATES",
-          "TIME_OFF",
-          "REQUIRED_FIELDS",
-          "WORKSPACE_LOCK_TIMEENTRIES",
-          "RECURRING_INVOICES",
-          "FILE_IMPORT",
-          "SUMMARY_ESTIMATE",
-          "LOCATIONS",
-          "WORKSPACE_TRANSFER",
-          "BULK_EDIT",
-          "KIOSK_QR_CODE",
-          "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
-          "USER_IMPORT",
-          "MULTI_FACTOR_AUTHENTICATION",
-          "HISTORIC_RATES",
-          "LABOR_COST",
-          "WHO_CAN_SEE_ALL_TIME_ENTRIES",
-          "SCREENSHOTS",
-          "KIOSK",
-          "CLIENT_CURRENCY",
-          "EDIT_MEMBER_PROFILE",
-          "WORKSPACE_TIME_ROUNDING",
-          "TIME_TRACKING",
-          "APPROVAL",
-          "BRANDED_REPORTS",
-          "KIOSK_PIN_REQUIRED",
-          "SCHEDULING",
           "BREAKS",
-          "PROJECT_BUDGET",
-          "EXPENSES",
-          "USER_CUSTOM_FIELDS",
-          "WHO_CAN_SEE_PROJECT_STATUS",
-          "SCHEDULED_REPORTS",
-          "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
-          "KIOSK_SESSION_DURATION",
-          "KIOSK_SIX_DIGIT_PIN",
-          "RECURRING_ESTIMATES",
-          "SPLIT_TIME_ENTRY",
-          "FORECASTING",
-          "CUSTOM_REPORTING",
-          "TARGETS_AND_REMINDERS",
-          "QUICKBOOKS_INTEGRATION",
+          "LOCATIONS",
+          "TIME_TRACKING",
+          "CUSTOM_FIELDS",
+          "HIDE_PAGES",
+          "REQUIRED_FIELDS",
           "DECIMAL_FORMAT",
+          "PROJECT_BUDGET",
+          "KIOSK",
+          "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
+          "FAVORITE_ENTRIES",
+          "UNLIMITED_REPORTS",
+          "APPROVAL",
+          "MANAGER_ROLE",
+          "LABOR_COST",
+          "INVOICING",
+          "SCREENSHOTS",
+          "USER_CUSTOM_FIELDS",
+          "EDIT_MEMBER_PROFILE",
+          "AUTOMATIC_LOCK",
+          "WHO_CAN_SEE_ALL_TIME_ENTRIES",
+          "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
+          "RECURRING_ESTIMATES",
+          "ADD_TIME_FOR_OTHERS",
+          "CLIENT_CURRENCY",
+          "RECURRING_INVOICES",
+          "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
+          "KIOSK_SIX_DIGIT_PIN",
+          "INVOICE_EMAILS",
+          "SUMMARY_ESTIMATE",
+          "FILE_IMPORT",
+          "PROJECT_TEMPLATES",
+          "SPLIT_TIME_ENTRY",
+          "ATTENDANCE_REPORT",
+          "WHO_CAN_SEE_TEAMS_DASHBOARD",
+          "MULTI_FACTOR_AUTHENTICATION",
           "WORKSPACE_TIME_AUDIT",
-          "HIDE_PAGES"
+          "WORKSPACE_TIME_ROUNDING",
+          "ALERTS",
+          "USER_IMPORT",
+          "BRANDED_REPORTS",
+          "CUSTOM_REPORTING",
+          "FORECASTING",
+          "WHO_CAN_SEE_PROJECT_STATUS",
+          "KIOSK_SESSION_DURATION",
+          "WORKSPACE_TRANSFER",
+          "TIMESHEET_IMPORT",
+          "SCHEDULED_REPORTS",
+          "EXPENSES",
+          "SCHEDULING",
+          "WORKSPACE_LOCK_TIMEENTRIES",
+          "DISABLE_MANUAL_MODE",
+          "TARGETS_AND_REMINDERS",
+          "HISTORIC_RATES",
+          "KIOSK_QR_CODE",
+          "KIOSK_PIN_REQUIRED",
+          "TIME_OFF",
+          "TASK_RATES",
+          "BULK_EDIT",
+          "QUICKBOOKS_INTEGRATION",
+          "INVOICE_REMINDERS"
         ],
         "currencies": [
           {
@@ -6557,7 +6557,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 309
+      "durationMs": 299
     },
     {
       "check": {
@@ -7052,7 +7052,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 307,
+      "durationMs": 133,
       "responseDataSample": {
         "name": "James Risberg",
         "email": "james.risberg@gmail.com",
@@ -7913,7 +7913,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 154
+      "durationMs": 164
     },
     {
       "check": {
@@ -8302,7 +8302,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 299
+      "durationMs": 321
     },
     {
       "check": {
@@ -9966,7 +9966,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 132,
+      "durationMs": 141,
       "responseDataSample": [
         {
           "id": "63f447a9513b6c41904e81c0",
@@ -10956,7 +10956,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 140,
+      "durationMs": 331,
       "responseDataSample": {
         "id": "63f447a9513b6c41904e81c0",
         "name": "Better Stove",
@@ -11081,7 +11081,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 134
+      "durationMs": 310
     },
     {
       "check": {
@@ -11165,7 +11165,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 277
+      "durationMs": 128
     },
     {
       "check": {
@@ -11735,7 +11735,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 157
+      "durationMs": 327
     },
     {
       "check": {
@@ -12292,7 +12292,7 @@
         "requiresIdFrom": "List tasks on project"
       },
       "status": "skip",
-      "durationMs": 1,
+      "durationMs": 0,
       "error": "Could not resolve path — missing ID from \"List tasks on project\""
     },
     {
@@ -12482,7 +12482,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 480
+      "durationMs": 126
     },
     {
       "check": {
@@ -13448,7 +13448,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 241,
+      "durationMs": 156,
       "responseDataSample": [
         {
           "id": "6877609b3bae1e57f72e0200",
@@ -14321,7 +14321,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 144,
+      "durationMs": 317,
       "responseDataSample": {
         "id": "6877609b3bae1e57f72e0200",
         "description": "Aaa",
@@ -15101,7 +15101,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 131
+      "durationMs": 129
     },
     {
       "check": {
@@ -15316,7 +15316,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 126
+      "durationMs": 315
     },
     {
       "check": {
@@ -16420,7 +16420,7 @@
           }
         ]
       },
-      "durationMs": 398,
+      "durationMs": 167,
       "responseDataSample": {
         "expenses": {
           "expenses": [
@@ -16845,7 +16845,7 @@
           }
         ]
       },
-      "durationMs": 309,
+      "durationMs": 130,
       "responseDataSample": {
         "id": "68705846ea976557148f3162",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -17181,7 +17181,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 132
+      "durationMs": 128
     },
     {
       "check": {
@@ -17816,7 +17816,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 130
+      "durationMs": 268
     },
     {
       "check": {
@@ -18997,7 +18997,7 @@
         "requiresIdFrom": "List invoices"
       },
       "status": "skip",
-      "durationMs": 0,
+      "durationMs": 1,
       "error": "Could not resolve path — missing ID from \"List invoices\""
     },
     {
@@ -19547,7 +19547,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 135
+      "durationMs": 132
     },
     {
       "check": {
@@ -20336,7 +20336,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 304
+      "durationMs": 313
     },
     {
       "check": {
@@ -20918,7 +20918,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 124
+      "durationMs": 162
     },
     {
       "check": {
@@ -21925,7 +21925,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 319,
+      "durationMs": 123,
       "responseDataSample": [
         {
           "id": "682116a841fbb46a74c2cb06",
@@ -22922,7 +22922,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 130
+      "durationMs": 280
     },
     {
       "check": {
@@ -23805,7 +23805,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 539,
+      "durationMs": 630,
       "responseDataSample": [
         {
           "id": "69c1968e5fdd9a5256b6fdc4",
@@ -24589,7 +24589,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 317,
+      "durationMs": 130,
       "responseDataSample": {
         "id": "69c1968e5fdd9a5256b6fdc4",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -24872,7 +24872,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 369
+      "durationMs": 127
     },
     {
       "check": {
@@ -25062,7 +25062,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 126,
+      "durationMs": 127,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25244,7 +25244,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 317,
+      "durationMs": 141,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25263,7 +25263,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 123,
+      "durationMs": 306,
       "error": "Skipped — endpoint not available (Shared Reports)"
     },
     {
@@ -25370,7 +25370,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 130
+      "durationMs": 301
     },
     {
       "check": {
@@ -25481,7 +25481,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 315
+      "durationMs": 307
     },
     {
       "check": {
@@ -25510,7 +25510,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 132
+      "durationMs": 124
     },
     {
       "check": {
@@ -25539,7 +25539,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 135
+      "durationMs": 133
     },
     {
       "check": {
@@ -25564,7 +25564,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 324
+      "durationMs": 136
     },
     {
       "check": {
@@ -25589,7 +25589,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 132
+      "durationMs": 488
     }
   ],
   "divergencesByTag": {
