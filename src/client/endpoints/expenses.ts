@@ -24,19 +24,11 @@ export class ExpenseEndpoints {
     );
   }
 
-  /**
-   * Create a new expense.
-   *
-   * Note: The Clockify API requires multipart/form-data for this endpoint.
-   * This method sends JSON which will be rejected with 415. Use the Clockify
-   * web UI or a direct HTTP client with multipart support for expense creation.
-   *
-   * @throws {ClockifyApiError} 415 Unsupported Media Type
-   */
+  /** Create a new expense. Sent as multipart/form-data (required by Clockify). */
   async create(body: CreateExpenseV1Request): Promise<Expense> {
     return this.http.post<Expense>(
       `/workspaces/${this.workspaceId}/expenses`,
-      { body }
+      { body: body as any, multipart: true }
     );
   }
 
@@ -47,18 +39,11 @@ export class ExpenseEndpoints {
     );
   }
 
-  /**
-   * Update an expense.
-   *
-   * Note: The Clockify API requires multipart/form-data for this endpoint.
-   * This method sends JSON which will be rejected with 415.
-   *
-   * @throws {ClockifyApiError} 415 Unsupported Media Type
-   */
+  /** Update an expense. Sent as multipart/form-data (required by Clockify). */
   async update(expenseId: string, body: UpdateExpenseV1Request): Promise<Expense> {
     return this.http.put<Expense>(
       `/workspaces/${this.workspaceId}/expenses/${expenseId}`,
-      { body }
+      { body: body as any, multipart: true }
     );
   }
 

@@ -34,6 +34,8 @@ export interface RequestOptions {
   useReportsApi?: boolean;
   /** Signal for request cancellation */
   signal?: AbortSignal;
+  /** If true, send body as multipart/form-data instead of JSON */
+  multipart?: boolean;
 }
 
 export interface PaginatedOptions extends RequestOptions {
@@ -106,6 +108,24 @@ class RateLimiter {
   }
 }
 
+// ── Multipart helper ─────────────────────────────────────────────────
+
+function toFormData(obj: Record<string, unknown>): FormData {
+  const form = new FormData();
+  for (const [key, value] of Object.entries(obj)) {
+    if (value === undefined || value === null) continue;
+    if (value instanceof Blob || value instanceof Uint8Array) {
+      const blob = value instanceof Uint8Array ? new Blob([value as any]) : value;
+      form.append(key, blob, "file");
+    } else if (typeof value === "object") {
+      form.append(key, JSON.stringify(value));
+    } else {
+      form.append(key, String(value));
+    }
+  }
+  return form;
+}
+
 // ── HTTP Client ──────────────────────────────────────────────────────
 
 const DEFAULT_BASE_URL = "https://api.clockify.me/api/v1";
@@ -146,12 +166,19 @@ export class HttpClient {
     await this.rateLimiter.acquire();
 
     const url = this.buildUrl(path, options);
+
+    const isMultipart = options?.multipart && options?.body !== undefined && method !== "GET";
+
     const headers: Record<string, string> = {
       "X-Api-Key": this.config.apiKey,
-      "Content-Type": "application/json",
       Accept: "application/json",
       ...options?.headers,
     };
+
+    // Don't set Content-Type for multipart — fetch sets it with the boundary
+    if (!isMultipart) {
+      headers["Content-Type"] = "application/json";
+    }
 
     const fetchOptions: globalThis.RequestInit = {
       method,
@@ -160,7 +187,11 @@ export class HttpClient {
     };
 
     if (options?.body !== undefined && method !== "GET") {
-      fetchOptions.body = JSON.stringify(options.body);
+      if (isMultipart) {
+        fetchOptions.body = toFormData(options.body as Record<string, unknown>);
+      } else {
+        fetchOptions.body = JSON.stringify(options.body);
+      }
     }
 
     const response = await fetch(url.toString(), fetchOptions);

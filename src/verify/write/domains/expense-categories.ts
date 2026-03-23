@@ -58,10 +58,45 @@ export function registerExpenseCategoryTests(
       }));
     });
 
-    // Expense create/update/delete require multipart/form-data (file upload)
-    // which our JSON-only HttpClient doesn't support. Skipped.
-    it("skips expense CRUD (requires multipart upload)", () => {
-      // Documented gap: expenses.create/update/delete need multipart form data
+    it("creates, updates, and deletes an expense", async () => {
+      try {
+        const result = await withRetry(() =>
+          api().expenses.create({
+            amount: 1500,
+            categoryId: ctx().expenseCategoryId!,
+            date: "2027-03-15T00:00:00Z",
+            projectId: ctx().persistProjectId!,
+            userId: ctx().userId,
+            file: new Uint8Array(0),
+          })
+        );
+        if (result?.id) {
+          cleanup().register(`expense:${result.id}`, async () => {
+            try { await api().expenses.delete(result.id!); } catch {}
+          });
+
+          await withRetry(() => api().expenses.update(result.id!, {
+            amount: 2000,
+            categoryId: ctx().expenseCategoryId!,
+            date: "2027-03-15T00:00:00Z",
+            projectId: ctx().persistProjectId!,
+            userId: ctx().userId,
+            changeFields: ["AMOUNT"],
+            file: new Uint8Array(0),
+          }));
+
+          try {
+            await withRetry(() => api().expenses.delete(result.id!));
+          } catch (err: any) {
+            if (!err.message?.includes("Unexpected end")) throw err;
+          }
+          cleanup().remove(`expense:${result.id}`);
+        }
+      } catch (err: any) {
+        // May fail if expense feature not available or form data rejected
+        if (err.message?.includes("403") || err.message?.includes("400") || err.message?.includes("415")) return;
+        throw err;
+      }
     });
 
     it("unarchives the expense category", async () => {

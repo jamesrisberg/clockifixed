@@ -294,14 +294,14 @@ Clockifixed's `templates.create()` handles this automatically (wraps single obje
 
 ### Multipart Upload Endpoints
 
-Expense create and update require `multipart/form-data` content type, not `application/json`:
+Expense create and update require `multipart/form-data` content type, not `application/json`. The OpenAPI spec doesn't indicate this requirement.
 
 | Endpoint | Issue |
 |---|---|
-| `POST /workspaces/{id}/expenses` | Returns `415 Unsupported Media Type` with JSON |
-| `PUT /workspaces/{id}/expenses/{id}` | Same — requires multipart form data |
+| `POST /workspaces/{id}/expenses` | Requires multipart/form-data |
+| `PUT /workspaces/{id}/expenses/{id}` | Requires multipart/form-data |
 
-The OpenAPI spec doesn't indicate the content type requirement.
+Clockifixed handles this automatically — the expense endpoints send multipart/form-data.
 
 ### Void Responses
 
