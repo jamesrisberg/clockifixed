@@ -151,11 +151,12 @@ import { projectDtoImplV1Schema } from "clockifixed";
 
 ## API drift detection
 
-Clockifixed includes a verification system that checks live API responses against the OpenAPI spec schemas. This catches fields that Clockify adds, removes, or changes type on — before they break your code.
+Clockifixed includes a verification system that checks live API responses against the OpenAPI spec schemas — both reads and writes. 87% of the library's 164 methods are tested against the live API, with 37 "reality" schemas that document where the API diverges from its own spec.
 
 ```bash
 # Clone the repo, then:
-CLOCKIFY_API_KEY=... npm run verify:cli
+CLOCKIFY_API_KEY=... npm run verify:cli     # Read-only (GET endpoints)
+CLOCKIFY_API_KEY=... npm run verify:write   # Full lifecycle (creates test data, then cleans up)
 ```
 
 ## Development
@@ -166,8 +167,9 @@ cd clockifixed
 npm install
 npm run build        # Build the library (excludes verify/scripts)
 npm run build:all    # Build everything including verifier
-npm test             # Run tests
-npm run verify:cli   # Run API verification (needs CLOCKIFY_API_KEY)
+npm test             # Run all tests (122 tests)
+npm run verify:cli   # Read API verification (needs CLOCKIFY_API_KEY)
+npm run verify:write # Write API verification (creates/cleans test data)
 npm run generate     # Regenerate types from openapi.json
 npm run lint         # Type-check without emitting
 ```

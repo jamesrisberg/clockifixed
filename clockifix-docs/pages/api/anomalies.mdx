@@ -23,6 +23,10 @@ This is a living document of every inconsistency, naming collision, and spec div
 | Undeclared enum values | 4 fields | Medium — responses contain values not in the spec |
 | Nullable arrays | 1 field | Medium — returns null instead of empty array |
 | Undocumented response fields | 3 fields | Medium — spec is incomplete |
+| Archive-before-delete requirement | 5 entities | Medium — undocumented prerequisite |
+| Array body endpoints | 2 endpoints | Medium — spec says object, API wants array |
+| Multipart upload requirement | 2 endpoints | Medium — spec doesn't indicate content type |
+| Void responses | 4 endpoints | Low — returns empty body instead of 204 |
 
 ---
 
@@ -255,7 +259,60 @@ For every endpoint with known divergences, Clockifixed maintains "reality" overr
 - **Spec schema** — does the response match the OpenAPI spec? (often no)
 - **Reality schema** — does the response match our patched schema? (should always pass)
 
-All 6 reality schema checks pass, meaning Clockifixed's override types accurately model the real API behavior even where the spec is wrong.
+All 37 reality schema checks pass (16 read + 21 write), meaning Clockifixed's override types accurately model the real API behavior even where the spec is wrong.
+
+---
+
+## Behavioral Anomalies
+
+These are not schema issues but undocumented requirements discovered by the write harness:
+
+### Archive-Before-Delete Requirement
+
+Several entity types cannot be deleted while active — the API returns `400 Bad Request`. You must archive them first:
+
+| Entity | How to archive | Then delete |
+|---|---|---|
+| Client | `clients.update(id, { ..., archived: true })` | `clients.delete(id)` |
+| Project | `projects.update(id, { ..., archived: true })` | `projects.delete(id)` |
+| Task | `tasks.update(projectId, taskId, { ..., status: "DONE" })` | `tasks.delete(projectId, taskId)` |
+| Expense Category | `expenses.archiveCategory(id, { archived: true })` | `expenses.deleteCategory(id)` |
+| Time-off Policy | `policies.updateStatus(id, { status: "ARCHIVED" })` | `policies.delete(id)` |
+
+None of this is documented in the OpenAPI spec.
+
+### Array Body Endpoints
+
+Two endpoints expect the request body to be a JSON array, not a single object:
+
+| Endpoint | Spec says | API expects |
+|---|---|---|
+| `POST /workspaces/{id}/templates` | `TemplateRequest` (object) | `TemplateRequest[]` (array) |
+| `PUT /workspaces/{id}/user/{id}/time-entries` | `UpdateTimeEntryBulkRequest` (object) | `UpdateTimeEntryBulkRequest[]` (array) |
+
+Clockifixed's `templates.create()` handles this automatically (wraps single objects in an array).
+
+### Multipart Upload Endpoints
+
+Expense create and update require `multipart/form-data` content type, not `application/json`:
+
+| Endpoint | Issue |
+|---|---|
+| `POST /workspaces/{id}/expenses` | Returns `415 Unsupported Media Type` with JSON |
+| `PUT /workspaces/{id}/expenses/{id}` | Same — requires multipart form data |
+
+The OpenAPI spec doesn't indicate the content type requirement.
+
+### Void Responses
+
+Several endpoints return `200 OK` with an empty body instead of `204 No Content`:
+
+| Endpoint | Expected | Actual |
+|---|---|---|
+| `DELETE /workspaces/{id}/webhooks/{id}` | JSON response | Empty body |
+| `PATCH /workspaces/{id}/time-off/policies/{id}` (status) | JSON response | Empty body |
+| `DELETE /workspaces/{id}/time-off/policies/{id}` | JSON response | Empty body |
+| `PATCH /workspaces/{id}/invoices/{id}/status` | JSON response | Empty body |
 
 ---
 
