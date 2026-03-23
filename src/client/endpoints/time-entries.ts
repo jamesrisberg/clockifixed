@@ -136,14 +136,15 @@ export class TimeEntryEndpoints {
     );
   }
 
-  /** Bulk edit time entries for a user. */
+  /** Bulk edit time entries for a user. Accepts a single entry or an array. */
   async bulkEdit(
     userId: string,
-    body: UpdateTimeEntryBulkRequest
+    body: UpdateTimeEntryBulkRequest | UpdateTimeEntryBulkRequest[]
   ): Promise<TimeEntryDtoV1[]> {
+    const payload = Array.isArray(body) ? body : [body];
     return this.http.put<TimeEntryDtoV1[]>(
       `/workspaces/${this.workspaceId}/user/${userId}/time-entries`,
-      { body }
+      { body: payload }
     );
   }
 
