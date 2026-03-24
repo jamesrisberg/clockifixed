@@ -34,8 +34,8 @@ sequenceDiagram
         API-->>HTTP: JSON response
         HTTP->>ZOD: schema.safeParse(data)
         ZOD-->>HTTP: Validated & typed data
-        HTTP-->>EP: ProjectDtoImplV1
-        EP-->>App: ProjectDtoImplV1
+        HTTP-->>EP: Project
+        EP-->>App: Project
     else 429 Too Many Requests
         API-->>HTTP: Rate limit error
         HTTP-->>App: ClockifyRateLimitError
