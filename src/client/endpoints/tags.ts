@@ -1,6 +1,5 @@
 import { HttpClient } from "../http.js";
 import type {
-  TagDtoV1,
   TagRequest,
   UpdateTagRequest,
   Tag,
@@ -27,7 +26,7 @@ export class TagEndpoints {
    * @returns Array of tags
    */
   async getAll(params?: GetAllTagsParams): Promise<Tag[]> {
-    return this.http.get<TagDtoV1[]>(
+    return this.http.get<Tag[]>(
       `/workspaces/${this.workspaceId}/tags`,
       {
         params: params
@@ -49,7 +48,7 @@ export class TagEndpoints {
    * @returns The created tag
    */
   async create(body: TagRequest): Promise<Tag> {
-    return this.http.post<TagDtoV1>(
+    return this.http.post<Tag>(
       `/workspaces/${this.workspaceId}/tags`,
       { body }
     );
@@ -62,7 +61,7 @@ export class TagEndpoints {
    * @returns The tag
    */
   async get(id: string): Promise<Tag> {
-    return this.http.get<TagDtoV1>(
+    return this.http.get<Tag>(
       `/workspaces/${this.workspaceId}/tags/${id}`
     );
   }
@@ -75,7 +74,7 @@ export class TagEndpoints {
    * @returns The updated tag
    */
   async update(id: string, body: UpdateTagRequest): Promise<Tag> {
-    return this.http.put<TagDtoV1>(
+    return this.http.put<Tag>(
       `/workspaces/${this.workspaceId}/tags/${id}`,
       { body }
     );
@@ -88,7 +87,7 @@ export class TagEndpoints {
    * @returns The deleted tag
    */
   async delete(id: string): Promise<Tag> {
-    return this.http.delete<TagDtoV1>(
+    return this.http.delete<Tag>(
       `/workspaces/${this.workspaceId}/tags/${id}`
     );
   }

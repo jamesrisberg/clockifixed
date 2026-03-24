@@ -1,6 +1,5 @@
 import { HttpClient } from "../http.js";
 import type {
-  UserDtoV1,
   MemberProfile,
   RoleDetails,
   UserCustomFieldValue,
@@ -38,7 +37,7 @@ export class UserEndpoints {
    * ```
    */
   async getLoggedUser(): Promise<User> {
-    return this.http.get<UserDtoV1>("/user");
+    return this.http.get<User>("/user");
   }
 
   /**
@@ -67,7 +66,7 @@ export class UserEndpoints {
    * ```
    */
   async getAll(params?: GetAllUsersParams): Promise<User[]> {
-    return this.http.get<UserDtoV1[]>(
+    return this.http.get<User[]>(
       `/workspaces/${this.workspaceId}/users`,
       {
         params: params
@@ -90,7 +89,7 @@ export class UserEndpoints {
    * @returns Array of matching users
    */
   async filter(body: GetUsersRequest): Promise<User[]> {
-    return this.http.post<UserDtoV1[]>(
+    return this.http.post<User[]>(
       `/workspaces/${this.workspaceId}/users/info`,
       { body }
     );
@@ -152,7 +151,7 @@ export class UserEndpoints {
    * @returns Array of users who are managers of this user
    */
   async getManagers(userId: string): Promise<User[]> {
-    return this.http.get<UserDtoV1[]>(
+    return this.http.get<User[]>(
       `/workspaces/${this.workspaceId}/users/${userId}/managers`
     );
   }

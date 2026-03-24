@@ -1,7 +1,5 @@
 import { HttpClient } from "../http.js";
 import type {
-  ProjectDtoImplV1,
-  ProjectDtoV1,
   CreateProjectFromTemplate,
   ProjectRequest,
   UpdateProjectRequest,
@@ -52,7 +50,7 @@ export class ProjectEndpoints {
    * ```
    */
   async getAll(params?: GetAllProjectsParams): Promise<Project[]> {
-    return this.http.get<ProjectDtoV1[]>(
+    return this.http.get<Project[]>(
       `/workspaces/${this.workspaceId}/projects`,
       {
         params: params
@@ -93,7 +91,7 @@ export class ProjectEndpoints {
    * ```
    */
   async create(body: ProjectRequest): Promise<Project> {
-    return this.http.post<ProjectDtoImplV1>(
+    return this.http.post<Project>(
       `/workspaces/${this.workspaceId}/projects`,
       { body }
     );
@@ -108,7 +106,7 @@ export class ProjectEndpoints {
   async createFromTemplate(
     body: CreateProjectFromTemplate
   ): Promise<Project> {
-    return this.http.post<ProjectDtoImplV1>(
+    return this.http.post<Project>(
       `/workspaces/${this.workspaceId}/projects/from-template`,
       { body }
     );
@@ -121,7 +119,7 @@ export class ProjectEndpoints {
    * @returns The project
    */
   async get(projectId: string): Promise<Project> {
-    return this.http.get<ProjectDtoV1>(
+    return this.http.get<Project>(
       `/workspaces/${this.workspaceId}/projects/${projectId}`
     );
   }
@@ -137,7 +135,7 @@ export class ProjectEndpoints {
     projectId: string,
     body: UpdateProjectRequest
   ): Promise<Project> {
-    return this.http.put<ProjectDtoImplV1>(
+    return this.http.put<Project>(
       `/workspaces/${this.workspaceId}/projects/${projectId}`,
       { body }
     );
@@ -150,7 +148,7 @@ export class ProjectEndpoints {
    * @returns The deleted project
    */
   async delete(projectId: string): Promise<Project> {
-    return this.http.delete<ProjectDtoImplV1>(
+    return this.http.delete<Project>(
       `/workspaces/${this.workspaceId}/projects/${projectId}`
     );
   }
@@ -166,7 +164,7 @@ export class ProjectEndpoints {
     projectId: string,
     body: ProjectEstimateRequest
   ): Promise<Project> {
-    return this.http.patch<ProjectDtoImplV1>(
+    return this.http.patch<Project>(
       `/workspaces/${this.workspaceId}/projects/${projectId}/estimate`,
       { body }
     );
@@ -183,7 +181,7 @@ export class ProjectEndpoints {
     projectId: string,
     body: UpdateProjectMembershipsRequest
   ): Promise<Project> {
-    return this.http.patch<ProjectDtoImplV1>(
+    return this.http.patch<Project>(
       `/workspaces/${this.workspaceId}/projects/${projectId}/memberships`,
       { body }
     );
@@ -216,7 +214,7 @@ export class ProjectEndpoints {
     projectId: string,
     body: PatchProjectTemplateRequest
   ): Promise<Project> {
-    return this.http.patch<ProjectDtoImplV1>(
+    return this.http.patch<Project>(
       `/workspaces/${this.workspaceId}/projects/${projectId}/template`,
       { body }
     );
@@ -235,7 +233,7 @@ export class ProjectEndpoints {
     userId: string,
     body: CostRateRequestV1
   ): Promise<Project> {
-    return this.http.put<ProjectDtoImplV1>(
+    return this.http.put<Project>(
       `/workspaces/${this.workspaceId}/projects/${projectId}/users/${userId}/cost-rate`,
       { body }
     );
@@ -254,7 +252,7 @@ export class ProjectEndpoints {
     userId: string,
     body: HourlyRateRequestV1
   ): Promise<Project> {
-    return this.http.put<ProjectDtoImplV1>(
+    return this.http.put<Project>(
       `/workspaces/${this.workspaceId}/projects/${projectId}/users/${userId}/hourly-rate`,
       { body }
     );

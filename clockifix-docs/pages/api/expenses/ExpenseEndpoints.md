@@ -24,7 +24,7 @@
 
 ### archiveCategory()
 
-> **archiveCategory**(`categoryId`, `body`): `Promise`\<`ExpenseCategoryDtoV1`\>
+> **archiveCategory**(`categoryId`, `body`): `Promise`\<`ExpenseCategory`\>
 
 Archive or unarchive an expense category.
 
@@ -44,7 +44,7 @@ The archive status to set
 
 #### Returns
 
-`Promise`\<`ExpenseCategoryDtoV1`\>
+`Promise`\<`ExpenseCategory`\>
 
 The updated category
 
@@ -88,7 +88,7 @@ const expense = await clockify.expenses.create({
 
 ### createCategory()
 
-> **createCategory**(`body`): `Promise`\<`ExpenseCategoryDtoV1`\>
+> **createCategory**(`body`): `Promise`\<`ExpenseCategory`\>
 
 Create an expense category.
 
@@ -102,7 +102,7 @@ The category name
 
 #### Returns
 
-`Promise`\<`ExpenseCategoryDtoV1`\>
+`Promise`\<`ExpenseCategory`\>
 
 The created category
 
@@ -264,7 +264,7 @@ The updated expense
 
 ### updateCategory()
 
-> **updateCategory**(`categoryId`, `body`): `Promise`\<`ExpenseCategoryDtoV1`\>
+> **updateCategory**(`categoryId`, `body`): `Promise`\<`ExpenseCategory`\>
 
 Update an expense category.
 
@@ -284,6 +284,6 @@ The fields to update
 
 #### Returns
 
-`Promise`\<`ExpenseCategoryDtoV1`\>
+`Promise`\<`ExpenseCategory`\>
 
 The updated category

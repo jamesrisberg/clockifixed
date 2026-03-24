@@ -3,7 +3,6 @@ import type {
   Expense,
   ExpensesAndTotals,
   ExpenseCategoriesWithCount,
-  ExpenseCategoryDtoV1,
   CreateExpenseV1Request,
   UpdateExpenseV1Request,
   ExpenseCategoryV1Request,
@@ -125,7 +124,7 @@ export class ExpenseEndpoints {
    * @returns The created category
    */
   async createCategory(body: ExpenseCategoryV1Request): Promise<ExpenseCategory> {
-    return this.http.post<ExpenseCategoryDtoV1>(
+    return this.http.post<ExpenseCategory>(
       `/workspaces/${this.workspaceId}/expenses/categories`,
       { body }
     );
@@ -142,7 +141,7 @@ export class ExpenseEndpoints {
     categoryId: string,
     body: ExpenseCategoryV1Request
   ): Promise<ExpenseCategory> {
-    return this.http.put<ExpenseCategoryDtoV1>(
+    return this.http.put<ExpenseCategory>(
       `/workspaces/${this.workspaceId}/expenses/categories/${categoryId}`,
       { body }
     );
@@ -170,7 +169,7 @@ export class ExpenseEndpoints {
     categoryId: string,
     body: ExpenseCategoryArchiveV1Request
   ): Promise<ExpenseCategory> {
-    return this.http.patch<ExpenseCategoryDtoV1>(
+    return this.http.patch<ExpenseCategory>(
       `/workspaces/${this.workspaceId}/expenses/categories/${categoryId}/status`,
       { body }
     );

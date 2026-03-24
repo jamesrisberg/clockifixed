@@ -78,7 +78,7 @@ The role to remove
 
 ### filter()
 
-> **filter**(`body`): `Promise`\<`UserDtoV1`[]\>
+> **filter**(`body`): `Promise`\<`User`[]\>
 
 Filter users with advanced criteria via a POST body.
 
@@ -92,7 +92,7 @@ The filter criteria
 
 #### Returns
 
-`Promise`\<`UserDtoV1`[]\>
+`Promise`\<`User`[]\>
 
 Array of matching users
 
@@ -100,7 +100,7 @@ Array of matching users
 
 ### getAll()
 
-> **getAll**(`params?`): `Promise`\<`UserDtoV1`[]\>
+> **getAll**(`params?`): `Promise`\<`User`[]\>
 
 Get all users in the workspace. Supports pagination and filtering
 by name, email, and status.
@@ -115,7 +115,7 @@ Optional pagination and filter parameters
 
 #### Returns
 
-`Promise`\<`UserDtoV1`[]\>
+`Promise`\<`User`[]\>
 
 Array of users
 
@@ -132,13 +132,13 @@ const active = await clockify.users.getAll({
 
 ### getLoggedUser()
 
-> **getLoggedUser**(): `Promise`\<`UserDtoV1`\>
+> **getLoggedUser**(): `Promise`\<`User`\>
 
 Get the currently authenticated user. Does not require a workspace ID.
 
 #### Returns
 
-`Promise`\<`UserDtoV1`\>
+`Promise`\<`User`\>
 
 The authenticated user
 
@@ -153,7 +153,7 @@ console.log(me.name, me.email, me.activeWorkspace);
 
 ### getManagers()
 
-> **getManagers**(`userId`): `Promise`\<`UserDtoV1`[]\>
+> **getManagers**(`userId`): `Promise`\<`User`[]\>
 
 Get the managers assigned to a specific user.
 
@@ -167,7 +167,7 @@ The user ID
 
 #### Returns
 
-`Promise`\<`UserDtoV1`[]\>
+`Promise`\<`User`[]\>
 
 Array of users who are managers of this user
 

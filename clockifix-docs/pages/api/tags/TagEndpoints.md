@@ -24,7 +24,7 @@
 
 ### create()
 
-> **create**(`body`): `Promise`\<`TagDtoV1`\>
+> **create**(`body`): `Promise`\<`Tag`\>
 
 Create a new tag.
 
@@ -38,7 +38,7 @@ The tag name
 
 #### Returns
 
-`Promise`\<`TagDtoV1`\>
+`Promise`\<`Tag`\>
 
 The created tag
 
@@ -46,7 +46,7 @@ The created tag
 
 ### delete()
 
-> **delete**(`id`): `Promise`\<`TagDtoV1`\>
+> **delete**(`id`): `Promise`\<`Tag`\>
 
 Delete a tag.
 
@@ -60,7 +60,7 @@ The tag ID
 
 #### Returns
 
-`Promise`\<`TagDtoV1`\>
+`Promise`\<`Tag`\>
 
 The deleted tag
 
@@ -68,7 +68,7 @@ The deleted tag
 
 ### get()
 
-> **get**(`id`): `Promise`\<`TagDtoV1`\>
+> **get**(`id`): `Promise`\<`Tag`\>
 
 Get a tag by ID.
 
@@ -82,7 +82,7 @@ The tag ID
 
 #### Returns
 
-`Promise`\<`TagDtoV1`\>
+`Promise`\<`Tag`\>
 
 The tag
 
@@ -90,7 +90,7 @@ The tag
 
 ### getAll()
 
-> **getAll**(`params?`): `Promise`\<`TagDtoV1`[]\>
+> **getAll**(`params?`): `Promise`\<`Tag`[]\>
 
 Get all tags in the workspace. Supports pagination and filtering
 by name and archived status.
@@ -105,7 +105,7 @@ Optional pagination and filter parameters
 
 #### Returns
 
-`Promise`\<`TagDtoV1`[]\>
+`Promise`\<`Tag`[]\>
 
 Array of tags
 
@@ -113,7 +113,7 @@ Array of tags
 
 ### update()
 
-> **update**(`id`, `body`): `Promise`\<`TagDtoV1`\>
+> **update**(`id`, `body`): `Promise`\<`Tag`\>
 
 Update an existing tag.
 
@@ -133,6 +133,6 @@ The fields to update
 
 #### Returns
 
-`Promise`\<`TagDtoV1`\>
+`Promise`\<`Tag`\>
 
 The updated tag

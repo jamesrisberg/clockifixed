@@ -24,7 +24,7 @@
 
 ### ~~create()~~
 
-> **create**(`body`): `Promise`\<`TemplateDtoImpl`[]\>
+> **create**(`body`): `Promise`\<`TemplateResult`[]\>
 
 Create one or more templates. Accepts a single template or an array —
 single values are automatically wrapped in an array.
@@ -39,7 +39,7 @@ One or more template definitions
 
 #### Returns
 
-`Promise`\<`TemplateDtoImpl`[]\>
+`Promise`\<`TemplateResult`[]\>
 
 The created templates
 
@@ -51,7 +51,7 @@ Clockify has deprecated the templates API.
 
 ### ~~delete()~~
 
-> **delete**(`templateId`): `Promise`\<`TemplateDtoImpl`\>
+> **delete**(`templateId`): `Promise`\<`TemplateResult`\>
 
 Delete a template.
 
@@ -65,7 +65,7 @@ The template ID
 
 #### Returns
 
-`Promise`\<`TemplateDtoImpl`\>
+`Promise`\<`TemplateResult`\>
 
 The deleted template
 
@@ -121,7 +121,7 @@ Clockify has deprecated the templates API.
 
 ### ~~update()~~
 
-> **update**(`templateId`, `body`): `Promise`\<`TemplateDtoImpl`\>
+> **update**(`templateId`, `body`): `Promise`\<`TemplateResult`\>
 
 Update a template.
 
@@ -141,7 +141,7 @@ The fields to update
 
 #### Returns
 
-`Promise`\<`TemplateDtoImpl`\>
+`Promise`\<`TemplateResult`\>
 
 The updated template
 

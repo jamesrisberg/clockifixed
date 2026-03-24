@@ -1,7 +1,6 @@
 import { HttpClient } from "../http.js";
 import type {
   Template,
-  TemplateDtoImpl,
   TemplateRequest,
   TemplatePatchRequest,
   TemplateResult,
@@ -35,7 +34,7 @@ export class TemplateEndpoints {
    */
   async create(body: TemplateRequest | TemplateRequest[]): Promise<TemplateResult[]> {
     const payload = Array.isArray(body) ? body : [body];
-    return this.http.post<TemplateDtoImpl[]>(
+    return this.http.post<TemplateResult[]>(
       `/workspaces/${this.workspaceId}/templates`,
       { body: payload }
     );
@@ -63,7 +62,7 @@ export class TemplateEndpoints {
    * @deprecated Clockify has deprecated the templates API.
    */
   async update(templateId: string, body: TemplatePatchRequest): Promise<TemplateResult> {
-    return this.http.patch<TemplateDtoImpl>(
+    return this.http.patch<TemplateResult>(
       `/workspaces/${this.workspaceId}/templates/${templateId}`,
       { body }
     );
@@ -77,7 +76,7 @@ export class TemplateEndpoints {
    * @deprecated Clockify has deprecated the templates API.
    */
   async delete(templateId: string): Promise<TemplateResult> {
-    return this.http.delete<TemplateDtoImpl>(
+    return this.http.delete<TemplateResult>(
       `/workspaces/${this.workspaceId}/templates/${templateId}`
     );
   }

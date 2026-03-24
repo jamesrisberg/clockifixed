@@ -1,7 +1,5 @@
 import { HttpClient } from "../http.js";
 import type {
-  HolidayDtoV1,
-  HolidayDto,
   CreateHolidayRequest,
   UpdateHolidayRequest,
   Holiday,
@@ -19,7 +17,7 @@ export class HolidayEndpoints {
    * @returns Array of holidays
    */
   async getAll(): Promise<Holiday[]> {
-    return this.http.get<HolidayDtoV1[]>(
+    return this.http.get<Holiday[]>(
       `/workspaces/${this.workspaceId}/holidays`
     );
   }
@@ -41,7 +39,7 @@ export class HolidayEndpoints {
    * ```
    */
   async create(body: CreateHolidayRequest): Promise<Holiday> {
-    return this.http.post<HolidayDtoV1>(
+    return this.http.post<Holiday>(
       `/workspaces/${this.workspaceId}/holidays`,
       { body }
     );
@@ -54,7 +52,7 @@ export class HolidayEndpoints {
    * @returns Array of holidays in the period
    */
   async getInPeriod(params: { start: string; end: string }): Promise<Holiday[]> {
-    return this.http.get<HolidayDtoV1[]>(
+    return this.http.get<Holiday[]>(
       `/workspaces/${this.workspaceId}/holidays/in-period`,
       {
         params: {
@@ -73,7 +71,7 @@ export class HolidayEndpoints {
    * @returns The updated holiday
    */
   async update(holidayId: string, body: UpdateHolidayRequest): Promise<Holiday> {
-    return this.http.put<HolidayDtoV1>(
+    return this.http.put<Holiday>(
       `/workspaces/${this.workspaceId}/holidays/${holidayId}`,
       { body }
     );
@@ -86,7 +84,7 @@ export class HolidayEndpoints {
    * @returns The deleted holiday
    */
   async delete(holidayId: string): Promise<Holiday> {
-    return this.http.delete<HolidayDto>(
+    return this.http.delete<Holiday>(
       `/workspaces/${this.workspaceId}/holidays/${holidayId}`
     );
   }

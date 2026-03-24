@@ -1,8 +1,5 @@
 import { HttpClient } from "../http.js";
 import type {
-  TimeEntryDtoImplV1,
-  TimeEntryDtoV1,
-  TimeEntryWithRates,
   CreateTimeEntryRequest,
   UpdateTimeEntryRequest,
   UpdateInvoicedStatusRequest,
@@ -48,7 +45,7 @@ export class TimeEntryEndpoints {
    * ```
    */
   async create(body: CreateTimeEntryRequest): Promise<TimeEntry> {
-    return this.http.post<TimeEntryDtoImplV1>(
+    return this.http.post<TimeEntry>(
       `/workspaces/${this.workspaceId}/time-entries`,
       { body }
     );
@@ -62,7 +59,7 @@ export class TimeEntryEndpoints {
    * @returns The time entry with rate details
    */
   async get(id: string): Promise<TimeEntry> {
-    return this.http.get<TimeEntryWithRates>(
+    return this.http.get<TimeEntry>(
       `/workspaces/${this.workspaceId}/time-entries/${id}`
     );
   }
@@ -78,7 +75,7 @@ export class TimeEntryEndpoints {
     id: string,
     body: UpdateTimeEntryRequest
   ): Promise<TimeEntry> {
-    return this.http.put<TimeEntryDtoImplV1>(
+    return this.http.put<TimeEntry>(
       `/workspaces/${this.workspaceId}/time-entries/${id}`,
       { body }
     );
@@ -121,7 +118,7 @@ export class TimeEntryEndpoints {
    * ```
    */
   async getInProgress(): Promise<TimeEntry> {
-    return this.http.get<TimeEntryDtoImplV1>(
+    return this.http.get<TimeEntry>(
       `/workspaces/${this.workspaceId}/time-entries/status/in-progress`
     );
   }
@@ -148,7 +145,7 @@ export class TimeEntryEndpoints {
     userId: string,
     params?: GetTimeEntriesParams
   ): Promise<TimeEntry[]> {
-    return this.http.get<TimeEntryWithRates[]>(
+    return this.http.get<TimeEntry[]>(
       `/workspaces/${this.workspaceId}/user/${userId}/time-entries`,
       {
         params: params
@@ -181,7 +178,7 @@ export class TimeEntryEndpoints {
     userId: string,
     body: CreateTimeEntryRequest
   ): Promise<TimeEntry> {
-    return this.http.post<TimeEntryDtoImplV1>(
+    return this.http.post<TimeEntry>(
       `/workspaces/${this.workspaceId}/user/${userId}/time-entries`,
       { body }
     );
@@ -205,7 +202,7 @@ export class TimeEntryEndpoints {
     userId: string,
     body: StopTimeEntryRequest
   ): Promise<TimeEntry> {
-    return this.http.patch<TimeEntryDtoImplV1>(
+    return this.http.patch<TimeEntry>(
       `/workspaces/${this.workspaceId}/user/${userId}/time-entries`,
       { body }
     );
@@ -219,7 +216,7 @@ export class TimeEntryEndpoints {
    * @returns The deleted time entries
    */
   async deleteForUser(userId: string, timeEntryIds: string[]): Promise<TimeEntry[]> {
-    return this.http.delete<TimeEntryDtoImplV1[]>(
+    return this.http.delete<TimeEntry[]>(
       `/workspaces/${this.workspaceId}/user/${userId}/time-entries`,
       { params: { "time-entry-ids": timeEntryIds.join(",") } }
     );
@@ -247,7 +244,7 @@ export class TimeEntryEndpoints {
     body: UpdateTimeEntryBulkRequest | UpdateTimeEntryBulkRequest[]
   ): Promise<TimeEntry[]> {
     const payload = Array.isArray(body) ? body : [body];
-    return this.http.put<TimeEntryDtoV1[]>(
+    return this.http.put<TimeEntry[]>(
       `/workspaces/${this.workspaceId}/user/${userId}/time-entries`,
       { body: payload }
     );
@@ -264,7 +261,7 @@ export class TimeEntryEndpoints {
     userId: string,
     id: string
   ): Promise<TimeEntry> {
-    return this.http.post<TimeEntryDtoImplV1>(
+    return this.http.post<TimeEntry>(
       `/workspaces/${this.workspaceId}/user/${userId}/time-entries/${id}/duplicate`
     );
   }

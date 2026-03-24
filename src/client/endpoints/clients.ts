@@ -1,7 +1,5 @@
 import { HttpClient } from "../http.js";
 import type {
-  Client,
-  ClientWithCurrency,
   CreateClientRequest,
   UpdateClientRequest,
   ClockifyClient,
@@ -33,7 +31,7 @@ export class ClientEndpoints {
    * ```
    */
   async getAll(params?: GetAllClientsParams): Promise<ClockifyClient[]> {
-    return this.http.get<ClientWithCurrency[]>(
+    return this.http.get<ClockifyClient[]>(
       `/workspaces/${this.workspaceId}/clients`,
       {
         params: params
@@ -63,7 +61,7 @@ export class ClientEndpoints {
    * ```
    */
   async create(body: CreateClientRequest): Promise<ClockifyClient> {
-    return this.http.post<ClientWithCurrency>(
+    return this.http.post<ClockifyClient>(
       `/workspaces/${this.workspaceId}/clients`,
       { body }
     );
@@ -76,7 +74,7 @@ export class ClientEndpoints {
    * @returns The client
    */
   async get(id: string): Promise<ClockifyClient> {
-    return this.http.get<ClientWithCurrency>(
+    return this.http.get<ClockifyClient>(
       `/workspaces/${this.workspaceId}/clients/${id}`
     );
   }
@@ -89,7 +87,7 @@ export class ClientEndpoints {
    * @returns The updated client
    */
   async update(id: string, body: UpdateClientRequest): Promise<ClockifyClient> {
-    return this.http.put<Client>(
+    return this.http.put<ClockifyClient>(
       `/workspaces/${this.workspaceId}/clients/${id}`,
       { body }
     );
@@ -102,7 +100,7 @@ export class ClientEndpoints {
    * @returns The deleted client
    */
   async delete(id: string): Promise<ClockifyClient> {
-    return this.http.delete<Client>(
+    return this.http.delete<ClockifyClient>(
       `/workspaces/${this.workspaceId}/clients/${id}`
     );
   }
