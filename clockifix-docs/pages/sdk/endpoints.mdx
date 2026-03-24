@@ -244,28 +244,133 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `setUserCostRate(userId, body)` | `Workspace` | Set user cost rate |
 | `setUserHourlyRate(userId, body)` | `Workspace` | Set user hourly rate |
 
-### `clockify.groups` | `clockify.webhooks` | `clockify.customFields`
+### `clockify.groups`
 
-| Module | Methods | Returns | Key Operations |
-|---|---|---|---|
-| `groups` | 6 | `UserGroup` | CRUD, add/remove users |
-| `webhooks` | 8 | `Webhook` / `Webhooks` | CRUD, logs, token regeneration |
-| `customFields` | 7 | `CustomField` | CRUD, project defaults |
+| Method | Returns | Description |
+|---|---|---|
+| `getAll()` | `UserGroup[]` | List groups |
+| `create(body)` | `UserGroup` | Create a group |
+| `update(id, body)` | `UserGroup` | Update a group |
+| `delete(id)` | `UserGroup` | Delete a group |
+| `addUsers(groupId, body)` | `UserGroup` | Add user to group |
+| `removeUser(groupId, userId)` | `UserGroup` | Remove user from group |
 
-### `clockify.scheduling` | `clockify.policies` | `clockify.timeOff` | `clockify.balances`
+### `clockify.webhooks`
 
-| Module | Methods | Returns | Key Operations |
-|---|---|---|---|
-| `scheduling` | 11 | `Assignment` / `SchedulingProjectsTotals` | Assignments, recurring, capacity |
-| `policies` | 6 | `Policy` | Time-off policies CRUD (must archive before delete) |
-| `timeOff` | 5 | `TimeOffRequestFull` / `TimeOffRequest` | Requests, status changes |
-| `balances` | 3 | `unknown` | Balance queries and updates |
+| Method | Returns | Description |
+|---|---|---|
+| `getAll()` | `Webhooks` | List webhooks (wrapped in `{ webhooks, workspaceWebhookCount }`) |
+| `getForAddon(addonId)` | `Webhooks` | List webhooks for an addon |
+| `get(webhookId)` | `Webhook` | Get by ID |
+| `create(body)` | `Webhook` | Create a webhook |
+| `update(webhookId, body)` | `Webhook` | Update a webhook |
+| `delete(webhookId)` | `void` | Delete a webhook |
+| `getLogs(webhookId, body)` | `WebhookLog[]` | Get webhook delivery logs |
+| `regenerateToken(webhookId)` | `Webhook` | Regenerate auth token |
 
-### `clockify.reports` | `clockify.sharedReports` | `clockify.templates` | `clockify.entityChanges`
+### `clockify.customFields`
 
-| Module | Methods | Returns | Key Operations |
-|---|---|---|---|
-| `reports` | 6 | `unknown` | Detailed, summary, weekly, attendance, expense, audit |
-| `sharedReports` | 5 | `unknown` | CRUD |
-| `templates` | 5 | `Template` / `TemplateResult` | CRUD *(deprecated by Clockify)* |
-| `entityChanges` | 3 | `unknown` | Created/updated/deleted tracking *(experimental)* |
+| Method | Returns | Description |
+|---|---|---|
+| `getAll()` | `CustomField[]` | List workspace custom fields |
+| `create(body)` | `void` | Create a custom field |
+| `update(cfId, body)` | `CustomField` | Update a custom field |
+| `delete(cfId)` | `void` | Delete a custom field |
+| `getForProject(projectId)` | `CustomField[]` | List custom fields for a project |
+| `updateProjectDefault(projectId, cfId, body)` | `CustomField` | Set project default value |
+| `removeFromProject(projectId, cfId)` | `CustomField` | Remove from project |
+
+### `clockify.approvals`
+
+| Method | Returns | Description |
+|---|---|---|
+| `getAll()` | `ApprovalDetails[]` | List approval requests |
+| `create(body)` | `ApprovalRequest` | Create approval request |
+| `createForUser(userId, body)` | `ApprovalRequest` | Create for specific user |
+| `resubmit(body)` | `void` | Resubmit entries for approval |
+| `resubmitForUser(userId, body)` | `void` | Resubmit for specific user |
+| `updateStatus(requestId, body)` | `ApprovalRequest` | Approve/reject/withdraw |
+
+### `clockify.scheduling`
+
+| Method | Returns | Description |
+|---|---|---|
+| `getAllAssignments()` | `AssignmentHydrated[]` | List all assignments (requires `start`/`end` params) |
+| `getProjectTotals(body)` | `SchedulingProjectsTotals[]` | Get project totals |
+| `getProjectTotalsForProject(projectId)` | `SchedulingProjectsTotals` | Get totals for one project |
+| `publishAssignments(body)` | `void` | Publish assignments |
+| `createRecurring(body)` | `Assignment[]` | Create recurring assignment |
+| `deleteRecurring(assignmentId)` | `Assignment[]` | Delete recurring assignment |
+| `updateRecurring(assignmentId, body)` | `Assignment[]` | Update recurring assignment |
+| `updateRecurringPeriod(assignmentId, body)` | `Assignment[]` | Update period/series |
+| `getUserTotals(body)` | `SchedulingUsersTotals[]` | Get user totals |
+| `getUserTotalsForUser(userId)` | `SchedulingUsersTotals` | Get totals for one user |
+| `copyAssignment(assignmentId, body)` | `Assignment[]` | Copy an assignment |
+
+### `clockify.policies`
+
+| Method | Returns | Description |
+|---|---|---|
+| `getAll()` | `Policy[]` | List time-off policies |
+| `create(body)` | `Policy` | Create a policy |
+| `get(policyId)` | `Policy` | Get by ID |
+| `update(policyId, body)` | `Policy` | Update a policy |
+| `updateStatus(policyId, body)` | `Policy` | Archive/activate |
+| `delete(policyId)` | `void` | Delete (must archive first) |
+
+### `clockify.timeOff`
+
+| Method | Returns | Description |
+|---|---|---|
+| `getAll(body)` | `TimeOffRequestsWithCount` | List time-off requests (POST with filters) |
+| `create(policyId, body)` | `TimeOffRequestFull` | Create a request |
+| `createForUser(policyId, userId, body)` | `TimeOffRequestFull` | Create for specific user |
+| `delete(policyId, requestId)` | `TimeOffRequest` | Delete a request |
+| `changeStatus(policyId, requestId, body)` | `TimeOffRequest` | Approve/reject |
+
+### `clockify.balances`
+
+| Method | Returns | Description |
+|---|---|---|
+| `getForPolicy(policyId)` | `unknown` | Get balances for a policy |
+| `update(policyId, body)` | `unknown` | Update balances |
+| `getForUser(userId)` | `unknown` | Get balances for a user |
+
+### `clockify.reports`
+
+| Method | Returns | Description |
+|---|---|---|
+| `summary(body)` | `unknown` | Generate summary report |
+| `detailed(body)` | `unknown` | Generate detailed report |
+| `weekly(body)` | `unknown` | Generate weekly report |
+| `attendance(body)` | `unknown` | Generate attendance report |
+| `expenseDetailed(body)` | `ExpenseDetailedReport` | Generate expense report |
+| `auditLog(body)` | `PageableV1ListAuditLog` | Get audit log entries |
+
+### `clockify.sharedReports`
+
+| Method | Returns | Description |
+|---|---|---|
+| `getAll()` | `unknown` | List shared reports |
+| `create(body)` | `unknown` | Create a shared report |
+| `getById(id)` | `unknown` | Get by ID |
+| `update(id, body)` | `unknown` | Update a shared report |
+| `delete(id)` | `void` | Delete a shared report |
+
+### `clockify.templates` *(deprecated by Clockify)*
+
+| Method | Returns | Description |
+|---|---|---|
+| `getAll()` | `Template[]` | List templates |
+| `create(body)` | `TemplateResult[]` | Create (accepts single or array) |
+| `get(templateId)` | `Template` | Get by ID |
+| `update(templateId, body)` | `TemplateResult` | Update a template |
+| `delete(templateId)` | `TemplateResult` | Delete a template |
+
+### `clockify.entityChanges` *(experimental)*
+
+| Method | Returns | Description |
+|---|---|---|
+| `getCreated(params)` | `unknown` | Get entities created in a time range |
+| `getUpdated(params)` | `unknown` | Get entities updated in a time range |
+| `getDeleted(params)` | `PageableCollectionLogBinDocument` | Get entities deleted in a time range |
