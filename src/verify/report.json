@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-24T00:33:14.102Z",
+  "timestamp": "2026-03-24T02:11:43.291Z",
   "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
     "total": 45,
-    "passed": 22,
-    "failed": 13,
+    "passed": 23,
+    "failed": 12,
     "skipped": 10,
     "errors": 0,
-    "totalDivergences": 102,
+    "totalDivergences": 100,
     "totalUndocumentedFields": 6
   },
   "checks": [
@@ -851,7 +851,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 308
+      "durationMs": 312
     },
     {
       "check": {
@@ -3341,7 +3341,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 328,
+      "durationMs": 331,
       "responseDataSample": [
         {
           "id": "63eab29ecf0b257026ab5625",
@@ -3413,78 +3413,78 @@
             "projectLabel": "project",
             "taskLabel": "task",
             "workingDays": [
-              "WEDNESDAY",
               "THURSDAY",
-              "MONDAY",
               "FRIDAY",
-              "TUESDAY"
+              "TUESDAY",
+              "MONDAY",
+              "WEDNESDAY"
             ],
             "isProjectPublicByDefault": true
           },
           "imageUrl": "",
           "featureSubscriptionType": "PRO_2021",
           "features": [
-            "DISABLE_MANUAL_MODE",
-            "INVOICE_EMAILS",
-            "TIMESHEET_IMPORT",
-            "MANAGER_ROLE",
-            "INVOICE_REMINDERS",
-            "ALERTS",
-            "CUSTOM_FIELDS",
-            "WHO_CAN_SEE_TEAMS_DASHBOARD",
-            "INVOICING",
-            "PROJECT_TEMPLATES",
-            "UNLIMITED_REPORTS",
-            "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
-            "ATTENDANCE_REPORT",
-            "ADD_TIME_FOR_OTHERS",
-            "FAVORITE_ENTRIES",
             "AUTOMATIC_LOCK",
-            "TASK_RATES",
-            "TIME_OFF",
-            "REQUIRED_FIELDS",
-            "WORKSPACE_LOCK_TIMEENTRIES",
-            "RECURRING_INVOICES",
-            "FILE_IMPORT",
-            "SUMMARY_ESTIMATE",
-            "LOCATIONS",
-            "WORKSPACE_TRANSFER",
-            "BULK_EDIT",
-            "KIOSK_QR_CODE",
-            "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
-            "USER_IMPORT",
-            "MULTI_FACTOR_AUTHENTICATION",
-            "HISTORIC_RATES",
-            "LABOR_COST",
-            "WHO_CAN_SEE_ALL_TIME_ENTRIES",
-            "SCREENSHOTS",
-            "KIOSK",
-            "CLIENT_CURRENCY",
-            "EDIT_MEMBER_PROFILE",
-            "WORKSPACE_TIME_ROUNDING",
-            "TIME_TRACKING",
-            "APPROVAL",
-            "BRANDED_REPORTS",
-            "KIOSK_PIN_REQUIRED",
-            "SCHEDULING",
-            "BREAKS",
-            "PROJECT_BUDGET",
-            "EXPENSES",
-            "USER_CUSTOM_FIELDS",
-            "WHO_CAN_SEE_PROJECT_STATUS",
-            "SCHEDULED_REPORTS",
             "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
-            "KIOSK_SESSION_DURATION",
-            "KIOSK_SIX_DIGIT_PIN",
-            "RECURRING_ESTIMATES",
-            "SPLIT_TIME_ENTRY",
-            "FORECASTING",
-            "CUSTOM_REPORTING",
-            "TARGETS_AND_REMINDERS",
-            "QUICKBOOKS_INTEGRATION",
+            "WHO_CAN_SEE_PROJECT_STATUS",
+            "EXPENSES",
             "DECIMAL_FORMAT",
+            "ADD_TIME_FOR_OTHERS",
+            "ALERTS",
+            "USER_CUSTOM_FIELDS",
+            "KIOSK_PIN_REQUIRED",
+            "PROJECT_TEMPLATES",
+            "BULK_EDIT",
+            "WHO_CAN_SEE_TEAMS_DASHBOARD",
+            "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
+            "WORKSPACE_LOCK_TIMEENTRIES",
+            "HISTORIC_RATES",
+            "APPROVAL",
+            "INVOICE_EMAILS",
+            "TIME_OFF",
+            "FAVORITE_ENTRIES",
+            "HIDE_PAGES",
+            "MULTI_FACTOR_AUTHENTICATION",
+            "WORKSPACE_TIME_ROUNDING",
+            "EDIT_MEMBER_PROFILE",
+            "KIOSK_QR_CODE",
+            "PROJECT_BUDGET",
+            "USER_IMPORT",
+            "SUMMARY_ESTIMATE",
+            "DISABLE_MANUAL_MODE",
+            "FILE_IMPORT",
+            "WHO_CAN_SEE_ALL_TIME_ENTRIES",
+            "LOCATIONS",
+            "SPLIT_TIME_ENTRY",
+            "UNLIMITED_REPORTS",
+            "INVOICE_REMINDERS",
+            "LABOR_COST",
+            "FORECASTING",
+            "REQUIRED_FIELDS",
+            "RECURRING_ESTIMATES",
+            "KIOSK",
             "WORKSPACE_TIME_AUDIT",
-            "HIDE_PAGES"
+            "KIOSK_SIX_DIGIT_PIN",
+            "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
+            "QUICKBOOKS_INTEGRATION",
+            "CLIENT_CURRENCY",
+            "SCREENSHOTS",
+            "RECURRING_INVOICES",
+            "SCHEDULING",
+            "MANAGER_ROLE",
+            "INVOICING",
+            "CUSTOM_REPORTING",
+            "BREAKS",
+            "CUSTOM_FIELDS",
+            "ATTENDANCE_REPORT",
+            "WORKSPACE_TRANSFER",
+            "SCHEDULED_REPORTS",
+            "BRANDED_REPORTS",
+            "TIME_TRACKING",
+            "TIMESHEET_IMPORT",
+            "TARGETS_AND_REMINDERS",
+            "TASK_RATES",
+            "KIOSK_SESSION_DURATION"
           ],
           "currencies": [
             {
@@ -5559,7 +5559,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 752,
+      "durationMs": 768,
       "responseDataSample": {
         "id": "63eab29ecf0b257026ab5625",
         "name": "James Risberg's workspace",
@@ -5630,10 +5630,10 @@
           "projectLabel": "project",
           "taskLabel": "task",
           "workingDays": [
-            "MONDAY",
-            "THURSDAY",
-            "FRIDAY",
             "WEDNESDAY",
+            "THURSDAY",
+            "MONDAY",
+            "FRIDAY",
             "TUESDAY"
           ],
           "isProjectPublicByDefault": true
@@ -5641,67 +5641,67 @@
         "imageUrl": "",
         "featureSubscriptionType": "PRO_2021",
         "features": [
-          "PROJECT_TEMPLATES",
-          "FORECASTING",
-          "PROJECT_BUDGET",
+          "DISABLE_MANUAL_MODE",
+          "INVOICE_EMAILS",
+          "TIMESHEET_IMPORT",
           "MANAGER_ROLE",
+          "INVOICE_REMINDERS",
+          "ALERTS",
+          "CUSTOM_FIELDS",
+          "WHO_CAN_SEE_TEAMS_DASHBOARD",
+          "INVOICING",
+          "PROJECT_TEMPLATES",
+          "UNLIMITED_REPORTS",
+          "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
+          "ATTENDANCE_REPORT",
+          "ADD_TIME_FOR_OTHERS",
+          "FAVORITE_ENTRIES",
           "AUTOMATIC_LOCK",
           "TASK_RATES",
-          "REQUIRED_FIELDS",
-          "INVOICE_EMAILS",
-          "WORKSPACE_TRANSFER",
-          "WORKSPACE_TIME_ROUNDING",
-          "INVOICING",
-          "USER_CUSTOM_FIELDS",
           "TIME_OFF",
-          "KIOSK_SIX_DIGIT_PIN",
-          "WHO_CAN_SEE_TEAMS_DASHBOARD",
-          "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
-          "SCHEDULED_REPORTS",
-          "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
-          "FILE_IMPORT",
-          "WHO_CAN_SEE_PROJECT_STATUS",
-          "HIDE_PAGES",
-          "UNLIMITED_REPORTS",
-          "ALERTS",
-          "QUICKBOOKS_INTEGRATION",
-          "HISTORIC_RATES",
-          "SUMMARY_ESTIMATE",
-          "LABOR_COST",
-          "LOCATIONS",
-          "KIOSK_PIN_REQUIRED",
-          "WORKSPACE_TIME_AUDIT",
-          "CUSTOM_FIELDS",
-          "APPROVAL",
+          "REQUIRED_FIELDS",
           "WORKSPACE_LOCK_TIMEENTRIES",
-          "SCHEDULING",
-          "KIOSK_QR_CODE",
-          "CUSTOM_REPORTING",
-          "BREAKS",
-          "TARGETS_AND_REMINDERS",
-          "TIMESHEET_IMPORT",
-          "MULTI_FACTOR_AUTHENTICATION",
-          "DISABLE_MANUAL_MODE",
-          "CLIENT_CURRENCY",
-          "USER_IMPORT",
-          "KIOSK",
-          "KIOSK_SESSION_DURATION",
-          "SCREENSHOTS",
-          "RECURRING_ESTIMATES",
-          "TIME_TRACKING",
-          "EXPENSES",
           "RECURRING_INVOICES",
-          "DECIMAL_FORMAT",
-          "ADD_TIME_FOR_OTHERS",
+          "FILE_IMPORT",
+          "SUMMARY_ESTIMATE",
+          "LOCATIONS",
+          "WORKSPACE_TRANSFER",
           "BULK_EDIT",
-          "EXCLUDE_NON_BILLABLE_FROM_ESTIMATE",
-          "INVOICE_REMINDERS",
+          "KIOSK_QR_CODE",
+          "WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY",
+          "USER_IMPORT",
+          "MULTI_FACTOR_AUTHENTICATION",
+          "HISTORIC_RATES",
+          "LABOR_COST",
+          "WHO_CAN_SEE_ALL_TIME_ENTRIES",
+          "SCREENSHOTS",
+          "KIOSK",
+          "CLIENT_CURRENCY",
           "EDIT_MEMBER_PROFILE",
-          "ATTENDANCE_REPORT",
-          "FAVORITE_ENTRIES",
-          "SPLIT_TIME_ENTRY",
+          "WORKSPACE_TIME_ROUNDING",
+          "TIME_TRACKING",
+          "APPROVAL",
           "BRANDED_REPORTS",
-          "WHO_CAN_SEE_ALL_TIME_ENTRIES"
+          "KIOSK_PIN_REQUIRED",
+          "SCHEDULING",
+          "BREAKS",
+          "PROJECT_BUDGET",
+          "EXPENSES",
+          "USER_CUSTOM_FIELDS",
+          "WHO_CAN_SEE_PROJECT_STATUS",
+          "SCHEDULED_REPORTS",
+          "WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES",
+          "KIOSK_SESSION_DURATION",
+          "KIOSK_SIX_DIGIT_PIN",
+          "RECURRING_ESTIMATES",
+          "SPLIT_TIME_ENTRY",
+          "FORECASTING",
+          "CUSTOM_REPORTING",
+          "TARGETS_AND_REMINDERS",
+          "QUICKBOOKS_INTEGRATION",
+          "DECIMAL_FORMAT",
+          "WORKSPACE_TIME_AUDIT",
+          "HIDE_PAGES"
         ],
         "currencies": [
           {
@@ -6557,7 +6557,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 124
+      "durationMs": 132
     },
     {
       "check": {
@@ -7052,7 +7052,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 318,
+      "durationMs": 307,
       "responseDataSample": {
         "name": "James Risberg",
         "email": "james.risberg@gmail.com",
@@ -7913,7 +7913,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 354
+      "durationMs": 165
     },
     {
       "check": {
@@ -8302,7 +8302,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 134
+      "durationMs": 135
     },
     {
       "check": {
@@ -9966,7 +9966,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 133,
+      "durationMs": 132,
       "responseDataSample": [
         {
           "id": "63f447a9513b6c41904e81c0",
@@ -10956,7 +10956,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 312,
+      "durationMs": 274,
       "responseDataSample": {
         "id": "63f447a9513b6c41904e81c0",
         "name": "Better Stove",
@@ -11081,7 +11081,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 124
+      "durationMs": 128
     },
     {
       "check": {
@@ -11165,7 +11165,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 156
+      "durationMs": 297
     },
     {
       "check": {
@@ -11735,7 +11735,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 458
+      "durationMs": 172
     },
     {
       "check": {
@@ -12482,7 +12482,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 127
+      "durationMs": 125
     },
     {
       "check": {
@@ -13448,7 +13448,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 245,
+      "durationMs": 389,
       "responseDataSample": [
         {
           "id": "6877609b3bae1e57f72e0200",
@@ -14321,7 +14321,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 316,
+      "durationMs": 134,
       "responseDataSample": {
         "id": "6877609b3bae1e57f72e0200",
         "description": "Aaa",
@@ -15101,7 +15101,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 124
+      "durationMs": 385
     },
     {
       "check": {
@@ -15316,7 +15316,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 130
+      "durationMs": 127
     },
     {
       "check": {
@@ -16420,7 +16420,7 @@
           }
         ]
       },
-      "durationMs": 414,
+      "durationMs": 161,
       "responseDataSample": {
         "expenses": {
           "expenses": [
@@ -16845,7 +16845,7 @@
           }
         ]
       },
-      "durationMs": 126,
+      "durationMs": 302,
       "responseDataSample": {
         "id": "68705846ea976557148f3162",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -17181,7 +17181,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 132
+      "durationMs": 129
     },
     {
       "check": {
@@ -17816,7 +17816,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 220
+      "durationMs": 300
     },
     {
       "check": {
@@ -19547,7 +19547,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 133
+      "durationMs": 125
     },
     {
       "check": {
@@ -20336,7 +20336,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 177
+      "durationMs": 305
     },
     {
       "check": {
@@ -20911,64 +20911,14 @@
         "array": true,
         "readonly": true
       },
-      "status": "fail",
+      "status": "pass",
       "result": {
-        "valid": false,
-        "divergences": [
-          {
-            "path": "[0].projectId",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[0].taskId",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          }
-        ],
+        "valid": true,
+        "divergences": [],
         "undocumentedFields": [],
-        "zodErrors": [
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "projectId"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "taskId"
-            ],
-            "message": "Invalid input: expected string, received null"
-          }
-        ]
+        "zodErrors": []
       },
-      "durationMs": 356,
-      "responseDataSample": [
-        {
-          "id": "69c1dbc65fdd9a5256bd76e2",
-          "workspaceId": "63eab29ecf0b257026ab5625",
-          "name": "_cfix_test_Updated Holiday mn3vsamu",
-          "userIds": [],
-          "userGroupIds": [],
-          "datePeriod": {
-            "startDate": "2027-12-26",
-            "endDate": "2027-12-26"
-          },
-          "occursAnnually": false,
-          "everyoneIncludingNew": true,
-          "automaticTimeEntryCreation": false,
-          "projectId": null,
-          "taskId": null
-        }
-      ]
+      "durationMs": 307
     },
     {
       "check": {
@@ -22972,7 +22922,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 383
+      "durationMs": 130
     },
     {
       "check": {
@@ -23855,7 +23805,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 498,
+      "durationMs": 519,
       "responseDataSample": [
         {
           "id": "69c1968e5fdd9a5256b6fdc4",
@@ -24639,7 +24589,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 130,
+      "durationMs": 126,
       "responseDataSample": {
         "id": "69c1968e5fdd9a5256b6fdc4",
         "workspaceId": "63eab29ecf0b257026ab5625",
@@ -24922,7 +24872,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 121
+      "durationMs": 124
     },
     {
       "check": {
@@ -25112,7 +25062,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 131,
+      "durationMs": 120,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25294,7 +25244,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 136,
+      "durationMs": 131,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -25313,7 +25263,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 125,
+      "durationMs": 132,
       "error": "Skipped — endpoint not available (Shared Reports)"
     },
     {
@@ -25420,7 +25370,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 494
+      "durationMs": 501
     },
     {
       "check": {
@@ -25501,7 +25451,7 @@
         "requiresIdFrom": "List templates"
       },
       "status": "skip",
-      "durationMs": 1,
+      "durationMs": 0,
       "error": "Could not resolve path — missing ID from \"List templates\""
     },
     {
@@ -25531,7 +25481,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 214
+      "durationMs": 297
     },
     {
       "check": {
@@ -25560,7 +25510,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 122
+      "durationMs": 131
     },
     {
       "check": {
@@ -25589,7 +25539,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 133
+      "durationMs": 146
     },
     {
       "check": {
@@ -25639,7 +25589,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 406
+      "durationMs": 311
     }
   ],
   "divergencesByTag": {
@@ -25716,9 +25666,9 @@
       "undocumentedFields": 0
     },
     "Holiday": {
-      "passed": 0,
-      "failed": 1,
-      "divergences": 2,
+      "passed": 1,
+      "failed": 0,
+      "divergences": 0,
       "undocumentedFields": 0
     },
     "Custom Fields": {
