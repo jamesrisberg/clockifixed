@@ -1,6 +1,6 @@
 {
   "name": "clockifixed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Normalized Clockify API wrapper with complete TypeScript types, Zod runtime validation, and API drift detection",
   "type": "module",
   "main": "dist/index.js",
