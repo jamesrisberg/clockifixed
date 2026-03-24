@@ -7,7 +7,7 @@ description: A normalized, type-safe Clockify API wrapper with runtime validatio
 
 [npm](https://www.npmjs.com/package/clockifixed) | [GitHub](https://github.com/jamesrisberg/clockifixed)
 
-A complete TypeScript wrapper for the [Clockify API](https://clockify.me) that tames its inconsistencies and provides a clean, validated interface for building integrations.
+A complete TypeScript wrapper for the [Clockify API](/api/overview) that tames its inconsistencies and provides a clean, validated interface for building integrations.
 
 ## Install
 
@@ -56,10 +56,11 @@ Clockify's REST API has **108 paths**, **166 operations**, and **277 schema defi
 | Section | What's there |
 |---|---|
 | [**Getting Started**](/sdk/getting-started) | Installation, configuration, and first API calls |
-| [**Architecture**](/sdk/architecture) | How the layers fit together |
-| [**Type System**](/sdk/type-system) | TypeScript + Zod dual validation |
-| [**Endpoints**](/sdk/endpoints) | All 22 modules and 164 methods |
+| [**Architecture**](/sdk/architecture) | How the layers fit together — diagrams, components, tech stack |
+| [**Type System**](/sdk/type-system) | TypeScript + Zod dual validation and generator internals |
+| [**Data Flow**](/sdk/data-flow) | Request lifecycle, pagination, and error handling |
+| [**Endpoints**](/sdk/endpoints) | All 22 modules and 164 methods at a glance |
 | [**Verification**](/sdk/verification) | Runtime API drift detection |
-| [**System Design**](/system/overview) | Diagrams and data flow |
-| [**API Reference**](/api/overview) | Auto-generated from the OpenAPI spec |
+| [**API Reference**](/api/time-entries/TimeEntryEndpoints) | Auto-generated from source — every method in detail |
+| [**Clockify API**](/api/overview) | The upstream API surface, auth, rate limits, and base URLs |
 | [**Anomalies**](/api/anomalies) | Every inconsistency we've found in Clockify's API |

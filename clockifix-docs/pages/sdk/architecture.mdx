@@ -115,3 +115,70 @@ Two layers working together:
 | **Zod schemas** | Validate actual API responses match expected shapes | Runtime |
 
 The Zod schemas are the foundation of the verifier — they let us prove whether Clockify is actually sending what the spec claims.
+
+## System Context
+
+```mermaid
+C4Context
+    title Clockifixed — System Context
+
+    Person(dev, "Developer", "Builds integrations with Clockify")
+
+    System(clockifixed, "Clockifixed SDK", "TypeScript wrapper with 277 types, 164 endpoints, runtime validation")
+
+    System_Ext(clockify_api, "Clockify API", "api.clockify.me — 108 paths, 166 operations")
+    System_Ext(clockify_reports, "Clockify Reports API", "reports.api.clockify.me")
+
+    Rel(dev, clockifixed, "Uses", "TypeScript")
+    Rel(clockifixed, clockify_api, "Calls", "HTTPS/JSON")
+    Rel(clockifixed, clockify_reports, "Calls", "HTTPS/JSON")
+```
+
+## Module Dependencies
+
+```mermaid
+graph LR
+    subgraph "Entry Points"
+        INDEX["src/index.ts"]
+    end
+
+    subgraph "Client"
+        CLOCK["clockify.ts"]
+        HTTP_M["http.ts"]
+        EP["endpoints/*"]
+    end
+
+    subgraph "Types"
+        T_INDEX["types/index.ts"]
+        T_MOD["types/models/*"]
+        T_REQ["types/requests/*"]
+        T_FIL["types/filters/*"]
+    end
+
+    subgraph "Tools"
+        GEN["scripts/generate-types.ts"]
+        SPEC["openapi.json"]
+    end
+
+    INDEX --> CLOCK & T_INDEX
+    CLOCK --> HTTP_M & EP
+    EP --> HTTP_M & T_INDEX
+    T_INDEX --> T_MOD & T_REQ & T_FIL
+    GEN --> SPEC
+    GEN -.->|generates| T_MOD & T_REQ & T_FIL
+
+    style INDEX fill:#f59e0b,stroke:#d97706,color:#000
+    style GEN fill:#8b5cf6,stroke:#7c3aed,color:#fff
+    style SPEC fill:#6366f1,stroke:#4f46e5,color:#fff
+```
+
+## Technology Stack
+
+| Layer | Technology | Purpose |
+|---|---|---|
+| Language | TypeScript 5.x | Type safety, IDE support |
+| Runtime validation | Zod 4.x | Schema validation, parsing |
+| Testing | Vitest 4.x | Unit tests, verification suite |
+| HTTP | Native `fetch` | No dependencies, Node 20+ |
+| Spec source | OpenAPI 3.0.1 | Clockify's official spec |
+| Documentation | Tome | This site |

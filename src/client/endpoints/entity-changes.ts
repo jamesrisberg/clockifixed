@@ -27,7 +27,12 @@ export class EntityChangeEndpoints {
     };
   }
 
-  /** Get created entities in a time range. */
+  /**
+   * Get entities created within a time range. This is an experimental API.
+   *
+   * @param params - The entity type, date range, and optional pagination
+   * @returns Created entities matching the criteria
+   */
   async getCreated(params: EntityChangesParams): Promise<unknown> {
     return this.http.get(
       `/workspaces/${this.workspaceId}/entities/created`,
@@ -35,7 +40,12 @@ export class EntityChangeEndpoints {
     );
   }
 
-  /** Get updated entities in a time range. */
+  /**
+   * Get entities updated within a time range. This is an experimental API.
+   *
+   * @param params - The entity type, date range, and optional pagination
+   * @returns Updated entities matching the criteria
+   */
   async getUpdated(params: EntityChangesParams): Promise<unknown> {
     return this.http.get(
       `/workspaces/${this.workspaceId}/entities/updated`,
@@ -43,7 +53,12 @@ export class EntityChangeEndpoints {
     );
   }
 
-  /** Get deleted entities in a time range. */
+  /**
+   * Get entities deleted within a time range. This is an experimental API.
+   *
+   * @param params - The entity type, date range, and optional pagination
+   * @returns Paginated collection of deleted entity records
+   */
   async getDeleted(params: EntityChangesParams): Promise<PageableCollectionLogBinDocument> {
     return this.http.get<PageableCollectionLogBinDocument>(
       `/workspaces/${this.workspaceId}/entities/deleted`,

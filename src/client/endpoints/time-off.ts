@@ -14,7 +14,13 @@ export class TimeOffEndpoints {
     private workspaceId: string
   ) {}
 
-  /** Get all time-off requests (uses POST as a filter/search). */
+  /**
+   * Get time-off requests using a POST body as a filter. Supports filtering
+   * by date range, status, and pagination.
+   *
+   * @param body - The filter criteria (start, end, statuses, page, pageSize)
+   * @returns Time-off requests with total count
+   */
   async getAll(body: GetTimeOffRequestsV1Request): Promise<TimeOffRequestsWithCount> {
     return this.http.post<TimeOffRequestsWithCount>(
       `/workspaces/${this.workspaceId}/time-off/requests`,
@@ -22,7 +28,13 @@ export class TimeOffEndpoints {
     );
   }
 
-  /** Create a time-off request for a policy. */
+  /**
+   * Create a time-off request under a policy for the authenticated user.
+   *
+   * @param policyId - The time-off policy ID
+   * @param body - The request details (date period, optional note)
+   * @returns The created time-off request
+   */
   async create(
     policyId: string,
     body: CreateTimeOffRequestV1Request
@@ -33,7 +45,14 @@ export class TimeOffEndpoints {
     );
   }
 
-  /** Create a time-off request for a specific user under a policy. */
+  /**
+   * Create a time-off request on behalf of a specific user under a policy.
+   *
+   * @param policyId - The time-off policy ID
+   * @param userId - The user ID
+   * @param body - The request details (date period, optional note)
+   * @returns The created time-off request
+   */
   async createForUser(
     policyId: string,
     userId: string,
@@ -45,14 +64,27 @@ export class TimeOffEndpoints {
     );
   }
 
-  /** Delete a time-off request. */
+  /**
+   * Delete a time-off request.
+   *
+   * @param policyId - The time-off policy ID
+   * @param requestId - The time-off request ID
+   * @returns The deleted request
+   */
   async delete(policyId: string, requestId: string): Promise<TimeOffRequest> {
     return this.http.delete<TimeOffRequest>(
       `/workspaces/${this.workspaceId}/time-off/policies/${policyId}/requests/${requestId}`
     );
   }
 
-  /** Change the status of a time-off request (approve/reject/withdraw). */
+  /**
+   * Approve, reject, or withdraw a time-off request.
+   *
+   * @param policyId - The time-off policy ID
+   * @param requestId - The time-off request ID
+   * @param body - The new status and optional note
+   * @returns The updated request
+   */
   async changeStatus(
     policyId: string,
     requestId: string,

@@ -12,14 +12,33 @@ export class PolicyEndpoints {
     private workspaceId: string
   ) {}
 
-  /** Get all time-off policies in the workspace. */
+  /**
+   * Get all time-off policies in the workspace.
+   *
+   * @returns Array of policies
+   */
   async getAll(): Promise<Policy[]> {
     return this.http.get<Policy[]>(
       `/workspaces/${this.workspaceId}/time-off/policies`
     );
   }
 
-  /** Create a new time-off policy. */
+  /**
+   * Create a new time-off policy.
+   *
+   * @param body - The policy configuration (name, approval rules, time unit, etc.)
+   * @returns The created policy
+   *
+   * @example
+   * ```ts
+   * const policy = await clockify.policies.create({
+   *   name: "Vacation",
+   *   approve: { requiresApproval: true },
+   *   timeUnit: "DAYS",
+   *   allowHalfDay: true,
+   * });
+   * ```
+   */
   async create(body: CreatePolicyRequest): Promise<Policy> {
     return this.http.post<Policy>(
       `/workspaces/${this.workspaceId}/time-off/policies`,
@@ -27,14 +46,25 @@ export class PolicyEndpoints {
     );
   }
 
-  /** Get a policy by ID. */
+  /**
+   * Get a time-off policy by ID.
+   *
+   * @param policyId - The policy ID
+   * @returns The policy
+   */
   async get(policyId: string): Promise<Policy> {
     return this.http.get<Policy>(
       `/workspaces/${this.workspaceId}/time-off/policies/${policyId}`
     );
   }
 
-  /** Update a policy. */
+  /**
+   * Update a time-off policy.
+   *
+   * @param policyId - The policy ID
+   * @param body - The fields to update
+   * @returns The updated policy
+   */
   async update(policyId: string, body: UpdatePolicyRequest): Promise<Policy> {
     return this.http.put<Policy>(
       `/workspaces/${this.workspaceId}/time-off/policies/${policyId}`,
@@ -42,7 +72,13 @@ export class PolicyEndpoints {
     );
   }
 
-  /** Update the status of a policy (archive/unarchive). */
+  /**
+   * Archive or unarchive a time-off policy.
+   *
+   * @param policyId - The policy ID
+   * @param body - The new status
+   * @returns The updated policy
+   */
   async updateStatus(policyId: string, body: ChangePolicyStatusRequest): Promise<Policy> {
     return this.http.patch<Policy>(
       `/workspaces/${this.workspaceId}/time-off/policies/${policyId}`,
@@ -50,7 +86,11 @@ export class PolicyEndpoints {
     );
   }
 
-  /** Delete a policy. */
+  /**
+   * Delete a time-off policy. Must be archived first.
+   *
+   * @param policyId - The policy ID
+   */
   async delete(policyId: string): Promise<void> {
     return this.http.delete<void>(
       `/workspaces/${this.workspaceId}/time-off/policies/${policyId}`

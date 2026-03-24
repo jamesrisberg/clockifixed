@@ -20,7 +20,22 @@ export class TaskEndpoints {
     private workspaceId: string
   ) {}
 
-  /** Get all tasks for a project. */
+  /**
+   * Get all tasks for a project. Supports pagination and filtering
+   * by name and active status.
+   *
+   * @param projectId - The project ID
+   * @param params - Optional pagination and filter parameters
+   * @returns Array of tasks
+   *
+   * @example
+   * ```ts
+   * const tasks = await clockify.tasks.getAll(projectId, {
+   *   "is-active": true,
+   *   pageSize: 100,
+   * });
+   * ```
+   */
   async getAll(
     projectId: string,
     params?: GetAllTasksParams
@@ -40,7 +55,22 @@ export class TaskEndpoints {
     );
   }
 
-  /** Create a new task in a project. */
+  /**
+   * Create a new task in a project.
+   *
+   * @param projectId - The project ID
+   * @param body - The task configuration
+   * @returns The created task
+   *
+   * @example
+   * ```ts
+   * const task = await clockify.tasks.create(projectId, {
+   *   name: "Design review",
+   *   assigneeIds: [userId],
+   *   estimate: "PT4H",
+   * });
+   * ```
+   */
   async create(projectId: string, body: TaskRequestV1): Promise<Task> {
     return this.http.post<Task>(
       `/workspaces/${this.workspaceId}/projects/${projectId}/tasks`,
@@ -48,14 +78,27 @@ export class TaskEndpoints {
     );
   }
 
-  /** Get a task by ID within a project. */
+  /**
+   * Get a task by ID within a project.
+   *
+   * @param projectId - The project ID
+   * @param taskId - The task ID
+   * @returns The task
+   */
   async get(projectId: string, taskId: string): Promise<Task> {
     return this.http.get<Task>(
       `/workspaces/${this.workspaceId}/projects/${projectId}/tasks/${taskId}`
     );
   }
 
-  /** Update an existing task. */
+  /**
+   * Update an existing task.
+   *
+   * @param projectId - The project ID
+   * @param taskId - The task ID
+   * @param body - The fields to update
+   * @returns The updated task
+   */
   async update(
     projectId: string,
     taskId: string,
@@ -67,14 +110,27 @@ export class TaskEndpoints {
     );
   }
 
-  /** Delete a task from a project. */
+  /**
+   * Delete a task from a project. The task must be marked as DONE first.
+   *
+   * @param projectId - The project ID
+   * @param taskId - The task ID
+   * @returns The deleted task
+   */
   async delete(projectId: string, taskId: string): Promise<Task> {
     return this.http.delete<Task>(
       `/workspaces/${this.workspaceId}/projects/${projectId}/tasks/${taskId}`
     );
   }
 
-  /** Set the cost rate for a task. */
+  /**
+   * Set the cost rate for a task.
+   *
+   * @param projectId - The project ID
+   * @param taskId - The task ID
+   * @param body - The cost rate amount (in cents) and optional effective date
+   * @returns The updated task
+   */
   async setCostRate(
     projectId: string,
     taskId: string,
@@ -86,7 +142,14 @@ export class TaskEndpoints {
     );
   }
 
-  /** Set the hourly rate for a task. */
+  /**
+   * Set the hourly rate for a task.
+   *
+   * @param projectId - The project ID
+   * @param taskId - The task ID
+   * @param body - The hourly rate amount (in cents) and optional effective date
+   * @returns The updated task
+   */
   async setHourlyRate(
     projectId: string,
     taskId: string,

@@ -19,7 +19,13 @@ export class TagEndpoints {
     private workspaceId: string
   ) {}
 
-  /** Get all tags in the workspace. */
+  /**
+   * Get all tags in the workspace. Supports pagination and filtering
+   * by name and archived status.
+   *
+   * @param params - Optional pagination and filter parameters
+   * @returns Array of tags
+   */
   async getAll(params?: GetAllTagsParams): Promise<Tag[]> {
     return this.http.get<TagDtoV1[]>(
       `/workspaces/${this.workspaceId}/tags`,
@@ -36,7 +42,12 @@ export class TagEndpoints {
     );
   }
 
-  /** Create a new tag. */
+  /**
+   * Create a new tag.
+   *
+   * @param body - The tag name
+   * @returns The created tag
+   */
   async create(body: TagRequest): Promise<Tag> {
     return this.http.post<TagDtoV1>(
       `/workspaces/${this.workspaceId}/tags`,
@@ -44,14 +55,25 @@ export class TagEndpoints {
     );
   }
 
-  /** Get a tag by ID. */
+  /**
+   * Get a tag by ID.
+   *
+   * @param id - The tag ID
+   * @returns The tag
+   */
   async get(id: string): Promise<Tag> {
     return this.http.get<TagDtoV1>(
       `/workspaces/${this.workspaceId}/tags/${id}`
     );
   }
 
-  /** Update an existing tag. */
+  /**
+   * Update an existing tag.
+   *
+   * @param id - The tag ID
+   * @param body - The fields to update
+   * @returns The updated tag
+   */
   async update(id: string, body: UpdateTagRequest): Promise<Tag> {
     return this.http.put<TagDtoV1>(
       `/workspaces/${this.workspaceId}/tags/${id}`,
@@ -59,7 +81,12 @@ export class TagEndpoints {
     );
   }
 
-  /** Delete a tag. */
+  /**
+   * Delete a tag.
+   *
+   * @param id - The tag ID
+   * @returns The deleted tag
+   */
   async delete(id: string): Promise<Tag> {
     return this.http.delete<TagDtoV1>(
       `/workspaces/${this.workspaceId}/tags/${id}`

@@ -12,14 +12,32 @@ export class CustomFieldEndpoints {
     private workspaceId: string
   ) {}
 
-  /** Get all custom fields in the workspace. */
+  /**
+   * Get all custom fields defined in the workspace.
+   *
+   * @returns Array of custom fields
+   */
   async getAll(): Promise<CustomField[]> {
     return this.http.get<CustomField[]>(
       `/workspaces/${this.workspaceId}/custom-fields`
     );
   }
 
-  /** Create a new custom field. */
+  /**
+   * Create a new custom field in the workspace.
+   *
+   * @param body - The field definition (name, type, allowed values, etc.)
+   *
+   * @example
+   * ```ts
+   * await clockify.customFields.create({
+   *   name: "Department",
+   *   type: "DROPDOWN_SINGLE",
+   *   entityType: "TIMEENTRY",
+   *   allowedValues: ["Engineering", "Design", "Marketing"],
+   * });
+   * ```
+   */
   async create(body: CustomFieldRequest): Promise<void> {
     return this.http.post<void>(
       `/workspaces/${this.workspaceId}/custom-fields`,
@@ -27,7 +45,13 @@ export class CustomFieldEndpoints {
     );
   }
 
-  /** Update a custom field. */
+  /**
+   * Update a custom field's definition.
+   *
+   * @param customFieldId - The custom field ID
+   * @param body - The fields to update
+   * @returns The updated custom field
+   */
   async update(
     customFieldId: string,
     body: UpdateCustomFieldRequestV1
@@ -38,21 +62,36 @@ export class CustomFieldEndpoints {
     );
   }
 
-  /** Delete a custom field. */
+  /**
+   * Delete a custom field from the workspace.
+   *
+   * @param customFieldId - The custom field ID
+   */
   async delete(customFieldId: string): Promise<void> {
     return this.http.delete<void>(
       `/workspaces/${this.workspaceId}/custom-fields/${customFieldId}`
     );
   }
 
-  /** Get custom fields for a project. */
+  /**
+   * Get the custom fields configured for a specific project.
+   *
+   * @param projectId - The project ID
+   * @returns Array of custom fields on this project
+   */
   async getForProject(projectId: string): Promise<CustomField[]> {
     return this.http.get<CustomField[]>(
       `/workspaces/${this.workspaceId}/projects/${projectId}/custom-fields`
     );
   }
 
-  /** Remove a custom field from a project. */
+  /**
+   * Remove a custom field from a project (does not delete the field itself).
+   *
+   * @param projectId - The project ID
+   * @param customFieldId - The custom field ID to remove
+   * @returns The removed custom field
+   */
   async removeFromProject(
     projectId: string,
     customFieldId: string
@@ -62,7 +101,14 @@ export class CustomFieldEndpoints {
     );
   }
 
-  /** Update the project default value for a custom field. */
+  /**
+   * Set or update the default value for a custom field on a specific project.
+   *
+   * @param projectId - The project ID
+   * @param customFieldId - The custom field ID
+   * @param body - The default value configuration
+   * @returns The updated custom field
+   */
   async updateProjectDefault(
     projectId: string,
     customFieldId: string,

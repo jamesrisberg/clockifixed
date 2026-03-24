@@ -35,7 +35,22 @@ export class ProjectEndpoints {
     private workspaceId: string
   ) {}
 
-  /** Get all projects in the workspace. */
+  /**
+   * Get all projects in the workspace. Supports pagination and filtering
+   * by name, archived status, billable flag, clients, users, and template status.
+   *
+   * @param params - Optional pagination and filter parameters
+   * @returns Array of projects
+   *
+   * @example
+   * ```ts
+   * const active = await clockify.projects.getAll({
+   *   archived: false,
+   *   page: 1,
+   *   pageSize: 50,
+   * });
+   * ```
+   */
   async getAll(params?: GetAllProjectsParams): Promise<Project[]> {
     return this.http.get<ProjectDtoV1[]>(
       `/workspaces/${this.workspaceId}/projects`,
@@ -60,7 +75,23 @@ export class ProjectEndpoints {
     );
   }
 
-  /** Create a new project. */
+  /**
+   * Create a new project.
+   *
+   * @param body - The project configuration
+   * @returns The created project
+   *
+   * @example
+   * ```ts
+   * const project = await clockify.projects.create({
+   *   name: "Website Redesign",
+   *   clientId: "64a1234567890abcdef12345",
+   *   color: "#2196F3",
+   *   billable: true,
+   *   isPublic: true,
+   * });
+   * ```
+   */
   async create(body: ProjectRequest): Promise<Project> {
     return this.http.post<ProjectDtoImplV1>(
       `/workspaces/${this.workspaceId}/projects`,
@@ -68,7 +99,12 @@ export class ProjectEndpoints {
     );
   }
 
-  /** Create a project from a template. */
+  /**
+   * Create a project from an existing project template.
+   *
+   * @param body - The template reference and any overrides
+   * @returns The created project
+   */
   async createFromTemplate(
     body: CreateProjectFromTemplate
   ): Promise<Project> {
@@ -78,14 +114,25 @@ export class ProjectEndpoints {
     );
   }
 
-  /** Get a project by ID. */
+  /**
+   * Get a project by ID.
+   *
+   * @param projectId - The project ID
+   * @returns The project
+   */
   async get(projectId: string): Promise<Project> {
     return this.http.get<ProjectDtoV1>(
       `/workspaces/${this.workspaceId}/projects/${projectId}`
     );
   }
 
-  /** Update an existing project. */
+  /**
+   * Update an existing project.
+   *
+   * @param projectId - The project ID
+   * @param body - The fields to update
+   * @returns The updated project
+   */
   async update(
     projectId: string,
     body: UpdateProjectRequest
@@ -96,14 +143,25 @@ export class ProjectEndpoints {
     );
   }
 
-  /** Delete a project. */
+  /**
+   * Delete a project. The project must be archived first.
+   *
+   * @param projectId - The project ID
+   * @returns The deleted project
+   */
   async delete(projectId: string): Promise<Project> {
     return this.http.delete<ProjectDtoImplV1>(
       `/workspaces/${this.workspaceId}/projects/${projectId}`
     );
   }
 
-  /** Update the time/budget estimate for a project. */
+  /**
+   * Update the time or budget estimate for a project.
+   *
+   * @param projectId - The project ID
+   * @param body - The estimate configuration
+   * @returns The updated project
+   */
   async updateEstimate(
     projectId: string,
     body: ProjectEstimateRequest
@@ -114,7 +172,13 @@ export class ProjectEndpoints {
     );
   }
 
-  /** Update project memberships. */
+  /**
+   * Update the membership list for a project.
+   *
+   * @param projectId - The project ID
+   * @param body - The membership configuration
+   * @returns The updated project
+   */
   async updateMemberships(
     projectId: string,
     body: UpdateProjectMembershipsRequest
@@ -125,7 +189,12 @@ export class ProjectEndpoints {
     );
   }
 
-  /** Add users to a project. */
+  /**
+   * Add users to a project.
+   *
+   * @param projectId - The project ID
+   * @param body - The user IDs to add
+   */
   async addUsers(
     projectId: string,
     body: AddUsersToProjectRequest
@@ -136,7 +205,13 @@ export class ProjectEndpoints {
     );
   }
 
-  /** Update whether a project is a template. */
+  /**
+   * Set or unset the template flag on a project.
+   *
+   * @param projectId - The project ID
+   * @param body - The template flag value
+   * @returns The updated project
+   */
   async updateTemplate(
     projectId: string,
     body: PatchProjectTemplateRequest
@@ -147,7 +222,14 @@ export class ProjectEndpoints {
     );
   }
 
-  /** Set the cost rate for a user on a project. */
+  /**
+   * Set the cost rate for a specific user on a project.
+   *
+   * @param projectId - The project ID
+   * @param userId - The user ID
+   * @param body - The cost rate amount (in cents) and optional effective date
+   * @returns The updated project
+   */
   async setUserCostRate(
     projectId: string,
     userId: string,
@@ -159,7 +241,14 @@ export class ProjectEndpoints {
     );
   }
 
-  /** Set the hourly rate for a user on a project. */
+  /**
+   * Set the hourly rate for a specific user on a project.
+   *
+   * @param projectId - The project ID
+   * @param userId - The user ID
+   * @param body - The hourly rate amount (in cents) and optional effective date
+   * @returns The updated project
+   */
   async setUserHourlyRate(
     projectId: string,
     userId: string,

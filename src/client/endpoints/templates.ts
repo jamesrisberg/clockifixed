@@ -13,14 +13,26 @@ export class TemplateEndpoints {
     private workspaceId: string
   ) {}
 
-  /** Get all templates in the workspace. */
+  /**
+   * Get all templates in the workspace.
+   *
+   * @returns Array of templates
+   * @deprecated Clockify has deprecated the templates API.
+   */
   async getAll(): Promise<Template[]> {
     return this.http.get<Template[]>(
       `/workspaces/${this.workspaceId}/templates`
     );
   }
 
-  /** Create new templates. Accepts a single template or an array. */
+  /**
+   * Create one or more templates. Accepts a single template or an array —
+   * single values are automatically wrapped in an array.
+   *
+   * @param body - One or more template definitions
+   * @returns The created templates
+   * @deprecated Clockify has deprecated the templates API.
+   */
   async create(body: TemplateRequest | TemplateRequest[]): Promise<TemplateResult[]> {
     const payload = Array.isArray(body) ? body : [body];
     return this.http.post<TemplateDtoImpl[]>(
@@ -29,14 +41,27 @@ export class TemplateEndpoints {
     );
   }
 
-  /** Get a template by ID. */
+  /**
+   * Get a template by ID.
+   *
+   * @param templateId - The template ID
+   * @returns The template
+   * @deprecated Clockify has deprecated the templates API.
+   */
   async get(templateId: string): Promise<Template> {
     return this.http.get<Template>(
       `/workspaces/${this.workspaceId}/templates/${templateId}`
     );
   }
 
-  /** Update a template. */
+  /**
+   * Update a template.
+   *
+   * @param templateId - The template ID
+   * @param body - The fields to update
+   * @returns The updated template
+   * @deprecated Clockify has deprecated the templates API.
+   */
   async update(templateId: string, body: TemplatePatchRequest): Promise<TemplateResult> {
     return this.http.patch<TemplateDtoImpl>(
       `/workspaces/${this.workspaceId}/templates/${templateId}`,
@@ -44,7 +69,13 @@ export class TemplateEndpoints {
     );
   }
 
-  /** Delete a template. */
+  /**
+   * Delete a template.
+   *
+   * @param templateId - The template ID
+   * @returns The deleted template
+   * @deprecated Clockify has deprecated the templates API.
+   */
   async delete(templateId: string): Promise<TemplateResult> {
     return this.http.delete<TemplateDtoImpl>(
       `/workspaces/${this.workspaceId}/templates/${templateId}`
