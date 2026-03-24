@@ -53,38 +53,24 @@ src/types/
 └── index.ts          # Barrel export — import everything from here
 ```
 
-## Name Collision Handling
-
-Clockify defines multiple schemas for the same entity — different fields depending on which endpoint you call. Clockifixed solves this with **unified types** that merge the variants:
-
-| Entity | Clockify's raw schemas | You import |
-|---|---|---|
-| Project | `ProjectDtoV1` (GET), `ProjectDtoImplV1` (POST/PUT) | `Project` |
-| Time Entry | `TimeEntryDtoImplV1` (write), `TimeEntryWithRates` (GET), `TimeEntryDtoV1` (bulk) | `TimeEntry` |
-| Client | `ClientWithCurrency` (GET), `Client` (PUT/DELETE) | `ClockifyClient` |
-| Holiday | `HolidayDtoV1` (GET/create), `HolidayDto` (delete) | `Holiday` |
-| Tag | `TagDtoV1` | `Tag` |
-| User | `UserDtoV1` | `User` |
-| Report Time Entry | `TimeEntryDto` (completely different shape) | `ReportTimeEntry` |
-
-Each unified type is a superset — it has every field from every variant, with variant-specific fields marked optional. Every endpoint method returns the unified type, so you never need to know which variant the API sent.
-
 ## Unified Types
 
-Clockifixed solves the collision problem with unified response types. Instead of dealing with `ProjectDtoV1` vs `ProjectDtoImplV1`, you just use `Project`:
+Clockify defines multiple schemas for the same entity — different fields depending on which endpoint you call. For example, `projects.getAll()` returns `ProjectDtoV1` while `projects.create()` returns `ProjectDtoImplV1`, with different field sets.
 
-| Unified type | Replaces | What it does |
+Clockifixed solves this. Every endpoint returns a **unified type** that merges all variants into a single superset:
+
+| You import | Clockify's raw schemas it replaces | How it works |
 |---|---|---|
-| `Project` | `ProjectDtoV1`, `ProjectDtoImplV1` | Superset of both — all fields, variant-specific ones optional |
-| `TimeEntry` | `TimeEntryDtoImplV1`, `TimeEntryDtoV1`, `TimeEntryWithRates` | Superset of all 3 — includes rate fields when present |
-| `ClockifyClient` | `Client`, `ClientWithCurrency` | Superset — `currencyCode` optional |
-| `Holiday` | `HolidayDtoV1`, `HolidayDto` | Superset — handles boolean vs object `automaticTimeEntryCreation` |
+| `Project` | `ProjectDtoV1` (GET), `ProjectDtoImplV1` (POST/PUT) | Superset — variant-specific fields optional |
+| `TimeEntry` | `TimeEntryDtoImplV1` (write), `TimeEntryWithRates` (GET), `TimeEntryDtoV1` (bulk) | Superset — rate fields optional |
+| `ClockifyClient` | `ClientWithCurrency` (GET), `Client` (PUT/DELETE) | Superset — `currencyCode` optional |
+| `Holiday` | `HolidayDtoV1` (GET/create), `HolidayDto` (delete) | Superset — handles type differences |
 | `Tag` | `TagDtoV1` | Clean alias |
 | `User` | `UserDtoV1` | Clean alias |
 | `ExpenseCategory` | `ExpenseCategoryDtoV1` | Clean alias |
-| `ReportTimeEntry` | `TimeEntryDto` | Clean alias (separate shape for report responses) |
+| `ReportTimeEntry` | `TimeEntryDto` | Separate shape for report responses |
 
-Every endpoint method returns the unified type. You never need to think about which variant the API returns.
+You never need to think about which variant the API returns — a `Project` is a `Project`.
 
 ## Using Types
 
