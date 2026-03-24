@@ -55,20 +55,19 @@ src/types/
 
 ## Name Collision Handling
 
-Clockify defines multiple schemas that reduce to the same name after suffix stripping. The generator detects and resolves these:
+Clockify defines multiple schemas for the same entity — different fields depending on which endpoint you call. Clockifixed solves this with **unified types** that merge the variants:
 
-| Collision Group | Raw OpenAPI Names | Our Type Names |
+| Entity | Clockify's raw schemas | You import |
 |---|---|---|
-| TimeEntry | `TimeEntryDtoImplV1`, `TimeEntryDtoV1`, `TimeEntryDto` | `TimeEntryDtoImplV1`, `TimeEntryDtoV1`, `TimeEntryDto` |
-| Rate | `RateDto`, `RateDtoV1` | `RateDto`, `RateDtoV1` |
-| Tag | `TagDto`, `TagDtoV1` | `TagDto`, `TagDtoV1` |
-| User | `UserDtoV1`, `UserDto` | `UserDtoV1`, `UserDto` |
-| Holiday | `HolidayDto`, `HolidayDtoV1` | `HolidayDto`, `HolidayDtoV1` |
-| CustomFieldValue | `CustomFieldValueDto`, `CustomFieldValueDtoV1` | `CustomFieldValueDto`, `CustomFieldValueDtoV1` |
+| Project | `ProjectDtoV1` (GET), `ProjectDtoImplV1` (POST/PUT) | `Project` |
+| Time Entry | `TimeEntryDtoImplV1` (write), `TimeEntryWithRates` (GET), `TimeEntryDtoV1` (bulk) | `TimeEntry` |
+| Client | `ClientWithCurrency` (GET), `Client` (PUT/DELETE) | `ClockifyClient` |
+| Holiday | `HolidayDtoV1` (GET/create), `HolidayDto` (delete) | `Holiday` |
+| Tag | `TagDtoV1` | `Tag` |
+| User | `UserDtoV1` | `User` |
+| Report Time Entry | `TimeEntryDto` (completely different shape) | `ReportTimeEntry` |
 
-<Callout type="info" title="Naming Rule">
-  When a schema name is **unique** after stripping `Dto`, `DtoV1`, `DtoImplV1`, `V1` suffixes, we use the clean name (e.g., `WorkspaceDtoV1` becomes `Workspace`). When there's a **collision**, we preserve the raw OpenAPI name to avoid ambiguity — but provide **unified types** on top.
-</Callout>
+Each unified type is a superset — it has every field from every variant, with variant-specific fields marked optional. Every endpoint method returns the unified type, so you never need to know which variant the API sent.
 
 ## Unified Types
 
