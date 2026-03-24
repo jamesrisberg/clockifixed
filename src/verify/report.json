@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-24T00:02:05.368Z",
-  "workspaceId": "648b69e660cb70155e48de8c",
+  "timestamp": "2026-03-24T00:27:09.973Z",
+  "workspaceId": "63eab29ecf0b257026ab5625",
   "summary": {
     "total": 45,
-    "passed": 10,
-    "failed": 17,
-    "skipped": 18,
+    "passed": 23,
+    "failed": 12,
+    "skipped": 10,
     "errors": 0,
-    "totalDivergences": 221,
+    "totalDivergences": 100,
     "totalUndocumentedFields": 6
   },
   "checks": [
@@ -851,7 +851,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 220
+      "durationMs": 131
     },
     {
       "check": {
@@ -3341,7 +3341,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 155,
+      "durationMs": 326,
       "responseDataSample": [
         {
           "id": "63eab29ecf0b257026ab5625",
@@ -5394,114 +5394,6 @@
             "actual": "Invalid option: expected one of \"ADD_TIME_FOR_OTHERS\"|\"ADMIN_PANEL\"|\"ALERTS\"|\"APPROVAL\"|\"AUDIT_LOG\"|\"AUTOMATIC_LOCK\"|\"BRANDED_REPORTS\"|\"BULK_EDIT\"|\"CUSTOM_FIELDS\"|\"CUSTOM_REPORTING\"|\"CUSTOM_SUBDOMAIN\"|\"DECIMAL_FORMAT\"|\"DISABLE_MANUAL_MODE\"|\"EDIT_MEMBER_PROFILE\"|\"EXCLUDE_NON_BILLABLE_FROM_ESTIMATE\"|\"EXPENSES\"|\"FILE_IMPORT\"|\"TIMESHEET_IMPORT\"|\"USER_IMPORT\"|\"HIDE_PAGES\"|\"HISTORIC_RATES\"|\"INVOICING\"|\"INVOICE_EMAILS\"|\"INVOICE_REMINDERS\"|\"LABOR_COST\"|\"LOCATIONS\"|\"MANAGER_ROLE\"|\"MULTI_FACTOR_AUTHENTICATION\"|\"PROJECT_BUDGET\"|\"PROJECT_TEMPLATES\"|\"QUICKBOOKS_INTEGRATION\"|\"RECURRING_ESTIMATES\"|\"RECURRING_INVOICES\"|\"REQUIRED_FIELDS\"|\"SCHEDULED_REPORTS\"|\"SCHEDULING\"|\"SCREENSHOTS\"|\"SSO\"|\"SUMMARY_ESTIMATE\"|\"TARGETS_AND_REMINDERS\"|\"TASK_RATES\"|\"TIME_OFF\"|\"UNLIMITED_REPORTS\"|\"USER_CUSTOM_FIELDS\"|\"WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY\"|\"BREAKS\"|\"KIOSK_SESSION_DURATION\"|\"KIOSK_PIN_REQUIRED\"|\"WHO_CAN_SEE_ALL_TIME_ENTRIES\"|\"WHO_CAN_SEE_PROJECT_STATUS\"|\"WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES\"|\"WHO_CAN_SEE_TEAMS_DASHBOARD\"|\"WORKSPACE_LOCK_TIMEENTRIES\"|\"WORKSPACE_TIME_AUDIT\"|\"WORKSPACE_TIME_ROUNDING\"|\"KIOSK\"|\"KIOSK_SIX_DIGIT_PIN\"|\"KIOSK_QR_CODE\"|\"FORECASTING\"|\"TIME_TRACKING\"|\"ATTENDANCE_REPORT\"|\"WORKSPACE_TRANSFER\"|\"FAVORITE_ENTRIES\"|\"SPLIT_TIME_ENTRY\"|\"CLIENT_CURRENCY\"|\"SCHEDULING_FORECASTING\""
           },
           {
-            "path": "memberships.0.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.0.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.1.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.1.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.2.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.2.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.3.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.3.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.4.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.4.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.5.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.5.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.6.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.6.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.7.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.7.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.8.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.8.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
             "path": "subdomain.name",
             "issue": "wrong_type",
             "expected": "string",
@@ -5512,6 +5404,24 @@
             "issue": "invalid_enum",
             "expected": "PROJECT | TEAM | REPORTS",
             "actual": "Invalid option: expected one of \"PROJECT\"|\"TEAM\"|\"REPORTS\""
+          },
+          {
+            "path": "workspaceSettings.automaticLock",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "workspaceSettings.lockTimeEntries",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "workspaceSettings.lockTimeZone",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
           }
         ],
         "undocumentedFields": [],
@@ -5592,186 +5502,6 @@
             "message": "Invalid option: expected one of \"ADD_TIME_FOR_OTHERS\"|\"ADMIN_PANEL\"|\"ALERTS\"|\"APPROVAL\"|\"AUDIT_LOG\"|\"AUTOMATIC_LOCK\"|\"BRANDED_REPORTS\"|\"BULK_EDIT\"|\"CUSTOM_FIELDS\"|\"CUSTOM_REPORTING\"|\"CUSTOM_SUBDOMAIN\"|\"DECIMAL_FORMAT\"|\"DISABLE_MANUAL_MODE\"|\"EDIT_MEMBER_PROFILE\"|\"EXCLUDE_NON_BILLABLE_FROM_ESTIMATE\"|\"EXPENSES\"|\"FILE_IMPORT\"|\"TIMESHEET_IMPORT\"|\"USER_IMPORT\"|\"HIDE_PAGES\"|\"HISTORIC_RATES\"|\"INVOICING\"|\"INVOICE_EMAILS\"|\"INVOICE_REMINDERS\"|\"LABOR_COST\"|\"LOCATIONS\"|\"MANAGER_ROLE\"|\"MULTI_FACTOR_AUTHENTICATION\"|\"PROJECT_BUDGET\"|\"PROJECT_TEMPLATES\"|\"QUICKBOOKS_INTEGRATION\"|\"RECURRING_ESTIMATES\"|\"RECURRING_INVOICES\"|\"REQUIRED_FIELDS\"|\"SCHEDULED_REPORTS\"|\"SCHEDULING\"|\"SCREENSHOTS\"|\"SSO\"|\"SUMMARY_ESTIMATE\"|\"TARGETS_AND_REMINDERS\"|\"TASK_RATES\"|\"TIME_OFF\"|\"UNLIMITED_REPORTS\"|\"USER_CUSTOM_FIELDS\"|\"WHO_CAN_CHANGE_TIMEENTRY_BILLABILITY\"|\"BREAKS\"|\"KIOSK_SESSION_DURATION\"|\"KIOSK_PIN_REQUIRED\"|\"WHO_CAN_SEE_ALL_TIME_ENTRIES\"|\"WHO_CAN_SEE_PROJECT_STATUS\"|\"WHO_CAN_SEE_PUBLIC_PROJECTS_ENTRIES\"|\"WHO_CAN_SEE_TEAMS_DASHBOARD\"|\"WORKSPACE_LOCK_TIMEENTRIES\"|\"WORKSPACE_TIME_AUDIT\"|\"WORKSPACE_TIME_ROUNDING\"|\"KIOSK\"|\"KIOSK_SIX_DIGIT_PIN\"|\"KIOSK_QR_CODE\"|\"FORECASTING\"|\"TIME_TRACKING\"|\"ATTENDANCE_REPORT\"|\"WORKSPACE_TRANSFER\"|\"FAVORITE_ENTRIES\"|\"SPLIT_TIME_ENTRY\"|\"CLIENT_CURRENCY\"|\"SCHEDULING_FORECASTING\""
           },
           {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              0,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              0,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              1,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              1,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              2,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              2,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              3,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              3,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              4,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              4,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              5,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              5,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              6,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              6,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              7,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              7,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              8,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              8,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
             "expected": "string",
             "code": "invalid_type",
             "path": [
@@ -5792,6 +5522,33 @@
               "adminOnlyPages"
             ],
             "message": "Invalid option: expected one of \"PROJECT\"|\"TEAM\"|\"REPORTS\""
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "workspaceSettings",
+              "automaticLock"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "workspaceSettings",
+              "lockTimeEntries"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "workspaceSettings",
+              "lockTimeZone"
+            ],
+            "message": "Invalid input: expected string, received null"
           }
         ]
       },
@@ -5802,88 +5559,30 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 998,
+      "durationMs": 946,
       "responseDataSample": {
-        "id": "648b69e660cb70155e48de8c",
-        "name": "Orthodox Masonry",
+        "id": "63eab29ecf0b257026ab5625",
+        "name": "James Risberg's workspace",
         "hourlyRate": {
-          "amount": 0,
-          "currency": "$"
+          "amount": 5000,
+          "currency": "USD"
         },
         "costRate": {
-          "amount": 0,
-          "currency": "$"
+          "amount": 2500,
+          "currency": "USD"
         },
         "memberships": [
           {
-            "userId": "648b69e660cb70155e48de87",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "648b69e660cb70155e48de8c",
-            "membershipType": "WORKSPACE",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "61d463a6e3d99947374fd178",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "648b69e660cb70155e48de8c",
-            "membershipType": "WORKSPACE",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "64d95233ee239f5d8e0f4e20",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "648b69e660cb70155e48de8c",
-            "membershipType": "WORKSPACE",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "66417ce74312372f75eda146",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "648b69e660cb70155e48de8c",
-            "membershipType": "WORKSPACE",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "66894ab0f106f36223fb4d42",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "648b69e660cb70155e48de8c",
-            "membershipType": "WORKSPACE",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "66c32b87fad392214abef4c2",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "648b69e660cb70155e48de8c",
-            "membershipType": "WORKSPACE",
-            "membershipStatus": "INACTIVE"
-          },
-          {
-            "userId": "66f01f931f4afb7cc4314918",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "648b69e660cb70155e48de8c",
-            "membershipType": "WORKSPACE",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "6744f19d65e8d21228c7c7ce",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "648b69e660cb70155e48de8c",
-            "membershipType": "WORKSPACE",
-            "membershipStatus": "ACTIVE"
-          },
-          {
             "userId": "63eab29ecf0b257026ab5624",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "648b69e660cb70155e48de8c",
+            "hourlyRate": {
+              "amount": 6000,
+              "currency": "USD"
+            },
+            "costRate": {
+              "amount": 3000,
+              "currency": "USD"
+            },
+            "targetId": "63eab29ecf0b257026ab5625",
             "membershipType": "WORKSPACE",
             "membershipStatus": "ACTIVE"
           }
@@ -5892,48 +5591,39 @@
           "timeRoundingInReports": false,
           "onlyAdminsSeeBillableRates": true,
           "activeBillableHours": true,
-          "onlyAdminsCanChangeBillableStatus": true,
+          "onlyAdminsCanChangeBillableStatus": false,
           "onlyAdminsCreateProject": true,
-          "onlyAdminsSeeDashboard": true,
+          "onlyAdminsSeeDashboard": false,
           "defaultBillableProjects": true,
-          "lockTimeEntries": "2026-02-06T05:00:00Z",
-          "lockTimeZone": "America/New_York",
+          "lockTimeEntries": null,
+          "lockTimeZone": null,
           "round": {
-            "round": "Round up to",
+            "round": "Round to nearest",
             "minutes": "15"
           },
           "projectFavorites": true,
-          "canSeeTimeSheet": true,
+          "canSeeTimeSheet": false,
           "canSeeTracker": true,
           "projectPickerSpecialFilter": false,
-          "forceProjects": true,
-          "forceTasks": true,
+          "forceProjects": false,
+          "forceTasks": false,
           "forceTags": false,
-          "forceDescription": true,
-          "onlyAdminsSeeAllTimeEntries": true,
-          "onlyAdminsSeePublicProjectsEntries": true,
-          "trackTimeDownToSecond": false,
+          "forceDescription": false,
+          "onlyAdminsSeeAllTimeEntries": false,
+          "onlyAdminsSeePublicProjectsEntries": false,
+          "trackTimeDownToSecond": true,
           "projectGroupingLabel": "CLIENT",
-          "adminOnlyPages": [
-            "REPORTS"
-          ],
-          "automaticLock": {
-            "type": "OLDER_THAN",
-            "changeDay": "FRIDAY",
-            "firstDay": "MONDAY",
-            "dayOfMonth": 1,
-            "olderThanPeriod": "DAYS",
-            "olderThanValue": 45
-          },
+          "adminOnlyPages": [],
+          "automaticLock": null,
           "onlyAdminsCreateTag": false,
-          "onlyAdminsCreateTask": true,
+          "onlyAdminsCreateTask": false,
           "timeTrackingMode": "DEFAULT",
           "multiFactorEnabled": false,
           "numberFormat": "COMMA_PERIOD",
           "currencyFormat": "CURRENCY_VALUE",
-          "durationFormat": "COMPACT",
+          "durationFormat": "FULL",
           "entityCreationPermissions": {
-            "whoCanCreateTasks": "ADMINS",
+            "whoCanCreateTasks": "EVERYONE",
             "whoCanCreateProjectsAndClients": "ADMINS",
             "whoCanCreateTags": "EVERYONE"
           },
@@ -5948,8 +5638,8 @@
           ],
           "isProjectPublicByDefault": true
         },
-        "imageUrl": "https://img.clockify.me/2024-02-01T17%3A57%3A23.030ZOM+Logo+Website+Fix.png",
-        "featureSubscriptionType": "PRO_YEAR_2021",
+        "imageUrl": "",
+        "featureSubscriptionType": "PRO_2021",
         "features": [
           "DISABLE_MANUAL_MODE",
           "INVOICE_EMAILS",
@@ -6015,8 +5705,8 @@
         ],
         "currencies": [
           {
-            "id": "649bf16984ff0d0de2271db8",
-            "code": "$",
+            "id": "649bf12e84ff0d0de221ac2b",
+            "code": "USD",
             "isDefault": true
           }
         ],
@@ -6024,7 +5714,7 @@
           "name": null,
           "enabled": false
         },
-        "cakeOrganizationId": "67b507cd0bc7ba23f5854bd1"
+        "cakeOrganizationId": "67e29c25cb70de288ae75b0c"
       }
     },
     {
@@ -6867,7 +6557,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 405
+      "durationMs": 130
     },
     {
       "check": {
@@ -7362,18 +7052,18 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 178,
+      "durationMs": 139,
       "responseDataSample": {
         "name": "James Risberg",
         "email": "james.risberg@gmail.com",
-        "weekStart": "MONDAY",
+        "weekStart": "SUNDAY",
         "workCapacity": "PT7H",
         "workingDays": [
-          "FRIDAY",
           "MONDAY",
           "WEDNESDAY",
-          "THURSDAY",
-          "TUESDAY"
+          "FRIDAY",
+          "TUESDAY",
+          "THURSDAY"
         ],
         "workspaceNumber": 2,
         "imageUrl": "https://avatar.cake.com/defaults%2FJR%2F1668818%2F2026-03-06-17-41-13.JR.jpg",
@@ -8216,9 +7906,14 @@
         "readonly": true,
         "requiresIdFrom": "Get logged user"
       },
-      "status": "skip",
-      "durationMs": 127,
-      "error": "Skipped — requires elevated permissions (User)"
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 344
     },
     {
       "check": {
@@ -8593,134 +8288,12 @@
         "array": true,
         "readonly": true
       },
-      "status": "fail",
+      "status": "pass",
       "result": {
-        "valid": false,
-        "divergences": [
-          {
-            "path": "[0].ccEmails",
-            "issue": "wrong_type",
-            "expected": "array",
-            "actual": "Invalid input: expected array, received null"
-          },
-          {
-            "path": "[0].email",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[1].ccEmails",
-            "issue": "wrong_type",
-            "expected": "array",
-            "actual": "Invalid input: expected array, received null"
-          },
-          {
-            "path": "[2].ccEmails",
-            "issue": "wrong_type",
-            "expected": "array",
-            "actual": "Invalid input: expected array, received null"
-          },
-          {
-            "path": "[2].email",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[3].ccEmails",
-            "issue": "wrong_type",
-            "expected": "array",
-            "actual": "Invalid input: expected array, received null"
-          },
-          {
-            "path": "[3].email",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[4].ccEmails",
-            "issue": "wrong_type",
-            "expected": "array",
-            "actual": "Invalid input: expected array, received null"
-          }
-        ],
+        "valid": true,
+        "divergences": [],
         "undocumentedFields": [],
-        "zodErrors": [
-          {
-            "expected": "array",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "ccEmails"
-            ],
-            "message": "Invalid input: expected array, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "email"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "array",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "ccEmails"
-            ],
-            "message": "Invalid input: expected array, received null"
-          },
-          {
-            "expected": "array",
-            "code": "invalid_type",
-            "path": [
-              2,
-              "ccEmails"
-            ],
-            "message": "Invalid input: expected array, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              2,
-              "email"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "array",
-            "code": "invalid_type",
-            "path": [
-              3,
-              "ccEmails"
-            ],
-            "message": "Invalid input: expected array, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              3,
-              "email"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "array",
-            "code": "invalid_type",
-            "path": [
-              4,
-              "ccEmails"
-            ],
-            "message": "Invalid input: expected array, received null"
-          }
-        ]
+        "zodErrors": []
       },
       "realityResult": {
         "valid": true,
@@ -8729,21 +8302,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 414,
-      "responseDataSample": [
-        {
-          "id": "648cc4733871482bb20e53ab",
-          "name": "Alex Wolaver, TN",
-          "email": null,
-          "ccEmails": null,
-          "workspaceId": "648b69e660cb70155e48de8c",
-          "archived": true,
-          "address": "",
-          "note": "",
-          "currencyId": "649bf16984ff0d0de2271db8",
-          "currencyCode": "$"
-        }
-      ]
+      "durationMs": 391
     },
     {
       "check": {
@@ -9119,91 +8678,9 @@
         "readonly": true,
         "requiresIdFrom": "List clients"
       },
-      "status": "fail",
-      "result": {
-        "valid": false,
-        "divergences": [
-          {
-            "path": "address",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "ccEmails",
-            "issue": "wrong_type",
-            "expected": "array",
-            "actual": "Invalid input: expected array, received null"
-          },
-          {
-            "path": "email",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "note",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          }
-        ],
-        "undocumentedFields": [],
-        "zodErrors": [
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "address"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "array",
-            "code": "invalid_type",
-            "path": [
-              "ccEmails"
-            ],
-            "message": "Invalid input: expected array, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "email"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "note"
-            ],
-            "message": "Invalid input: expected string, received null"
-          }
-        ]
-      },
-      "realityResult": {
-        "valid": true,
-        "divergences": [],
-        "undocumentedFields": [],
-        "zodErrors": []
-      },
-      "realityStatus": "pass",
-      "durationMs": 460,
-      "responseDataSample": {
-        "id": "648cc4733871482bb20e53ab",
-        "name": "Alex Wolaver, TN",
-        "email": null,
-        "ccEmails": null,
-        "workspaceId": "648b69e660cb70155e48de8c",
-        "archived": true,
-        "address": null,
-        "note": null,
-        "currencyId": "649bf16984ff0d0de2271db8",
-        "currencyCode": "$"
-      }
+      "status": "skip",
+      "durationMs": 0,
+      "error": "Could not resolve path — missing ID from \"List clients\""
     },
     {
       "check": {
@@ -10060,85 +9537,7 @@
             "actual": "Invalid input: expected object, received null"
           },
           {
-            "path": "[0].memberships.1.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.1.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.2.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.2.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.3.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.3.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.4.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.4.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.5.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.5.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.6.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.6.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.7.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].memberships.7.hourlyRate",
+            "path": "[0].memberships.0.hourlyRate",
             "issue": "wrong_type",
             "expected": "object",
             "actual": "Invalid input: expected object, received null"
@@ -10168,109 +9567,7 @@
             "actual": "Invalid input: expected object, received null"
           },
           {
-            "path": "[1].memberships.1.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.1.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.2.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.2.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.3.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.3.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.4.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.4.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.5.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.5.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.6.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.6.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.7.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.7.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.8.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.8.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.9.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].memberships.9.hourlyRate",
+            "path": "[1].memberships.0.hourlyRate",
             "issue": "wrong_type",
             "expected": "object",
             "actual": "Invalid input: expected object, received null"
@@ -10376,12 +9673,12 @@
           {
             "path": "[0].clientId",
             "actualType": "string",
-            "sampleValue": "648cc4876c14000d0ad7508c"
+            "sampleValue": ""
           },
           {
             "path": "[0].clientName",
             "actualType": "string",
-            "sampleValue": "Max Baender, GA"
+            "sampleValue": ""
           },
           {
             "path": "[0].estimateReset",
@@ -10425,150 +9722,7 @@
             "path": [
               0,
               "memberships",
-              1,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
               0,
-              "memberships",
-              1,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              2,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              2,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              3,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              3,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              4,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              4,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              5,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              5,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              6,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              6,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              7,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "memberships",
-              7,
               "hourlyRate"
             ],
             "message": "Invalid input: expected object, received null"
@@ -10622,194 +9776,7 @@
             "path": [
               1,
               "memberships",
-              1,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              1,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              2,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              2,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              3,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              3,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              4,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              4,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              5,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              5,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              6,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              6,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              7,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              7,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              8,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              8,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              9,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "memberships",
-              9,
+              0,
               "hourlyRate"
             ],
             "message": "Invalid input: expected object, received null"
@@ -10999,95 +9966,36 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 262,
+      "durationMs": 134,
       "responseDataSample": [
         {
-          "id": "65a140e281cd2d0f02f2c548",
-          "name": "Baender Design Consult",
+          "id": "63f447a9513b6c41904e81c0",
+          "name": "Better Stove",
           "hourlyRate": {
-            "amount": 7500,
-            "currency": "$"
+            "amount": 0,
+            "currency": "USD"
           },
-          "clientId": "648cc4876c14000d0ad7508c",
-          "workspaceId": "648b69e660cb70155e48de8c",
+          "clientId": "",
+          "workspaceId": "63eab29ecf0b257026ab5625",
           "billable": true,
           "memberships": [
             {
-              "userId": "648b69e660cb70155e48de87",
-              "hourlyRate": {
-                "amount": 12500,
-                "currency": "$"
-              },
-              "costRate": null,
-              "targetId": "65a140e281cd2d0f02f2c548",
-              "membershipType": "PROJECT",
-              "membershipStatus": "ACTIVE"
-            },
-            {
-              "userId": "648c62523871482bb206c03d",
+              "userId": "63eab29ecf0b257026ab5624",
               "hourlyRate": null,
               "costRate": null,
-              "targetId": "65a140e281cd2d0f02f2c548",
-              "membershipType": "PROJECT",
-              "membershipStatus": "ACTIVE"
-            },
-            {
-              "userId": "648c8f0f3871482bb20a368c",
-              "hourlyRate": null,
-              "costRate": null,
-              "targetId": "65a140e281cd2d0f02f2c548",
-              "membershipType": "PROJECT",
-              "membershipStatus": "ACTIVE"
-            },
-            {
-              "userId": "648c8f233871482bb20a3831",
-              "hourlyRate": null,
-              "costRate": null,
-              "targetId": "65a140e281cd2d0f02f2c548",
-              "membershipType": "PROJECT",
-              "membershipStatus": "ACTIVE"
-            },
-            {
-              "userId": "648c8f0a60cb70155e52b53e",
-              "hourlyRate": null,
-              "costRate": null,
-              "targetId": "65a140e281cd2d0f02f2c548",
-              "membershipType": "PROJECT",
-              "membershipStatus": "ACTIVE"
-            },
-            {
-              "userId": "648c8f0360cb70155e52b4da",
-              "hourlyRate": null,
-              "costRate": null,
-              "targetId": "65a140e281cd2d0f02f2c548",
-              "membershipType": "PROJECT",
-              "membershipStatus": "ACTIVE"
-            },
-            {
-              "userId": "64d95233ee239f5d8e0f4e20",
-              "hourlyRate": null,
-              "costRate": null,
-              "targetId": "65a140e281cd2d0f02f2c548",
-              "membershipType": "PROJECT",
-              "membershipStatus": "ACTIVE"
-            },
-            {
-              "userId": "66417ce74312372f75eda146",
-              "hourlyRate": null,
-              "costRate": null,
-              "targetId": "65a140e281cd2d0f02f2c548",
+              "targetId": "63f447a9513b6c41904e81c0",
               "membershipType": "PROJECT",
               "membershipStatus": "ACTIVE"
             }
           ],
-          "color": "#4CAF50",
+          "color": "#3293C6",
           "estimate": {
             "estimate": "PT0S",
             "type": "AUTO"
           },
           "archived": true,
-          "duration": "PT4H30M",
-          "clientName": "Max Baender, GA",
+          "duration": "PT1H",
+          "clientName": "",
           "note": "",
           "costRate": null,
           "timeEstimate": {
@@ -11954,24 +10862,6 @@
             "actual": "Invalid input: expected object, received null"
           },
           {
-            "path": "duration",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "estimate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
             "path": "memberships.0.costRate",
             "issue": "wrong_type",
             "expected": "object",
@@ -11984,106 +10874,22 @@
             "actual": "Invalid input: expected object, received null"
           },
           {
-            "path": "memberships.1.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.1.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.2.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.2.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.3.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.3.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.4.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.4.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.5.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.5.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.6.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.6.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.7.costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "memberships.7.hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "timeEstimate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
+            "path": "timeEstimate.resetOption",
+            "issue": "invalid_enum",
+            "expected": "WEEKLY | MONTHLY | YEARLY",
+            "actual": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
           }
         ],
         "undocumentedFields": [
           {
             "path": "clientId",
             "actualType": "string",
-            "sampleValue": "648cc4876c14000d0ad7508c"
+            "sampleValue": ""
           },
           {
             "path": "clientName",
             "actualType": "string",
-            "sampleValue": "Max Baender, GA"
+            "sampleValue": ""
           },
           {
             "path": "estimateReset",
@@ -12109,30 +10915,6 @@
             "message": "Invalid input: expected object, received null"
           },
           {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "duration"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "estimate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
             "expected": "object",
             "code": "invalid_type",
             "path": [
@@ -12153,152 +10935,17 @@
             "message": "Invalid input: expected object, received null"
           },
           {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              1,
-              "costRate"
+            "code": "invalid_value",
+            "values": [
+              "WEEKLY",
+              "MONTHLY",
+              "YEARLY"
             ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
             "path": [
-              "memberships",
-              1,
-              "hourlyRate"
+              "timeEstimate",
+              "resetOption"
             ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              2,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              2,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              3,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              3,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              4,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              4,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              5,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              5,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              6,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              6,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              7,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "memberships",
-              7,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "timeEstimate"
-            ],
-            "message": "Invalid input: expected object, received null"
+            "message": "Invalid option: expected one of \"WEEKLY\"|\"MONTHLY\"|\"YEARLY\""
           }
         ]
       },
@@ -12309,88 +10956,44 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 319,
+      "durationMs": 136,
       "responseDataSample": {
-        "id": "65a140e281cd2d0f02f2c548",
-        "name": "Baender Design Consult",
-        "hourlyRate": null,
-        "clientId": "648cc4876c14000d0ad7508c",
-        "workspaceId": "648b69e660cb70155e48de8c",
+        "id": "63f447a9513b6c41904e81c0",
+        "name": "Better Stove",
+        "hourlyRate": {
+          "amount": 0,
+          "currency": "USD"
+        },
+        "clientId": "",
+        "workspaceId": "63eab29ecf0b257026ab5625",
         "billable": true,
         "memberships": [
           {
-            "userId": "648b69e660cb70155e48de87",
+            "userId": "63eab29ecf0b257026ab5624",
             "hourlyRate": null,
             "costRate": null,
-            "targetId": "65a140e281cd2d0f02f2c548",
-            "membershipType": "PROJECT",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "648c62523871482bb206c03d",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "65a140e281cd2d0f02f2c548",
-            "membershipType": "PROJECT",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "648c8f0f3871482bb20a368c",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "65a140e281cd2d0f02f2c548",
-            "membershipType": "PROJECT",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "648c8f233871482bb20a3831",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "65a140e281cd2d0f02f2c548",
-            "membershipType": "PROJECT",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "648c8f0a60cb70155e52b53e",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "65a140e281cd2d0f02f2c548",
-            "membershipType": "PROJECT",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "648c8f0360cb70155e52b4da",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "65a140e281cd2d0f02f2c548",
-            "membershipType": "PROJECT",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "64d95233ee239f5d8e0f4e20",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "65a140e281cd2d0f02f2c548",
-            "membershipType": "PROJECT",
-            "membershipStatus": "ACTIVE"
-          },
-          {
-            "userId": "66417ce74312372f75eda146",
-            "hourlyRate": null,
-            "costRate": null,
-            "targetId": "65a140e281cd2d0f02f2c548",
+            "targetId": "63f447a9513b6c41904e81c0",
             "membershipType": "PROJECT",
             "membershipStatus": "ACTIVE"
           }
         ],
-        "color": "#4CAF50",
-        "estimate": null,
+        "color": "#3293C6",
+        "estimate": {
+          "estimate": "PT0S",
+          "type": "AUTO"
+        },
         "archived": true,
-        "duration": null,
-        "clientName": "Max Baender, GA",
+        "duration": "PT1H",
+        "clientName": "",
         "note": "",
         "costRate": null,
-        "timeEstimate": null,
+        "timeEstimate": {
+          "estimate": "PT0S",
+          "type": "AUTO",
+          "resetOption": null,
+          "active": false,
+          "includeNonBillable": true
+        },
         "budgetEstimate": null,
         "estimateReset": null,
         "public": true,
@@ -12478,7 +11081,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 313
+      "durationMs": 134
     },
     {
       "check": {
@@ -12562,7 +11165,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 444
+      "durationMs": 126
     },
     {
       "check": {
@@ -13118,269 +11721,12 @@
         "readonly": true,
         "requiresIdFrom": "List projects"
       },
-      "status": "fail",
+      "status": "pass",
       "result": {
-        "valid": false,
-        "divergences": [
-          {
-            "path": "[0].assigneeId",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[0].costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[0].hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].assigneeId",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[1].costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[1].duration",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[1].hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[2].assigneeId",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[2].costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[2].duration",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[2].hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[3].assigneeId",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[3].costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[3].hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[4].assigneeId",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[4].costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "[4].hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          }
-        ],
+        "valid": true,
+        "divergences": [],
         "undocumentedFields": [],
-        "zodErrors": [
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "assigneeId"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "assigneeId"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "duration"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              2,
-              "assigneeId"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              2,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              2,
-              "duration"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              2,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              3,
-              "assigneeId"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              3,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              3,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              4,
-              "assigneeId"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              4,
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              4,
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          }
-        ]
+        "zodErrors": []
       },
       "realityResult": {
         "valid": true,
@@ -13389,24 +11735,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 333,
-      "responseDataSample": [
-        {
-          "id": "6744aa6205f056675a8f98bf",
-          "name": "Consultation",
-          "projectId": "65a140e281cd2d0f02f2c548",
-          "assigneeIds": [],
-          "assigneeId": null,
-          "userGroupIds": [],
-          "estimate": "PT0S",
-          "status": "DONE",
-          "budgetEstimate": 0,
-          "duration": "PT1H",
-          "billable": true,
-          "hourlyRate": null,
-          "costRate": null
-        }
-      ]
+      "durationMs": 398
     },
     {
       "check": {
@@ -13962,122 +12291,9 @@
         "readonly": true,
         "requiresIdFrom": "List tasks on project"
       },
-      "status": "fail",
-      "result": {
-        "valid": false,
-        "divergences": [
-          {
-            "path": "assigneeId",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "budgetEstimate",
-            "issue": "wrong_type",
-            "expected": "number",
-            "actual": "Invalid input: expected number, received null"
-          },
-          {
-            "path": "costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "duration",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "estimate",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          }
-        ],
-        "undocumentedFields": [],
-        "zodErrors": [
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "assigneeId"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "number",
-            "code": "invalid_type",
-            "path": [
-              "budgetEstimate"
-            ],
-            "message": "Invalid input: expected number, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "duration"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "estimate"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          }
-        ]
-      },
-      "realityResult": {
-        "valid": true,
-        "divergences": [],
-        "undocumentedFields": [],
-        "zodErrors": []
-      },
-      "realityStatus": "pass",
-      "durationMs": 132,
-      "responseDataSample": {
-        "id": "6744aa6205f056675a8f98bf",
-        "name": "Consultation",
-        "projectId": "65a140e281cd2d0f02f2c548",
-        "assigneeIds": [],
-        "assigneeId": null,
-        "userGroupIds": [],
-        "estimate": null,
-        "status": "DONE",
-        "budgetEstimate": null,
-        "duration": null,
-        "billable": true,
-        "hourlyRate": null,
-        "costRate": null
-      }
+      "status": "skip",
+      "durationMs": 0,
+      "error": "Could not resolve path — missing ID from \"List tasks on project\""
     },
     {
       "check": {
@@ -14266,7 +12482,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 125
+      "durationMs": 208
     },
     {
       "check": {
@@ -15071,22 +13287,16 @@
         "valid": false,
         "divergences": [
           {
-            "path": "[0].customFieldValues.0.value",
-            "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received null"
-          },
-          {
             "path": "[0].kioskId",
             "issue": "wrong_type",
             "expected": "string",
             "actual": "Invalid input: expected string, received null"
           },
           {
-            "path": "[1].customFieldValues.0.value",
+            "path": "[0].tagIds",
             "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received null"
+            "expected": "array",
+            "actual": "Invalid input: expected array, received null"
           },
           {
             "path": "[1].kioskId",
@@ -15095,10 +13305,10 @@
             "actual": "Invalid input: expected string, received null"
           },
           {
-            "path": "[2].customFieldValues.0.value",
+            "path": "[1].tagIds",
             "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received null"
+            "expected": "array",
+            "actual": "Invalid input: expected array, received null"
           },
           {
             "path": "[2].kioskId",
@@ -15107,10 +13317,10 @@
             "actual": "Invalid input: expected string, received null"
           },
           {
-            "path": "[3].customFieldValues.0.value",
+            "path": "[2].tagIds",
             "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received null"
+            "expected": "array",
+            "actual": "Invalid input: expected array, received null"
           },
           {
             "path": "[3].kioskId",
@@ -15119,32 +13329,27 @@
             "actual": "Invalid input: expected string, received null"
           },
           {
-            "path": "[4].customFieldValues.0.value",
+            "path": "[3].tagIds",
             "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received null"
+            "expected": "array",
+            "actual": "Invalid input: expected array, received null"
           },
           {
             "path": "[4].kioskId",
             "issue": "wrong_type",
             "expected": "string",
             "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "[4].tagIds",
+            "issue": "wrong_type",
+            "expected": "array",
+            "actual": "Invalid input: expected array, received null"
           }
         ],
         "undocumentedFields": [],
         "zodErrors": [
           {
-            "expected": "record",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "customFieldValues",
-              0,
-              "value"
-            ],
-            "message": "Invalid input: expected record, received null"
-          },
-          {
             "expected": "string",
             "code": "invalid_type",
             "path": [
@@ -15154,15 +13359,13 @@
             "message": "Invalid input: expected string, received null"
           },
           {
-            "expected": "record",
+            "expected": "array",
             "code": "invalid_type",
             "path": [
-              1,
-              "customFieldValues",
               0,
-              "value"
+              "tagIds"
             ],
-            "message": "Invalid input: expected record, received null"
+            "message": "Invalid input: expected array, received null"
           },
           {
             "expected": "string",
@@ -15174,15 +13377,13 @@
             "message": "Invalid input: expected string, received null"
           },
           {
-            "expected": "record",
+            "expected": "array",
             "code": "invalid_type",
             "path": [
-              2,
-              "customFieldValues",
-              0,
-              "value"
+              1,
+              "tagIds"
             ],
-            "message": "Invalid input: expected record, received null"
+            "message": "Invalid input: expected array, received null"
           },
           {
             "expected": "string",
@@ -15194,15 +13395,13 @@
             "message": "Invalid input: expected string, received null"
           },
           {
-            "expected": "record",
+            "expected": "array",
             "code": "invalid_type",
             "path": [
-              3,
-              "customFieldValues",
-              0,
-              "value"
+              2,
+              "tagIds"
             ],
-            "message": "Invalid input: expected record, received null"
+            "message": "Invalid input: expected array, received null"
           },
           {
             "expected": "string",
@@ -15214,15 +13413,13 @@
             "message": "Invalid input: expected string, received null"
           },
           {
-            "expected": "record",
+            "expected": "array",
             "code": "invalid_type",
             "path": [
-              4,
-              "customFieldValues",
-              0,
-              "value"
+              3,
+              "tagIds"
             ],
-            "message": "Invalid input: expected record, received null"
+            "message": "Invalid input: expected array, received null"
           },
           {
             "expected": "string",
@@ -15232,6 +13429,15 @@
               "kioskId"
             ],
             "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "array",
+            "code": "invalid_type",
+            "path": [
+              4,
+              "tagIds"
+            ],
+            "message": "Invalid input: expected array, received null"
           }
         ]
       },
@@ -15242,40 +13448,32 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 460,
+      "durationMs": 247,
       "responseDataSample": [
         {
-          "id": "69bcc37fb46cacd7a9ca1315",
-          "description": "beams and recuts",
-          "tagIds": [],
+          "id": "6877609b3bae1e57f72e0200",
+          "description": "Aaa",
+          "tagIds": null,
           "userId": "63eab29ecf0b257026ab5624",
           "billable": true,
-          "taskId": "698b74e07a00778418330646",
-          "projectId": "698b74c803a4c780c8bec884",
-          "workspaceId": "648b69e660cb70155e48de8c",
+          "taskId": "6862186624ae9b73502917fd",
+          "projectId": "6820fdfc7f29f26a8855e76e",
+          "workspaceId": "63eab29ecf0b257026ab5625",
           "timeInterval": {
-            "start": "2026-03-19T12:15:00Z",
-            "end": "2026-03-19T21:00:00Z",
-            "duration": "PT8H45M"
+            "start": "2025-07-16T16:00:00Z",
+            "end": "2025-07-16T17:00:00Z",
+            "duration": "PT1H"
           },
-          "customFieldValues": [
-            {
-              "customFieldId": "648c960360cb70155e533b54",
-              "timeEntryId": "69bcc37fb46cacd7a9ca1315",
-              "value": null,
-              "name": "Project ID",
-              "type": "TXT"
-            }
-          ],
+          "customFieldValues": [],
           "type": "REGULAR",
           "kioskId": null,
           "hourlyRate": {
-            "amount": 5500,
-            "currency": "$"
+            "amount": 0,
+            "currency": "USD"
           },
           "costRate": {
             "amount": 0,
-            "currency": "$"
+            "currency": "USD"
           },
           "isLocked": false
         }
@@ -16084,58 +14282,20 @@
         "valid": false,
         "divergences": [
           {
-            "path": "costRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "customFieldValues.0.value",
-            "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received null"
-          },
-          {
-            "path": "hourlyRate",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
             "path": "kioskId",
             "issue": "wrong_type",
             "expected": "string",
             "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "tagIds",
+            "issue": "wrong_type",
+            "expected": "array",
+            "actual": "Invalid input: expected array, received null"
           }
         ],
         "undocumentedFields": [],
         "zodErrors": [
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "costRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "record",
-            "code": "invalid_type",
-            "path": [
-              "customFieldValues",
-              0,
-              "value"
-            ],
-            "message": "Invalid input: expected record, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "hourlyRate"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
           {
             "expected": "string",
             "code": "invalid_type",
@@ -16143,6 +14303,14 @@
               "kioskId"
             ],
             "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "array",
+            "code": "invalid_type",
+            "path": [
+              "tagIds"
+            ],
+            "message": "Invalid input: expected array, received null"
           }
         ]
       },
@@ -16153,34 +14321,32 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 135,
+      "durationMs": 129,
       "responseDataSample": {
-        "id": "69bcc37fb46cacd7a9ca1315",
-        "description": "beams and recuts",
-        "tagIds": [],
+        "id": "6877609b3bae1e57f72e0200",
+        "description": "Aaa",
+        "tagIds": null,
         "userId": "63eab29ecf0b257026ab5624",
         "billable": true,
-        "taskId": "698b74e07a00778418330646",
-        "projectId": "698b74c803a4c780c8bec884",
-        "workspaceId": "648b69e660cb70155e48de8c",
+        "taskId": "6862186624ae9b73502917fd",
+        "projectId": "6820fdfc7f29f26a8855e76e",
+        "workspaceId": "63eab29ecf0b257026ab5625",
         "timeInterval": {
-          "start": "2026-03-19T12:15:00Z",
-          "end": "2026-03-19T21:00:00Z",
-          "duration": "PT8H45M"
+          "start": "2025-07-16T16:00:00Z",
+          "end": "2025-07-16T17:00:00Z",
+          "duration": "PT1H"
         },
-        "customFieldValues": [
-          {
-            "customFieldId": "648c960360cb70155e533b54",
-            "timeEntryId": "69bcc37fb46cacd7a9ca1315",
-            "value": null,
-            "name": "Project ID",
-            "type": "TXT"
-          }
-        ],
+        "customFieldValues": [],
         "type": "REGULAR",
         "kioskId": null,
-        "hourlyRate": null,
-        "costRate": null,
+        "hourlyRate": {
+          "amount": 0,
+          "currency": "USD"
+        },
+        "costRate": {
+          "amount": 0,
+          "currency": "USD"
+        },
         "isLocked": false
       }
     },
@@ -16921,9 +15087,21 @@
         "array": true,
         "readonly": true
       },
-      "status": "skip",
-      "durationMs": 126,
-      "error": "Skipped — requires elevated permissions (Time Entry)"
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "realityResult": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "realityStatus": "pass",
+      "durationMs": 124
     },
     {
       "check": {
@@ -17131,9 +15309,14 @@
         "array": true,
         "readonly": true
       },
-      "status": "skip",
-      "durationMs": 169,
-      "error": "Skipped — requires elevated permissions (Approval)"
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 123
     },
     {
       "check": {
@@ -18148,28 +16331,10 @@
         "valid": false,
         "divergences": [
           {
-            "path": "expenses.expenses.0.notes",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
             "path": "expenses.expenses.0.task",
             "issue": "wrong_type",
             "expected": "object",
             "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "expenses.expenses.1.fileName",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "expenses.expenses.1.notes",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
           },
           {
             "path": "expenses.expenses.1.task",
@@ -18178,34 +16343,10 @@
             "actual": "Invalid input: expected object, received null"
           },
           {
-            "path": "expenses.expenses.2.fileName",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "expenses.expenses.2.notes",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
             "path": "expenses.expenses.2.task",
             "issue": "wrong_type",
             "expected": "object",
             "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "expenses.expenses.3.fileName",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "expenses.expenses.3.notes",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
           },
           {
             "path": "expenses.expenses.3.task",
@@ -18214,67 +16355,7 @@
             "actual": "Invalid input: expected object, received null"
           },
           {
-            "path": "expenses.expenses.4.fileName",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "expenses.expenses.4.notes",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
             "path": "expenses.expenses.4.task",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "expenses.expenses.5.fileName",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "expenses.expenses.5.notes",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "expenses.expenses.5.task",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "expenses.expenses.6.fileName",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "expenses.expenses.6.notes",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "expenses.expenses.6.task",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
-            "path": "expenses.expenses.7.fileName",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "expenses.expenses.7.task",
             "issue": "wrong_type",
             "expected": "object",
             "actual": "Invalid input: expected object, received null"
@@ -18283,17 +16364,6 @@
         "undocumentedFields": [],
         "zodErrors": [
           {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              0,
-              "notes"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
             "expected": "object",
             "code": "invalid_type",
             "path": [
@@ -18305,28 +16375,6 @@
             "message": "Invalid input: expected object, received null"
           },
           {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              1,
-              "fileName"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              1,
-              "notes"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
             "expected": "object",
             "code": "invalid_type",
             "path": [
@@ -18336,28 +16384,6 @@
               "task"
             ],
             "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              2,
-              "fileName"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              2,
-              "notes"
-            ],
-            "message": "Invalid input: expected string, received null"
           },
           {
             "expected": "object",
@@ -18371,28 +16397,6 @@
             "message": "Invalid input: expected object, received null"
           },
           {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              3,
-              "fileName"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              3,
-              "notes"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
             "expected": "object",
             "code": "invalid_type",
             "path": [
@@ -18404,425 +16408,191 @@
             "message": "Invalid input: expected object, received null"
           },
           {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              4,
-              "fileName"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              4,
-              "notes"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
             "expected": "object",
             "code": "invalid_type",
             "path": [
               "expenses",
               "expenses",
               4,
-              "task"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              5,
-              "fileName"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              5,
-              "notes"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              5,
-              "task"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              6,
-              "fileName"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              6,
-              "notes"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              6,
-              "task"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              7,
-              "fileName"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              "expenses",
-              "expenses",
-              7,
               "task"
             ],
             "message": "Invalid input: expected object, received null"
           }
         ]
       },
-      "durationMs": 202,
+      "durationMs": 613,
       "responseDataSample": {
         "expenses": {
           "expenses": [
             {
-              "id": "6967dabf557749519a9f8e1a",
-              "workspaceId": "648b69e660cb70155e48de8c",
+              "id": "68705846ea976557148f3162",
+              "workspaceId": "63eab29ecf0b257026ab5625",
               "userId": "63eab29ecf0b257026ab5624",
-              "date": "2026-01-14T00:00:00Z",
+              "date": "2025-07-11T00:17:50Z",
               "project": {
-                "id": "64d678979c4c4c70dc545544",
-                "name": "In-House",
-                "color": "#607D8B",
+                "id": "6820fdfc7f29f26a8855e76e",
+                "name": "House",
+                "color": "#1976D2",
                 "clientId": "",
                 "clientName": ""
               },
               "task": null,
               "category": {
-                "id": "675b2430c0d4f51a75a41f37",
-                "name": "Crew Tool & Gear Stipend",
+                "id": "682155b20185434493810f29",
+                "name": "Lodging",
                 "hasUnitPrice": false,
                 "priceInCents": 0,
                 "unit": "",
-                "workspaceId": "648b69e660cb70155e48de8c",
+                "workspaceId": "63eab29ecf0b257026ab5625",
                 "archived": false
               },
-              "notes": null,
-              "quantity": 18498,
-              "fileId": "6967dabf557749519a9f8e18",
-              "fileName": "receipt.jpeg",
-              "total": 18498,
-              "locked": true
+              "notes": "Hah",
+              "quantity": 500,
+              "billable": true,
+              "fileId": "68705846ea976557148f3160",
+              "fileName": "receipt_EBDA951F.jpg",
+              "total": 500,
+              "locked": false
             },
             {
-              "id": "69647d41a501ea7d16b24e08",
-              "workspaceId": "648b69e660cb70155e48de8c",
+              "id": "6870569dc73cbc309d375b7f",
+              "workspaceId": "63eab29ecf0b257026ab5625",
               "userId": "63eab29ecf0b257026ab5624",
-              "date": "2026-01-08T00:00:00Z",
+              "date": "2025-07-11T00:10:38Z",
               "project": {
-                "id": "64d678979c4c4c70dc545544",
-                "name": "In-House",
-                "color": "#607D8B",
+                "id": "6820fdfc7f29f26a8855e76e",
+                "name": "House",
+                "color": "#1976D2",
                 "clientId": "",
                 "clientName": ""
               },
               "task": null,
               "category": {
-                "id": "648c5f06abc41f2c31789f66",
-                "name": "Mileage",
-                "hasUnitPrice": true,
-                "priceInCents": 70,
-                "unit": "mile",
-                "workspaceId": "648b69e660cb70155e48de8c",
+                "id": "682155b20185434493810f2a",
+                "name": "Meals",
+                "hasUnitPrice": false,
+                "priceInCents": 0,
+                "unit": "",
+                "workspaceId": "63eab29ecf0b257026ab5625",
                 "archived": false
               },
-              "notes": null,
-              "quantity": 70,
-              "fileId": "",
-              "fileName": null,
-              "total": 4900,
-              "locked": true
+              "notes": "Linner",
+              "quantity": 200,
+              "billable": true,
+              "fileId": "6870569dc73cbc309d375b79",
+              "fileName": "receipt_0237CCC5.jpg",
+              "total": 200,
+              "locked": false
             },
             {
-              "id": "693b3683cddce1087a793ecd",
-              "workspaceId": "648b69e660cb70155e48de8c",
+              "id": "687055fceb5c3b3d10245ce4",
+              "workspaceId": "63eab29ecf0b257026ab5625",
               "userId": "63eab29ecf0b257026ab5624",
-              "date": "2025-12-11T00:00:00Z",
+              "date": "2025-07-11T00:08:08Z",
               "project": {
-                "id": "6924c3f49f8fc32a78517f14",
-                "name": "Historical Society Repair and Restoration",
-                "color": "#f44336",
-                "clientId": "6924c32b4d8ad52cf6e17654",
-                "clientName": "Saxtons River Historical Society, VT"
-              },
-              "task": null,
-              "category": {
-                "id": "648c5f06abc41f2c31789f66",
-                "name": "Mileage",
-                "hasUnitPrice": true,
-                "priceInCents": 70,
-                "unit": "mile",
-                "workspaceId": "648b69e660cb70155e48de8c",
-                "archived": false
-              },
-              "notes": null,
-              "quantity": 70,
-              "fileId": "",
-              "fileName": null,
-              "total": 4900,
-              "locked": true
-            },
-            {
-              "id": "693981bd2d8d3a36ae56a790",
-              "workspaceId": "648b69e660cb70155e48de8c",
-              "userId": "63eab29ecf0b257026ab5624",
-              "date": "2025-12-10T00:00:00Z",
-              "project": {
-                "id": "6924c3f49f8fc32a78517f14",
-                "name": "Historical Society Repair and Restoration",
-                "color": "#f44336",
-                "clientId": "6924c32b4d8ad52cf6e17654",
-                "clientName": "Saxtons River Historical Society, VT"
-              },
-              "task": null,
-              "category": {
-                "id": "648c5f06abc41f2c31789f66",
-                "name": "Mileage",
-                "hasUnitPrice": true,
-                "priceInCents": 70,
-                "unit": "mile",
-                "workspaceId": "648b69e660cb70155e48de8c",
-                "archived": false
-              },
-              "notes": null,
-              "quantity": 60,
-              "fileId": "",
-              "fileName": null,
-              "total": 4200,
-              "locked": true
-            },
-            {
-              "id": "693981ce863304478bb5a58a",
-              "workspaceId": "648b69e660cb70155e48de8c",
-              "userId": "63eab29ecf0b257026ab5624",
-              "date": "2025-12-09T00:00:00Z",
-              "project": {
-                "id": "648c64f36c14000d0acfeade",
-                "name": "Croitoru Construction",
-                "color": "#FFC107",
-                "clientId": "648c63d160cb70155e4f58e9",
-                "clientName": "Andrei Croitoru, NH"
-              },
-              "task": null,
-              "category": {
-                "id": "648c5f06abc41f2c31789f66",
-                "name": "Mileage",
-                "hasUnitPrice": true,
-                "priceInCents": 70,
-                "unit": "mile",
-                "workspaceId": "648b69e660cb70155e48de8c",
-                "archived": false
-              },
-              "notes": null,
-              "quantity": 60,
-              "fileId": "",
-              "fileName": null,
-              "total": 4200,
-              "locked": true
-            },
-            {
-              "id": "69325126cec3d61e56a7f316",
-              "workspaceId": "648b69e660cb70155e48de8c",
-              "userId": "63eab29ecf0b257026ab5624",
-              "date": "2025-12-04T00:00:00Z",
-              "project": {
-                "id": "6924c3f49f8fc32a78517f14",
-                "name": "Historical Society Repair and Restoration",
-                "color": "#f44336",
-                "clientId": "6924c32b4d8ad52cf6e17654",
-                "clientName": "Saxtons River Historical Society, VT"
-              },
-              "task": null,
-              "category": {
-                "id": "648c5f06abc41f2c31789f66",
-                "name": "Mileage",
-                "hasUnitPrice": true,
-                "priceInCents": 70,
-                "unit": "mile",
-                "workspaceId": "648b69e660cb70155e48de8c",
-                "archived": false
-              },
-              "notes": null,
-              "quantity": 70,
-              "fileId": "",
-              "fileName": null,
-              "total": 4900,
-              "locked": true
-            },
-            {
-              "id": "693251107039f37b2189123f",
-              "workspaceId": "648b69e660cb70155e48de8c",
-              "userId": "63eab29ecf0b257026ab5624",
-              "date": "2025-12-03T00:00:00Z",
-              "project": {
-                "id": "648c64f36c14000d0acfeade",
-                "name": "Croitoru Construction",
-                "color": "#FFC107",
-                "clientId": "648c63d160cb70155e4f58e9",
-                "clientName": "Andrei Croitoru, NH"
-              },
-              "task": null,
-              "category": {
-                "id": "648c5f06abc41f2c31789f66",
-                "name": "Mileage",
-                "hasUnitPrice": true,
-                "priceInCents": 70,
-                "unit": "mile",
-                "workspaceId": "648b69e660cb70155e48de8c",
-                "archived": false
-              },
-              "notes": null,
-              "quantity": 70,
-              "fileId": "",
-              "fileName": null,
-              "total": 4900,
-              "locked": true
-            },
-            {
-              "id": "692e55665f6071272393a6e6",
-              "workspaceId": "648b69e660cb70155e48de8c",
-              "userId": "63eab29ecf0b257026ab5624",
-              "date": "2025-12-01T00:00:00Z",
-              "project": {
-                "id": "64d678979c4c4c70dc545544",
-                "name": "In-House",
-                "color": "#607D8B",
+                "id": "6820fdfc7f29f26a8855e76e",
+                "name": "House",
+                "color": "#1976D2",
                 "clientId": "",
                 "clientName": ""
               },
               "task": null,
               "category": {
-                "id": "648c5f06abc41f2c31789f66",
-                "name": "Mileage",
-                "hasUnitPrice": true,
-                "priceInCents": 70,
-                "unit": "mile",
-                "workspaceId": "648b69e660cb70155e48de8c",
+                "id": "682155b20185434493810f2a",
+                "name": "Meals",
+                "hasUnitPrice": false,
+                "priceInCents": 0,
+                "unit": "",
+                "workspaceId": "63eab29ecf0b257026ab5625",
                 "archived": false
               },
-              "notes": "Mileage 10/20-12/1",
-              "quantity": 1540,
-              "fileId": "",
-              "fileName": null,
-              "total": 107800,
-              "locked": true
+              "notes": "Dinner",
+              "quantity": 500,
+              "billable": true,
+              "fileId": "687055fceb5c3b3d10245cdd",
+              "fileName": "receipt_FBB51C31.jpg",
+              "total": 500,
+              "locked": false
+            },
+            {
+              "id": "68705538eb5c3b3d1024540c",
+              "workspaceId": "63eab29ecf0b257026ab5625",
+              "userId": "63eab29ecf0b257026ab5624",
+              "date": "2025-07-10T23:55:00Z",
+              "project": {
+                "id": "6820fdfc7f29f26a8855e76e",
+                "name": "House",
+                "color": "#1976D2",
+                "clientId": "",
+                "clientName": ""
+              },
+              "task": null,
+              "category": {
+                "id": "682155b20185434493810f2a",
+                "name": "Meals",
+                "hasUnitPrice": false,
+                "priceInCents": 0,
+                "unit": "",
+                "workspaceId": "63eab29ecf0b257026ab5625",
+                "archived": false
+              },
+              "notes": "Lunch",
+              "quantity": 500,
+              "billable": true,
+              "fileId": "68705538eb5c3b3d10245406",
+              "fileName": "receipt_3869DDA7.jpg",
+              "total": 500,
+              "locked": false
+            },
+            {
+              "id": "68704aaf1b772926573ab0c8",
+              "workspaceId": "63eab29ecf0b257026ab5625",
+              "userId": "63eab29ecf0b257026ab5624",
+              "date": "2025-07-10T23:19:55Z",
+              "project": {
+                "id": "6820fdfc7f29f26a8855e76e",
+                "name": "House",
+                "color": "#1976D2",
+                "clientId": "",
+                "clientName": ""
+              },
+              "task": null,
+              "category": {
+                "id": "682155b20185434493810f2a",
+                "name": "Meals",
+                "hasUnitPrice": false,
+                "priceInCents": 0,
+                "unit": "",
+                "workspaceId": "63eab29ecf0b257026ab5625",
+                "archived": false
+              },
+              "notes": "Lunch",
+              "quantity": 200,
+              "billable": true,
+              "fileId": "68704aaf1b772926573ab0c2",
+              "fileName": "receipt_0BA0BDF5.jpg",
+              "total": 200,
+              "locked": false
             }
           ],
-          "count": 8
+          "count": 5
         },
         "dailyTotals": [
           {
-            "date": "2025-12-01",
-            "total": 107800,
-            "dateAsInstant": "2025-12-01T00:00:00Z"
+            "date": "2025-07-10",
+            "total": 700,
+            "dateAsInstant": "2025-07-10T00:00:00Z"
           },
           {
-            "date": "2025-12-03",
-            "total": 4900,
-            "dateAsInstant": "2025-12-03T00:00:00Z"
-          },
-          {
-            "date": "2025-12-04",
-            "total": 4900,
-            "dateAsInstant": "2025-12-04T00:00:00Z"
-          },
-          {
-            "date": "2025-12-09",
-            "total": 4200,
-            "dateAsInstant": "2025-12-09T00:00:00Z"
-          },
-          {
-            "date": "2025-12-10",
-            "total": 4200,
-            "dateAsInstant": "2025-12-10T00:00:00Z"
-          },
-          {
-            "date": "2025-12-11",
-            "total": 4900,
-            "dateAsInstant": "2025-12-11T00:00:00Z"
-          },
-          {
-            "date": "2026-01-08",
-            "total": 4900,
-            "dateAsInstant": "2026-01-08T00:00:00Z"
-          },
-          {
-            "date": "2026-01-14",
-            "total": 18498,
-            "dateAsInstant": "2026-01-14T00:00:00Z"
+            "date": "2025-07-11",
+            "total": 1200,
+            "dateAsInstant": "2025-07-11T00:00:00Z"
           }
         ],
         "weeklyTotals": [
           {
-            "date": "2026-01-12",
-            "total": 18498
-          },
-          {
-            "date": "2025-12-08",
-            "total": 13300
-          },
-          {
-            "date": "2026-01-05",
-            "total": 4900
-          },
-          {
-            "date": "2025-12-01",
-            "total": 117600
+            "date": "2025-07-06",
+            "total": 1900
           }
         ]
       }
@@ -19057,12 +16827,6 @@
         "valid": false,
         "divergences": [
           {
-            "path": "notes",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
             "path": "taskId",
             "issue": "wrong_type",
             "expected": "string",
@@ -19075,34 +16839,27 @@
             "expected": "string",
             "code": "invalid_type",
             "path": [
-              "notes"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
               "taskId"
             ],
             "message": "Invalid input: expected string, received null"
           }
         ]
       },
-      "durationMs": 133,
+      "durationMs": 135,
       "responseDataSample": {
-        "id": "6967dabf557749519a9f8e1a",
-        "workspaceId": "648b69e660cb70155e48de8c",
+        "id": "68705846ea976557148f3162",
+        "workspaceId": "63eab29ecf0b257026ab5625",
         "userId": "63eab29ecf0b257026ab5624",
-        "date": "2026-01-14T00:00:00Z",
-        "projectId": "64d678979c4c4c70dc545544",
+        "date": "2025-07-11T00:17:50Z",
+        "projectId": "6820fdfc7f29f26a8855e76e",
         "taskId": null,
-        "categoryId": "675b2430c0d4f51a75a41f37",
-        "notes": null,
+        "categoryId": "682155b20185434493810f29",
+        "notes": "Hah",
         "quantity": 1,
-        "fileId": "6967dabf557749519a9f8e18",
-        "total": 18498,
-        "locked": true
+        "billable": true,
+        "fileId": "68705846ea976557148f3160",
+        "total": 500,
+        "locked": false
       }
     },
     {
@@ -19424,7 +17181,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 561
+      "durationMs": 305
     },
     {
       "check": {
@@ -20052,9 +17809,14 @@
         "array": false,
         "readonly": true
       },
-      "status": "skip",
-      "durationMs": 129,
-      "error": "Skipped — requires elevated permissions (Invoice)"
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 131
     },
     {
       "check": {
@@ -21778,9 +19540,14 @@
         "array": false,
         "readonly": true
       },
-      "status": "skip",
-      "durationMs": 309,
-      "error": "Skipped — requires elevated permissions (Invoice)"
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 134
     },
     {
       "check": {
@@ -22562,9 +20329,14 @@
         "array": false,
         "readonly": true
       },
-      "status": "skip",
-      "durationMs": 128,
-      "error": "Skipped — requires elevated permissions (Webhook)"
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 127
     },
     {
       "check": {
@@ -23146,7 +20918,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 123
+      "durationMs": 488
     },
     {
       "check": {
@@ -24118,18 +21890,6 @@
             "actual": "Invalid input: expected string, received null"
           },
           {
-            "path": "[0].projectDefaultValues.0.value",
-            "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received string"
-          },
-          {
-            "path": "[0].projectDefaultValues.1.value",
-            "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received string"
-          },
-          {
             "path": "[0].workspaceDefaultValue",
             "issue": "wrong_type",
             "expected": "record",
@@ -24152,28 +21912,6 @@
             "code": "invalid_type",
             "path": [
               0,
-              "projectDefaultValues",
-              0,
-              "value"
-            ],
-            "message": "Invalid input: expected record, received string"
-          },
-          {
-            "expected": "record",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "projectDefaultValues",
-              1,
-              "value"
-            ],
-            "message": "Invalid input: expected record, received string"
-          },
-          {
-            "expected": "record",
-            "code": "invalid_type",
-            "path": [
-              0,
               "workspaceDefaultValue"
             ],
             "message": "Invalid input: expected record, received null"
@@ -24187,33 +21925,26 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 151,
+      "durationMs": 130,
       "responseDataSample": [
         {
-          "id": "648c960360cb70155e533b54",
-          "workspaceId": "648b69e660cb70155e48de8c",
-          "name": "Project ID",
+          "id": "682116a841fbb46a74c2cb06",
+          "workspaceId": "63eab29ecf0b257026ab5625",
+          "name": "Activity",
           "description": null,
-          "type": "TXT",
-          "placeholder": "Enter Project ID",
-          "allowedValues": [],
+          "type": "DROPDOWN_SINGLE",
+          "placeholder": "Select Activity",
+          "allowedValues": [
+            "Masonry",
+            "Timber Framing",
+            "Interior"
+          ],
           "workspaceDefaultValue": null,
-          "onlyAdminCanEdit": false,
+          "onlyAdminCanEdit": true,
           "required": false,
-          "status": "INVISIBLE",
+          "status": "INACTIVE",
           "entityType": "TIMEENTRY",
-          "projectDefaultValues": [
-            {
-              "projectId": "64d532e79844a67c5c176d3b",
-              "value": "001",
-              "status": "INVISIBLE"
-            },
-            {
-              "projectId": "659558863e0b9408234dcee4",
-              "value": "001",
-              "status": "INVISIBLE"
-            }
-          ]
+          "projectDefaultValues": []
         }
       ]
     },
@@ -25177,78 +22908,12 @@
         "readonly": true,
         "requiresIdFrom": "List projects"
       },
-      "status": "fail",
+      "status": "pass",
       "result": {
-        "valid": false,
-        "divergences": [
-          {
-            "path": "[0].description",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[0].projectDefaultValues.0.value",
-            "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received string"
-          },
-          {
-            "path": "[0].projectDefaultValues.1.value",
-            "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received string"
-          },
-          {
-            "path": "[0].workspaceDefaultValue",
-            "issue": "wrong_type",
-            "expected": "record",
-            "actual": "Invalid input: expected record, received null"
-          }
-        ],
+        "valid": true,
+        "divergences": [],
         "undocumentedFields": [],
-        "zodErrors": [
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "description"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "record",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "projectDefaultValues",
-              0,
-              "value"
-            ],
-            "message": "Invalid input: expected record, received string"
-          },
-          {
-            "expected": "record",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "projectDefaultValues",
-              1,
-              "value"
-            ],
-            "message": "Invalid input: expected record, received string"
-          },
-          {
-            "expected": "record",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "workspaceDefaultValue"
-            ],
-            "message": "Invalid input: expected record, received null"
-          }
-        ]
+        "zodErrors": []
       },
       "realityResult": {
         "valid": true,
@@ -25257,35 +22922,7 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 481,
-      "responseDataSample": [
-        {
-          "id": "648c960360cb70155e533b54",
-          "workspaceId": "648b69e660cb70155e48de8c",
-          "name": "Project ID",
-          "description": null,
-          "type": "TXT",
-          "placeholder": "Enter Project ID",
-          "allowedValues": [],
-          "workspaceDefaultValue": null,
-          "onlyAdminCanEdit": false,
-          "required": false,
-          "status": "INVISIBLE",
-          "entityType": "TIMEENTRY",
-          "projectDefaultValues": [
-            {
-              "projectId": "64d532e79844a67c5c176d3b",
-              "value": "001",
-              "status": "INVISIBLE"
-            },
-            {
-              "projectId": "659558863e0b9408234dcee4",
-              "value": "001",
-              "status": "INVISIBLE"
-            }
-          ]
-        }
-      ]
+      "durationMs": 127
     },
     {
       "check": {
@@ -25977,12 +23614,6 @@
         "valid": false,
         "divergences": [
           {
-            "path": "[0].approve",
-            "issue": "wrong_type",
-            "expected": "object",
-            "actual": "Invalid input: expected object, received null"
-          },
-          {
             "path": "[0].automaticAccrual",
             "issue": "wrong_type",
             "expected": "object",
@@ -26007,29 +23638,56 @@
             "actual": "Invalid input: expected string, received null"
           },
           {
-            "path": "[0].userGroupIds",
+            "path": "[1].automaticAccrual",
             "issue": "wrong_type",
-            "expected": "array",
-            "actual": "Invalid input: expected array, received null"
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
           },
           {
-            "path": "[0].userIds",
+            "path": "[1].automaticTimeEntryCreation",
             "issue": "wrong_type",
-            "expected": "array",
-            "actual": "Invalid input: expected array, received null"
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "[1].negativeBalance",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "[1].projectId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          },
+          {
+            "path": "[2].automaticAccrual",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "[2].automaticTimeEntryCreation",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "[2].negativeBalance",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "[2].projectId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
           }
         ],
         "undocumentedFields": [],
         "zodErrors": [
-          {
-            "expected": "object",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "approve"
-            ],
-            "message": "Invalid input: expected object, received null"
-          },
           {
             "expected": "object",
             "code": "invalid_type",
@@ -26067,22 +23725,76 @@
             "message": "Invalid input: expected string, received null"
           },
           {
-            "expected": "array",
+            "expected": "object",
             "code": "invalid_type",
             "path": [
-              0,
-              "userGroupIds"
+              1,
+              "automaticAccrual"
             ],
-            "message": "Invalid input: expected array, received null"
+            "message": "Invalid input: expected object, received null"
           },
           {
-            "expected": "array",
+            "expected": "object",
             "code": "invalid_type",
             "path": [
-              0,
-              "userIds"
+              1,
+              "automaticTimeEntryCreation"
             ],
-            "message": "Invalid input: expected array, received null"
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              1,
+              "negativeBalance"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              1,
+              "projectId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              2,
+              "automaticAccrual"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              2,
+              "automaticTimeEntryCreation"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              2,
+              "negativeBalance"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              2,
+              "projectId"
+            ],
+            "message": "Invalid input: expected string, received null"
           }
         ]
       },
@@ -26093,21 +23805,26 @@
         "zodErrors": []
       },
       "realityStatus": "pass",
-      "durationMs": 315,
+      "durationMs": 525,
       "responseDataSample": [
         {
-          "id": "66d1afbbc23484038188fc0e",
-          "workspaceId": "648b69e660cb70155e48de8c",
-          "name": "Vacation",
-          "allowNegativeBalance": true,
+          "id": "69c1968e5fdd9a5256b6fdc4",
+          "workspaceId": "63eab29ecf0b257026ab5625",
+          "name": "_cfix_test_PTO mn3l8hx9",
+          "allowNegativeBalance": false,
           "negativeBalance": null,
           "allowHalfDay": false,
           "archived": false,
-          "timeUnit": "HOURS",
-          "userIds": null,
-          "userGroupIds": null,
-          "everyoneIncludingNew": false,
-          "approve": null,
+          "timeUnit": "DAYS",
+          "userIds": [],
+          "userGroupIds": [],
+          "everyoneIncludingNew": true,
+          "approve": {
+            "requiresApproval": false,
+            "teamManagers": false,
+            "specificMembers": false,
+            "userIds": []
+          },
           "automaticAccrual": null,
           "projectId": null,
           "automaticTimeEntryCreation": null
@@ -26800,9 +24517,101 @@
         "readonly": true,
         "requiresIdFrom": "List time-off policies"
       },
-      "status": "skip",
-      "durationMs": 359,
-      "error": "Skipped — requires elevated permissions (Policy)"
+      "status": "fail",
+      "result": {
+        "valid": false,
+        "divergences": [
+          {
+            "path": "automaticAccrual",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "automaticTimeEntryCreation",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "negativeBalance",
+            "issue": "wrong_type",
+            "expected": "object",
+            "actual": "Invalid input: expected object, received null"
+          },
+          {
+            "path": "projectId",
+            "issue": "wrong_type",
+            "expected": "string",
+            "actual": "Invalid input: expected string, received null"
+          }
+        ],
+        "undocumentedFields": [],
+        "zodErrors": [
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticAccrual"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "automaticTimeEntryCreation"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "object",
+            "code": "invalid_type",
+            "path": [
+              "negativeBalance"
+            ],
+            "message": "Invalid input: expected object, received null"
+          },
+          {
+            "expected": "string",
+            "code": "invalid_type",
+            "path": [
+              "projectId"
+            ],
+            "message": "Invalid input: expected string, received null"
+          }
+        ]
+      },
+      "realityResult": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "realityStatus": "pass",
+      "durationMs": 131,
+      "responseDataSample": {
+        "id": "69c1968e5fdd9a5256b6fdc4",
+        "workspaceId": "63eab29ecf0b257026ab5625",
+        "name": "_cfix_test_PTO mn3l8hx9",
+        "allowNegativeBalance": false,
+        "negativeBalance": null,
+        "allowHalfDay": false,
+        "archived": false,
+        "timeUnit": "DAYS",
+        "userIds": [],
+        "userGroupIds": [],
+        "everyoneIncludingNew": true,
+        "approve": {
+          "requiresApproval": false,
+          "teamManagers": false,
+          "specificMembers": false,
+          "userIds": []
+        },
+        "automaticAccrual": null,
+        "projectId": null,
+        "automaticTimeEntryCreation": null
+      }
     },
     {
       "check": {
@@ -27056,144 +24865,14 @@
           "end": "2030-01-01T00:00:00Z"
         }
       },
-      "status": "fail",
+      "status": "pass",
       "result": {
-        "valid": false,
-        "divergences": [
-          {
-            "path": "[0].note",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[1].note",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[2].note",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[2].startTime",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[3].note",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[3].startTime",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          },
-          {
-            "path": "[4].note",
-            "issue": "wrong_type",
-            "expected": "string",
-            "actual": "Invalid input: expected string, received null"
-          }
-        ],
+        "valid": true,
+        "divergences": [],
         "undocumentedFields": [],
-        "zodErrors": [
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              0,
-              "note"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              1,
-              "note"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              2,
-              "note"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              2,
-              "startTime"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              3,
-              "note"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              3,
-              "startTime"
-            ],
-            "message": "Invalid input: expected string, received null"
-          },
-          {
-            "expected": "string",
-            "code": "invalid_type",
-            "path": [
-              4,
-              "note"
-            ],
-            "message": "Invalid input: expected string, received null"
-          }
-        ]
+        "zodErrors": []
       },
-      "durationMs": 137,
-      "responseDataSample": [
-        {
-          "id": "64d52dda421b761f90910e0e",
-          "workspaceId": "648b69e660cb70155e48de8c",
-          "userId": "648b69e660cb70155e48de87",
-          "userName": "Patrick",
-          "projectId": "64d529d77ae6257b3c906796",
-          "projectName": "Osgood Rd Chimney Build",
-          "clientId": "64d529af9ddfd442a44ca5c0",
-          "clientName": "Devin Smith, VT",
-          "projectColor": "#FF9800",
-          "period": {
-            "start": "2023-08-21T00:00:00Z",
-            "end": "2023-08-29T23:59:59.999Z"
-          },
-          "hoursPerDay": 8,
-          "startTime": "07:00",
-          "note": null,
-          "billable": true,
-          "projectArchived": true,
-          "projectBillable": true
-        }
-      ]
+      "durationMs": 120
     },
     {
       "check": {
@@ -27383,7 +25062,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 325,
+      "durationMs": 146,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -27565,7 +25244,7 @@
         }
       },
       "status": "skip",
-      "durationMs": 137,
+      "durationMs": 150,
       "error": "Skipped — endpoint returned empty response (Scheduling)"
     },
     {
@@ -27584,7 +25263,7 @@
         "readonly": true
       },
       "status": "skip",
-      "durationMs": 497,
+      "durationMs": 126,
       "error": "Skipped — endpoint not available (Shared Reports)"
     },
     {
@@ -27691,7 +25370,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 131
+      "durationMs": 478
     },
     {
       "check": {
@@ -27795,9 +25474,14 @@
           "end": "2030-01-01T00:00:00Z"
         }
       },
-      "status": "skip",
-      "durationMs": 306,
-      "error": "Skipped — requires elevated permissions (Entity Changes)"
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 295
     },
     {
       "check": {
@@ -27819,9 +25503,14 @@
           "end": "2030-01-01T00:00:00Z"
         }
       },
-      "status": "skip",
-      "durationMs": 122,
-      "error": "Skipped — requires elevated permissions (Entity Changes)"
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 319
     },
     {
       "check": {
@@ -27843,9 +25532,14 @@
           "end": "2030-01-01T00:00:00Z"
         }
       },
-      "status": "skip",
-      "durationMs": 126,
-      "error": "Skipped — requires elevated permissions (Entity Changes)"
+      "status": "pass",
+      "result": {
+        "valid": true,
+        "divergences": [],
+        "undocumentedFields": [],
+        "zodErrors": []
+      },
+      "durationMs": 136
     },
     {
       "check": {
@@ -27870,7 +25564,7 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 307
+      "durationMs": 311
     },
     {
       "check": {
@@ -27895,12 +25589,12 @@
         "undocumentedFields": [],
         "zodErrors": []
       },
-      "durationMs": 165
+      "durationMs": 375
     }
   ],
   "divergencesByTag": {
     "User": {
-      "passed": 2,
+      "passed": 3,
       "failed": 1,
       "divergences": 1,
       "undocumentedFields": 0
@@ -27908,19 +25602,19 @@
     "Workspace": {
       "passed": 0,
       "failed": 2,
-      "divergences": 48,
+      "divergences": 33,
       "undocumentedFields": 0
     },
     "Client": {
-      "passed": 0,
-      "failed": 2,
-      "divergences": 12,
+      "passed": 1,
+      "failed": 0,
+      "divergences": 0,
       "undocumentedFields": 0
     },
     "Project": {
       "passed": 0,
       "failed": 2,
-      "divergences": 77,
+      "divergences": 30,
       "undocumentedFields": 6
     },
     "Tag": {
@@ -27930,9 +25624,9 @@
       "undocumentedFields": 0
     },
     "Task": {
-      "passed": 0,
-      "failed": 2,
-      "divergences": 23,
+      "passed": 1,
+      "failed": 0,
+      "divergences": 0,
       "undocumentedFields": 0
     },
     "Group": {
@@ -27942,13 +25636,13 @@
       "undocumentedFields": 0
     },
     "Time Entry": {
-      "passed": 0,
+      "passed": 1,
       "failed": 2,
-      "divergences": 14,
+      "divergences": 12,
       "undocumentedFields": 0
     },
     "Approval": {
-      "passed": 0,
+      "passed": 1,
       "failed": 0,
       "divergences": 0,
       "undocumentedFields": 0
@@ -27956,17 +25650,17 @@
     "Expense": {
       "passed": 1,
       "failed": 2,
-      "divergences": 24,
+      "divergences": 6,
       "undocumentedFields": 0
     },
     "Invoice": {
-      "passed": 0,
+      "passed": 2,
       "failed": 0,
       "divergences": 0,
       "undocumentedFields": 0
     },
     "Webhook": {
-      "passed": 0,
+      "passed": 1,
       "failed": 0,
       "divergences": 0,
       "undocumentedFields": 0
@@ -27978,21 +25672,21 @@
       "undocumentedFields": 0
     },
     "Custom Fields": {
-      "passed": 0,
-      "failed": 2,
-      "divergences": 8,
+      "passed": 1,
+      "failed": 1,
+      "divergences": 2,
       "undocumentedFields": 0
     },
     "Policy": {
       "passed": 0,
-      "failed": 1,
-      "divergences": 7,
+      "failed": 2,
+      "divergences": 16,
       "undocumentedFields": 0
     },
     "Scheduling": {
-      "passed": 0,
-      "failed": 1,
-      "divergences": 7,
+      "passed": 1,
+      "failed": 0,
+      "divergences": 0,
       "undocumentedFields": 0
     },
     "Shared Reports": {
@@ -28008,7 +25702,7 @@
       "undocumentedFields": 0
     },
     "Entity Changes": {
-      "passed": 0,
+      "passed": 3,
       "failed": 0,
       "divergences": 0,
       "undocumentedFields": 0

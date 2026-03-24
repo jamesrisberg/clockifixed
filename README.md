@@ -112,7 +112,7 @@ const http = new HttpClient({ apiKey: "your-key" });
 
 // Async generator — yields one page at a time
 for await (const page of http.getAllPages("/workspaces/ws-id/projects")) {
-  console.log(page); // ProjectDtoV1[]
+  console.log(page); // Project[]
 }
 
 // Or collect everything into a single array
@@ -167,7 +167,7 @@ cd clockifixed
 npm install
 npm run build        # Build the library (excludes verify/scripts)
 npm run build:all    # Build everything including verifier
-npm test             # Run all tests (139 tests)
+npm test             # Run all tests (148 tests)
 npm run verify:cli   # Read API verification (needs CLOCKIFY_API_KEY)
 npm run verify:write # Write API verification (creates/cleans test data)
 npm run generate     # Regenerate types from openapi.json
