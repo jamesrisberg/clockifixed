@@ -137,7 +137,17 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `update(id, body)` | `Tag` | Update a tag |
 | `delete(id)` | `Tag` | Delete a tag |
 
-**Tag fields:** `{ id, name, archived, workspaceId }`
+**TagRequest (create):**
+```typescript
+{ name: string }
+```
+
+**Tag fields:**
+```typescript
+{
+  id, name, archived, workspaceId
+}
+```
 
 ---
 
@@ -145,18 +155,44 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 
 | Method | Returns | Description |
 |---|---|---|
-| `getLoggedUser()` | `User` | Current authenticated user |
+| `getLoggedUser()` | `User` | Current authenticated user (no workspaceId needed) |
 | `getAll(params?)` | `User[]` | List workspace users |
 | `filter(body)` | `User[]` | Filter with criteria |
 | `getMemberProfile(userId)` | `MemberProfile` | Get member profile |
 | `updateMemberProfile(userId, body)` | `MemberProfile` | Update profile |
-| `upsertCustomFieldValue(userId, cfId, body)` | `UserCustomFieldValue` | Set custom field |
+| `upsertCustomFieldValue(userId, cfId, body)` | `UserCustomFieldValue` | Set custom field value |
 | `getManagers(userId)` | `User[]` | Get user's managers |
 | `createRole(userId, body)` | `RoleDetails[]` | Assign role |
 | `deleteRole(userId, body)` | `void` | Remove role |
 | `uploadImage(body)` | `UploadFileResponse` | Upload profile photo |
 
-**User fields:** `{ id, name, email, activeWorkspace, defaultWorkspace, memberships, profilePicture, settings, status, customFields }`
+**GetAllUsersParams:**
+```typescript
+{
+  page?: number;
+  pageSize?: number;
+  name?: string;
+  email?: string;
+  status?: "PENDING" | "ACTIVE" | "DECLINED" | "INACTIVE" | "ALL";
+}
+```
+
+**RoleRequest (createRole/deleteRole):**
+```typescript
+{
+  entityId: string;       // required — user ID
+  role: "WORKSPACE_ADMIN" | "TEAM_MANAGER" | "PROJECT_MANAGER";
+  sourceType?: "USER_GROUP";
+}
+```
+
+**User fields:**
+```typescript
+{
+  id, name, email, status, activeWorkspace, defaultWorkspace,
+  memberships, profilePicture, settings, customFields
+}
+```
 
 ---
 
@@ -172,6 +208,28 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `setCostRate(projectId, taskId, body)` | `Task` | Set cost rate |
 | `setHourlyRate(projectId, taskId, body)` | `Task` | Set hourly rate |
 
+**TaskRequestV1 (create):**
+```typescript
+{
+  name: string;             // required
+  assigneeId?: string;
+  assigneeIds?: string[];
+  budgetEstimate?: number;
+  estimate?: string;        // ISO 8601 duration — "PT8H"
+  status?: "ACTIVE" | "DONE" | "ALL";
+}
+```
+
+**Rate body (setCostRate/setHourlyRate):** `{ amount: number, since?: string }`
+
+**Task fields:**
+```typescript
+{
+  id, name, status, projectId, billable, assigneeId, assigneeIds,
+  budgetEstimate, costRate, duration, estimate, hourlyRate, userGroupIds
+}
+```
+
 ---
 
 ## `clockify.holidays` — Holiday
@@ -183,6 +241,33 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `getInPeriod(params)` | `Holiday[]` | List holidays in date range |
 | `update(holidayId, body)` | `Holiday` | Update a holiday |
 | `delete(holidayId)` | `Holiday` | Delete a holiday |
+
+**CreateHolidayRequest:**
+```typescript
+{
+  name: string;                        // required
+  datePeriod: {                        // required
+    startDate: string;                 // "2026-12-25"
+    endDate: string;
+  };
+  everyoneIncludingNew?: boolean;      // assign to all users
+  occursAnnually?: boolean;
+  users?: { ids?: string[] };          // specific users
+  userGroups?: { ids?: string[] };     // specific groups
+}
+```
+
+**Holiday fields:**
+```typescript
+{
+  id, name, datePeriod, workspaceId, everyoneIncludingNew,
+  occursAnnually, userIds, userGroupIds,
+  automaticTimeEntryCreation,  // boolean (V1) or object (delete response)
+  projectId?,                  // V1 only
+  taskId?,                     // V1 only
+  color?,                      // delete response only
+}
+```
 
 ---
 
@@ -196,7 +281,7 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `update(invoiceId, body)` | `InvoiceOverview` | Update |
 | `delete(invoiceId)` | `void` | Delete |
 | `duplicate(invoiceId)` | `InvoiceOverview` | Duplicate |
-| `export(invoiceId)` | `void` | Export (binary) |
+| `export(invoiceId)` | `void` | Export (binary download) |
 | `getInfo(body)` | `InvoiceInfoResponse` | Filter invoices |
 | `addItem(invoiceId, body)` | `InvoiceOverview` | Add line item |
 | `importTimeEntriesAndExpenses(invoiceId, body)` | `InvoiceOverview` | Import entries |
@@ -208,25 +293,90 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `getSettings()` | `InvoiceSettings` | Get settings |
 | `updateSettings(body)` | `void` | Update settings |
 
+**CreateInvoiceRequest:**
+```typescript
+{
+  clientId: string;           // required
+  currency: string;           // required — "USD"
+  dueDate: string;            // required — ISO 8601 "2026-06-30T00:00:00Z"
+  issuedDate: string;         // required — ISO 8601
+  number: string;             // required — invoice number
+}
+```
+
+**UpdateInvoiceRequest:**
+```typescript
+{
+  number: string;             // required
+  currency: string;           // required
+  dueDate: string;            // required — ISO 8601
+  issuedDate: string;         // required — ISO 8601
+  discountPercent: number;    // required
+  taxPercent: number;         // required
+  tax2Percent: number;        // required
+  clientId?: string;
+  note?: string;
+  subject?: string;
+}
+```
+
+**CreateInvoiceItemRequest:**
+```typescript
+{
+  description: string;
+  quantity: number;
+  unitPrice: number;          // in cents
+  applyTaxes: "TAX1" | "TAX2" | "TAX1TAX2" | "NONE";
+  itemType: string;
+}
+```
+
+**ChangeInvoiceStatusRequest:** `{ invoiceStatus?: "UNSENT" | "SENT" | "PAID" | "PARTIALLY_PAID" | "VOID" | "OVERDUE" }`
+
 ---
 
 ## `clockify.expenses`
 
 | Method | Returns | Description |
 |---|---|---|
-| `getAll(params?)` | `ExpensesAndTotals` | List expenses |
-| `create(body)` | `Expense` | Create (multipart/form-data) |
+| `getAll(params?)` | `ExpensesAndTotals` | List expenses (wrapped in `{ expenses, dailyTotals, weeklyTotals }`) |
+| `create(body)` | `Expense` | Create expense (sent as multipart/form-data) |
 | `get(expenseId)` | `Expense` | Get by ID |
-| `update(expenseId, body)` | `Expense` | Update (multipart/form-data) |
+| `update(expenseId, body)` | `Expense` | Update expense (sent as multipart/form-data) |
 | `delete(expenseId)` | `void` | Delete |
-| `downloadReceipt(expenseId, fileId)` | `void` | Download receipt (binary) |
-| `getCategories()` | `ExpenseCategoriesWithCount` | List categories |
+| `downloadReceipt(expenseId, fileId)` | `void` | Download receipt file (binary) |
+| `getCategories()` | `ExpenseCategoriesWithCount` | List categories (`{ categories, count }`) |
 | `createCategory(body)` | `ExpenseCategory` | Create category |
 | `updateCategory(catId, body)` | `ExpenseCategory` | Update category |
 | `deleteCategory(catId)` | `void` | Delete category (must archive first) |
 | `archiveCategory(catId, body)` | `ExpenseCategory` | Archive/unarchive |
 
----
+**CreateExpenseV1Request:**
+```typescript
+{
+  amount: number;             // required — in cents
+  categoryId: string;         // required
+  date: string;               // required — ISO 8601 "2026-03-15T00:00:00Z"
+  projectId: string;          // required
+  userId: string;             // required
+  file: Blob | Uint8Array;    // required — receipt file (can be empty)
+  billable?: boolean;
+  notes?: string;
+  taskId?: string;
+}
+```
+
+**ExpenseCategoryV1Request:** `{ name: string }`
+
+**Expense fields:**
+```typescript
+{
+  id, billable, categoryId, date, fileId, isLocked, locked,
+  notes, projectId, quantity, taskId, total, userId, workspaceId
+}
+```
+
+**ExpenseCategory fields:** `{ id, name, archived, hasUnitPrice, priceInCents, unit, workspaceId }`
 
 ---
 
