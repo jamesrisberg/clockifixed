@@ -387,16 +387,47 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `getAll()` | `Workspace[]` | List workspaces (no workspaceId needed) |
 | `create(body)` | `Workspace` | Create workspace (no workspaceId needed) |
 | `get()` | `Workspace` | Get current workspace |
-| `setCostRate(body)` | `Workspace` | Set workspace cost rate |
-| `setHourlyRate(body)` | `Workspace` | Set workspace hourly rate |
+| `setCostRate(body)` | `Workspace` | Set workspace-level cost rate |
+| `setHourlyRate(body)` | `Workspace` | Set workspace-level hourly rate |
 | `addUsers(body)` | `Workspace` | Invite user by email |
 | `updateUserStatus(userId, body)` | `Workspace` | Activate/deactivate user |
-| `setUserCostRate(userId, body)` | `Workspace` | Set user cost rate |
-| `setUserHourlyRate(userId, body)` | `Workspace` | Set user hourly rate |
+| `setUserCostRate(userId, body)` | `Workspace` | Set cost rate for a specific user |
+| `setUserHourlyRate(userId, body)` | `Workspace` | Set hourly rate for a specific user |
 
-**Rate body:** `{ amount: number, since?: string }`
+**CreateWorkspaceRequest:**
+```typescript
+{
+  name?: string;
+  organizationId?: string;
+}
+```
 
-**AddUserToWorkspaceRequest:** `{ email: string }`
+**CostRateRequest / HourlyRateRequest (setCostRate, setHourlyRate, setUserCostRate, setUserHourlyRate):**
+```typescript
+{
+  amount: number;             // required — rate in cents
+  since?: string;             // ISO 8601 — effective date
+}
+```
+
+**AddUserToWorkspaceRequest:**
+```typescript
+{ email: string }             // required — email to invite
+```
+
+**UpdateUserStatusRequest:**
+```typescript
+{ status: "ACTIVE" | "INACTIVE" }
+```
+
+**Workspace fields:**
+```typescript
+{
+  id, name, imageUrl, memberships, workspaceSettings,
+  hourlyRate, costRate, currencies, features,
+  featureSubscriptionType, subdomain, cakeOrganizationId
+}
+```
 
 ---
 
