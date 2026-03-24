@@ -161,3 +161,35 @@ try {
 const otherWorkspace = clockify.forWorkspace("other-workspace-id");
 const projects = await otherWorkspace.projects.getAll();
 ```
+
+## Using with AI Agents
+
+Clockifixed's documentation is fully machine-readable. If you're using an AI coding agent (Claude Code, Cursor, Copilot, etc.), you can point it at the docs to get full SDK context.
+
+### Give your agent this prompt
+
+```
+Read the Clockifixed SDK docs before writing code:
+https://www.clockifixed.com/llms-full.txt
+
+This is a TypeScript wrapper for the Clockify time-tracking API.
+All endpoints are accessed through a `Clockify` facade — e.g.
+`clockify.timeEntries.create()`, `clockify.projects.getAll()`.
+
+The package is `clockifixed` on npm. It requires Node.js 20+.
+```
+
+### Available machine-readable endpoints
+
+| URL | What it contains | When to use |
+|-----|-----------------|-------------|
+| [`/llms-full.txt`](https://www.clockifixed.com/llms-full.txt) | Full markdown of every page (~11K lines) | Best for one-shot context loading |
+| [`/llms.txt`](https://www.clockifixed.com/llms.txt) | Page index with titles and URLs | When you only need to find a specific page |
+| [`/mcp.json`](https://www.clockifixed.com/mcp.json) | Structured metadata per page (headings, content) | For MCP-compatible agents |
+| [`/skill.md`](https://www.clockifixed.com/skill.md) | Agent capability manifest | For agents that support skill discovery |
+
+### Tips for best results
+
+- **Start with `llms-full.txt`** — it gives the agent the complete SDK reference, endpoint signatures, type definitions, and usage examples in a single fetch.
+- **Provide your workspace ID** — most endpoints require it. Tell the agent your workspace ID and API key location (e.g. `process.env.CLOCKIFY_API_KEY`) so it can write working code immediately.
+- **Mention the domain** — if you're working with a specific part of the API, tell the agent (e.g. "I need to work with invoices and time entries") so it focuses on the relevant endpoints.
