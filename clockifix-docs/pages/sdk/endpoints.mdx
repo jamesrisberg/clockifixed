@@ -1,161 +1,271 @@
 ---
 title: Endpoint Reference
-description: All 22 endpoint modules and 164 methods in Clockifixed.
+description: All 22 endpoint modules and 164 methods in Clockifixed — with input types, return types, and field details.
 icon: plug
 ---
 
 # Endpoint Reference
 
-All endpoints are accessed through the `Clockify` facade. Each domain is a property containing typed methods.
+All endpoints are accessed through the `Clockify` facade. Each domain is a property containing typed methods. All response types are [unified](/sdk/type-system) — a `Project` is a `Project`, regardless of which operation returned it.
 
-## Endpoint Map
+## `clockify.timeEntries` — TimeEntry
 
-```mermaid
-graph LR
-    CL[Clockify]
+| Method | Returns | Description |
+|---|---|---|
+| `create(body)` | `TimeEntry` | Create a time entry |
+| `get(id)` | `TimeEntry` | Get by ID (includes costRate/hourlyRate) |
+| `update(id, body)` | `TimeEntry` | Update a time entry |
+| `delete(id)` | `void` | Delete a time entry |
+| `getForUser(userId, params?)` | `TimeEntry[]` | List entries for a user |
+| `createForUser(userId, body)` | `TimeEntry` | Create for another user |
+| `stopTimer(userId, body)` | `TimeEntry` | Stop a running timer |
+| `deleteForUser(userId, ids)` | `TimeEntry[]` | Delete specific entries by ID |
+| `bulkEdit(userId, body)` | `TimeEntry[]` | Bulk edit (accepts single or array) |
+| `duplicate(userId, id)` | `TimeEntry` | Duplicate an entry |
+| `updateInvoicedStatus(body)` | `void` | Mark entries as invoiced |
+| `getInProgress()` | `TimeEntry` | Get running timer |
 
-    CL --> WS[workspaces]
-    CL --> US[users]
-    CL --> PR[projects]
-    CL --> TE[timeEntries]
-    CL --> TG[tags]
-    CL --> TK[tasks]
-    CL --> CLI[clients]
-    CL --> GR[groups]
-    CL --> AP[approvals]
-    CL --> EX[expenses]
-    CL --> IN[invoices]
-    CL --> WH[webhooks]
-    CL --> HO[holidays]
-    CL --> CF[customFields]
-    CL --> SC[scheduling]
-    CL --> PO[policies]
-    CL --> TO[timeOff]
-    CL --> BA[balances]
-    CL --> RE[reports]
-    CL --> SR[sharedReports]
-    CL --> TP[templates]
-    CL --> EC[entityChanges]
-
-    WS --- WS_M["9 methods"]
-    US --- US_M["10 methods"]
-    PR --- PR_M["12 methods"]
-    TE --- TE_M["12 methods"]
-    CLI --- CLI_M["5 methods"]
-    IN --- IN_M["17 methods"]
-    EX --- EX_M["11 methods"]
-    SC --- SC_M["11 methods"]
-
-    style CL fill:#f59e0b,stroke:#d97706,color:#000
+**CreateTimeEntryRequest:**
+```typescript
+{
+  start?: string;          // ISO 8601 — "2026-03-23T09:00:00Z"
+  end?: string;            // ISO 8601
+  projectId?: string;
+  taskId?: string;
+  description?: string;
+  billable?: boolean;
+  tagIds?: string[];
+  type?: "REGULAR" | "BREAK";
+}
 ```
 
-## Complete Method Reference
+**TimeEntry fields:**
+```typescript
+{
+  id, billable, description, projectId, taskId, userId, workspaceId,
+  tagIds, kioskId, isLocked, timeInterval, customFieldValues, type,
+  costRate?,    // only on GET responses
+  hourlyRate?,  // only on GET responses
+}
+```
 
-### `clockify.timeEntries` — Time Entry Operations
+---
 
-| Method | HTTP | Description |
+## `clockify.projects` — Project
+
+| Method | Returns | Description |
 |---|---|---|
-| `create(body)` | POST | Add a new time entry |
-| `get(id)` | GET | Get a specific time entry |
-| `update(id, body)` | PUT | Update a time entry |
-| `delete(id)` | DELETE | Delete a time entry |
-| `getForUser(userId, params?)` | GET | Get time entries for a user |
-| `createForUser(userId, body)` | POST | Add a time entry for another user |
-| `stopTimer(userId, body)` | PATCH | Stop a running timer |
-| `deleteForUser(userId, timeEntryIds)` | DELETE | Delete specific time entries for a user |
-| `bulkEdit(userId, body)` | PUT | Bulk edit time entries (accepts single or array) |
-| `duplicate(userId, id)` | POST | Duplicate a time entry |
-| `updateInvoicedStatus(body)` | PATCH | Mark entries as invoiced |
-| `getInProgress()` | GET | Get all running timers |
+| `getAll(params?)` | `Project[]` | List all projects |
+| `create(body)` | `Project` | Create a project |
+| `createFromTemplate(body)` | `Project` | Create from template |
+| `get(projectId)` | `Project` | Get by ID |
+| `update(projectId, body)` | `Project` | Update a project |
+| `delete(projectId)` | `Project` | Delete (must archive first) |
+| `updateEstimate(projectId, body)` | `Project` | Update estimate |
+| `updateMemberships(projectId, body)` | `Project` | Update memberships |
+| `addUsers(projectId, body)` | `void` | Add users to project |
+| `updateTemplate(projectId, body)` | `Project` | Set template flag |
+| `setUserCostRate(projectId, userId, body)` | `Project` | Set user cost rate |
+| `setUserHourlyRate(projectId, userId, body)` | `Project` | Set user hourly rate |
 
-### `clockify.projects` — Project Management
+**ProjectRequest (create):**
+```typescript
+{
+  name: string;             // required
+  clientId?: string;
+  color?: string;           // hex — "#2196F3"
+  billable?: boolean;
+  isPublic?: boolean;
+  note?: string;
+}
+```
 
-| Method | HTTP | Description |
+**Project fields:**
+```typescript
+{
+  id, name, archived, billable, color, note, workspaceId,
+  public, template, duration, memberships, budgetEstimate,
+  costRate, hourlyRate, timeEstimate, estimate,
+  clientId?,      // only on create/update responses
+  clientName?,    // only on create/update responses
+  isPublic?,      // only on create/update responses
+  isTemplate?,    // only on create/update responses
+  estimateReset?, // only on create/update responses
+}
+```
+
+---
+
+## `clockify.clients` — ClockifyClient
+
+| Method | Returns | Description |
 |---|---|---|
-| `getAll(params?)` | GET | List all projects |
-| `create(body)` | POST | Create a project |
-| `createFromTemplate(body)` | POST | Create from template |
-| `get(projectId)` | GET | Get project by ID |
-| `update(projectId, body)` | PUT | Update a project |
-| `delete(projectId)` | DELETE | Delete a project |
-| `updateEstimate(projectId, body)` | PATCH | Update project estimate |
-| `updateMemberships(projectId, body)` | PATCH | Update memberships |
-| `addUsers(projectId, body)` | POST | Assign users to project |
-| `updateTemplate(projectId, body)` | PATCH | Update template flag |
-| `setUserCostRate(projectId, userId, body)` | PUT | Set user's cost rate |
-| `setUserHourlyRate(projectId, userId, body)` | PUT | Set user's hourly rate |
+| `getAll()` | `ClockifyClient[]` | List all clients |
+| `create(body)` | `ClockifyClient` | Create a client |
+| `get(id)` | `ClockifyClient` | Get by ID |
+| `update(id, body)` | `ClockifyClient` | Update a client |
+| `delete(id)` | `ClockifyClient` | Delete (must archive first) |
 
-### `clockify.users` — User Operations
+**CreateClientRequest:**
+```typescript
+{
+  name?: string;
+  address?: string;
+  email?: string;
+  note?: string;
+}
+```
 
-| Method | HTTP | Description |
+**ClockifyClient fields:**
+```typescript
+{
+  id, name, archived, address, email, ccEmails, note,
+  workspaceId, currencyId,
+  currencyCode?,  // only on GET/create responses
+}
+```
+
+---
+
+## `clockify.tags` — Tag
+
+| Method | Returns | Description |
 |---|---|---|
-| `getLoggedUser()` | GET | Get current user info |
-| `getAll(params?)` | GET | List workspace users |
-| `filter(body)` | POST | Filter users with criteria |
-| `getMemberProfile(userId)` | GET | Get member profile |
-| `updateMemberProfile(userId, body)` | PATCH | Update member profile |
-| `upsertCustomFieldValue(userId, cfId, body)` | PUT | Set user custom field |
-| `getManagers(userId)` | GET | Get user's managers |
-| `createRole(userId, body)` | POST | Assign manager role |
-| `deleteRole(userId, body)` | DELETE | Remove manager role |
-| `uploadImage(body)` | POST | Upload profile photo |
+| `getAll(params?)` | `Tag[]` | List all tags |
+| `create(body)` | `Tag` | Create a tag |
+| `get(id)` | `Tag` | Get by ID |
+| `update(id, body)` | `Tag` | Update a tag |
+| `delete(id)` | `Tag` | Delete a tag |
 
-### `clockify.invoices` — Invoice Management
+**Tag fields:** `{ id, name, archived, workspaceId }`
 
-| Method | HTTP | Description |
+---
+
+## `clockify.users` — User
+
+| Method | Returns | Description |
 |---|---|---|
-| `getAll(params?)` | GET | List invoices |
-| `create(body)` | POST | Create an invoice |
-| `get(invoiceId)` | GET | Get invoice by ID |
-| `update(invoiceId, body)` | PUT | Update an invoice |
-| `delete(invoiceId)` | DELETE | Delete an invoice |
-| `duplicate(invoiceId)` | POST | Duplicate an invoice |
-| `export(invoiceId)` | GET | Export an invoice |
-| `getInfo(body)` | POST | Filter invoices |
-| `addItem(invoiceId, body)` | POST | Add line item |
-| `importTimeEntriesAndExpenses(invoiceId, body)` | POST | Import entries to invoice |
-| `removeItem(invoiceId, order)` | DELETE | Remove line item |
-| `getPayments(invoiceId)` | GET | List payments |
-| `createPayment(invoiceId, body)` | POST | Add payment |
-| `deletePayment(invoiceId, paymentId)` | DELETE | Remove payment |
-| `changeStatus(invoiceId, body)` | PATCH | Change invoice status |
-| `getSettings()` | GET | Get invoice settings |
-| `updateSettings(body)` | PUT | Update invoice settings |
+| `getLoggedUser()` | `User` | Current authenticated user |
+| `getAll(params?)` | `User[]` | List workspace users |
+| `filter(body)` | `User[]` | Filter with criteria |
+| `getMemberProfile(userId)` | `MemberProfile` | Get member profile |
+| `updateMemberProfile(userId, body)` | `MemberProfile` | Update profile |
+| `upsertCustomFieldValue(userId, cfId, body)` | `UserCustomFieldValue` | Set custom field |
+| `getManagers(userId)` | `User[]` | Get user's managers |
+| `createRole(userId, body)` | `RoleDetails[]` | Assign role |
+| `deleteRole(userId, body)` | `void` | Remove role |
+| `uploadImage(body)` | `UploadFileResponse` | Upload profile photo |
 
-### `clockify.expenses` — Expense Tracking
+**User fields:** `{ id, name, email, activeWorkspace, defaultWorkspace, memberships, profilePicture, settings, status, customFields }`
 
-| Method | HTTP | Description |
+---
+
+## `clockify.tasks` — Task
+
+| Method | Returns | Description |
 |---|---|---|
-| `getAll(params?)` | GET | List expenses |
-| `create(body)` | POST | Create an expense |
-| `get(expenseId)` | GET | Get expense by ID |
-| `update(expenseId, body)` | PUT | Update an expense |
-| `delete(expenseId)` | DELETE | Delete an expense |
-| `downloadReceipt(expenseId, fileId)` | GET | Download receipt file |
-| `getCategories()` | GET | List expense categories |
-| `createCategory(body)` | POST | Create category |
-| `updateCategory(catId, body)` | PUT | Update category |
-| `deleteCategory(catId)` | DELETE | Delete category |
-| `archiveCategory(catId, body)` | PATCH | Archive category |
+| `getAll(projectId, params?)` | `Task[]` | List tasks on a project |
+| `create(projectId, body)` | `Task` | Create a task |
+| `get(projectId, taskId)` | `Task` | Get by ID |
+| `update(projectId, taskId, body)` | `Task` | Update a task |
+| `delete(projectId, taskId)` | `Task` | Delete (must mark DONE first) |
+| `setCostRate(projectId, taskId, body)` | `Task` | Set cost rate |
+| `setHourlyRate(projectId, taskId, body)` | `Task` | Set hourly rate |
 
-### Other Endpoint Modules
+---
 
-| Module | Methods | Key Operations |
+## `clockify.holidays` — Holiday
+
+| Method | Returns | Description |
 |---|---|---|
-| `workspaces` | 9 | CRUD, rates, user management |
-| `clients` | 5 | CRUD |
-| `tags` | 5 | CRUD |
-| `tasks` | 7 | CRUD, cost/hourly rates |
-| `groups` | 6 | CRUD, add/remove users |
-| `approvals` | 6 | Submit, resubmit, update status |
-| `webhooks` | 8 | CRUD, logs, token regeneration |
-| `holidays` | 5 | CRUD, period queries |
-| `customFields` | 7 | CRUD, project defaults |
-| `scheduling` | 11 | Assignments, recurring, capacity |
-| `policies` | 6 | Time-off policies CRUD |
-| `timeOff` | 5 | Time-off requests, status changes |
-| `balances` | 3 | Time-off balance queries |
-| `reports` | 6 | Detailed, summary, weekly, attendance, expense, audit |
-| `sharedReports` | 5 | CRUD |
-| `templates` | 5 | CRUD *(deprecated)* |
-| `entityChanges` | 3 | Created/updated/deleted tracking *(experimental)* |
+| `getAll()` | `Holiday[]` | List holidays |
+| `create(body)` | `Holiday` | Create a holiday |
+| `getInPeriod(params)` | `Holiday[]` | List holidays in date range |
+| `update(holidayId, body)` | `Holiday` | Update a holiday |
+| `delete(holidayId)` | `Holiday` | Delete a holiday |
+
+---
+
+## `clockify.invoices`
+
+| Method | Returns | Description |
+|---|---|---|
+| `getAll(params?)` | `InvoicesList` | List invoices |
+| `create(body)` | `CreateInvoice` | Create an invoice |
+| `get(invoiceId)` | `InvoiceOverview` | Get by ID |
+| `update(invoiceId, body)` | `InvoiceOverview` | Update |
+| `delete(invoiceId)` | `void` | Delete |
+| `duplicate(invoiceId)` | `InvoiceOverview` | Duplicate |
+| `export(invoiceId)` | `void` | Export (binary) |
+| `getInfo(body)` | `InvoiceInfoResponse` | Filter invoices |
+| `addItem(invoiceId, body)` | `InvoiceOverview` | Add line item |
+| `importTimeEntriesAndExpenses(invoiceId, body)` | `InvoiceOverview` | Import entries |
+| `removeItem(invoiceId, order)` | `InvoiceOverview` | Remove line item |
+| `getPayments(invoiceId)` | `InvoicePayment[]` | List payments |
+| `createPayment(invoiceId, body)` | `InvoiceOverview` | Add payment |
+| `deletePayment(invoiceId, paymentId)` | `InvoiceOverview` | Remove payment |
+| `changeStatus(invoiceId, body)` | `void` | Change status |
+| `getSettings()` | `InvoiceSettings` | Get settings |
+| `updateSettings(body)` | `void` | Update settings |
+
+---
+
+## `clockify.expenses`
+
+| Method | Returns | Description |
+|---|---|---|
+| `getAll(params?)` | `ExpensesAndTotals` | List expenses |
+| `create(body)` | `Expense` | Create (multipart/form-data) |
+| `get(expenseId)` | `Expense` | Get by ID |
+| `update(expenseId, body)` | `Expense` | Update (multipart/form-data) |
+| `delete(expenseId)` | `void` | Delete |
+| `downloadReceipt(expenseId, fileId)` | `void` | Download receipt (binary) |
+| `getCategories()` | `ExpenseCategoriesWithCount` | List categories |
+| `createCategory(body)` | `ExpenseCategory` | Create category |
+| `updateCategory(catId, body)` | `ExpenseCategory` | Update category |
+| `deleteCategory(catId)` | `void` | Delete category (must archive first) |
+| `archiveCategory(catId, body)` | `ExpenseCategory` | Archive/unarchive |
+
+---
+
+## Other Modules
+
+### `clockify.workspaces`
+
+| Method | Returns | Description |
+|---|---|---|
+| `getAll()` | `Workspace[]` | List workspaces (no workspaceId needed) |
+| `create(body)` | `Workspace` | Create workspace (no workspaceId needed) |
+| `get()` | `Workspace` | Get current workspace |
+| `setCostRate(body)` | `Workspace` | Set workspace cost rate |
+| `setHourlyRate(body)` | `Workspace` | Set workspace hourly rate |
+| `addUsers(body)` | `Workspace` | Invite user by email |
+| `updateUserStatus(userId, body)` | `Workspace` | Activate/deactivate user |
+| `setUserCostRate(userId, body)` | `Workspace` | Set user cost rate |
+| `setUserHourlyRate(userId, body)` | `Workspace` | Set user hourly rate |
+
+### `clockify.groups` | `clockify.webhooks` | `clockify.customFields`
+
+| Module | Methods | Returns | Key Operations |
+|---|---|---|---|
+| `groups` | 6 | `UserGroup` | CRUD, add/remove users |
+| `webhooks` | 8 | `Webhook` / `Webhooks` | CRUD, logs, token regeneration |
+| `customFields` | 7 | `CustomField` | CRUD, project defaults |
+
+### `clockify.scheduling` | `clockify.policies` | `clockify.timeOff` | `clockify.balances`
+
+| Module | Methods | Returns | Key Operations |
+|---|---|---|---|
+| `scheduling` | 11 | `Assignment` / `SchedulingProjectsTotals` | Assignments, recurring, capacity |
+| `policies` | 6 | `Policy` | Time-off policies CRUD (must archive before delete) |
+| `timeOff` | 5 | `TimeOffRequestFull` / `TimeOffRequest` | Requests, status changes |
+| `balances` | 3 | `unknown` | Balance queries and updates |
+
+### `clockify.reports` | `clockify.sharedReports` | `clockify.templates` | `clockify.entityChanges`
+
+| Module | Methods | Returns | Key Operations |
+|---|---|---|---|
+| `reports` | 6 | `unknown` | Detailed, summary, weekly, attendance, expense, audit |
+| `sharedReports` | 5 | `unknown` | CRUD |
+| `templates` | 5 | `Template` / `TemplateResult` | CRUD *(deprecated by Clockify)* |
+| `entityChanges` | 3 | `unknown` | Created/updated/deleted tracking *(experimental)* |
