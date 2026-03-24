@@ -228,9 +228,9 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 
 ---
 
-## Other Modules
+---
 
-### `clockify.workspaces`
+## `clockify.workspaces` — Workspace
 
 | Method | Returns | Description |
 |---|---|---|
@@ -244,7 +244,13 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `setUserCostRate(userId, body)` | `Workspace` | Set user cost rate |
 | `setUserHourlyRate(userId, body)` | `Workspace` | Set user hourly rate |
 
-### `clockify.groups`
+**Rate body:** `{ amount: number, since?: string }`
+
+**AddUserToWorkspaceRequest:** `{ email: string }`
+
+---
+
+## `clockify.groups` — UserGroup
 
 | Method | Returns | Description |
 |---|---|---|
@@ -255,20 +261,41 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `addUsers(groupId, body)` | `UserGroup` | Add user to group |
 | `removeUser(groupId, userId)` | `UserGroup` | Remove user from group |
 
-### `clockify.webhooks`
+**UserGroupRequest:** `{ name?: string }`
+
+**UserGroup fields:** `{ id, name, userIds, teamManagers, workspaceId }`
+
+---
+
+## `clockify.webhooks` — Webhook
 
 | Method | Returns | Description |
 |---|---|---|
-| `getAll()` | `Webhooks` | List webhooks (wrapped in `{ webhooks, workspaceWebhookCount }`) |
+| `getAll()` | `Webhooks` | List webhooks (`{ webhooks: Webhook[], workspaceWebhookCount }`) |
 | `getForAddon(addonId)` | `Webhooks` | List webhooks for an addon |
 | `get(webhookId)` | `Webhook` | Get by ID |
 | `create(body)` | `Webhook` | Create a webhook |
 | `update(webhookId, body)` | `Webhook` | Update a webhook |
 | `delete(webhookId)` | `void` | Delete a webhook |
-| `getLogs(webhookId, body)` | `WebhookLog[]` | Get webhook delivery logs |
+| `getLogs(webhookId, body)` | `WebhookLog[]` | Get delivery logs |
 | `regenerateToken(webhookId)` | `Webhook` | Regenerate auth token |
 
-### `clockify.customFields`
+**CreateWebhookRequest:**
+```typescript
+{
+  name?: string;              // max 30 characters
+  url: string;                // required — delivery URL
+  triggerSource: string[];    // required — IDs to watch
+  triggerSourceType: "PROJECT_ID" | "USER_ID" | "TAG_ID" | "TASK_ID" | "WORKSPACE_ID" | "ASSIGNMENT_ID" | "EXPENSE_ID";
+  webhookEvent: "NEW_TIME_ENTRY" | "TIME_ENTRY_UPDATED" | "TIME_ENTRY_DELETED" | "NEW_PROJECT" | "PROJECT_UPDATED" | ...;
+}
+```
+
+**Webhook fields:** `{ id, name, url, triggerSource, triggerSourceType, webhookEvent, authToken, enabled, deliveryEnabled, userId, workspaceId }`
+
+---
+
+## `clockify.customFields` — CustomField
 
 | Method | Returns | Description |
 |---|---|---|
@@ -276,11 +303,29 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `create(body)` | `void` | Create a custom field |
 | `update(cfId, body)` | `CustomField` | Update a custom field |
 | `delete(cfId)` | `void` | Delete a custom field |
-| `getForProject(projectId)` | `CustomField[]` | List custom fields for a project |
-| `updateProjectDefault(projectId, cfId, body)` | `CustomField` | Set project default value |
+| `getForProject(projectId)` | `CustomField[]` | List fields for a project |
+| `updateProjectDefault(projectId, cfId, body)` | `CustomField` | Set project default |
 | `removeFromProject(projectId, cfId)` | `CustomField` | Remove from project |
 
-### `clockify.approvals`
+**CustomFieldRequest:**
+```typescript
+{
+  name: string;               // required
+  type: "TXT" | "NUMBER" | "DROPDOWN_SINGLE" | "DROPDOWN_MULTIPLE" | "CHECKBOX" | "LINK";  // required
+  entityType?: "TIMEENTRY" | "USER";
+  description?: string;
+  placeholder?: string;
+  allowedValues?: string[];   // for dropdown types
+  onlyAdminCanEdit?: boolean;
+  status?: "INACTIVE" | "VISIBLE" | "INVISIBLE";
+}
+```
+
+**CustomField fields:** `{ id, name, type, entityType, description, placeholder, allowedValues, onlyAdminCanEdit, required, status, projectDefaultValues, workspaceDefaultValue, workspaceId }`
+
+---
+
+## `clockify.approvals`
 
 | Method | Returns | Description |
 |---|---|---|
@@ -291,7 +336,15 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `resubmitForUser(userId, body)` | `void` | Resubmit for specific user |
 | `updateStatus(requestId, body)` | `ApprovalRequest` | Approve/reject/withdraw |
 
-### `clockify.scheduling`
+**CreateApprovalRequest:** `{ periodStart: string, period?: "WEEKLY" | "SEMI_MONTHLY" | "MONTHLY" }`
+
+**UpdateApprovalRequest:** `{ state: "PENDING" | "APPROVED" | "WITHDRAWN_SUBMISSION" | "WITHDRAWN_APPROVAL" | "REJECTED", note?: string }`
+
+**ApprovalDetails fields:** `{ approvalRequest, approvedTime, billableAmount, billableTime, breakTime, costAmount, entries, expenseTotal, expenses, pendingTime, trackedTime }`
+
+---
+
+## `clockify.scheduling`
 
 | Method | Returns | Description |
 |---|---|---|
@@ -307,7 +360,11 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `getUserTotalsForUser(userId)` | `SchedulingUsersTotals` | Get totals for one user |
 | `copyAssignment(assignmentId, body)` | `Assignment[]` | Copy an assignment |
 
-### `clockify.policies`
+**Assignment fields:** `{ id, billable, excludeDays, hoursPerDay, includeNonWorkingDays, note, period, projectId, published, recurring }`
+
+---
+
+## `clockify.policies` — Policy
 
 | Method | Returns | Description |
 |---|---|---|
@@ -318,7 +375,24 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `updateStatus(policyId, body)` | `Policy` | Archive/activate |
 | `delete(policyId)` | `void` | Delete (must archive first) |
 
-### `clockify.timeOff`
+**CreatePolicyRequest:**
+```typescript
+{
+  name: string;                // required
+  approve: PolicyApproval;     // required — { requiresApproval?, teamManagers?, userIds? }
+  timeUnit?: "DAYS" | "HOURS";
+  allowHalfDay?: boolean;
+  allowNegativeBalance?: boolean;
+  everyoneIncludingNew?: boolean;
+  icon?: "UMBRELLA" | "SNOWFLAKE" | "FAMILY" | "PLANE" | ...;
+}
+```
+
+**Policy fields:** `{ id, name, approve, timeUnit, allowHalfDay, allowNegativeBalance, archived, automaticAccrual, automaticTimeEntryCreation, everyoneIncludingNew, negativeBalance, projectId, userGroupIds, userIds, workspaceId }`
+
+---
+
+## `clockify.timeOff`
 
 | Method | Returns | Description |
 |---|---|---|
@@ -328,15 +402,23 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `delete(policyId, requestId)` | `TimeOffRequest` | Delete a request |
 | `changeStatus(policyId, requestId, body)` | `TimeOffRequest` | Approve/reject |
 
-### `clockify.balances`
+**CreateTimeOffRequestV1Request:** `{ timeOffPeriod: { period: { start, end } }, note?: string }`
+
+**GetTimeOffRequestsV1Request:** `{ start?, end?, statuses?: ("PENDING" | "APPROVED" | "REJECTED" | "ALL")[], page?, pageSize? }`
+
+---
+
+## `clockify.balances`
 
 | Method | Returns | Description |
 |---|---|---|
-| `getForPolicy(policyId)` | `unknown` | Get balances for a policy |
-| `update(policyId, body)` | `unknown` | Update balances |
-| `getForUser(userId)` | `unknown` | Get balances for a user |
+| `getForPolicy(policyId)` | `unknown` | Get balances for all users on a policy |
+| `update(policyId, body)` | `unknown` | Update balances for a policy |
+| `getForUser(userId)` | `unknown` | Get all policy balances for a user |
 
-### `clockify.reports`
+---
+
+## `clockify.reports`
 
 | Method | Returns | Description |
 |---|---|---|
@@ -347,17 +429,23 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `expenseDetailed(body)` | `ExpenseDetailedReport` | Generate expense report |
 | `auditLog(body)` | `PageableV1ListAuditLog` | Get audit log entries |
 
-### `clockify.sharedReports`
+All report methods require `dateRangeStart` and `dateRangeEnd` (ISO 8601). Each has a filter-specific required field: `summaryFilter` for summary, `detailedFilter` for detailed, `weeklyFilter` for weekly, `attendanceFilter` for attendance.
+
+---
+
+## `clockify.sharedReports`
 
 | Method | Returns | Description |
 |---|---|---|
 | `getAll()` | `unknown` | List shared reports |
 | `create(body)` | `unknown` | Create a shared report |
-| `getById(id)` | `unknown` | Get by ID |
+| `getById(id)` | `unknown` | Get by ID (no workspace prefix in path) |
 | `update(id, body)` | `unknown` | Update a shared report |
 | `delete(id)` | `void` | Delete a shared report |
 
-### `clockify.templates` *(deprecated by Clockify)*
+---
+
+## `clockify.templates` *(deprecated by Clockify)*
 
 | Method | Returns | Description |
 |---|---|---|
@@ -367,10 +455,16 @@ All endpoints are accessed through the `Clockify` facade. Each domain is a prope
 | `update(templateId, body)` | `TemplateResult` | Update a template |
 | `delete(templateId)` | `TemplateResult` | Delete a template |
 
-### `clockify.entityChanges` *(experimental)*
+**TemplateRequest:** `{ name: string, projectsAndTasks: ProjectTaskTupleRequest[] }`
+
+---
+
+## `clockify.entityChanges` *(experimental)*
 
 | Method | Returns | Description |
 |---|---|---|
 | `getCreated(params)` | `unknown` | Get entities created in a time range |
 | `getUpdated(params)` | `unknown` | Get entities updated in a time range |
 | `getDeleted(params)` | `PageableCollectionLogBinDocument` | Get entities deleted in a time range |
+
+**EntityChangesParams:** `{ type: string, start: string, end: string, limit?: number, page?: number }`
