@@ -5,6 +5,8 @@ export default {
     preset: "amber",
     mode: "auto",
   },
+  // api spec disabled — Clockify's OpenAPI has circular $ref chains that
+  // Tome can't serialize. See https://docs.clockify.me/ for the official API reference.
   // api: {
   //   spec: "./openapi.json",
   //   playground: true,
